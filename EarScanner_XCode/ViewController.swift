@@ -6,6 +6,8 @@
 //
 import AVFoundation
 import UIKit
+import Foundation
+
 
 class ViewController: UIViewController {
     @IBOutlet weak var imageTake: UIImage!
@@ -51,6 +53,7 @@ class ViewController: UIViewController {
         
         shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
@@ -87,8 +90,13 @@ class ViewController: UIViewController {
     }
     
     private func setUpCamera(){
+        
+        AVCaptureDevice.ExposureMode.custom
+        
         let session = AVCaptureSession()
+       
         if let device = AVCaptureDevice.default(for: .video){
+            
             do {
                 let input = try AVCaptureDeviceInput(device: device)
                 if session.canAddInput(input){
@@ -97,6 +105,15 @@ class ViewController: UIViewController {
                 if session.canAddOutput(output){
                     session.addOutput(output)
                 }
+                //create a temperature element and 
+                let temp = AVCaptureDevice.WhiteBalanceTemperatureAndTintValues.init(temperature: 3000, tint: 0)
+                var tempgains = device.deviceWhiteBalanceGains(for: temp)
+                
+                //3000k = RGB (255, 180, 107), weighted equivalent
+                var Gains = AVCaptureDevice.WhiteBalanceGains.init(redGain: 4, greenGain: 2.82, blueGain: 1.68)
+                try device.lockForConfiguration() //add a catch
+                device.setWhiteBalanceModeLocked(with: tempgains, completionHandler: nil)
+                device.unlockForConfiguration()
                 previewLayer.videoGravity = .resizeAspectFill
                 previewLayer.session = session
                 
@@ -118,7 +135,7 @@ class ViewController: UIViewController {
 
 
 extension ViewController: AVCapturePhotoCaptureDelegate {
-
+ 
     struct MyVariables {
         static var yourVariable = false
     }
@@ -126,11 +143,12 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         guard let data = photo.fileDataRepresentation() else{
             return
         }
-//
+        
+        
 //        func writeToPhotoAlbum(image: UIImage) {
 //            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
 //        }
-
+        
         let image = UIImage(data: data)
         
         
@@ -153,7 +171,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         imageTake = image
         NextPhotoButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
         
-
+        
         
         
         
