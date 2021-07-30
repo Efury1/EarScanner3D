@@ -105,14 +105,18 @@ class ViewController: UIViewController {
                 if session.canAddOutput(output){
                     session.addOutput(output)
                 }
-                //create a temperature element and 
+                //create a temperature element
                 let temp = AVCaptureDevice.WhiteBalanceTemperatureAndTintValues.init(temperature: 3000, tint: 0)
+                //convert the temperature element into white balance gains
                 var tempgains = device.deviceWhiteBalanceGains(for: temp)
                 
-                //3000k = RGB (255, 180, 107), weighted equivalent
-                var Gains = AVCaptureDevice.WhiteBalanceGains.init(redGain: 4, greenGain: 2.82, blueGain: 1.68)
+                
+//                var Gains = AVCaptureDevice.WhiteBalanceGains.init(redGain: 4, greenGain: 2.82, blueGain: 1.68)
+                //lock the white balance
                 try device.lockForConfiguration() //add a catch
+                //set the white balance to the gains
                 device.setWhiteBalanceModeLocked(with: tempgains, completionHandler: nil)
+                //unlock
                 device.unlockForConfiguration()
                 previewLayer.videoGravity = .resizeAspectFill
                 previewLayer.session = session
