@@ -28,13 +28,14 @@ class ViewController: UIViewController {
         button.layer.borderColor = UIColor.white.cgColor
         return button
     }()
-    
+    //the button to retake the photo
     private let RetakeButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 //        button.backgroundColor = .black
         button.setTitle("Retake", for: .normal)
         return button
     }()
+    //button to move to the next photo
     private let NextPhotoButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 //        button.backgroundColor = .black
@@ -43,28 +44,30 @@ class ViewController: UIViewController {
         return button
     }()
 
-    
+    //if view has loaded make the background black (for simulator)
+    //add the camera preview sub layer
+    //and check permissions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
-        view.addSubview(shutterButton)
-        checkCameraPermissions()
         
-        shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
+        checkCameraPermissions()
+
     }
-    
+    //create the preview layer frames and place the buttons on them
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
         
-        shutterButton.center = CGPoint(x: view.frame.size.width/2,
-                                       y: view.frame.size.height - (view.frame.size.height*0.18) )
+        
         RetakeButton.center = CGPoint(x: view.frame.size.width - (view.frame.size.width*0.85),
                                        y: view.frame.size.height -  (view.frame.size.height*0.93) )
         NextPhotoButton.center = CGPoint(x:  view.frame.size.width*0.80,
                                        y: view.frame.size.height -  (view.frame.size.height*0.93) )
+        shutterButton.center = CGPoint(x: (view.frame.size.width/2)+10 ,
+                                       y: view.frame.size.height - (view.frame.size.height*0.18) )
     }
     private func checkCameraPermissions(){
         switch AVCaptureDevice.authorizationStatus(for: .video){
@@ -92,10 +95,10 @@ class ViewController: UIViewController {
     
     private func setUpCamera(){
         
-        AVCaptureDevice.ExposureMode.custom
+        
         
         let session = AVCaptureSession()
-       
+        addGridView()
         if let device = AVCaptureDevice.default(for: .video){
             
             do {
@@ -109,9 +112,9 @@ class ViewController: UIViewController {
                 //create a temperature element
                 let temp = AVCaptureDevice.WhiteBalanceTemperatureAndTintValues.init(temperature: 3000, tint: 0)
                 //convert the temperature element into white balance gains
-                var tempgains = device.deviceWhiteBalanceGains(for: temp)
+                let tempgains = device.deviceWhiteBalanceGains(for: temp)
                 //define a time element of 1/60 seconds
-                var exposureTime = CMTimeMake(value: 1, timescale: 60)
+                let exposureTime = CMTimeMake(value: 1, timescale: 60)
                 
 //                var Gains = AVCaptureDevice.WhiteBalanceGains.init(redGain: 4, greenGain: 2.82, blueGain: 1.68)
                 //lock the white balance
@@ -157,9 +160,14 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 //            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
 //        }
         
+        
         let image = UIImage(data: data)
         
-        
+//        let grid: UIView = {
+//            let grid = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+//
+//            return grid
+//        }()
         imageView =  UIImageView(image: image)
         
         //Maybe Remove
@@ -174,6 +182,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         imageView.frame = view.bounds
         view.addSubview(imageView)
         view.addSubview(RetakeButton)
+        
         view.addSubview(NextPhotoButton)
         
         imageTake = image
@@ -184,9 +193,12 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         
         
+        
     }
     @objc private func savePhoto() {
-        UIImageWriteToSavedPhotosAlbum(imageTake, nil, nil, nil)
+//        UIImageWriteToSavedPhotosAlbum(imageTake, nil, nil, nil)
+        MyAwesomeAlbum.shared.albumName = "test3"
+        MyAwesomeAlbum.shared.save(image: imageTake)
         session?.startRunning()
         imageView.removeFromSuperview()
 
@@ -196,7 +208,25 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         imageView.removeFromSuperview()
         
     }
-    
+    private func addGridView() {
+        // cameraView is your view where you want to show the grid view
+        let horizontalMargin = -10
+        let verticalMargin = -10
+        
+        
+        
+        let gridView = GridView()
+        gridView.addSubview(shutterButton)
+        shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
+
+        gridView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(gridView)
+        gridView.backgroundColor = UIColor.clear
+        gridView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: CGFloat(horizontalMargin)).isActive = true
+        gridView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: CGFloat(-1 * horizontalMargin)).isActive = true
+        gridView.topAnchor.constraint(equalTo: view.topAnchor, constant: CGFloat(verticalMargin)).isActive = true
+        gridView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: CGFloat(-1 * verticalMargin)).isActive = true
+    }
 }
 
 
