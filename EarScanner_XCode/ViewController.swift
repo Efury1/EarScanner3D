@@ -11,6 +11,7 @@ import Foundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var imageTake: UIImage!
+    @IBOutlet var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
 
     //capture session
@@ -159,7 +160,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         let image = UIImage(data: data)
         
         
-        let imageView = UIImageView(image: image)
+        imageView =  UIImageView(image: image)
         
         //Maybe Remove
         session?.stopRunning()
@@ -178,6 +179,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         imageTake = image
         NextPhotoButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
         
+        RetakeButton.addTarget(self, action: #selector(retake), for: .touchUpInside)
         
         
         
@@ -185,7 +187,14 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
     }
     @objc private func savePhoto() {
         UIImageWriteToSavedPhotosAlbum(imageTake, nil, nil, nil)
+        session?.startRunning()
+        imageView.removeFromSuperview()
 
+    }
+    @objc private func retake() {
+        session?.startRunning()
+        imageView.removeFromSuperview()
+        
     }
     
 }
