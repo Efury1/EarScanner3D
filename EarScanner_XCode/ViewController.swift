@@ -109,13 +109,16 @@ class ViewController: UIViewController {
                 let temp = AVCaptureDevice.WhiteBalanceTemperatureAndTintValues.init(temperature: 3000, tint: 0)
                 //convert the temperature element into white balance gains
                 var tempgains = device.deviceWhiteBalanceGains(for: temp)
-                
+                //define a time element of 1/60 seconds
+                var exposureTime = CMTimeMake(value: 1, timescale: 60)
                 
 //                var Gains = AVCaptureDevice.WhiteBalanceGains.init(redGain: 4, greenGain: 2.82, blueGain: 1.68)
                 //lock the white balance
                 try device.lockForConfiguration() //add a catch
                 //set the white balance to the gains
                 device.setWhiteBalanceModeLocked(with: tempgains, completionHandler: nil)
+                //set exposure to the defined time element and iso to 200
+                device.setExposureModeCustom(duration: exposureTime, iso: 200, completionHandler: nil)
                 //unlock
                 device.unlockForConfiguration()
                 previewLayer.videoGravity = .resizeAspectFill
