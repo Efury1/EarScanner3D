@@ -63,9 +63,9 @@ class ViewController: UIViewController {
         
         
         RetakeButton.center = CGPoint(x: view.frame.size.width - (view.frame.size.width*0.85),
-                                       y: view.frame.size.height -  (view.frame.size.height*0.93) )
+                                       y: view.frame.size.height -  (view.frame.size.height*0.85) )
         NextPhotoButton.center = CGPoint(x:  view.frame.size.width*0.80,
-                                       y: view.frame.size.height -  (view.frame.size.height*0.93) )
+                                       y: view.frame.size.height -  (view.frame.size.height*0.85) )
         shutterButton.center = CGPoint(x: (view.frame.size.width/2)+10 ,
                                        y: view.frame.size.height - (view.frame.size.height*0.18) )
     }
