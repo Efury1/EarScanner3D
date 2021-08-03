@@ -3,35 +3,23 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="EarScanner_XCode" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ze7-FF-JmA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="17" y="2590"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uis-0z-Ip3">
             <objects>
                 <tabBarController id="RbX-Pi-iHW" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lzp-ic-pS0">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="lzp-ic-pS0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="systemPurpleColor"/>
+                        <color key="barTintColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="RwJ-pp-vpX" kind="relationship" relationship="viewControllers" id="JL5-ZM-ajl"/>
@@ -47,13 +35,15 @@
         <scene sceneID="TvY-w4-6GL">
             <objects>
                 <navigationController id="dR5-5A-ZWN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Start" image="plus.circle.fill" catalog="system" id="GRA-7Z-EpZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nds-Te-NoY">
+                    <tabBarItem key="tabBarItem" title="Start" image="plus.circle.fill" catalog="system" id="GRA-7Z-EpZ">
+                        <color key="badgeColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Nds-Te-NoY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" systemColor="systemPinkColor"/>
+                        <color key="barTintColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" systemColor="systemOrangeColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <userDefinedRuntimeAttributes>
@@ -76,9 +66,13 @@
                     <tabBarItem key="tabBarItem" title="Tutorial" image="questionmark" catalog="system" id="WBP-aB-Hbe">
                         <color key="badgeColor" systemColor="systemPinkColor"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZzT-cL-Goo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ZzT-cL-Goo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="IlQ-5X-PzY" kind="relationship" relationship="rootViewController" id="zsh-BQ-D1q"/>
@@ -88,21 +82,22 @@
             </objects>
             <point key="canvasLocation" x="586" y="761"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial-->
         <scene sceneID="Jqw-OG-LNE">
             <objects>
                 <viewController id="IlQ-5X-PzY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JPM-yT-vNo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="GvS-hy-pGB"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4Uh-Cx-v27">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="filemenu.and.selection" catalog="system" id="vvM-CW-iFR">
-                            <color key="tintColor" systemColor="systemPurpleColor"/>
+                    <navigationItem key="navigationItem" title="Tutorial" id="4Uh-Cx-v27">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3.circle.fill" catalog="system" id="jMj-vI-4Vr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="e09-JQ-R8g" kind="show" id="bFD-Uq-4hY"/>
+                                <segue destination="e09-JQ-R8g" kind="show" id="14N-zH-P72"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -116,9 +111,13 @@
             <objects>
                 <navigationController id="ENK-Yq-ql5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Photosets" image="photo.on.rectangle.angled" catalog="system" id="sKx-X4-IGT"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5i-A5-E5Q">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="A5i-A5-E5Q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="5wh-8P-WbK" kind="relationship" relationship="rootViewController" id="X49-i4-tDw"/>
@@ -128,21 +127,22 @@
             </objects>
             <point key="canvasLocation" x="2038" y="761"/>
         </scene>
-        <!--View Controller-->
+        <!--Photosets-->
         <scene sceneID="3d8-q8-MRv">
             <objects>
                 <viewController id="5wh-8P-WbK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gVN-0Y-xd0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Nak-8K-dUG"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SOa-eT-Ehx">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="filemenu.and.selection" catalog="system" id="R86-Lu-b9u">
-                            <color key="tintColor" systemColor="systemPurpleColor"/>
+                    <navigationItem key="navigationItem" title="Photosets" id="SOa-eT-Ehx">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3.circle.fill" catalog="system" id="5dI-V7-gf5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="e09-JQ-R8g" kind="show" id="Q1C-Wh-Y2T"/>
+                                <segue destination="e09-JQ-R8g" kind="show" id="hia-af-9Rr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -151,12 +151,12 @@
             </objects>
             <point key="canvasLocation" x="2038" y="1454"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="R6R-an-4Cg">
             <objects>
                 <viewController id="UoM-2Z-qXg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cyK-RQ-GBo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9O-Jv-UEn">
@@ -165,14 +165,15 @@
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ahl-hN-sTe"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                        <color key="tintColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SNT-eA-ZNM">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="filemenu.and.selection" catalog="system" id="C9W-XJ-AtZ">
-                            <color key="tintColor" systemColor="systemPurpleColor"/>
+                    <navigationItem key="navigationItem" title="Home" id="SNT-eA-ZNM">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="rhj-OS-IAC">
+                            <imageReference key="image" image="line.horizontal.3.circle.fill" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="e09-JQ-R8g" kind="show" id="KYW-4h-fSk"/>
+                                <segue destination="e09-JQ-R8g" kind="show" id="YTJ-1T-zM5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -186,59 +187,224 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="e09-JQ-R8g" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDa-8G-a2a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUc-0K-uJF">
-                                <rect key="frame" x="0.0" y="88" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2R-rA-8fS">
-                                <rect key="frame" x="159" y="268" width="96" height="222"/>
+                                <rect key="frame" x="159" y="708" width="96" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Photo"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Knw-LZ-w8Z"/>
-                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="ZUu-Iy-8Vy">
+                                <rect key="frame" x="77" y="133" width="260" height="457"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmK-Sk-kg1">
+                                        <rect key="frame" x="25" y="25" width="210" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Profile"/>
+                                        <connections>
+                                            <segue destination="fEL-yq-Lhm" kind="show" id="aiY-i2-BoP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SE-Gu-oOb">
+                                        <rect key="frame" x="25" y="98" width="210" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Contact Us"/>
+                                        <connections>
+                                            <segue destination="Qbj-PT-vLY" kind="show" id="hMv-5Y-0dw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dED-tR-7Fc">
+                                        <rect key="frame" x="25" y="171" width="210" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Share"/>
+                                        <connections>
+                                            <segue destination="pLP-Ce-Mw2" kind="show" id="quj-NM-htR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXM-Qv-yPP">
+                                        <rect key="frame" x="25" y="244" width="210" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="About Us"/>
+                                        <connections>
+                                            <segue destination="IGS-C2-jCB" kind="show" id="AcH-BK-2aw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHE-yM-x6T">
+                                        <rect key="frame" x="25" y="317" width="210" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Terms &amp; Conditions"/>
+                                        <connections>
+                                            <segue destination="KyH-rW-Pku" kind="show" id="czL-2p-s2v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79j-qq-mUj">
+                                        <rect key="frame" x="25" y="390" width="210" height="42"/>
+                                        <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="GMM-Cc-ku3" kind="show" id="I5I-6T-6oP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <edgeInsets key="layoutMargins" top="25" left="25" bottom="25" right="25"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L8f-HW-2gF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QaC-BI-ddS"/>
+                    <navigationItem key="navigationItem" id="QaC-BI-ddS">
+                        <nil key="title"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuG-iT-r76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295.6521739130435" y="2137.5"/>
+            <point key="canvasLocation" x="1295.6521739130435" y="2243.9732142857142"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Mkb-ix-n7a">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="fEL-yq-Lhm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t9t-8g-ckE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTY-ST-jPc">
+                                <rect key="frame" x="77" y="308" width="261" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Password"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3g-1M-p7s">
+                                <rect key="frame" x="77" y="362" width="261" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Account Type"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkk-Cc-vUX">
+                                <rect key="frame" x="77" y="252" width="261" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Email"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ST-JN-gYu">
+                                <rect key="frame" x="77" y="198" width="261" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Name"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ngl-Pl-LWe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="xBw-rU-j2S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Za0-pR-9lj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="2962"/>
+        </scene>
+        <!--Contact Us-->
+        <scene sceneID="0x0-JT-y2d">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="Qbj-PT-vLY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cIU-Tj-dKw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7Zt-tw-kPl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact Us" id="R9R-em-Yie"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rqu-9b-OEe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269.56521739130437" y="2961.8303571428569"/>
+        </scene>
+        <!--Share-->
+        <scene sceneID="eob-Nb-FX9">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="pLP-Ce-Mw2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LRv-cz-JK8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NkM-wp-Q01"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Share" id="Pwd-TP-84S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ozu-L9-1WR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="2962"/>
+        </scene>
+        <!--About Us-->
+        <scene sceneID="XtZ-FN-JUf">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="IGS-C2-jCB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t2E-jU-pyH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CxC-sl-26q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="OmE-l4-WoG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGc-AV-GI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="2962"/>
+        </scene>
+        <!--Terms & Conditions-->
+        <scene sceneID="SV3-Cw-hvH">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="KyH-rW-Pku" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mb6-ds-yMj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AI0-Z1-2Rt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Terms &amp; Conditions" id="xco-Bb-X4Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMg-DN-HiB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2246" y="2962"/>
+        </scene>
+        <!--Logout-->
+        <scene sceneID="9sW-81-YcH">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="GMM-Cc-ku3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rn1-eS-Bjl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FKP-5T-wIb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Logout" id="AJM-Xc-XoA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wZ-X1-AkZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2919" y="2962"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KYW-4h-fSk"/>
+        <segue reference="YTJ-1T-zM5"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" systemColor="systemPurpleColor"/>
+    <color key="tintColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
+        <image name="line.horizontal.3.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
