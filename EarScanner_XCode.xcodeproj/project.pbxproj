@@ -19,6 +19,7 @@
 		5687B81826B93E8C00548B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687B81726B93E8C00548B19 /* LoginViewController.swift */; };
 		5687B81D26B94A5900548B19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687B81C26B94A5900548B19 /* HomeViewController.swift */; };
 		569B3CE226BB4FA600A1A76E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569B3CE126BB4FA600A1A76E /* Login.storyboard */; };
+		569B3CE426BB52A100A1A76E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569B3CE326BB52A100A1A76E /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5687B81726B93E8C00548B19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5687B81C26B94A5900548B19 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		569B3CE126BB4FA600A1A76E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		569B3CE326BB52A100A1A76E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				47947D7C26B3EABD00761DC8 /* Main.storyboard */,
 				569B3CE126BB4FA600A1A76E /* Login.storyboard */,
 				47947D7F26B3EABF00761DC8 /* Assets.xcassets */,
+				569B3CE326BB52A100A1A76E /* Media.xcassets */,
 				47947D8126B3EABF00761DC8 /* LaunchScreen.storyboard */,
 				47947D8426B3EABF00761DC8 /* Info.plist */,
 				47947D8A26B55DCB00761DC8 /* GridView.swift */,
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569B3CE426BB52A100A1A76E /* Media.xcassets in Resources */,
 				569B3CE226BB4FA600A1A76E /* Login.storyboard in Resources */,
 				47947D8326B3EABF00761DC8 /* LaunchScreen.storyboard in Resources */,
 				47947D8026B3EABF00761DC8 /* Assets.xcassets in Resources */,
