@@ -13,7 +13,6 @@
         <!--View Controller-->
         <scene sceneID="zQL-NB-T6x">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TAU-7g-m20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="SWI-6d-uB4" customClass="ViewController" customModule="EarScanner_XCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JE1-ep-akq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
@@ -23,6 +22,7 @@
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="8fS-Kk-l3R"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TAU-7g-m20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2883" y="1454"/>
         </scene>
