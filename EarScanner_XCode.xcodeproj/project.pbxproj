@@ -79,12 +79,12 @@
 				47947D7C26B3EABD00761DC8 /* Main.storyboard */,
 				569B3CE126BB4FA600A1A76E /* Login.storyboard */,
 				47947D8126B3EABF00761DC8 /* LaunchScreen.storyboard */,
-				47947D7F26B3EABF00761DC8 /* Assets.xcassets */,
-				569B3CE326BB52A100A1A76E /* Media.xcassets */,
-				47947D8426B3EABF00761DC8 /* Info.plist */,
 				47947D8A26B55DCB00761DC8 /* GridView.swift */,
 				47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */,
 				566CCE0E26BBFABA00DF6616 /* DesignableView.swift */,
+				47947D8426B3EABF00761DC8 /* Info.plist */,
+				47947D7F26B3EABF00761DC8 /* Assets.xcassets */,
+				569B3CE326BB52A100A1A76E /* Media.xcassets */,
 			);
 			path = EarScanner_XCode;
 			sourceTree = "<group>";
