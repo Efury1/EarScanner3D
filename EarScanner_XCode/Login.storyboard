@@ -202,10 +202,16 @@
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="W9Z-b8-lBl">
-                                <rect key="frame" x="57" y="191" width="300" height="235"/>
+                                <rect key="frame" x="57" y="191" width="300" height="367"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ear Scanner 3D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQL-le-kfT">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="0Uz-6G-LKQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="67" width="300" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIh-HX-I9a">
                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="34"/>
@@ -224,7 +230,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="ASg-ps-5Yd">
-                                        <rect key="frame" x="0.0" y="71" width="300" height="164"/>
+                                        <rect key="frame" x="0.0" y="138" width="300" height="229"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVu-kb-OHE">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
@@ -241,21 +247,28 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyx-uf-2Cd">
+                                                <rect key="frame" x="0.0" y="195" width="300" height="34"/>
+                                                <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Sign up"/>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="Orc-5I-p6d"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O3k-Kd-nlk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SU7-fA-75a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893" y="-218"/>
+            <point key="canvasLocation" x="892.75362318840587" y="-218.30357142857142"/>
         </scene>
     </scenes>
     <resources>
