@@ -15,6 +15,7 @@
 		47947D8326B3EABF00761DC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47947D8126B3EABF00761DC8 /* LaunchScreen.storyboard */; };
 		47947D8B26B55DCB00761DC8 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D8A26B55DCB00761DC8 /* GridView.swift */; };
 		47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */; };
+		566CCE0F26BBFABA00DF6616 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CCE0E26BBFABA00DF6616 /* DesignableView.swift */; };
 		5687B81626B93E5E00548B19 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687B81526B93E5E00548B19 /* SignupViewController.swift */; };
 		5687B81826B93E8C00548B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687B81726B93E8C00548B19 /* LoginViewController.swift */; };
 		5687B81D26B94A5900548B19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687B81C26B94A5900548B19 /* HomeViewController.swift */; };
@@ -33,6 +34,7 @@
 		47947D8426B3EABF00761DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47947D8A26B55DCB00761DC8 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToPhotoAlbum.swift; sourceTree = "<group>"; };
+		566CCE0E26BBFABA00DF6616 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		5687B81526B93E5E00548B19 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		5687B81726B93E8C00548B19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5687B81C26B94A5900548B19 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -76,12 +78,13 @@
 				5687B81B26B9470700548B19 /* ViewControllers */,
 				47947D7C26B3EABD00761DC8 /* Main.storyboard */,
 				569B3CE126BB4FA600A1A76E /* Login.storyboard */,
+				47947D8126B3EABF00761DC8 /* LaunchScreen.storyboard */,
 				47947D7F26B3EABF00761DC8 /* Assets.xcassets */,
 				569B3CE326BB52A100A1A76E /* Media.xcassets */,
-				47947D8126B3EABF00761DC8 /* LaunchScreen.storyboard */,
 				47947D8426B3EABF00761DC8 /* Info.plist */,
 				47947D8A26B55DCB00761DC8 /* GridView.swift */,
 				47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */,
+				566CCE0E26BBFABA00DF6616 /* DesignableView.swift */,
 			);
 			path = EarScanner_XCode;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				47947D8B26B55DCB00761DC8 /* GridView.swift in Sources */,
 				47947D7926B3EABD00761DC8 /* SceneDelegate.swift in Sources */,
 				47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */,
+				566CCE0F26BBFABA00DF6616 /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
