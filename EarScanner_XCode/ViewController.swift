@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     //Video Preview
     let previewLayer = AVCaptureVideoPreviewLayer()
     //Shutter Button
-    private let shutterButton: UIButton = {
+    public let shutterButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.layer.cornerRadius = 50
         button.layer.borderWidth = 10
