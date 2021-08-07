@@ -6,3 +6,34 @@
 //
 
 import Foundation
+
+import UIKit
+
+class LoginViewController:
+    UIViewController {
+    
+    @IBOutlet weak var
+        emailLoginTextField:
+            UITextField!
+    
+    
+    @IBOutlet weak var
+        passwordLoginTextField:
+            UITextField!
+    
+    @IBOutlet weak var
+        loginButton:
+            UIButton!
+    
+    override func
+    viewDidLoad() {
+        super.viewDidLoad()
+        //Additional setup after loading view
+    }
+    
+    //Handing Login button
+    @IBAction func
+    loginTapped(_ sender:
+                    Any) {
+    }
+}
