@@ -10,26 +10,17 @@ import Foundation
 import UIKit
 
 class LoginViewController: UIViewController {
-    
-    @IBOutlet weak var
-        emailLoginTextField:
-            UITextField!
-    
-    
-    @IBOutlet weak var
-        passwordLoginTextField:
-            UITextField!
-    
-    @IBOutlet weak var
-        loginButton:
-            UIButton!
-    
-    override func
-    viewDidLoad() {
+  
+    @IBOutlet weak var emailLoginTextField: UITextField!
+    @IBOutlet weak var passwordLoginTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+
+    override func viewDidLoad() {
         super.viewDidLoad()
-        //Additional setup after loading view
+        
+        //emailLoginTextField.delegate = self
+        //passwordLoginTextField.delegate = self
     }
-    
     //Handing Login button
     @IBAction func
     loginTapped(_ sender:
@@ -65,18 +56,26 @@ class LoginViewController: UIViewController {
         
     }
     
+    //trying to code it so it listens toi every chnage in UITextView.
+    //I think there needs to be a view did load
+    override func viewWillAppear(_ animated: Bool) {
+        //Not sure if viewWillAppear is the correct way to go about it
+        //It notifies the view is about ot be assed to a view hierarchy
+            super.viewWillAppear(animated)
+        //adds entry to notification center to receive notifications
+            NotificationCenter.default.addObserver(
+                //not  understanding what self is
+                    self,
+                //it's support to recognise obj private function
+                    selector: #selector(textViewDidChangeWithNotification(_:)),
+                    name: UITextField.textDidChangeNotification,
+                    object: nil
+            )
+    }
     
+    //Trying to print notification to output
+    @objc private func textViewDidChangeWithNotification(_ notification: Notification) {
+             print("Text: \(String(describing: emailLoginTextField.text))")
+    }
 
-
-
-            
-          
-            
-     
-    
-        }
-    
-
-
-
-
+}
