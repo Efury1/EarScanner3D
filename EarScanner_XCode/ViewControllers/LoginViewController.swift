@@ -33,9 +33,7 @@ class LoginViewController: UIViewController {
     override func
     viewDidLoad() {
         super.viewDidLoad()
-        
-        //emailLoginTextField.delegate = self
-        //passwordLoginTextField.delegate = self
+        //Additional setup after loading view
     }
     //gets the text inputs
     @IBOutlet weak var PasswordField: UITextField!
@@ -108,4 +106,3 @@ extension LoginViewController : UITextFieldDelegate {
 
 
 
-}
