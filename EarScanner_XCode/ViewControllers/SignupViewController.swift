@@ -8,43 +8,24 @@
 import Foundation
 import UIKit;
 
-class SignUpViewController:
-    UIViewController {
 
-    @IBOutlet weak var
-        NameTextField:
-            UITextField!
-
-    @IBOutlet weak var
-        LastNameTextField:
-            UITextField!
-    
-    @IBOutlet weak var
-        EmailTextField:
-            UITextField!
-    
-    @IBOutlet weak var
-        PasswordTextField:
-            UITextField!
+class SignUpViewController: UIViewController {
     
     
-    @IBOutlet weak var
-        ConfirmPasswordTextField:
-            UITextField!
     
-    @IBOutlet weak var
-        SignupButton:
-            UIButton!
+    @IBOutlet weak var firstNameTextField: UITextField!
     
+    @IBOutlet weak var lastNameTextField: UITextField!
     
-    @IBOutlet weak var
-        ErrorLabel:
-            UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
     
-    //functions 
+    @IBOutlet weak var retypeEmailTextField: UITextField!
     
-    @IBAction func
-        signUpTapped(_
-        sender: Any) {
-    }
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var registerTextField: UIButton!
+    
+    @IBAction func RegisterButton(_ sender: Any) {
+        
+}
 }
