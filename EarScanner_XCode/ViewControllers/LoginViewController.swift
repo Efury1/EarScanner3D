@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     loginTapped(_ sender:
                     Any) {
         //set the url of the api
-        let url = URL(string:  "https://r316dbbv9l.execute-api.ap-southeast-2.amazonaws.com/Version2-POST")
+        let url = URL(string:  "https://r316dbbv9l.execute-api.ap-southeast-2.amazonaws.com/Version2-POST/login?fbclid=IwAR3BVYlKy_6Wza495RLvXkbBLzdP058VtwSw4qpNppmdHwVA5Bgf49rgTUM")
         //make a request object with the url
         var request = URLRequest(url: url!)
         //attach the json body to he request
