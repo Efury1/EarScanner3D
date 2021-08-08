@@ -22,9 +22,9 @@ class LoginViewController: UIViewController {
 //    }
     
     
-    @IBOutlet weak var
-        passwordLoginTextField:
-            UITextField!
+//    @IBOutlet weak var
+//        passwordLoginTextField:
+//            UITextField!
     
     @IBOutlet weak var
         loginButton:
@@ -36,9 +36,11 @@ class LoginViewController: UIViewController {
         //Additional setup after loading view
     }
     //gets the text inputs
-    @IBOutlet weak var PasswordField: UITextField!
     
     @IBOutlet weak var EmailField: UITextField!
+    
+    @IBOutlet weak var PasswordField: UITextField!
+
     //Handing Login button
     @IBAction func
     loginTapped(_ sender:

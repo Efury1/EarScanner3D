@@ -50,9 +50,6 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="emailTextFieldChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="Tba-c1-wHu"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -92,9 +89,6 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                                <connections>
-                                                                    <action selector="passwordFieldChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="pVC-EN-Yog"/>
-                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -180,8 +174,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="EmailField" destination="1NP-qE-E6X" id="Qs3-Wo-arG"/>
-                        <outlet property="PasswordField" destination="jb3-04-JXt" id="GIt-9R-4r9"/>
+                        <outlet property="EmailField" destination="1NP-qE-E6X" id="e6g-Li-U8h"/>
+                        <outlet property="PasswordField" destination="jb3-04-JXt" id="9dE-3m-roA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
