@@ -59,12 +59,17 @@ class LoginViewController: UIViewController {
         //pass in the text inputs
         let jsonbody = [  "Email": email, "Password": password]
         //making sure to convet it to json and attach it, testing if it breaks
-        do { let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
+        do
+        {
+            let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
             request.httpBody = requestBody
         }
-        catch {
+        catch
+        {
             print("error creating request body")
         }
+        
+        
         //set the method to POST
         request.httpMethod = "POST"
         
@@ -72,16 +77,11 @@ class LoginViewController: UIViewController {
         //make the request
         let dataTask = session.dataTask(with: request) { data, response, error in
         //decode the request and print the result
-            let UserExists = String(decoding: data!, as: UTF8.self)
+        let UserExists = String(decoding: data!, as: UTF8.self)
             /// USEREXISTS
-            //print(UserExists) //returns true or false boolean
+        print(UserExists) //returns true or false boolean
             
             
-            //Testing if and else statment 
-            let person = "valid"
-            if person == "valid" {
-                print(UserExists)
-            }
         }
         //resume the datatask
         dataTask.resume()
