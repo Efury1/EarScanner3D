@@ -74,9 +74,14 @@ class LoginViewController: UIViewController {
         //decode the request and print the result
             let UserExists = String(decoding: data!, as: UTF8.self)
             /// USEREXISTS
-            print(UserExists) //returns true or false boolean
-            ///
-
+            //print(UserExists) //returns true or false boolean
+            
+            
+            //Testing if and else statment 
+            let person = "valid"
+            if person == "valid" {
+                print(UserExists)
+            }
         }
         //resume the datatask
         dataTask.resume()
