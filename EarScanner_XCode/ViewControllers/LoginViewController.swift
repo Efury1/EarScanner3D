@@ -25,7 +25,10 @@ class LoginViewController: UIViewController {
 //    @IBOutlet weak var
 //        passwordLoginTextField:
 //            UITextField!
-    
+    struct MyVariables {
+        static var UserExists = "False"
+        static var dataTaskFinished = false
+    }
     @IBOutlet weak var
         loginButton:
             UIButton!
@@ -40,6 +43,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var EmailField: UITextField!
     
     @IBOutlet weak var PasswordField: UITextField!
+    
+    
 
     //Handing Login button
     @IBAction func
@@ -53,6 +58,7 @@ class LoginViewController: UIViewController {
         
         //set the url of the api
         let url = URL(string:  "https://r316dbbv9l.execute-api.ap-southeast-2.amazonaws.com/Version2-POST/login")
+        
         //make a request object with the url
         var request = URLRequest(url: url!)
         //attach the json body to he request
@@ -74,19 +80,56 @@ class LoginViewController: UIViewController {
         request.httpMethod = "POST"
         
         let session = URLSession.shared
+        
+        var UserExists = "False"
+        
         //make the request
-        let dataTask = session.dataTask(with: request) { data, response, error in
+        MyVariables.dataTaskFinished = false
+        let dataTask =  session.dataTask(with: request) { data, response, error in
         //decode the request and print the result
-        let UserExists = String(decoding: data!, as: UTF8.self)
+        UserExists = String(decoding: data!, as: UTF8.self)
             /// USEREXISTS
-        print(UserExists) //returns true or false boolean
             
+            print(UserExists)
+            if (UserExists.contains("True")){
+                MyVariables.UserExists = "True"
+                MyVariables.dataTaskFinished = true
+                return
+                
+                
+               
+            }
+            else
+            {
+                MyVariables.UserExists = "False"
+                MyVariables.dataTaskFinished = true
+                return
+            }
+            
+             //returns true or false string
             
         }
+        
         //resume the datatask
+        
         dataTask.resume()
         
+        while (MyVariables.dataTaskFinished == false){
+            print("waiting")
+        }
         
+        if (MyVariables.UserExists == "True"){
+        let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+        self.addChild(childViewController)
+        self.view.addSubview(childViewController.view)
+        childViewController.didMove(toParent: self)
+        }
+        else{
+            ///SAY WRONG EMAIL OR PASSWORD
+            print("wrong email or password")
+        }
+        
+           
     }
 }
 extension LoginViewController : UITextFieldDelegate {
