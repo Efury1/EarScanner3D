@@ -36,10 +36,18 @@ class LoginViewController: UIViewController {
     override func
     viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         //Additional setup after loading view
     }
     //gets the text inputs
     
+    @IBAction func Done(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func DonePassword(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     @IBOutlet weak var EmailField: UITextField!
     
     @IBOutlet weak var PasswordField: UITextField!
