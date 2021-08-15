@@ -11,7 +11,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    
+    var userDefaults = UserDefaults.standard
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var EmailField: UITextField!
@@ -44,6 +44,7 @@ class LoginViewController: UIViewController {
     //Handing Login button
     @IBAction func
     loginTapped(_ sender: Any) {
+       
 //    saves the text inputs to variables
      guard
         let email = EmailField.text,
@@ -78,6 +79,12 @@ class LoginViewController: UIViewController {
             
             print(UserExists)
             if (UserExists.contains("True")){
+                //Implement autologin 
+                self.userDefaults.setValue(true, forKey: "UserExists")
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "loginSegue", sender: self)
+                    
+                }
                 MyVariables.UserExists = "True"
                 MyVariables.dataTaskFinished = true
                 return
