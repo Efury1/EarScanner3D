@@ -11,18 +11,16 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
- 
     
-
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var mainTitle: UILabel!
+    @IBOutlet weak var EmailField: UITextField!
+    @IBOutlet weak var PasswordField: UITextField!
     
     struct MyVariables {
         static var UserExists = "False"
         static var dataTaskFinished = false
     }
-    @IBOutlet weak var
-        loginButton:
-            UIButton!
     
     override func
     viewDidLoad() {
@@ -30,25 +28,22 @@ class LoginViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         //Additional setup after loading view
     }
-    //gets the text inputs
     
-    @IBAction func Done(_ sender: UITextField) {
+    
+    @IBAction func Done(_ sender: UITextField) { //gets the text inputs
         sender.resignFirstResponder()
     }
     
     @IBAction func DonePassword(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
-    @IBOutlet weak var EmailField: UITextField!
     
-    @IBOutlet weak var PasswordField: UITextField!
     
     
 
     //Handing Login button
     @IBAction func
-    loginTapped(_ sender:
-                    Any) {
+    loginTapped(_ sender: Any) {
 //    saves the text inputs to variables
      guard
         let email = EmailField.text,
@@ -57,14 +52,9 @@ class LoginViewController: UIViewController {
         
         //set the url of the api
         let url = URL(string:  "https://r316dbbv9l.execute-api.ap-southeast-2.amazonaws.com/Version2-POST/login")
-        
-        //make a request object with the url
-        var request = URLRequest(url: url!)
-        //attach the json body to he request
-        //pass in the text inputs
-        let jsonbody = [  "Email": email, "Password": password]
-        //making sure to convet it to json and attach it, testing if it breaks
-        do
+        var request = URLRequest(url: url!) //make a request object with the url
+        let jsonbody = [  "Email": email, "Password": password]  //attach the json body to he request. pass in the text inputs
+        do //making sure to convet it to json and attach it, testing if it breaks
         {
             let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
             request.httpBody = requestBody
@@ -74,12 +64,9 @@ class LoginViewController: UIViewController {
             print("error creating request body")
         }
         
-        
-        //set the method to POST
-        request.httpMethod = "POST"
-        
+    
+        request.httpMethod = "POST" //set the method to POST
         let session = URLSession.shared
-        
         var UserExists = "False"
         
         //make the request
@@ -94,9 +81,6 @@ class LoginViewController: UIViewController {
                 MyVariables.UserExists = "True"
                 MyVariables.dataTaskFinished = true
                 return
-                
-                
-               
             }
             else
             {
@@ -109,38 +93,28 @@ class LoginViewController: UIViewController {
             
         }
         
-        //resume the datatask
         
-        dataTask.resume()
         
+        dataTask.resume() //resume the datatask
         while (MyVariables.dataTaskFinished == false){
             print("waiting")
         }
         
         if (MyVariables.UserExists == "True"){
-        let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
-        self.addChild(childViewController)
-        self.view.addSubview(childViewController.view)
-        childViewController.didMove(toParent: self)
+            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+            self.addChild(childViewController)
+            self.view.addSubview(childViewController.view)
+            childViewController.didMove(toParent: self)
         }
         else{
-            ///SAY WRONG EMAIL OR PASSWORD
-            //print("wrong email or password")
-            
-            // create the alert
-            let alert = UIAlertController(title: "Error", message: "Wrong password or email", preferredStyle: UIAlertController.Style.alert)
-
-            // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-            // show the alert
-            self.present(alert, animated: true, completion: nil)
-            
+            //Alert if password or email is wrong
+            let alert = UIAlertController(title: "Error", message: "Wrong password or email", preferredStyle: UIAlertController.Style.alert) //create alert
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+            self.present(alert, animated: true, completion: nil) // show the alert
         }
-        
-           
     }
 }
+
 extension LoginViewController : UITextFieldDelegate {
         
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -148,8 +122,7 @@ extension LoginViewController : UITextFieldDelegate {
         
         return true
     }
-        
-    }
+}
     
     
 
