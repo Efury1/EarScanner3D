@@ -13,18 +13,9 @@ class LoginViewController: UIViewController {
     
  
     
+
+    @IBOutlet weak var mainTitle: UILabel!
     
-    
-    //gets text from emailLoginTextField and saves it to email
-//    @IBAction func getVal () {
-//        var email: String = emailLoginTextField.text!
-//
-//    }
-    
-    
-//    @IBOutlet weak var
-//        passwordLoginTextField:
-//            UITextField!
     struct MyVariables {
         static var UserExists = "False"
         static var dataTaskFinished = false
