@@ -32,6 +32,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var registerTextField: UIButton!
      
     //Eliza: Need to change registerText to button
+    //Need to check whether text fields are written
+    //Password needs to specify the expectations
+    //Make sure email has a @
+    //Check if user exsists
+    
     @IBAction func submitAction(sender: UIButton) {
         //create URL, will need URL
         let url = URL(string: "www.example.com") //creating URL object
