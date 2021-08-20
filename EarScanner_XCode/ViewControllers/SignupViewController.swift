@@ -14,11 +14,12 @@ import CoreData
 
 class SignUpViewController: UIViewController {
     
-    /*
+     /*
      ELiza: Need to add Terms and Condition solution
      
      */
     
+    //Need to redo these after the storyboard has correct dimensions
     @IBOutlet weak var firstNameTextField: UITextField!
     
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -30,6 +31,18 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var registerTextField: UIButton!
+    
+    
+    //switch button. Still need to drag it in
+    /*@IBOutlet func switchPressed(   sender: UISwitch) {
+        if switch.isOn() {
+            label.text = "Switch is on"
+        switch.SetOn(false, animated: true)
+        } else {
+            label.text = "Switch is on"
+            switch.setOn(true, animated: true)
+        }
+    }*/
      
     //Eliza: Need to change registerText to button
     //Need to check whether text fields are written
@@ -79,3 +92,24 @@ class SignUpViewController: UIViewController {
     }
 }
 
+//Codeable is alias for two other modules Encodable and Decodable
+struct Users: Codable {
+    var firstName: String
+    var lastName: String
+    var email: String
+    var password: String
+    
+}
+
+
+/*class SignUpViewController: UIViewController {
+let encoder = JSONEncoder()
+let data = try encoder.encode(Users)
+let string = String(data: data, encoding: .utf8)!
+    
+    //if this enum exists, we be used for coding and encoding
+    func emumCodingKeys() -> String;, CodingKey {
+        case firstName,  lastName, email, password
+        
+    }
+ }*/

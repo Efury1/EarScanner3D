@@ -35,9 +35,8 @@ class MainViewController: UIViewController {
     }*/
     
     @IBAction func logoutButton(_ sender: Any) {
-        let alert1 = UIAlertController(title: "Error", message: "Connection Timed Out", preferredStyle: UIAlertController.Style.alert) //create alert
-        alert1.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
-         self.present(alert1, animated: true, completion: nil) // show the alert
+        
+        print("Users action was tapped")
     }
     
 }
