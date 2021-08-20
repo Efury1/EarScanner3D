@@ -386,10 +386,10 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="lde-rU-3kD">
-                                <rect key="frame" x="30" y="30" width="354" height="665"/>
+                                <rect key="frame" x="30" y="30" width="200" height="665"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ear" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7ZL-ql-H22">
-                                        <rect key="frame" x="0.0" y="-1" width="354" height="297"/>
+                                        <rect key="frame" x="0.0" y="-1" width="200" height="297"/>
                                         <color key="tintColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="33r-Ww-zOa"/>
@@ -397,7 +397,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ear Scanner 3D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07j-VY-nHw">
-                                        <rect key="frame" x="0.0" y="374" width="354" height="37"/>
+                                        <rect key="frame" x="0.0" y="374" width="200" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="t6C-xf-yzZ"/>
                                         </constraints>
@@ -406,7 +406,7 @@
                                         <color key="highlightedColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bde-WX-OTh">
-                                        <rect key="frame" x="0.0" y="488" width="354" height="50"/>
+                                        <rect key="frame" x="0.0" y="488" width="200" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="M9D-zr-vS9"/>
@@ -423,7 +423,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wri-2b-Fp3">
-                                        <rect key="frame" x="0.0" y="615" width="354" height="50"/>
+                                        <rect key="frame" x="0.0" y="615" width="200" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iaq-g9-I45"/>
@@ -475,7 +475,7 @@
         <!--Menu-->
         <scene sceneID="a48-MC-T7K">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="e09-JQ-R8g" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="e09-JQ-R8g" customClass="MainViewController" customModule="EarScanner_XCode" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDa-8G-a2a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -596,6 +596,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79j-qq-mUj">
                                         <rect key="frame" x="25" y="285" width="264" height="35"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" label="logoutButton"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <state key="normal" title="Logout">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -605,6 +606,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logoutButton:" destination="G5M-lv-Fu5" eventType="touchUpInside" id="zYO-U5-T53"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -625,6 +629,7 @@
                     <navigationItem key="navigationItem" title="Menu" id="QaC-BI-ddS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuG-iT-r76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="G5M-lv-Fu5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1295.6521739130435" y="2243.9732142857142"/>
         </scene>
