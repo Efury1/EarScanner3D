@@ -80,6 +80,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
  
 //Buttons are connected
 @IBAction func signup(_ sender: Any) {
+    print("heh")
         //create URL, will need URL
         let url = URL(string: "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Register") //creating URL object
         let session = URLSession.shared //Session object
@@ -104,6 +105,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     var UserExists = "False"
     
     let dataTask =  session.dataTask(with: request) { data, response, error in
+        print("heh2")
     //decode the request and print the result
         //checks if response returned and if not checks internet
         if (data != nil){
