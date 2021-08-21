@@ -11,7 +11,8 @@ import UIKit
 import CoreData
 import CryptoKit
 
-
+/*
+ * James, Not sure how to implement the encoding functions with the other code. Eliza*/
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     //Need to redo these after the storyboard has correct dimensions
