@@ -246,6 +246,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Htg-g3-kzj">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchConditon:" destination="ZWz-jN-3IQ" eventType="valueChanged" id="E1S-c1-Ww0"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have read " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H18-hV-9j9">
                                                 <rect key="frame" x="49" y="0.0" width="87.5" height="31"/>
@@ -266,12 +269,14 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5gD-wU-PkA"/>
                                             <constraint firstAttribute="height" constant="40" id="R0t-R1-rao"/>
                                         </constraints>
-                                        <state key="normal" title="Register ">
+                                        <state key="normal" title="Sign up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="RegisterButton:" destination="ZWz-jN-3IQ" eventType="touchUpInside" id="9z5-iV-KYa"/>
+                                            <action selector="signup:" destination="ZWz-jN-3IQ" eventType="touchUpInside" id="DX3-99-qLi"/>
+                                            <action selector="signupAction:" destination="ZWz-jN-3IQ" eventType="touchUpInside" id="BnY-y6-vQy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -302,12 +307,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="Xkb-KU-ytN"/>
                     <connections>
+                        <outlet property="Signup" destination="eT3-mP-4aW" id="O06-d5-OVc"/>
                         <outlet property="emailTextField" destination="P2A-Uo-X2b" id="bvh-Q1-g2S"/>
                         <outlet property="firstNameTextField" destination="DBu-a9-YEM" id="xQ8-5J-3hI"/>
                         <outlet property="lastNameTextField" destination="U8u-Bk-Wag" id="5yZ-NA-XWu"/>
                         <outlet property="passwordTextField" destination="Lbz-RY-OuE" id="E23-h3-HCA"/>
                         <outlet property="registerTextField" destination="eT3-mP-4aW" id="RaT-hv-40Z"/>
                         <outlet property="retypeEmailTextField" destination="Wmy-Bs-yxa" id="ZAc-Vx-oKT"/>
+                        <outlet property="signup" destination="eT3-mP-4aW" id="931-vh-aUK"/>
+                        <outlet property="switchCondition" destination="Htg-g3-kzj" id="srH-I0-JFQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SU7-fA-75a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

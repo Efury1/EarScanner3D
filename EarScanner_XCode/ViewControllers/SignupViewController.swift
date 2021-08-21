@@ -32,9 +32,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var passwordTextField: UITextField!
     
-    @IBOutlet weak var registerTextField: UIButton!
-
-
+    
+    @IBOutlet weak var signup: UIButton!
+    
+    //delegate allows 
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
@@ -68,9 +69,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
  
-    
-    @IBAction func submitAction(sender: UIButton) {
-        
+//Buttons are connected
+@IBAction func signup(_ sender: Any) {
         //create URL, will need URL
         let url = URL(string: "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Login") //creating URL object
         let session = URLSession.shared //Session object
