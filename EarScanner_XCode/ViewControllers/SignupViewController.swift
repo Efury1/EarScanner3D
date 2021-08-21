@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 import CoreData
+import CryptoKit
 
 
-
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
      /*
      ELiza: Need to add Terms and Condition solution
@@ -28,37 +28,55 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var retypeEmailTextField: UITextField!
     
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
     @IBOutlet weak var registerTextField: UIButton!
-    
-    
-    //switch button. Still need to drag it in
-    /*@IBOutlet func switchPressed(   sender: UISwitch) {
-        if switch.isOn() {
-            label.text = "Switch is on"
-        switch.SetOn(false, animated: true)
-        } else {
-            label.text = "Switch is on"
-            switch.setOn(true, animated: true)
-        }
-    }*/
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emailTextField.delegate = self
+    }
+    //create encyption key for passoword
+    func keyAccount(_ password: String) -> SymmetricKey {
+      // Create a SHA256 hash from the provided password
+      let hash = SHA256.hash(data: password.data(using: .utf8)!)
+      // Convert the SHA256 to a string. This will be a 64 byte string
+      let hashString = hash.map { String(format: "%02hhx", $0) }.joined()
+      // Convert to 32 bytes
+      let subString = String(hashString.prefix(32))
+      // Convert the substring to data
+      let keyData = subString.data(using: .utf8)!
      
-    //Eliza: Need to change registerText to button
-    //Need to check whether text fields are written
-    //Password needs to specify the expectations
-    //Make sure email has a @
-    //Check if user exsists
+      // Create the key use keyData as the seed
+      return SymmetricKey(data: keyData)
+    }
+    
+    func encryptCodableObject<T: Codable>(_ object: T, usingKey key: SymmetricKey) throws -> String {
+      // Convert to JSON in a Data record
+      let encoder = JSONEncoder()
+      let userData = try encoder.encode(object)
+     
+      // Encrypt the userData
+      let encryptedData = try ChaChaPoly.seal(userData, using: key)
+     
+      // Convert the encryptedData to a base64 string which is the
+      // format that it can be transported in
+      return encryptedData.combined.base64EncodedString()
+    }
+    
+ 
     
     @IBAction func submitAction(sender: UIButton) {
+        
         //create URL, will need URL
-        let url = URL(string: "www.example.com") //creating URL object
+        let url = URL(string: "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Login") //creating URL object
         let session = URLSession.shared //Session object
         //create the URLRequest object using the url object
         var request = URLRequest(url: url!)
-        let email = emailTextField
+        let email = emailTextField.text!
         let password = passwordTextField
-        let jsonbody = [  "Email": email, "Password": password]
+        let jsonbody = [  "Email": email, "Password": password!] as [String : Any]
         
         
         do {
@@ -68,8 +86,7 @@ class SignUpViewController: UIViewController {
             print(error.localizedDescription)
         }
     
-        //May had to do request.addValue()
-        
+
         //Create dataTask using the session object to send to server
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error in
             
@@ -92,24 +109,3 @@ class SignUpViewController: UIViewController {
     }
 }
 
-//Codeable is alias for two other modules Encodable and Decodable
-struct Users: Codable {
-    var firstName: String
-    var lastName: String
-    var email: String
-    var password: String
-    
-}
-
-
-/*class SignUpViewController: UIViewController {
-let encoder = JSONEncoder()
-let data = try encoder.encode(Users)
-let string = String(data: data, encoding: .utf8)!
-    
-    //if this enum exists, we be used for coding and encoding
-    func emumCodingKeys() -> String;, CodingKey {
-        case firstName,  lastName, email, password
-        
-    }
- }*/
