@@ -14,36 +14,43 @@ import CryptoKit
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
-     /*
-     ELiza: Need to add Terms and Condition solution
-     
-     */
-    
-
-    
     //Need to redo these after the storyboard has correct dimensions
     @IBOutlet weak var firstNameTextField: UITextField!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var retypeEmailTextField: UITextField!
-    
     @IBOutlet var passwordTextField: UITextField!
-    
-    
     @IBOutlet weak var signup: UIButton!
+    @IBOutlet weak var termsConditions: UIButton!
     
-    //delegate allows 
+    @IBAction func termsConditions(_ sender: Any) {
+      //have some kind of scrolled pop up
+    }
+    //delegate allows text field to be a string
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     //create encyption key for passoword
-    func keyAccount(_ password: String) -> SymmetricKey {
+    func passwordKey(_ passwordTextField: String) -> SymmetricKey {
       // Create a SHA256 hash from the provided password
-      let hash = SHA256.hash(data: password.data(using: .utf8)!)
+      let hash = SHA256.hash(data: passwordTextField.data(using: .utf8)!)
+      // Convert the SHA256 to a string. This will be a 64 byte string
+      let hashString = hash.map { String(format: "%02hhx", $0) }.joined()
+      // Convert to 32 bytes
+      let subString = String(hashString.prefix(32))
+      // Convert the substring to data
+      let keyData = subString.data(using: .utf8)!
+     
+      // Create the key use keyData as the seed
+      return SymmetricKey(data: keyData)
+    }
+    
+    //create encyption key for email
+    func emailKey(_ emailTextField: String) -> SymmetricKey {
+      // Create a SHA256 hash from the provided password
+      let hash = SHA256.hash(data: emailTextField.data(using: .utf8)!)
       // Convert the SHA256 to a string. This will be a 64 byte string
       let hashString = hash.map { String(format: "%02hhx", $0) }.joined()
       // Convert to 32 bytes

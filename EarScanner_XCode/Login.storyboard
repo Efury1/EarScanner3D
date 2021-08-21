@@ -259,6 +259,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-Uy-wJa">
                                                 <rect key="frame" x="136.5" y="0.0" width="197.5" height="31"/>
                                                 <state key="normal" title="The Terms and Conditions"/>
+                                                <connections>
+                                                    <action selector="termsConditions:" destination="ZWz-jN-3IQ" eventType="touchUpInside" id="9Yc-M8-ymU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -316,6 +319,8 @@
                         <outlet property="retypeEmailTextField" destination="Wmy-Bs-yxa" id="ZAc-Vx-oKT"/>
                         <outlet property="signup" destination="eT3-mP-4aW" id="931-vh-aUK"/>
                         <outlet property="switchCondition" destination="Htg-g3-kzj" id="srH-I0-JFQ"/>
+                        <outlet property="termsConditions" destination="Lyg-Uy-wJa" id="EMS-nc-xY1"/>
+                        <outlet property="termsconditions" destination="Lyg-Uy-wJa" id="Szi-OD-dvw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SU7-fA-75a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
