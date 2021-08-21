@@ -60,6 +60,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ih-7m-ax4">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                                <connections>
+                                                    <action selector="rememberMe:" destination="Y6W-OH-hqX" eventType="valueChanged" id="PJc-zQ-k1N"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Remember me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS0-L2-8Ce">
                                                 <rect key="frame" x="57" y="0.0" width="325" height="50"/>
@@ -123,6 +126,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ser-5k-mri" secondAttribute="bottom" constant="30" id="x6C-p5-G0Y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rememberMe" destination="6Ih-7m-ax4" id="vwy-Af-cHT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
