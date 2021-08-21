@@ -1124,7 +1124,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="17" affinity="minX"/>
-                            <userLayoutGuide location="2" affinity="maxX"/>
+                            <userLayoutGuide location="13" affinity="maxX"/>
+                            <userLayoutGuide location="483" affinity="minY"/>
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="fmv-d5-mxi">

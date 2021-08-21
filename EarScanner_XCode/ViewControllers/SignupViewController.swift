@@ -19,6 +19,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
      
      */
     
+
+    
     //Need to redo these after the storyboard has correct dimensions
     @IBOutlet weak var firstNameTextField: UITextField!
     
