@@ -16,6 +16,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var EmailField: UITextField!
     @IBOutlet weak var PasswordField: UITextField!
+    @IBOutlet weak var rememberMe: UISwitch!
+    
+    @IBAction func rememberMe(_ sender: Any) {
+        //Turn on and off
+        //Save in userDeautls
+        if ((sender as AnyObject).isOn == true) {
+            print("Is on")
+            
+        } else {
+            print("Is off")
+            
+        }
+    }
     
     struct MyVariables {
         static var UserExists = "None"

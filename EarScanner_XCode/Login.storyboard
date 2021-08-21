@@ -60,6 +60,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ih-7m-ax4">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                                <connections>
+                                                    <action selector="rememberMe:" destination="Y6W-OH-hqX" eventType="valueChanged" id="PJc-zQ-k1N"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Remember me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS0-L2-8Ce">
                                                 <rect key="frame" x="57" y="0.0" width="325" height="50"/>
@@ -79,9 +82,6 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="loginTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9Ma-x8-t08"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -127,8 +127,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="EmailField" destination="U5Q-8H-O0P" id="A9w-LG-rvU"/>
-                        <outlet property="PasswordField" destination="Jiw-oX-l5z" id="bVS-QV-Bru"/>
+                        <outlet property="rememberMe" destination="6Ih-7m-ax4" id="vwy-Af-cHT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -284,7 +283,9 @@
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="signup:" destination="ZWz-jN-3IQ" eventType="touchUpInside" id="oCB-AI-5Dh"/>
+                                            <action selector="RegisterButton:" destination="ZWz-jN-3IQ" eventType="touchUpInside" id="9z5-iV-KYa"/>
+                                            <action selector="signup:" destination="ZWz-jN-3IQ" eventType="touchUpInside" id="DX3-99-qLi"/>
+                                            <action selector="signupAction:" destination="ZWz-jN-3IQ" eventType="touchUpInside" id="BnY-y6-vQy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -315,11 +316,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="Xkb-KU-ytN"/>
                     <connections>
+                        <outlet property="Signup" destination="eT3-mP-4aW" id="O06-d5-OVc"/>
                         <outlet property="emailTextField" destination="P2A-Uo-X2b" id="bvh-Q1-g2S"/>
                         <outlet property="firstNameTextField" destination="DBu-a9-YEM" id="xQ8-5J-3hI"/>
                         <outlet property="lastNameTextField" destination="U8u-Bk-Wag" id="5yZ-NA-XWu"/>
                         <outlet property="passwordTextField" destination="Lbz-RY-OuE" id="E23-h3-HCA"/>
+                        <outlet property="registerTextField" destination="eT3-mP-4aW" id="RaT-hv-40Z"/>
                         <outlet property="retypeEmailTextField" destination="Wmy-Bs-yxa" id="ZAc-Vx-oKT"/>
+                        <outlet property="signup" destination="eT3-mP-4aW" id="931-vh-aUK"/>
+                        <outlet property="switchCondition" destination="Htg-g3-kzj" id="srH-I0-JFQ"/>
+                        <outlet property="termsConditions" destination="Lyg-Uy-wJa" id="EMS-nc-xY1"/>
+                        <outlet property="termsconditions" destination="Lyg-Uy-wJa" id="Szi-OD-dvw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SU7-fA-75a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
