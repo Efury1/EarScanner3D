@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var rememberMe: UISwitch!
     
     @IBAction func rememberMe(_ sender: Any) {
+        //Turn on and off
+        //Save in userDeautls
         if ((sender as AnyObject).isOn == true) {
             print("Is on")
             
