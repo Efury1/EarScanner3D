@@ -16,12 +16,13 @@ import CryptoKit
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     //Need to redo these after the storyboard has correct dimensions
+    var userDefaults = UserDefaults.standard
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var retypeEmailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet weak var signup: UIButton!
+
     @IBOutlet weak var termsConditions: UIButton!
     
     @IBAction func termsConditions(_ sender: Any) {
@@ -79,14 +80,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
  
 //Buttons are connected
 @IBAction func signup(_ sender: Any) {
+    print("heh")
         //create URL, will need URL
-        let url = URL(string: "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Login") //creating URL object
+        let url = URL(string: "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Register") //creating URL object
         let session = URLSession.shared //Session object
         //create the URLRequest object using the url object
         var request = URLRequest(url: url!)
-        let email = emailTextField.text!
-        let password = passwordTextField
-        let jsonbody = [  "Email": email, "Password": password!] as [String : Any]
+    request.httpMethod = "POST"
+
+    let email = emailTextField.text!
+    let password = passwordTextField.text!
+    let jsonbody = [  "Email": email, "Password": password] as [String : Any]
         
         
         do {
@@ -98,24 +102,71 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
 
         //Create dataTask using the session object to send to server
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error in
-            
-            guard error == nil else {
-                return
+    var UserExists = "False"
+    
+    let dataTask =  session.dataTask(with: request) { data, response, error in
+        print("heh2")
+    //decode the request and print the result
+        //checks if response returned and if not checks internet
+        if (data != nil){
+    UserExists = String(decoding: data!, as: UTF8.self)
+        /// USEREXISTS
+        
+        print(UserExists)
+        
+        if (UserExists.contains("True")){
+            //Implement autologin
+            self.userDefaults.setValue(true, forKey: "UserExists")
+            DispatchQueue.main.async {
+//                    self.performSegue(withIdentifier: "loginSegue", sender: self)
+                let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+                 self.addChild(childViewController)
+                 self.view.addSubview(childViewController.view)
+                 childViewController.didMove(toParent: self)
+                
             }
             
-            guard let data = data else {
-                return
+            
+            return
+        }
+        else if (UserExists.contains("False"))
+        {
+            DispatchQueue.main.async {
+            print("alert")
+            let alert = UIAlertController(title: "Error", message: "Wrong password or email", preferredStyle: UIAlertController.Style.alert) //create alert
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+            self.present(alert, animated: true, completion: nil) // show the alert
             }
-            do { //Json object from data
-                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                    print(json)
-                }
-            } catch let error {
-                print(error.localizedDescription)
+            
+            
+            return
+        }
+        }
+        else{
+            print("error with connection")
+            DispatchQueue.main.async {
+            print("alert")
+            let alert = UIAlertController(title: "Error", message: "Please Check Internet Connection", preferredStyle: UIAlertController.Style.alert) //create alert
+                //I'm a pop up
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+            self.present(alert, animated: true, completion: nil)
+                //I end here
+                // show the alert
             }
-        })
-        task.resume()
+        }
+        
+         //returns true or false string
+        
+    }
+//            do { //Json object from data
+//                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
+//                    print(json)
+//                }
+//            } catch let error {
+//                print(error.localizedDescription)
+//            }
+        
+        dataTask.resume()
     }
 }
 

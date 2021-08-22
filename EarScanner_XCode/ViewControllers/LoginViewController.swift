@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
     //Handing Login button
     @IBAction func
     loginTapped(_ sender: Any) {
-       
+       print("wtf")
 //    saves the text inputs to variables
      guard
         let email = EmailField.text,
