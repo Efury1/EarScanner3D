@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		47947D8326B3EABF00761DC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47947D8126B3EABF00761DC8 /* LaunchScreen.storyboard */; };
 		47947D8B26B55DCB00761DC8 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D8A26B55DCB00761DC8 /* GridView.swift */; };
 		47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */; };
+		47DEEF9126D2191900D6DF91 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 47DEEF9026D2191900D6DF91 /* CryptoSwift */; };
 		5607E4E926D101DB003D90E5 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 5607E4E826D101DB003D90E5 /* Readme.md */; };
 		566CCE0F26BBFABA00DF6616 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CCE0E26BBFABA00DF6616 /* DesignableView.swift */; };
 		5687B81626B93E5E00548B19 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687B81526B93E5E00548B19 /* SignupViewController.swift */; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47DEEF9126D2191900D6DF91 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +120,9 @@
 			dependencies = (
 			);
 			name = EarScanner_XCode;
+			packageProductDependencies = (
+				47DEEF9026D2191900D6DF91 /* CryptoSwift */,
+			);
 			productName = EarScanner_XCode;
 			productReference = 47947D7326B3EABD00761DC8 /* EarScanner_XCode.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 47947D6A26B3EABD00761DC8;
+			packageReferences = (
+				47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			productRefGroup = 47947D7426B3EABD00761DC8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -385,6 +393,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47DEEF9026D2191900D6DF91 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47947D6B26B3EABD00761DC8 /* Project object */;
 }

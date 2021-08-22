@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import CryptoSwift
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -59,12 +59,13 @@ class LoginViewController: UIViewController {
     }
     
     
-    
+
 
     //Handing Login button
     @IBAction func
     loginTapped(_ sender: Any) {
-       print("wtf")
+        
+        print(cryto(password: "qw"))
 //    saves the text inputs to variables
      guard
         let email = EmailField.text,
@@ -194,6 +195,25 @@ extension LoginViewController : UITextFieldDelegate {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    func cryto(password: String) -> String{
+     //let encryptedBytes = try AES(key: [1,2,3,...,32], blockMode: CBC(iv: [1,2,3,...,16]), padding: .pkcs7)
+        do {
+            //encrypt with AES256
+            let aes = try AES(key: [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5], blockMode: CBC(iv: [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,16]), padding: .pkcs7)
+            let ciphertext = try aes.encrypt(Array(password.utf8))
+            print(ciphertext)
+            //convert result to string
+            let encData = NSData(bytes: ciphertext, length: Int(ciphertext.count))
+            let base64String: String = encData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0));
+            let result = String(base64String)
+            return result
+        } catch {
+            print(error)
+        }
+       return "Failed"
+        
     }
 }
     
