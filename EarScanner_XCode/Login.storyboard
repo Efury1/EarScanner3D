@@ -150,7 +150,7 @@
                         <userGuides>
                             <userLayoutGuide location="16" affinity="minX"/>
                             <userLayoutGuide location="16" affinity="maxX"/>
-                            <userLayoutGuide location="402" affinity="maxY"/>
+                            <userLayoutGuide location="403" affinity="maxY"/>
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N87-BK-fHH">
@@ -162,11 +162,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Retype your email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltt-uh-PF8">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-5Q-etM">
                                         <rect key="frame" x="0.0" y="58" width="382" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Hhk-cE-r3p"/>
-                                            <constraint firstAttribute="height" constant="50" id="LU5-Sw-4SH"/>
+                                            <constraint firstAttribute="height" constant="50" id="jhE-YG-KZJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -178,6 +177,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendEmail:" destination="KbU-Up-jrS" eventType="touchUpInside" id="TKr-7G-9GX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -192,6 +194,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Sp-rP-Imx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KbU-Up-jrS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="889.85507246376824" y="442.63392857142856"/>
         </scene>

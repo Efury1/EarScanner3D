@@ -17,6 +17,7 @@
 		47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */; };
 		47DEEF9126D2191900D6DF91 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 47DEEF9026D2191900D6DF91 /* CryptoSwift */; };
 		5607E4E926D101DB003D90E5 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 5607E4E826D101DB003D90E5 /* Readme.md */; };
+		5607E4ED26D258A4003D90E5 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */; };
 		566CCE0F26BBFABA00DF6616 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CCE0E26BBFABA00DF6616 /* DesignableView.swift */; };
 		5687B81626B93E5E00548B19 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687B81526B93E5E00548B19 /* SignupViewController.swift */; };
 		5687B81826B93E8C00548B19 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5687B81726B93E8C00548B19 /* LoginViewController.swift */; };
@@ -37,6 +38,7 @@
 		47947D8A26B55DCB00761DC8 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToPhotoAlbum.swift; sourceTree = "<group>"; };
 		5607E4E826D101DB003D90E5 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		566CCE0E26BBFABA00DF6616 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		5687B81526B93E5E00548B19 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		5687B81726B93E8C00548B19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = EarScanner_XCode/ViewControllers/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -100,6 +102,7 @@
 				5687B81526B93E5E00548B19 /* SignupViewController.swift */,
 				5687B81726B93E8C00548B19 /* LoginViewController.swift */,
 				569E2C7326C90E4D00B6FBFE /* MainViewController.swift */,
+				5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5607E4ED26D258A4003D90E5 /* ForgotPassViewController.swift in Sources */,
 				5687B81826B93E8C00548B19 /* LoginViewController.swift in Sources */,
 				5687B81626B93E5E00548B19 /* SignupViewController.swift in Sources */,
 				47947D7B26B3EABD00761DC8 /* ViewController.swift in Sources */,
