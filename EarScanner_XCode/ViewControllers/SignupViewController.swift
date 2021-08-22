@@ -132,7 +132,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         {
             DispatchQueue.main.async {
             print("alert")
-            let alert = UIAlertController(title: "Error", message: "Wrong password or email", preferredStyle: UIAlertController.Style.alert) //create alert
+            let alert = UIAlertController(title: "Error", message: "Something Went Wrong", preferredStyle: UIAlertController.Style.alert) //create alert
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
             self.present(alert, animated: true, completion: nil) // show the alert
             }

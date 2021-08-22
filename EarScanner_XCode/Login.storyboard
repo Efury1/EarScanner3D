@@ -105,7 +105,7 @@
                                                 <rect key="frame" x="160.5" y="0.0" width="60" height="30"/>
                                                 <state key="normal" title="SIGN UP"/>
                                                 <connections>
-                                                    <segue destination="ZWz-jN-3IQ" kind="show" id="dHF-Q2-cvZ"/>
+                                                    <action selector="GoToSignUp:" destination="Y6W-OH-hqX" eventType="primaryActionTriggered" id="3II-3g-NNd"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -198,9 +198,9 @@
         <!--Sign Up View Controller-->
         <scene sceneID="XAF-a0-kqM">
             <objects>
-                <viewController id="ZWz-jN-3IQ" customClass="SignUpViewController" customModule="EarScanner_XCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" id="ZWz-jN-3IQ" customClass="SignUpViewController" customModule="EarScanner_XCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3XW-MM-ZFd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
                             <userLayoutGuide location="562" affinity="minY"/>
@@ -210,7 +210,7 @@
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-Bl-T9n">
-                                <rect key="frame" x="16" y="40" width="358" height="351.5"/>
+                                <rect key="frame" x="16" y="84" width="358" height="351.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P7w-pk-gOo">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="20.5"/>

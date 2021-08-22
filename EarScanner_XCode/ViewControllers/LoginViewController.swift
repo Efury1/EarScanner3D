@@ -35,6 +35,13 @@ class LoginViewController: UIViewController {
         static var dataTaskFinished = false
     }
     
+    @IBAction func GoToSignUp(_ sender: UIButton) {
+        let childViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "SignUp")
+         self.addChild(childViewController)
+         self.view.addSubview(childViewController.view)
+         childViewController.didMove(toParent: self)
+        
+    }
     override func
     viewDidLoad() {
         super.viewDidLoad()
