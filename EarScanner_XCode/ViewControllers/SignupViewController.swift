@@ -11,46 +11,8 @@ import UIKit
 import CoreData
 import CryptoKit
 
-struct Response: Codable {
-    let results: MyResults
-    let status: String
-}
-
-struct MyResults: Codable {
-    let email: String
-    let password: String
-}
 
 
-//It's not getting response therefore code is printing something went wrong
-private func getData(from url: String) {
-    let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: {data, response, error in
-        
-        guard let data = data, error == nil else {
-            //data back if nil
-            print("Something went wrong")
-            return
-        }
-        
-        //have data
-        var result: Response?
-        do {
-            //map data to Response
-            result = try JSONDecoder().decode(Response.self, from: data)
-        } catch {
-            print("failed to convert \(error.localizedDescription)")
-        }
-        guard let json = result else {
-            return
-        }
-        print(json.status)
-        print(json.results)
-        print(json.results.email)
-    })
-    
-    task.resume()
-    
-}
 /*
  * James, Not sure how to implement the encoding functions with the other code. Eliza*/
 class SignUpViewController: UIViewController, UITextFieldDelegate {
@@ -71,32 +33,45 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     //delegate allows text field to be a string
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let url = "earscannerdb.ckczsnjdfawk.ap-southeast-2.rds.amazonaws.com"
-        //getData(from: url)
+
     }
     
     
   
     @IBAction func signup(_ sender: Any)
     {
-
-        var inputtedPassword: String? { // optional, remember textfield.text can return nil
-            return passwordTextField.text
-        }
-        
-        var inputtedEmail: String? { // optional, remember textfield.text can return nil
-            return emailTextField.text
-        }
-        
-        //let inputtedPassword = passwordTextField.text
-        //let inputtedEmail = emailTextField.text
+        let inputtedPassword = passwordTextField.text
+        let inputtedEmail = emailTextField.text
         
         if((inputtedPassword == "") || inputtedEmail == "") {
             print("Please ensure all fields are typed in")
         }
         else {
-            let url = "earscannerdb.ckczsnjdfawk.ap-southeast-2.rds.amazonaws.com"
-            getData(from: url)
+            // prepare json data
+            let json = [  "InputtedEmail": inputtedEmail, "InputtedPassword": inputtedPassword]
+
+            let jsonData = try? JSONSerialization.data(withJSONObject: json)
+
+            // create post request
+            let url = URL(string: "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Login")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+
+            // insert json data to the request
+            request.httpBody = jsonData
+
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data = data, error == nil else {
+                    print(error?.localizedDescription ?? "No data")
+                    return
+                }
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let responseJSON = responseJSON as? [String: Any] {
+                    print(responseJSON)
+                }
+            }
+
+            task.resume()
         }
             
     }

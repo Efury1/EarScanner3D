@@ -65,6 +65,7 @@ class LoginViewController: UIViewController {
      else {return}
         
         //set the url of the api
+        
         let url = URL(string:  "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Login")
         var request = URLRequest(url: url!) //make a request object with the url
         let jsonbody = [  "Email": email, "Password": password]  //attach the json body to he request. pass in the text inputs
