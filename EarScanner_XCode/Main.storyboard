@@ -712,7 +712,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ZM-fZ-3g0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BEO-t5-nJg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -975,13 +975,13 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xSi-gO-ds3">
-                                        <rect key="frame" x="0.0" y="453" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="453" width="414" height="272"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYV-25-sM4">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Apx-5O-5ru">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="272"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="150" id="9wG-c8-1bK"/>
@@ -989,24 +989,24 @@
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iu9-BS-b6w">
-                                                        <rect key="frame" x="150" y="0.0" width="239" height="150"/>
+                                                        <rect key="frame" x="150" y="0.0" width="239" height="272"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xL-n4-gqw">
-                                                                <rect key="frame" x="25" y="25" width="189" height="28"/>
+                                                                <rect key="frame" x="25" y="25" width="189" height="68.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <state key="normal" title="Amy Smith">
                                                                     <color key="titleColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-Dv-lUO">
-                                                                <rect key="frame" x="25" y="61" width="189" height="28"/>
+                                                                <rect key="frame" x="25" y="101.5" width="189" height="69"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <state key="normal" title="22/08/21">
                                                                     <color key="titleColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-2b-X6g">
-                                                                <rect key="frame" x="25" y="97" width="189" height="28"/>
+                                                                <rect key="frame" x="25" y="178.5" width="189" height="68.5"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <state key="normal" title="Unsent">
                                                                     <color key="titleColor" systemColor="systemRedColor"/>
@@ -1017,10 +1017,10 @@
                                                         <edgeInsets key="layoutMargins" top="25" left="25" bottom="25" right="25"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-le-k74">
-                                                        <rect key="frame" x="389" y="0.0" width="25" height="150"/>
+                                                        <rect key="frame" x="389" y="0.0" width="25" height="272"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wk9-ej-x8v">
-                                                                <rect key="frame" x="0.0" y="-1" width="25" height="96"/>
+                                                                <rect key="frame" x="0.0" y="-1" width="25" height="157"/>
                                                                 <color key="tintColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="Kxt-rB-dN2"/>
@@ -1028,7 +1028,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eK5-1p-DCw">
-                                                                <rect key="frame" x="0.0" y="54" width="25" height="95.5"/>
+                                                                <rect key="frame" x="0.0" y="115" width="25" height="156.5"/>
                                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="E2f-4T-LXw"/>
@@ -1315,6 +1315,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="logoutButton:" destination="e09-JQ-R8g" eventType="touchUpInside" id="AG5-ec-q3l"/>
                                             <action selector="logoutButton:" destination="G5M-lv-Fu5" eventType="touchUpInside" id="zYO-U5-T53"/>
                                         </connections>
                                     </button>

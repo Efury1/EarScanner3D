@@ -35,8 +35,25 @@ class MainViewController: UIViewController {
     }*/
     
     @IBAction func logoutButton(_ sender: Any) {
-        
         print("Users action was tapped")
+        let refreshAlert = UIAlertController(title: "Log Out", message: "Are You Sure to Log Out ? ", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
+
+            refreshAlert .dismiss(animated: true, completion: nil)
+
+
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
+    
     }
+   
+        
+        
     
 }
