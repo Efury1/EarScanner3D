@@ -161,12 +161,12 @@ class LoginViewController: UIViewController {
 //        sleep(2)
         //if the result is yet to come in wait a second, then check again
         //do this up to 4 times (4 seconds)
-        while(MyVariables.UserExists != "True" && MyVariables.UserExists != "False" && waiting < 4){
-            print(waiting)
-            sleep(1)
-            waiting += 1;
-        }
-        
+//        while(MyVariables.UserExists != "True" && MyVariables.UserExists != "False" && waiting < 4){
+//            print(waiting)
+//            sleep(1)
+//            waiting += 1;
+//        }
+//
 //        if (MyVariables.UserExists == "True"){
 //            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
 //            self.addChild(childViewController)

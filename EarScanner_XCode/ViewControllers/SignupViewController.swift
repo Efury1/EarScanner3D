@@ -15,6 +15,8 @@ import CryptoKit
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     //Need to redo these after the storyboard has correct dimensions
+    @IBOutlet weak var LastNameField: UITextField!
+    @IBOutlet weak var FirstNameField: UITextField!
     var userDefaults = UserDefaults.standard
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -46,7 +48,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     let email = emailTextField.text!
     let password = passwordTextField.text!
-    if((email == "") || password == "") {
+    let FirstName = FirstNameField.text!
+    let LastName = LastNameField.text!
+    if((email == "") || password == "" || FirstName == "" || LastName == "") {
                 print("Please ensure all fields are typed in")
                 DispatchQueue.main.async {
                 print("alert")
@@ -57,7 +61,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
             }
             else {
-        let jsonbody = [  "Email": email, "Password": password] as [String : Any]
+                let jsonbody = [  "Email": email, "Password": password, "FirstName": FirstName, "LastName": LastName] as [String : Any]
             
             
             do {

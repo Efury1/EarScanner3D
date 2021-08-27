@@ -45,6 +45,8 @@ class ViewController: UIViewController {
         return button
     }()
 
+
+
     //if view has loaded make the background black (for simulator)
     //add the camera preview sub layer
     //and check permissions
@@ -67,6 +69,7 @@ class ViewController: UIViewController {
                                        y: view.frame.size.height -  (view.frame.size.height*0.93) )
         NextPhotoButton.center = CGPoint(x:  view.frame.size.width*0.80,
                                        y: view.frame.size.height -  (view.frame.size.height*0.93) )
+       
         shutterButton.center = CGPoint(x: (view.frame.size.width/2)+10 ,
                                        y: view.frame.size.height - (view.frame.size.height*0.18) )
     }
@@ -186,10 +189,13 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         view.addSubview(NextPhotoButton)
         
+        
         imageTake = image
         NextPhotoButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
         
+        
         RetakeButton.addTarget(self, action: #selector(retake), for: .touchUpInside)
+        
         
         
         
@@ -204,6 +210,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         imageView.removeFromSuperview()
 
     }
+
     @objc private func retake() {
         session?.startRunning()
         imageView.removeFromSuperview()
