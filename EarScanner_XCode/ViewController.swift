@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 //        button.backgroundColor = .black
         button.setTitle("Retake", for: .normal)
+        
         return button
     }()
     //button to move to the next photo
@@ -41,6 +42,13 @@ class ViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 //        button.backgroundColor = .black
         button.setTitle("Next Photo", for: .normal)
+        
+        return button
+    }()
+    private let HelpButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        button.backgroundColor = .black
+        button.setTitle("Help", for: .normal)
         
         return button
     }()
@@ -57,6 +65,14 @@ class ViewController: UIViewController {
         view.layer.addSublayer(previewLayer)
         
         checkCameraPermissions()
+        let gridView = GridView()
+        
+        let screenRect = UIScreen.main.bounds
+        let screenWidth = screenRect.size.width
+        let screenHeight = screenRect.size.height
+        MyVariables.screenWidth = screenWidth;
+        MyVariables.screenHeight = screenHeight
+        ;
 
     }
     //create the preview layer frames and place the buttons on them
@@ -65,13 +81,15 @@ class ViewController: UIViewController {
         previewLayer.frame = view.bounds
         
         
-        RetakeButton.center = CGPoint(x: view.frame.size.width - (view.frame.size.width*0.85),
-                                       y: view.frame.size.height -  (view.frame.size.height*0.93) )
-        NextPhotoButton.center = CGPoint(x:  view.frame.size.width*0.80,
-                                       y: view.frame.size.height -  (view.frame.size.height*0.93) )
+        RetakeButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
+                                       y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
+        NextPhotoButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
+                                         y: MyVariables.screenHeight - (MyVariables.screenHeight*0.3) )
        
-        shutterButton.center = CGPoint(x: (view.frame.size.width/2)+10 ,
-                                       y: view.frame.size.height - (view.frame.size.height*0.18) )
+        shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
+                                       y: MyVariables.screenHeight - (MyVariables.screenHeight*0.19) )
+        HelpButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
+                                         y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
     }
     private func checkCameraPermissions(){
         switch AVCaptureDevice.authorizationStatus(for: .video){
@@ -153,6 +171,9 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
  
     struct MyVariables {
         static var yourVariable = false
+        static var greenview = UIView()
+        static var screenWidth = CGFloat(0.1);
+        static var screenHeight = CGFloat(0.1);
     }
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let data = photo.fileDataRepresentation() else{
@@ -181,13 +202,25 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         imageView.contentMode = .scaleAspectFill
         
 //        writeToPhotoAlbum(image: image!)
-        
+        //remove ad re-add elements
+        shutterButton.removeFromSuperview()
+        HelpButton.removeFromSuperview()
+        MyVariables.greenview.removeFromSuperview()
+        NextPhotoButton.removeFromSuperview()
+        RetakeButton.removeFromSuperview()
         
         imageView.frame = view.bounds
-        view.addSubview(imageView)
-        view.addSubview(RetakeButton)
         
+        view.addSubview(imageView)
+
+       
+        view.addSubview(MyVariables.greenview)
+        view.addSubview(shutterButton)
+        view.addSubview(RetakeButton)
+        view.addSubview(HelpButton)
+        //view.addSubview(greenView)
         view.addSubview(NextPhotoButton)
+        
         
         
         imageTake = image
@@ -216,7 +249,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         imageView.removeFromSuperview()
         
     }
-    private func addGridView() {
+    public func addGridView() {
         // cameraView is your view where you want to show the grid view
         let horizontalMargin = -10
         let verticalMargin = -10
@@ -224,11 +257,35 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         
         let gridView = GridView()
-        gridView.addSubview(shutterButton)
+        
+        let screenRect = UIScreen.main.bounds
+        let screenWidth = screenRect.size.width
+        let screenHeight = screenRect.size.height
+        
+        //make and place rectangle
+        let rectFrame: CGRect = CGRect(x:CGFloat(0), y:CGFloat(screenHeight-(screenHeight*0.19)), width:CGFloat(screenWidth), height:CGFloat(screenHeight*0.1))
+        
+              
+              // Create a UIView object which use above CGRect object.
+        let greenView = UIView(frame: rectFrame)
+//        greenView.center = CGPoint(x: CGFloat(screenWidth/2),
+//                                   y: CGFloat(screenHeight-(screenHeight*0.05)))
+              // Set UIView background color.
+        
+                greenView.backgroundColor = UIColor(rgb: 0xA87F8B)
+        
+        MyVariables.greenview = greenView
+        
         shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
 
         gridView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(gridView)
+        view.addSubview(greenView)
+        view.addSubview(shutterButton)
+        view.addSubview(RetakeButton)
+        view.addSubview(HelpButton)
+        //view.addSubview(greenView)
+        view.addSubview(NextPhotoButton)
         gridView.backgroundColor = UIColor.clear
         gridView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: CGFloat(horizontalMargin)).isActive = true
         gridView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: CGFloat(-1 * horizontalMargin)).isActive = true
@@ -250,4 +307,22 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+}
+
+extension UIColor {
+   convenience init(red: Int, green: Int, blue: Int) {
+       assert(red >= 0 && red <= 255, "Invalid red component")
+       assert(green >= 0 && green <= 255, "Invalid green component")
+       assert(blue >= 0 && blue <= 255, "Invalid blue component")
+
+       self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+   }
+
+   convenience init(rgb: Int) {
+       self.init(
+           red: (rgb >> 16) & 0xFF,
+           green: (rgb >> 8) & 0xFF,
+           blue: rgb & 0xFF
+       )
+   }
 }
