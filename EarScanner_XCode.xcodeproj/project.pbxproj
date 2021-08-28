@@ -24,6 +24,7 @@
 		569B3CE426BB52A100A1A76E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569B3CE326BB52A100A1A76E /* Media.xcassets */; };
 		569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569E2C7326C90E4D00B6FBFE /* MainViewController.swift */; };
 		6A703E5326D8818E007A06BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A703E5226D8818E007A06BA /* Main.storyboard */; };
+		C0075DED261B0AE6595095B3 /* Pods_EarScanner_XCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87928C1E21F276CFD86C3E0D /* Pods_EarScanner_XCode.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		47947D8426B3EABF00761DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47947D8A26B55DCB00761DC8 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToPhotoAlbum.swift; sourceTree = "<group>"; };
+		53EA04072803588CFD5E5478 /* Pods-EarScanner_XCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarScanner_XCode.debug.xcconfig"; path = "Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode.debug.xcconfig"; sourceTree = "<group>"; };
 		5607E4E826D101DB003D90E5 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		566CCE0E26BBFABA00DF6616 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		569B3CE326BB52A100A1A76E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		569E2C7326C90E4D00B6FBFE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6A703E5226D8818E007A06BA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		87928C1E21F276CFD86C3E0D /* Pods_EarScanner_XCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EarScanner_XCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9095D166B902AF9638FC7A48 /* Pods-EarScanner_XCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarScanner_XCode.release.xcconfig"; path = "Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +57,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DEEF9126D2191900D6DF91 /* CryptoSwift in Frameworks */,
+				C0075DED261B0AE6595095B3 /* Pods_EarScanner_XCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0403741AAFEF1D82FA37FD3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53EA04072803588CFD5E5478 /* Pods-EarScanner_XCode.debug.xcconfig */,
+				9095D166B902AF9638FC7A48 /* Pods-EarScanner_XCode.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		25A53DE6F1AF680EC2D1566D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87928C1E21F276CFD86C3E0D /* Pods_EarScanner_XCode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		47947D6A26B3EABD00761DC8 = {
 			isa = PBXGroup;
 			children = (
 				47947D7526B3EABD00761DC8 /* EarScanner_XCode */,
 				47947D7426B3EABD00761DC8 /* Products */,
+				0403741AAFEF1D82FA37FD3E /* Pods */,
+				25A53DE6F1AF680EC2D1566D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47947D8726B3EABF00761DC8 /* Build configuration list for PBXNativeTarget "EarScanner_XCode" */;
 			buildPhases = (
+				48D223D2681AD052854B42F9 /* [CP] Check Pods Manifest.lock */,
 				47947D6F26B3EABD00761DC8 /* Sources */,
 				47947D7026B3EABD00761DC8 /* Frameworks */,
 				47947D7126B3EABD00761DC8 /* Resources */,
+				27D2DD9F16204FEAEF56E1FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,7 +197,7 @@
 			);
 			mainGroup = 47947D6A26B3EABD00761DC8;
 			packageReferences = (
-				47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift.git" */,
 			);
 			productRefGroup = 47947D7426B3EABD00761DC8 /* Products */;
 			projectDirPath = "";
@@ -196,6 +223,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27D2DD9F16204FEAEF56E1FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48D223D2681AD052854B42F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EarScanner_XCode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47947D6F26B3EABD00761DC8 /* Sources */ = {
@@ -347,6 +416,7 @@
 		};
 		47947D8826B3EABF00761DC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53EA04072803588CFD5E5478 /* Pods-EarScanner_XCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,6 +436,7 @@
 		};
 		47947D8926B3EABF00761DC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9095D166B902AF9638FC7A48 /* Pods-EarScanner_XCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -407,7 +478,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+		47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
 			requirement = {
@@ -420,7 +491,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		47DEEF9026D2191900D6DF91 /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			package = 47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift.git" */;
 			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

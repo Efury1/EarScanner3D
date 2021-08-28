@@ -1,0 +1,6 @@
+framework module Pods_EarScanner_XCode {
+  umbrella header "Pods-EarScanner_XCode-umbrella.h"
+
+  export *
+  module * { export * }
+}

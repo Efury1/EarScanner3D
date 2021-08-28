@@ -8,6 +8,7 @@
 import Foundation
 import CryptoSwift
 import UIKit
+import KeychainAccess
 
 class LoginViewController: UIViewController {
     
@@ -32,9 +33,11 @@ class LoginViewController: UIViewController {
         //Save in userDeautls
         if ((sender as AnyObject).isOn == true) {
             print("Is on")
-            
-              
-            
+            let savePassword = self.PasswordField.text
+            //save data
+            let keychain = Keychain(service: "com.CodeIT.EarScanner-XCode")
+            keychain["PASSWORDFIELD"] = savePassword
+            //
         } else {
             
             print("Is off")
@@ -84,6 +87,7 @@ class LoginViewController: UIViewController {
         let password = PasswordField.text
      else {return}
         
+     
         //set the url of the api
         
         let url = URL(string:  "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Login")
@@ -117,7 +121,7 @@ class LoginViewController: UIViewController {
             print(UserExists)
             
             if (UserExists.contains("True")){
-                //Implement autologin 
+                //Implement autologin
                 self.userDefaults.setValue(true, forKey: "UserExists")
                 DispatchQueue.main.async {
 //                    self.performSegue(withIdentifier: "loginSegue", sender: self)
