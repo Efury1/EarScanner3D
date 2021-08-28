@@ -81,12 +81,10 @@
 				47947D7626B3EABD00761DC8 /* AppDelegate.swift */,
 				47947D7826B3EABD00761DC8 /* SceneDelegate.swift */,
 				47947D7A26B3EABD00761DC8 /* ViewController.swift */,
+				56C263AF26D9D8780001F3AD /* Camera */,
+				56C263AE26D9D8260001F3AD /* Storyboards */,
 				5687B81B26B9470700548B19 /* ViewControllers */,
-				569B3CE126BB4FA600A1A76E /* Login.storyboard */,
-				6A703E5226D8818E007A06BA /* Main.storyboard */,
 				47947D8126B3EABF00761DC8 /* LaunchScreen.storyboard */,
-				47947D8A26B55DCB00761DC8 /* GridView.swift */,
-				47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */,
 				566CCE0E26BBFABA00DF6616 /* DesignableView.swift */,
 				47947D8426B3EABF00761DC8 /* Info.plist */,
 				47947D7F26B3EABF00761DC8 /* Assets.xcassets */,
@@ -105,6 +103,24 @@
 				5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		56C263AE26D9D8260001F3AD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				569B3CE126BB4FA600A1A76E /* Login.storyboard */,
+				6A703E5226D8818E007A06BA /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		56C263AF26D9D8780001F3AD /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				47947D8A26B55DCB00761DC8 /* GridView.swift */,
+				47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
