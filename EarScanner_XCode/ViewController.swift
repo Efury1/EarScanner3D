@@ -11,7 +11,9 @@ import Foundation
 
 
 class ViewController: UIViewController {
-    @IBOutlet weak var imageTake: UIImage!
+    @IBOutlet var imageTake: UIImage!
+    @IBOutlet var imageTakePast: UIImage!
+    var Retake = true
     @IBOutlet var imageView: UIImageView!
     var imagePicker: UIImagePickerController!
 
@@ -221,15 +223,32 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         //view.addSubview(greenView)
         view.addSubview(NextPhotoButton)
         
-        
+        imageTakePast = imageTake
         
         imageTake = image
+        if (Retake != true){
+            MyAwesomeAlbum.shared.albumName = "RemovalTest"
+            
+            MyAwesomeAlbum.shared.save(image: self.imageTakePast)
+        }
+        Retake = false
         NextPhotoButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
         
         
         RetakeButton.addTarget(self, action: #selector(retake), for: .touchUpInside)
         
+        let seconds = 2.0
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            
+            
+            
+            self.session?.startRunning()
+            self.imageView.removeFromSuperview()
+            
+
+        }
+
         
         
         
@@ -237,14 +256,11 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
     }
     @objc private func savePhoto() {
 //        UIImageWriteToSavedPhotosAlbum(imageTake, nil, nil, nil)
-        MyAwesomeAlbum.shared.albumName = "test3"
-        MyAwesomeAlbum.shared.save(image: imageTake)
-        session?.startRunning()
-        imageView.removeFromSuperview()
-
+       
     }
 
     @objc private func retake() {
+        Retake = true;
         session?.startRunning()
         imageView.removeFromSuperview()
         
