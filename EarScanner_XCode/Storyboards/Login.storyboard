@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="344" affinity="maxX"/>
+                            <userLayoutGuide location="345" affinity="maxX"/>
                             <userLayoutGuide location="14" affinity="maxX"/>
                             <userLayoutGuide location="615" affinity="minY"/>
                             <userLayoutGuide location="448" affinity="minY"/>
