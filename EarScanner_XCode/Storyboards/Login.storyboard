@@ -201,7 +201,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="XAF-a0-kqM">
             <objects>
-                <viewController storyboardIdentifier="SignUp" id="ZWz-jN-3IQ" customClass="SignUpViewController" customModule="EarScanner_XCode" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" id="ZWz-jN-3IQ" customClass="SignUpViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3XW-MM-ZFd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
