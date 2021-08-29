@@ -1258,7 +1258,7 @@
                                                     <color key="titleColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="pLP-Ce-Mw2" kind="show" id="quj-NM-htR"/>
+                                                    <segue destination="IGS-C2-jCB" kind="show" id="o5R-iI-5uu"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e9T-g6-1Kx">
@@ -1280,7 +1280,7 @@
                                                     <color key="titleColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="IGS-C2-jCB" kind="show" id="AcH-BK-2aw"/>
+                                                    <segue destination="pLP-Ce-Mw2" kind="show" id="9Dl-x8-KJC"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MJw-wx-8J5">
@@ -1467,54 +1467,90 @@
             </objects>
             <point key="canvasLocation" x="-1061" y="2324"/>
         </scene>
-        <!--Share-->
+        <!--About Us-->
         <scene sceneID="eob-Nb-FX9">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="pLP-Ce-Mw2" sceneMemberID="viewController">
+                <viewController title="About Us" hidesBottomBarWhenPushed="YES" id="pLP-Ce-Mw2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRv-cz-JK8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="NkM-wp-Q01"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIv-wM-6Gb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-LP-JQv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="About Us" id="Ovp-Re-HNV">
+                                                <rect key="frame" x="-6" y="0.0" width="426" height="312"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUT Biofabrication and Tissue Morphology Group" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWT-US-g7Y">
+                                                <rect key="frame" x="15" y="327" width="384" height="61"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB5-OY-RW9">
+                                                <rect key="frame" x="15" y="403" width="384" height="359"/>
+                                                <mutableString key="text">The Biofabrication and Tissue Morphology group led by Professor Mia Woodruff is a world class multi-disciplinary research team focused on embedding biofabrication into routine clinical use. The team uses 3D scanning, 3D modelling and 3D printing to disrupt traditional healthcare practices and provide low-cost, patient-specific and superior treatments for a range of conditions acquired from birth, injury or disease. 
+
+One of the team's flagship projects is the Future Hear project led by Prof Woodruff, Dr Sean Powell, Renee Nightingale and Maureen Ross. This project aims to deliver accessible, low-cost digital solutions for patient-specific ear prosthesis for those born with microtia or other conditions. This 3D scanning application provides the platform to connect with patients anywhere across Australia to obtain 3D scans of their affected and unaffected ears which can be used to create a custom-made prosthesis.</mutableString>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="IB5-OY-RW9" secondAttribute="trailing" constant="15" id="KBW-KD-0W5"/>
+                                            <constraint firstItem="dWT-US-g7Y" firstAttribute="top" secondItem="Ovp-Re-HNV" secondAttribute="bottom" constant="15" id="ORm-dU-QZS"/>
+                                            <constraint firstItem="IB5-OY-RW9" firstAttribute="leading" secondItem="RKp-LP-JQv" secondAttribute="leading" constant="15" id="c8n-rX-yQG"/>
+                                            <constraint firstItem="IB5-OY-RW9" firstAttribute="top" secondItem="dWT-US-g7Y" secondAttribute="bottom" constant="15" id="hH8-uD-gq6"/>
+                                            <constraint firstItem="dWT-US-g7Y" firstAttribute="leading" secondItem="RKp-LP-JQv" secondAttribute="leading" constant="15" id="k8N-97-PlR"/>
+                                            <constraint firstAttribute="trailing" secondItem="dWT-US-g7Y" secondAttribute="trailing" constant="15" id="maX-B0-wAL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RKp-LP-JQv" firstAttribute="leading" secondItem="gIv-wM-6Gb" secondAttribute="leading" id="3jH-Rs-eMo"/>
+                                    <constraint firstItem="RKp-LP-JQv" firstAttribute="width" secondItem="gIv-wM-6Gb" secondAttribute="width" id="9sd-va-kun"/>
+                                    <constraint firstItem="RKp-LP-JQv" firstAttribute="height" secondItem="gIv-wM-6Gb" secondAttribute="height" priority="250" id="D1Y-Uw-coW"/>
+                                    <constraint firstAttribute="bottom" secondItem="RKp-LP-JQv" secondAttribute="bottom" id="R88-Pg-U9D"/>
+                                    <constraint firstAttribute="trailing" secondItem="RKp-LP-JQv" secondAttribute="trailing" id="c5f-Gg-X19"/>
+                                    <constraint firstItem="RKp-LP-JQv" firstAttribute="top" secondItem="gIv-wM-6Gb" secondAttribute="top" id="nvq-eY-brR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gIv-wM-6Gb" firstAttribute="top" secondItem="LRv-cz-JK8" secondAttribute="top" id="0NY-y2-KB2"/>
+                            <constraint firstItem="gIv-wM-6Gb" firstAttribute="leading" secondItem="LRv-cz-JK8" secondAttribute="leading" id="18K-id-2bQ"/>
+                            <constraint firstAttribute="trailing" secondItem="gIv-wM-6Gb" secondAttribute="trailing" id="Acn-0f-clU"/>
+                            <constraint firstAttribute="bottom" secondItem="gIv-wM-6Gb" secondAttribute="bottom" id="Jti-Er-9gr"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Share" id="Pwd-TP-84S"/>
+                    <navigationItem key="navigationItem" title="About Us" id="Pwd-TP-84S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozu-L9-1WR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409" y="2324"/>
+            <point key="canvasLocation" x="-410" y="2324"/>
         </scene>
-        <!--About Us-->
+        <!--Share-->
         <scene sceneID="XtZ-FN-JUf">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="IGS-C2-jCB" sceneMemberID="viewController">
+                <viewController title="Share" hidesBottomBarWhenPushed="YES" id="IGS-C2-jCB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t2E-jU-pyH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="About Us" id="Ovp-Re-HNV">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUT Biofabrication and Tissue Morphology Group" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAU-Oc-dui">
-                                <rect key="frame" x="15" y="327" width="384" height="61"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CxC-sl-26q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="UAU-Oc-dui" firstAttribute="top" secondItem="Ovp-Re-HNV" secondAttribute="bottom" constant="15" id="5Iu-JZ-TBS"/>
-                            <constraint firstItem="UAU-Oc-dui" firstAttribute="leading" secondItem="t2E-jU-pyH" secondAttribute="leading" constant="15" id="MXp-Wi-GQO"/>
-                            <constraint firstAttribute="trailing" secondItem="UAU-Oc-dui" secondAttribute="trailing" constant="15" id="dnH-lY-PyR"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About Us" id="OmE-l4-WoG"/>
+                    <navigationItem key="navigationItem" title="Share" id="OmE-l4-WoG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGc-AV-GI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="2324"/>
+            <point key="canvasLocation" x="248" y="2324"/>
         </scene>
         <!--Terms & Conditions-->
         <scene sceneID="SV3-Cw-hvH">
