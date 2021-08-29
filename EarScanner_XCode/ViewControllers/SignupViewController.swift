@@ -50,6 +50,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     let password = passwordTextField.text!
     let FirstName = FirstNameField.text!
     let LastName = LastNameField.text!
+    let salt = randomString(length: 8)
     if((email == "") || password == "" || FirstName == "" || LastName == "") {
                 print("Please ensure all fields are typed in")
                 DispatchQueue.main.async {
@@ -61,10 +62,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
             }
             else {
-                let jsonbody = [  "Email": email, "Password": password, "FirstName": FirstName, "LastName": LastName] as [String : Any]
+                let jsonbody = [  "Email": cryto(password: email), "Password": cryto(password: password), "FirstName": cryto(password: FirstName), "LastName": cryto(password: LastName), "Salt": cryto(password: salt)] as [String : Any]
             
             
             do {
+
                 let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
                 request.httpBody = requestBody
             } catch let error {
