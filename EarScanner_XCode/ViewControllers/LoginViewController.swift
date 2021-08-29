@@ -87,12 +87,11 @@ class LoginViewController: UIViewController {
         let password = PasswordField.text
      else {return}
         
-     
         //set the url of the api
         
         let url = URL(string:  "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Login")
         var request = URLRequest(url: url!) //make a request object with the url
-        let jsonbody = [  "Email": email, "Password": password]  //attach the json body to he request. pass in the text inputs
+        let jsonbody = [  "Email": cryto(password: email), "Password": cryto(password: password)]  //attach the json body to he request. pass in the text inputs
         do //making sure to convet it to json and attach it, testing if it breaks
         {
             let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
@@ -213,32 +212,57 @@ extension LoginViewController : UITextFieldDelegate {
         return true
     }
     
-    func cryto(password: String) -> String{
-     //let encryptedBytes = try AES(key: [1,2,3,...,32], blockMode: CBC(iv: [1,2,3,...,16]), padding: .pkcs7)
-        do {
-            //encrypt with AES256
-            let aes = try AES(key: [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5], blockMode: CBC(iv: [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,16]), padding: .pkcs7)
-            let ciphertext = try aes.encrypt(Array(password.utf8))
-            print(ciphertext)
-            //convert result to string
-            let encData = NSData(bytes: ciphertext, length: Int(ciphertext.count))
-            let base64String: String = encData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0));
-            let result = String(base64String)
-            return result
-        } catch {
-            print(error)
-        }
-       return "Failed"
-        
-    }
+
 }
     
+public func randomString(length: Int) -> String {
+  let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  return String((0..<length).map{ _ in letters.randomElement()! })
+}
+public func cryto(password: String) -> String{
+ //let encryptedBytes = try AES(key: [1,2,3,...,32], blockMode: CBC(iv: [1,2,3,...,16]), padding: .pkcs7)
+    
+    do {
+        print("Password: "+password)
+        let password: [UInt8] = Array(password.utf8)
+        
+        /* Generate a key from a `password`. Optional if you already have a key */
+        let key = Array("-JaNdRgUkXp2s5u8x/A?D(G+KbPeShVm".utf8)
+        /* Generate random IV value. IV is public value. Either need to generate, or get it from elsewhere */
+        let iv = Array("53827h0qwercgvyq".utf8)
+        /* AES cryptor instance */
+        let aes = try AES(key: key, blockMode: CBC(iv: iv), padding: .pkcs7)
+        /* Encrypt Data */
+        let inputData = Data(password)
+        let encryptedBytes = try aes.encrypt(inputData.bytes)
+        let encryptedData = Data(encryptedBytes)
+        let encryptedString = encryptedBytes.toBase64()
+        print("encryption")
+        print(encryptedString)
+        
+        return encryptedString
+       
+    } catch {
+        print(error)
+    }
+   return "Failed"
+
+}
+
+
+public func hashco(password: String, salt: String) -> String{
+ //let encryptedBytes = try AES(key: [1,2,3,...,32], blockMode: CBC(iv: [1,2,3,...,16]), padding: .pkcs7)
     
 
+        
+        let inputString = password+salt
+        let inputData = Data(inputString.utf8)
+        let hashed = SHA256.hash(data: inputData)
+        let hashString = hashed.compactMap { String(format: "%02x", $0) }.joined()
+   print("hash"+hashString)
+   return hashString
+}
 
-
-            
-          
             
      
     
