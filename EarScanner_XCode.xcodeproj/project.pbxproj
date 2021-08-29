@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		47947D7326B3EABD00761DC8 /* EarScanner_XCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarScanner_XCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47947D7326B3EABD00761DC8 /* EarScan3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarScan3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47947D7626B3EABD00761DC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47947D7826B3EABD00761DC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		47947D7A26B3EABD00761DC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,6 @@
 				53EA04072803588CFD5E5478 /* Pods-EarScanner_XCode.debug.xcconfig */,
 				9095D166B902AF9638FC7A48 /* Pods-EarScanner_XCode.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,7 +92,7 @@
 		47947D7426B3EABD00761DC8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47947D7326B3EABD00761DC8 /* EarScanner_XCode.app */,
+				47947D7326B3EABD00761DC8 /* EarScan3D.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,7 +166,7 @@
 				47DEEF9026D2191900D6DF91 /* CryptoSwift */,
 			);
 			productName = EarScanner_XCode;
-			productReference = 47947D7326B3EABD00761DC8 /* EarScanner_XCode.app */;
+			productReference = 47947D7326B3EABD00761DC8 /* EarScan3D.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +193,7 @@
 			);
 			mainGroup = 47947D6A26B3EABD00761DC8;
 			packageReferences = (
-				47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift.git" */,
+				47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = 47947D7426B3EABD00761DC8 /* Products */;
 			projectDirPath = "";
@@ -413,7 +412,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CodeIT.EarScanner-XCode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EarScan3D;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -433,7 +432,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CodeIT.EarScanner-XCode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EarScan3D;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,7 +462,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift.git" */ = {
+		47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
 			requirement = {
@@ -476,7 +475,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		47DEEF9026D2191900D6DF91 /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift.git" */;
+			package = 47DEEF8F26D2191900D6DF91 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
 			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
