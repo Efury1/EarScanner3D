@@ -11,12 +11,12 @@
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="EarScanner_XCode" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="EarScan3D" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="345" affinity="maxX"/>
+                            <userLayoutGuide location="346" affinity="maxX"/>
                             <userLayoutGuide location="14" affinity="maxX"/>
                             <userLayoutGuide location="615" affinity="minY"/>
                             <userLayoutGuide location="448" affinity="minY"/>
@@ -131,7 +131,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="EmailField" destination="U5Q-8H-O0P" id="ZiJ-hL-u2X"/>
+                        <outlet property="EmailField" destination="U5Q-8H-O0P" id="eBP-38-Q2j"/>
                         <outlet property="PasswordField" destination="Jiw-oX-l5z" id="b5K-Fr-Pvl"/>
                         <outlet property="rememberMe" destination="6Ih-7m-ax4" id="vwy-Af-cHT"/>
                     </connections>
