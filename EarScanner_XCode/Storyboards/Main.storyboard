@@ -16,20 +16,6 @@
                     <view key="view" contentMode="scaleToFill" id="JE1-ep-akq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhM-py-zPQ">
-                                <rect key="frame" x="0.0" y="742" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Help" image="questionmark.square" catalog="system" id="zGm-mu-u57">
-                                        <color key="badgeColor" systemColor="systemGroupedBackgroundColor"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Retake" image="return" catalog="system" id="DcN-M4-2Uk"/>
-                                </items>
-                                <color key="barTintColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tabBar>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nMm-av-JAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -1108,8 +1094,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="lde-rU-3kD">
                                 <rect key="frame" x="0.0" y="386" width="414" height="289"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ear Scan 3D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07j-VY-nHw">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ear Scan 3D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07j-VY-nHw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="24.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="07j-VY-nHw" secondAttribute="height" multiplier="621:37" id="Ccq-YQ-bKg"/>
                                             <constraint firstAttribute="width" secondItem="07j-VY-nHw" secondAttribute="height" multiplier="621:37" id="PeB-xe-41h"/>
@@ -1118,8 +1104,8 @@
                                         <color key="textColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Here is where the tagline for the app will go. Ideally it should take up two or three lines like this." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xN-bU-vxU">
-                                        <rect key="frame" x="0.0" y="106" width="414" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is where the tagline for the app will go. Ideally it should take up two or three lines like this." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xN-bU-vxU">
+                                        <rect key="frame" x="0.0" y="82.5" width="414" height="73.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="IYp-T5-mqP"/>
                                             <constraint firstAttribute="width" secondItem="7xN-bU-vxU" secondAttribute="height" multiplier="621:61" id="RzL-oZ-QT0"/>
@@ -1493,9 +1479,9 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB5-OY-RW9">
                                                 <rect key="frame" x="15" y="403" width="384" height="359"/>
-                                                <mutableString key="text">The Biofabrication and Tissue Morphology group led by Professor Mia Woodruff is a world class multi-disciplinary research team focused on embedding biofabrication into routine clinical use. The team uses 3D scanning, 3D modelling and 3D printing to disrupt traditional healthcare practices and provide low-cost, patient-specific and superior treatments for a range of conditions acquired from birth, injury or disease. 
+                                                <string key="text">The Biofabrication and Tissue Morphology group led by Professor Mia Woodruff is a world class multi-disciplinary research team focused on embedding biofabrication into routine clinical use. The team uses 3D scanning, 3D modelling and 3D printing to disrupt traditional healthcare practices and provide low-cost, patient-specific and superior treatments for a range of conditions acquired from birth, injury or disease. 
 
-One of the team's flagship projects is the Future Hear project led by Prof Woodruff, Dr Sean Powell, Renee Nightingale and Maureen Ross. This project aims to deliver accessible, low-cost digital solutions for patient-specific ear prosthesis for those born with microtia or other conditions. This 3D scanning application provides the platform to connect with patients anywhere across Australia to obtain 3D scans of their affected and unaffected ears which can be used to create a custom-made prosthesis.</mutableString>
+One of the team's flagship projects is the Future Hear project led by Prof Woodruff, Dr Sean Powell, Renee Nightingale and Maureen Ross. This project aims to deliver accessible, low-cost digital solutions for patient-specific ear prosthesis for those born with microtia or other conditions. This 3D scanning application provides the platform to connect with patients anywhere across Australia to obtain 3D scans of their affected and unaffected ears which can be used to create a custom-made prosthesis.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1522,6 +1508,7 @@ One of the team's flagship projects is the Future Hear project led by Prof Woodr
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Z6-ES-aRJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gIv-wM-6Gb" firstAttribute="top" secondItem="LRv-cz-JK8" secondAttribute="top" id="0NY-y2-KB2"/>
@@ -2102,8 +2089,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <image name="logo" width="1000" height="1000"/>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
-        <image name="questionmark.square" catalog="system" width="128" height="114"/>
-        <image name="return" catalog="system" width="128" height="101"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
@@ -2117,9 +2102,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
