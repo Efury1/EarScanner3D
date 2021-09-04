@@ -24,6 +24,24 @@ class ViewController: UIViewController {
     //Video Preview
     let previewLayer = AVCaptureVideoPreviewLayer()
     //Shutter Button
+    
+//    var imageView : UIImageView
+//    imageView  = UIImageView(frame:CGRectMake(10, 50, 100, 300));
+//    imageView.image = UIImage(named:"image.jpg")
+//    self.view.addSubview(imageView)
+
+ 
+    //Lizzy 1
+    //Create the views of the four bars (images)
+    
+//    var imageView : UIImageView //maybe change the frame dimensions
+//    imageView  = UIImageView(frame:CGRectMake(10, 50, 100, 300));
+//    imageView.image = UIImage(named:"Bar1.jpg")
+    
+    
+
+    
+    
     public let shutterButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.layer.cornerRadius = 50
@@ -82,6 +100,13 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
         
+        //Lizzy 2
+        //give the bars (all 4) a position on the screen
+        //Bar1View.center =
+        //CGPoint(x: MyVariables.screenWidth/2,
+        //y: 40)
+        //change too 0, if you cant see it, add the bars height (maybe times 2)
+        //use a ratio MyVariables.screenHeight
         
         RetakeButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
@@ -90,6 +115,7 @@ class ViewController: UIViewController {
        
         shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.19) )
+        
         HelpButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
                                          y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
     }
@@ -162,6 +188,11 @@ class ViewController: UIViewController {
     }
     @objc private func didTapTakePhoto(){
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+        
+        //increment counter on button press
+        MyVariables.counter += 1;
+            
+        
     }
 
     
@@ -173,10 +204,14 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
  
     struct MyVariables {
         static var yourVariable = false
-        static var greenview = UIView()
+        static var bottomPinkBar = UIView()
         static var screenWidth = CGFloat(0.1);
         static var screenHeight = CGFloat(0.1);
+        //counter for button and progress bar
+        static var counter = 0;
+
     }
+    
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let data = photo.fileDataRepresentation() else{
             return
@@ -205,9 +240,10 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
 //        writeToPhotoAlbum(image: image!)
         //remove ad re-add elements
+        
         shutterButton.removeFromSuperview()
         HelpButton.removeFromSuperview()
-        MyVariables.greenview.removeFromSuperview()
+        MyVariables.bottomPinkBar.removeFromSuperview()
         NextPhotoButton.removeFromSuperview()
         RetakeButton.removeFromSuperview()
         
@@ -216,14 +252,33 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         view.addSubview(imageView)
 
        
-        view.addSubview(MyVariables.greenview)
+        view.addSubview(MyVariables.bottomPinkBar)
         view.addSubview(shutterButton)
         view.addSubview(RetakeButton)
         view.addSubview(HelpButton)
-        //view.addSubview(greenView)
+        //view.addSubview(bottomPinkBar)
         view.addSubview(NextPhotoButton)
         
         imageTakePast = imageTake
+        
+        //Lizzy 4
+        
+        //if counter is 16
+        //remove (bar 1) add bar 2
+        
+        //Bar1View.removeFromSuperview()
+        //view.addSubview(Bar2View)
+        
+        
+        //else if counter is 30
+        //remove bar 2 add bar 3
+        
+        //else if counter is 46
+        //remove bar 3 add bar 4
+        
+        //else if counter is 62
+        //go to completed page
+        
         
         imageTake = image
         if (Retake != true){
@@ -283,30 +338,44 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
               
               // Create a UIView object which use above CGRect object.
-        let greenView = UIView(frame: rectFrame)
-//        greenView.center = CGPoint(x: CGFloat(screenWidth/2),
+        let bottomPinkBar = UIView(frame: rectFrame)
+//        bottomPinkBar.center = CGPoint(x: CGFloat(screenWidth/2),
 //                                   y: CGFloat(screenHeight-(screenHeight*0.05)))
               // Set UIView background color.
         
-                greenView.backgroundColor = UIColor(rgb: 0xA87F8B)
+                bottomPinkBar.backgroundColor = UIColor(rgb: 0xA87F8B)
         
-        MyVariables.greenview = greenView
+        MyVariables.bottomPinkBar = bottomPinkBar
         
         shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
 
         gridView.translatesAutoresizingMaskIntoConstraints = false
+        //add image based upon what number counter is at
         view.addSubview(gridView)
-        view.addSubview(greenView)
+        //bottom pink bar
+        view.addSubview(bottomPinkBar)
+        //main circle button
         view.addSubview(shutterButton)
+        //retake button
         view.addSubview(RetakeButton)
+        //help
         view.addSubview(HelpButton)
-        //view.addSubview(greenView)
+        
+        //Lizzy 3
+        //add bar 1 for first time
+        //view.addSubview(Bar1View)
+        
+        //view.addSubview(bottomPinkBar)
         view.addSubview(NextPhotoButton)
+        
         gridView.backgroundColor = UIColor.clear
         gridView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: CGFloat(horizontalMargin)).isActive = true
         gridView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: CGFloat(-1 * horizontalMargin)).isActive = true
         gridView.topAnchor.constraint(equalTo: view.topAnchor, constant: CGFloat(verticalMargin)).isActive = true
         gridView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: CGFloat(-1 * verticalMargin)).isActive = true
+        
+        //set up a global counter variable (done)
+        //ever
     }
 }
 

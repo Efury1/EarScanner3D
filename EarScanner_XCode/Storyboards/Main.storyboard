@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAU-7g-m20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2108.695652173913" y="2123.4375"/>
+            <point key="canvasLocation" x="2107.2463768115945" y="2123.4375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uis-0z-Ip3">
@@ -1092,10 +1092,10 @@
                                 <rect key="frame" x="0.0" y="-737.5" width="86" height="44"/>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="lde-rU-3kD">
-                                <rect key="frame" x="0.0" y="386" width="1018" height="289"/>
+                                <rect key="frame" x="0.0" y="386" width="414" height="289"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ear Scan 3D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07j-VY-nHw">
-                                        <rect key="frame" x="0.0" y="0.0" width="1018" height="60.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ear Scan 3D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07j-VY-nHw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="07j-VY-nHw" secondAttribute="height" multiplier="621:37" id="Ccq-YQ-bKg"/>
                                             <constraint firstAttribute="width" secondItem="07j-VY-nHw" secondAttribute="height" multiplier="621:37" id="PeB-xe-41h"/>
@@ -1104,8 +1104,8 @@
                                         <color key="textColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is where the tagline for the app will go. Ideally it should take up two or three lines like this." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xN-bU-vxU">
-                                        <rect key="frame" x="0.0" y="118.5" width="1018" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Here is where the tagline for the app will go. Ideally it should take up two or three lines like this." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xN-bU-vxU">
+                                        <rect key="frame" x="0.0" y="106" width="414" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="IYp-T5-mqP"/>
                                             <constraint firstAttribute="width" secondItem="7xN-bU-vxU" secondAttribute="height" multiplier="621:61" id="RzL-oZ-QT0"/>
@@ -1117,7 +1117,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bde-WX-OTh">
-                                        <rect key="frame" x="0.0" y="276.5" width="1018" height="12.5"/>
+                                        <rect key="frame" x="0.0" y="214" width="414" height="75"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Bde-WX-OTh" secondAttribute="height" multiplier="207:25" id="4gn-xy-52p"/>
