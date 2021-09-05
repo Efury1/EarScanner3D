@@ -34,13 +34,22 @@ class ViewController: UIViewController {
 //    imageView  = UIImageView(frame:CGRectMake(10, 50, 100, 300));
 //    imageView.image = UIImage(named:"Bar1.jpg")
     
-    
-    let someImageView: UIImageView = {
-           let theImageView = UIImageView()
-           theImageView.image = UIImage(named: "ProgressBar1")
-           return theImageView
-        }()
-    
+    func drawRectangle()
+    {
+        // Get the Graphics Context
+        let context = UIGraphicsGetCurrentContext()
+        // Set the rectangle outerline-width
+        context?.setLineWidth( 5.0)
+        // Set the rectangle outerline-colour
+        UIColor.red.set()
+        // Create Rectangle
+        context?.addRect( CGRect(x: 0, y: 0, width: 100, height: 100))
+        // Draw
+        context?.strokePath()
+
+    }
+
+   
     public let shutterButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.layer.cornerRadius = 50
