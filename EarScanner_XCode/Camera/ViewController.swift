@@ -86,13 +86,31 @@ class ViewController: UIViewController {
         checkCameraPermissions()
         let gridView = GridView()
         
+        //Get screen size object
         let screenRect = UIScreen.main.bounds
+        //get screen width
         let screenWidth = screenRect.size.width
+        //get screen height
         let screenHeight = screenRect.size.height
         MyVariables.screenWidth = screenWidth;
-        MyVariables.screenHeight = screenHeight
-        ;
-
+        MyVariables.screenHeight = screenHeight;
+        
+        //Rectange
+        let xPos = 500
+        let yPos = 400
+        let rectWidth = Int(screenWidth) - 2 * xPos
+        let rectHeight = Int(screenHeight) - 2 * yPos
+        //Creat a CGRect object which is used to render a rectange
+        let rectFrame: CGRect = CGRect(x:CGFloat(xPos), y:CGFloat(yPos), width:CGFloat(rectWidth), height:CGFloat(rectHeight))
+        //Create a UIView object which use above CGRect object
+        let greenView = UIView(frame: rectFrame)
+        //Set UIView blackboard color.
+        greenView.backgroundColor = UIColor.green
+        
+        self.view.addSubview(greenView)
+        
+        
+       
     }
     //create the preview layer frames and place the buttons on them
     override func viewDidLayoutSubviews() {
@@ -364,7 +382,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         //Lizzy 3
         //add bar 1 for first time
         //view.addSubview(Bar1View)
-        view.addSubview(someImageView) //This add it the view controller without constraints
+       
         //view.addSubview(bottomPinkBar)
         view.addSubview(NextPhotoButton)
         
