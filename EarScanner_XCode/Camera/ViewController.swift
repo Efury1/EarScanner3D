@@ -25,22 +25,21 @@ class ViewController: UIViewController {
     let previewLayer = AVCaptureVideoPreviewLayer()
     //Shutter Button
     
-//    var imageView : UIImageView
-//    imageView  = UIImageView(frame:CGRectMake(10, 50, 100, 300));
-//    imageView.image = UIImage(named:"image.jpg")
-//    self.view.addSubview(imageView)
-
+//    z
  
     //Lizzy 1
     //Create the views of the four bars (images)
-    
+      
 //    var imageView : UIImageView //maybe change the frame dimensions
 //    imageView  = UIImageView(frame:CGRectMake(10, 50, 100, 300));
 //    imageView.image = UIImage(named:"Bar1.jpg")
     
     
-
-    
+    let someImageView: UIImageView = {
+           let theImageView = UIImageView()
+           theImageView.image = UIImage(named: "ProgressBar1")
+           return theImageView
+        }()
     
     public let shutterButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -107,6 +106,7 @@ class ViewController: UIViewController {
         //y: 40)
         //change too 0, if you cant see it, add the bars height (maybe times 2)
         //use a ratio MyVariables.screenHeight
+        
         
         RetakeButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
@@ -364,7 +364,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         //Lizzy 3
         //add bar 1 for first time
         //view.addSubview(Bar1View)
-        
+        view.addSubview(someImageView) //This add it the view controller without constraints
         //view.addSubview(bottomPinkBar)
         view.addSubview(NextPhotoButton)
         
