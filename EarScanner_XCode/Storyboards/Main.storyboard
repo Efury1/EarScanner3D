@@ -16,30 +16,14 @@
                     <view key="view" contentMode="scaleToFill" id="JE1-ep-akq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YdF-X0-fQd">
-                                <rect key="frame" x="16" y="0.0" width="382" height="4"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="tVL-Em-s8l"/>
-                                </constraints>
-                                <color key="progressTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </progressView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nMm-av-JAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="YdF-X0-fQd" firstAttribute="centerX" secondItem="JE1-ep-akq" secondAttribute="centerX" id="0cM-vp-G0W"/>
-                            <constraint firstItem="nMm-av-JAZ" firstAttribute="bottom" secondItem="YdF-X0-fQd" secondAttribute="bottom" constant="770" id="acV-nK-ek0"/>
-                            <constraint firstItem="YdF-X0-fQd" firstAttribute="leading" secondItem="nMm-av-JAZ" secondAttribute="leading" constant="16" id="gWl-SJ-78i"/>
-                            <constraint firstItem="nMm-av-JAZ" firstAttribute="trailing" secondItem="YdF-X0-fQd" secondAttribute="trailing" constant="16" id="qN3-xh-7Tb"/>
-                            <constraint firstItem="YdF-X0-fQd" firstAttribute="top" secondItem="nMm-av-JAZ" secondAttribute="top" id="yjr-MB-hG6"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" leftItemsSupplementBackButton="YES" id="8fS-Kk-l3R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAU-7g-m20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2108.695652173913" y="2123.4375"/>
+            <point key="canvasLocation" x="2107.2463768115945" y="2123.4375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uis-0z-Ip3">
@@ -1111,7 +1095,7 @@
                                 <rect key="frame" x="0.0" y="386" width="414" height="289"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ear Scan 3D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07j-VY-nHw">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="07j-VY-nHw" secondAttribute="height" multiplier="621:37" id="Ccq-YQ-bKg"/>
                                             <constraint firstAttribute="width" secondItem="07j-VY-nHw" secondAttribute="height" multiplier="621:37" id="PeB-xe-41h"/>
@@ -1121,7 +1105,7 @@
                                         <color key="highlightedColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Here is where the tagline for the app will go. Ideally it should take up two or three lines like this." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xN-bU-vxU">
-                                        <rect key="frame" x="0.0" y="89" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="106" width="414" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="IYp-T5-mqP"/>
                                             <constraint firstAttribute="width" secondItem="7xN-bU-vxU" secondAttribute="height" multiplier="621:61" id="RzL-oZ-QT0"/>
@@ -1132,8 +1116,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bde-WX-OTh">
-                                        <rect key="frame" x="0.0" y="247" width="414" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bde-WX-OTh">
+                                        <rect key="frame" x="0.0" y="214" width="414" height="75"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Bde-WX-OTh" secondAttribute="height" multiplier="207:25" id="4gn-xy-52p"/>
