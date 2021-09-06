@@ -2001,6 +2001,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="xqY-wm-3h9" kind="show" id="gBA-8i-u5m"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I1U-i0-m8b"/>
@@ -2026,6 +2029,65 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GI-lO-463" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5493" y="2123"/>
+        </scene>
+        <!--Step 1-->
+        <scene sceneID="Uhu-Jr-5Db">
+            <objects>
+                <viewController title="Step 1" hidesBottomBarWhenPushed="YES" id="xqY-wm-3h9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wbV-mL-zFp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DpO-gn-4u5">
+                                <rect key="frame" x="30" y="30" width="354" height="183.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a name for this photoset" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAd-8l-1D8">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter photoset name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8FA-gz-Uln">
+                                        <rect key="frame" x="0.0" y="70.5" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="X1Z-1H-MZS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-3N-kQr">
+                                        <rect key="frame" x="0.0" y="133.5" width="354" height="50"/>
+                                        <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="eDN-rP-ydA"/>
+                                        </constraints>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uTh-V3-AYb"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DpO-gn-4u5" firstAttribute="centerX" secondItem="wbV-mL-zFp" secondAttribute="centerX" id="G6v-BC-aQM"/>
+                            <constraint firstItem="DpO-gn-4u5" firstAttribute="leading" secondItem="uTh-V3-AYb" secondAttribute="leading" constant="30" id="LtK-ye-z59"/>
+                            <constraint firstItem="uTh-V3-AYb" firstAttribute="trailing" secondItem="DpO-gn-4u5" secondAttribute="trailing" constant="30" id="VTq-FG-fzT"/>
+                            <constraint firstItem="DpO-gn-4u5" firstAttribute="top" secondItem="uTh-V3-AYb" secondAttribute="top" constant="30" id="Z3E-e4-J3O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JQP-73-5oP"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0N-7J-Zjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5419" y="2948"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
