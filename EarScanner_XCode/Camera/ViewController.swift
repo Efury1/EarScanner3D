@@ -25,23 +25,31 @@ class ViewController: UIViewController {
     let previewLayer = AVCaptureVideoPreviewLayer()
     //Shutter Button
     
-//    var imageView : UIImageView
-//    imageView  = UIImageView(frame:CGRectMake(10, 50, 100, 300));
-//    imageView.image = UIImage(named:"image.jpg")
-//    self.view.addSubview(imageView)
-
+//    z
  
     //Lizzy 1
     //Create the views of the four bars (images)
-    
+      
 //    var imageView : UIImageView //maybe change the frame dimensions
 //    imageView  = UIImageView(frame:CGRectMake(10, 50, 100, 300));
 //    imageView.image = UIImage(named:"Bar1.jpg")
     
-    
+    func drawRectangle()
+    {
+        // Get the Graphics Context
+        let context = UIGraphicsGetCurrentContext()
+        // Set the rectangle outerline-width
+        context?.setLineWidth( 5.0)
+        // Set the rectangle outerline-colour
+        UIColor.red.set()
+        // Create Rectangle
+        context?.addRect( CGRect(x: 0, y: 0, width: 100, height: 100))
+        // Draw
+        context?.strokePath()
 
-    
-    
+    }
+
+   
     public let shutterButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.layer.cornerRadius = 50
@@ -87,13 +95,31 @@ class ViewController: UIViewController {
         checkCameraPermissions()
         let gridView = GridView()
         
+        //Get screen size object
         let screenRect = UIScreen.main.bounds
+        //get screen width
         let screenWidth = screenRect.size.width
+        //get screen height
         let screenHeight = screenRect.size.height
         MyVariables.screenWidth = screenWidth;
-        MyVariables.screenHeight = screenHeight
-        ;
-
+        MyVariables.screenHeight = screenHeight;
+        
+        //Rectange
+        let xPos = 500
+        let yPos = 400
+        let rectWidth = Int(screenWidth) - 2 * xPos
+        let rectHeight = Int(screenHeight) - 2 * yPos
+        //Creat a CGRect object which is used to render a rectange
+        let rectFrame: CGRect = CGRect(x:CGFloat(xPos), y:CGFloat(yPos), width:CGFloat(rectWidth), height:CGFloat(rectHeight))
+        //Create a UIView object which use above CGRect object
+        let greenView = UIView(frame: rectFrame)
+        //Set UIView blackboard color.
+        greenView.backgroundColor = UIColor.green
+        
+        self.view.addSubview(greenView)
+        
+        
+       
     }
     //create the preview layer frames and place the buttons on them
     override func viewDidLayoutSubviews() {
@@ -107,6 +133,7 @@ class ViewController: UIViewController {
         //y: 40)
         //change too 0, if you cant see it, add the bars height (maybe times 2)
         //use a ratio MyVariables.screenHeight
+        
         
         RetakeButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
@@ -364,7 +391,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         //Lizzy 3
         //add bar 1 for first time
         //view.addSubview(Bar1View)
-        
+       
         //view.addSubview(bottomPinkBar)
         view.addSubview(NextPhotoButton)
         

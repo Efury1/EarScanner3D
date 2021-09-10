@@ -105,7 +105,6 @@
 				47947D7626B3EABD00761DC8 /* AppDelegate.swift */,
 				47947D7826B3EABD00761DC8 /* SceneDelegate.swift */,
 				56C263AE26D9D8260001F3AD /* Storyboards */,
-				47947D7A26B3EABD00761DC8 /* ViewController.swift */,
 				56C263AF26D9D8780001F3AD /* Camera */,
 				5687B81B26B9470700548B19 /* ViewControllers */,
 				566CCE0E26BBFABA00DF6616 /* DesignableView.swift */,
@@ -143,6 +142,7 @@
 			children = (
 				47947D8A26B55DCB00761DC8 /* GridView.swift */,
 				47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */,
+				47947D7A26B3EABD00761DC8 /* ViewController.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
