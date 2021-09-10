@@ -104,11 +104,13 @@ class ViewController: UIViewController {
         MyVariables.screenWidth = screenWidth;
         MyVariables.screenHeight = screenHeight;
         
+        
         //Rectange
         let xPos = 500
         let yPos = 400
         let rectWidth = Int(screenWidth) - 2 * xPos
         let rectHeight = Int(screenHeight) - 2 * yPos
+        //let rectHeight = Int(screenHeight) - 2 * yPos
         //Creat a CGRect object which is used to render a rectange
         let rectFrame: CGRect = CGRect(x:CGFloat(xPos), y:CGFloat(yPos), width:CGFloat(rectWidth), height:CGFloat(rectHeight))
         //Create a UIView object which use above CGRect object
@@ -116,7 +118,8 @@ class ViewController: UIViewController {
         //Set UIView blackboard color.
         greenView.backgroundColor = UIColor.green
         
-        self.view.addSubview(greenView)
+    
+        //self.view.addSubview(greenView)
         
         
        
@@ -171,9 +174,6 @@ class ViewController: UIViewController {
     }
     
     private func setUpCamera(){
-        
-        
-        
         let session = AVCaptureSession()
         addGridView()
         if let device = AVCaptureDevice.default(for: .video){
@@ -213,6 +213,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     @objc private func didTapTakePhoto(){
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
         
@@ -291,7 +292,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         //Lizzy 4
         
         //if counter is 16
-        //remove (bar 1) add bar 2
+       //remove (bar 1) add bar 2
         
         //Bar1View.removeFromSuperview()
         //view.addSubview(Bar2View)
