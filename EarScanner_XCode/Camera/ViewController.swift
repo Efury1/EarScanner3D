@@ -309,7 +309,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         imageTake = image
         if (Retake != true){
-            MyAwesomeAlbum.shared.albumName = "RemovalTest"
+            MyAwesomeAlbum.shared.albumName = GlobalPhotosetName
             
             MyAwesomeAlbum.shared.save(image: self.imageTakePast)
         }

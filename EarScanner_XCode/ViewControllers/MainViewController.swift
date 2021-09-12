@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+public var GlobalPhotosetName = ""
 class MainViewController: UIViewController {
     
     override func
@@ -54,6 +54,29 @@ class MainViewController: UIViewController {
     }
    
         
-        
+    
+    
+    @IBOutlet weak var PhotosetName: UITextField!
+    
+    
+    @IBAction func StartCamera(_ sender: UIButton) {
+       
+        if (PhotosetName.text?.isEmpty == false && PhotosetName.text != nil && !(PhotosetName.text?.trimmingCharacters(in: .whitespaces).isEmpty)!){
+            GlobalPhotosetName = PhotosetName.text ?? "Unnamed"
+            
+            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Camera")
+             self.addChild(childViewController)
+             self.view.addSubview(childViewController.view)
+             childViewController.didMove(toParent: self)
+            
+        }
+        else{
+            let alert = UIAlertController(title: "Error", message: "Enter a name for the Photoset", preferredStyle: UIAlertController.Style.alert) //create alert
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+            self.present(alert, animated: true, completion: nil) // show the alert
+            
+        }
+    }
+    
     
 }

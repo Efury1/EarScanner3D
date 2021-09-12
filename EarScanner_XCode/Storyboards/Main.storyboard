@@ -12,9 +12,9 @@
         <!--Camera-->
         <scene sceneID="zQL-NB-T6x">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="SWI-6d-uB4" customClass="ViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Camera" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="SWI-6d-uB4" customClass="ViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JE1-ep-akq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="nMm-av-JAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAU-7g-m20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2107.2463768115945" y="2123.4375"/>
+            <point key="canvasLocation" x="2084" y="2869"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uis-0z-Ip3">
@@ -1122,7 +1122,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="SWI-6d-uB4" kind="show" id="Hrw-r0-SmC"/>
+                                            <segue destination="xqY-wm-3h9" kind="show" id="47t-7K-3SR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2002,9 +2002,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="xqY-wm-3h9" kind="show" id="gBA-8i-u5m"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I1U-i0-m8b"/>
@@ -2034,7 +2031,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Step 1-->
         <scene sceneID="Uhu-Jr-5Db">
             <objects>
-                <viewController title="Step 1" hidesBottomBarWhenPushed="YES" id="xqY-wm-3h9" sceneMemberID="viewController">
+                <viewController title="Step 1" hidesBottomBarWhenPushed="YES" id="xqY-wm-3h9" customClass="MainViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wbV-mL-zFp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2070,6 +2067,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="StartCamera:" destination="xqY-wm-3h9" eventType="touchUpInside" id="lUo-Xz-dRv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -2085,10 +2085,13 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                     </view>
                     <navigationItem key="navigationItem" id="JQP-73-5oP"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="PhotosetName" destination="8FA-gz-Uln" id="L6y-qy-7kL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0N-7J-Zjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5419" y="2948"/>
+            <point key="canvasLocation" x="2107" y="2157"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
