@@ -8,7 +8,7 @@
 import Foundation
 import CryptoSwift
 import UIKit
-import KeychainAccess
+//import KeychainAccess
 import CryptoKit
 
 class LoginViewController: UIViewController {
@@ -29,22 +29,7 @@ class LoginViewController: UIViewController {
      */
     
     
-    @IBAction func rememberMe(_ sender: Any) {
-        //Turn on and off
-        //Save in userDeautls
-        if ((sender as AnyObject).isOn == true) {
-            print("Is on")
-            let savePassword = self.PasswordField.text
-            //save data
-            let keychain = Keychain(service: "com.CodeIT.EarScanner-XCode")
-            keychain["PASSWORDFIELD"] = savePassword
-            //
-        } else {
-            
-            print("Is off")
-            
-        }
-    }
+   
     
     struct MyVariables {
         static var UserExists = "None"

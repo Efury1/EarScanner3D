@@ -6,6 +6,10 @@ target 'EarScanner_XCode' do
   use_frameworks!
 
   # Pods for EarScanner_XCode'
-pod 'KeychainAccess'
+#pod 'KeychainAccess'
+
+pod 'EasyPeasy'
+
+pod "AYStepperView"
 
 end

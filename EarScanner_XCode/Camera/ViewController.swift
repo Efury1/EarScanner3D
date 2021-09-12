@@ -34,20 +34,7 @@ class ViewController: UIViewController {
 //    imageView  = UIImageView(frame:CGRectMake(10, 50, 100, 300));
 //    imageView.image = UIImage(named:"Bar1.jpg")
     
-    func drawRectangle()
-    {
-        // Get the Graphics Context
-        let context = UIGraphicsGetCurrentContext()
-        // Set the rectangle outerline-width
-        context?.setLineWidth( 5.0)
-        // Set the rectangle outerline-colour
-        UIColor.red.set()
-        // Create Rectangle
-        context?.addRect( CGRect(x: 0, y: 0, width: 100, height: 100))
-        // Draw
-        context?.strokePath()
 
-    }
 
    
     public let shutterButton: UIButton = {
