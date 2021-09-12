@@ -104,7 +104,6 @@ class ViewController: UIViewController {
         MyVariables.screenWidth = screenWidth;
         MyVariables.screenHeight = screenHeight;
         
-        
         //Rectange
         let xPos = 500
         let yPos = 400
