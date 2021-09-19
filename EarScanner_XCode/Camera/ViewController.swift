@@ -8,6 +8,8 @@ import AVFoundation
 import UIKit
 import Foundation
 //test
+import EasyPeasy
+import AYStepperView
 
 
 class ViewController: UIViewController {
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
     //Shutter Button
     
 //    z
- 
+    let easy = SetUpViewController();
     //Lizzy 1
     //Create the views of the four bars (images)
       
@@ -35,6 +37,75 @@ class ViewController: UIViewController {
 //    imageView.image = UIImage(named:"Bar1.jpg")
     
 
+    var currentProgress = 0
+    let lineHeight: CGFloat = 5
+    
+    var containerWidth: CGFloat {
+        self.view.frame.size.width * 0.95
+    }
+    var containerHeight: CGFloat {
+        self.containerWidth/7
+    }
+    var viewSize: CGFloat {
+        self.containerWidth/9
+    }
+    var lineWidth: CGFloat {
+        self.containerWidth/8
+    }
+    var padding: CGFloat {
+        self.containerWidth/45
+    }
+    
+    let containerView = UIView()
+    
+    var view1: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        view.alpha = 0.5
+        return view
+    }()
+    let view2: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        view.alpha = 0.5
+        return view
+    }()
+    let view3: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        view.alpha = 0.5
+        return view
+    }()
+    let view4: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        view.alpha = 0.5
+        return view
+    }()
+    
+    let line1: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        view.alpha = 0.5
+        return view
+    }()
+    let line2: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        view.alpha = 0.5
+        return view
+    }()
+    let line3: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        view.alpha = 0.5
+        return view
+    }()
+    private func addViews(views: [UIView]) {
+        for view in views {
+            containerView.addSubview(view)
+        }
+    }
 
    
     public let shutterButton: UIButton = {
@@ -78,10 +149,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
+ 
+        
+        
         
         checkCameraPermissions()
-        let gridView = GridView()
-        
+//        let gridView = GridView()
+
         //Get screen size object
         let screenRect = UIScreen.main.bounds
         //get screen width
@@ -162,6 +236,9 @@ class ViewController: UIViewController {
     private func setUpCamera(){
         let session = AVCaptureSession()
         addGridView()
+        
+      
+
         if let device = AVCaptureDevice.default(for: .video){
             
             do {
@@ -272,7 +349,48 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         view.addSubview(HelpButton)
         //view.addSubview(bottomPinkBar)
         view.addSubview(NextPhotoButton)
+        let seconds2 = 2.0
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds2) {
+            
+            
+            
+         
+
+        
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            guard let self = self else {
+                return
+            }
+            switch self.currentProgress {
+            case 0:
+                self.view1.alpha = 1
+            case 1:
+                self.view2.alpha = 1
+                self.line1.alpha = 1
+            case 2:
+                self.view3.alpha = 1
+                self.line2.alpha = 1
+            case 3:
+                self.view4.alpha = 1
+                self.line3.alpha = 1
+            default:
+                self.view1.alpha = 0.5
+                self.view2.alpha = 0.5
+                self.line1.alpha = 0.5
+                self.view3.alpha = 0.5
+                self.line2.alpha = 0.5
+                self.view4.alpha = 0.5
+                self.line3.alpha = 0.5
+            }
+            if self.currentProgress > 3 {
+                self.currentProgress = 0
+            } else {
+                self.currentProgress += 1
+            }
+        }
+        }
+
         imageTakePast = imageTake
         
         //Lizzy 4
@@ -375,6 +493,40 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         //help
         view.addSubview(HelpButton)
         
+        
+        containerView.easy.layout(Top(padding).to(view.safeAreaLayoutGuide, .top), CenterX(), Width(containerWidth), Height(containerHeight))
+        
+        
+        addViews(views: [view1, view2, view3, view4])
+        addViews(views: [line1, line2, line3])
+        
+        view1.easy.layout(CenterY(), Left(padding).to(containerView, .left), Size(viewSize))
+        view1.rounded(radius: viewSize/2)
+        
+        line1.easy.layout(CenterY(), Left(padding).to(view1, .right), Height(lineHeight), Width(lineWidth))
+
+        line1.rounded(radius: lineHeight/2)
+        
+        view2.easy.layout(CenterY(), Left(padding).to(line1, .right), Size(viewSize))
+        view2.rounded(radius: viewSize/2)
+        
+        line2.easy.layout(CenterY(), Left(padding).to(view2, .right), Height(lineHeight), Width(lineWidth))
+        line2.rounded(radius: lineHeight/2)
+        
+        view3.easy.layout(CenterY(), Left(padding).to(line2, .right), Size(viewSize))
+        view3.rounded(radius: viewSize/2)
+        
+        line3.easy.layout(CenterY(), Left(padding).to(view3, .right), Height(lineHeight), Width(lineWidth))
+        line3.rounded(radius: lineHeight/2)
+        
+        view4.easy.layout(CenterY(), Left(padding).to(line3, .right), Size(viewSize))
+        view4.rounded(radius: viewSize/2)
+        view.addSubview(containerView)
+        
+       
+        
+        
+
         //Lizzy 3
         //add bar 1 for first time
         //view.addSubview(Bar1View)
