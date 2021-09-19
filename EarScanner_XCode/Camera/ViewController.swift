@@ -139,13 +139,13 @@ class ViewController: UIViewController {
         return button
     }()
     //button to move to the next photo
-    private let NextPhotoButton: UIButton = {
+    /*private let NextPhotoButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 //        button.backgroundColor = .black
         button.setTitle("Next Photo", for: .normal)
         
         return button
-    }()
+    }()*/
     
     private let HelpButton: UIButton = {
         
@@ -196,8 +196,8 @@ class ViewController: UIViewController {
         
         HelpButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
-        NextPhotoButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
-                                         y: MyVariables.screenHeight - (MyVariables.screenHeight*0.3) )
+        /*NextPhotoButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
+                                         y: MyVariables.screenHeight - (MyVariables.screenHeight*0.3) )*/
        
         shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.19) )
@@ -332,7 +332,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         shutterButton.removeFromSuperview()
         HelpButton.removeFromSuperview()
         MyVariables.bottomPinkBar.removeFromSuperview()
-        NextPhotoButton.removeFromSuperview()
+        //NextPhotoButton.removeFromSuperview()
         RetakeButton.removeFromSuperview()
         
         imageView.frame = view.bounds
@@ -345,7 +345,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         view.addSubview(RetakeButton)
         view.addSubview(HelpButton)
         //view.addSubview(bottomPinkBar)
-        view.addSubview(NextPhotoButton)
+        //view.addSubview(NextPhotoButton)
         let seconds2 = 2.0
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds2) {
@@ -398,7 +398,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             MyAwesomeAlbum.shared.save(image: self.imageTakePast)
         }
         Retake = false
-        NextPhotoButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
+        //NextPhotoButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
         
         
         RetakeButton.addTarget(self, action: #selector(retake), for: .touchUpInside)
@@ -504,7 +504,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         view.addSubview(containerView)
     
         //view.addSubview(bottomPinkBar)
-        view.addSubview(NextPhotoButton)
+        //view.addSubview(NextPhotoButton)
         
         gridView.backgroundColor = UIColor.clear
         gridView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: CGFloat(horizontalMargin)).isActive = true
