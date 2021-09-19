@@ -110,7 +110,6 @@
 				47947D7626B3EABD00761DC8 /* AppDelegate.swift */,
 				47947D7826B3EABD00761DC8 /* SceneDelegate.swift */,
 				56C263AE26D9D8260001F3AD /* Storyboards */,
-				56C263AF26D9D8780001F3AD /* Camera */,
 				5687B81B26B9470700548B19 /* ViewControllers */,
 				566CCE0E26BBFABA00DF6616 /* DesignableView.swift */,
 				47947D8426B3EABF00761DC8 /* Info.plist */,
@@ -146,6 +145,7 @@
 			children = (
 				569B3CE126BB4FA600A1A76E /* Login.storyboard */,
 				6A703E5226D8818E007A06BA /* Main.storyboard */,
+				56C263AF26D9D8780001F3AD /* Camera */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
