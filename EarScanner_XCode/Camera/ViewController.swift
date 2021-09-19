@@ -10,6 +10,7 @@ import Foundation
 //test
 import EasyPeasy
 import AYStepperView
+import SwiftUI
 
 
 class ViewController: UIViewController {
@@ -122,7 +123,6 @@ class ViewController: UIViewController {
             // Do stuff...
             let newValue = counter + 1
             button.setTitle("\(newValue)",for: .normal)
-                
         }
         
         //button.setTitle("\(items)",for: .normal)
@@ -132,7 +132,9 @@ class ViewController: UIViewController {
     private let RetakeButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 //        button.backgroundColor = .black
-        button.setTitle("Retake", for: .normal)
+        let largeTitle = UIImage.SymbolConfiguration(textStyle: .largeTitle)
+        button.setImage(UIImage(systemName: "gobackward", withConfiguration: largeTitle), for: .normal)
+        //button.setTitle("Retake", for: .normal)
         
         return button
     }()
@@ -144,11 +146,17 @@ class ViewController: UIViewController {
         
         return button
     }()
+    
     private let HelpButton: UIButton = {
+        
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 //        button.backgroundColor = .black
-        button.setTitle("Help", for: .normal)
+        let largeTitle = UIImage.SymbolConfiguration(textStyle: .largeTitle)
+        //let black = UIImage.SymbolConfiguration(weight: .black)
+        //let combined = largeTitle.applying(black)
+        button.setImage(UIImage(systemName: "questionmark", withConfiguration: largeTitle), for: .normal)
         
+        //button.setTitle("Help", for: .normal)
         return button
     }()
 
@@ -186,7 +194,7 @@ class ViewController: UIViewController {
         previewLayer.frame = view.bounds
 
         
-        RetakeButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
+        HelpButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
         NextPhotoButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
                                          y: MyVariables.screenHeight - (MyVariables.screenHeight*0.3) )
@@ -194,7 +202,7 @@ class ViewController: UIViewController {
         shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.19) )
         
-        HelpButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
+        RetakeButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
                                          y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
     }
     private func checkCameraPermissions(){
