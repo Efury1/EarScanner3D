@@ -13,6 +13,7 @@ import AYStepperView
 
 
 class ViewController: UIViewController {
+    
     @IBOutlet var imageTake: UIImage!
     @IBOutlet var imageTakePast: UIImage!
     var Retake = true
@@ -107,12 +108,22 @@ class ViewController: UIViewController {
         }
     }
 
-   
+   /*Capture button*/
+    
     public let shutterButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.layer.cornerRadius = 50
-        button.layer.borderWidth = 10
+        button.layer.borderWidth = 5
         button.layer.borderColor = UIColor.white.cgColor
+        button.layer.backgroundColor = UIColor.lightGray.cgColor
+        /*Counter */
+        
+        var counter = 30
+        for i in 0..<counter {
+            // Do stuff...
+            counter += 1;
+        }
+        button.setTitle("\(counter)",for: .normal)
         return button
     }()
     //the button to retake the photo
@@ -164,39 +175,13 @@ class ViewController: UIViewController {
         let screenHeight = screenRect.size.height
         MyVariables.screenWidth = screenWidth;
         MyVariables.screenHeight = screenHeight;
-        
-        //Rectange
-        let xPos = 500
-        let yPos = 400
-        let rectWidth = Int(screenWidth) - 2 * xPos
-        let rectHeight = Int(screenHeight) - 2 * yPos
-        //let rectHeight = Int(screenHeight) - 2 * yPos
-        //Creat a CGRect object which is used to render a rectange
-        let rectFrame: CGRect = CGRect(x:CGFloat(xPos), y:CGFloat(yPos), width:CGFloat(rectWidth), height:CGFloat(rectHeight))
-        //Create a UIView object which use above CGRect object
-        let greenView = UIView(frame: rectFrame)
-        //Set UIView blackboard color.
-        greenView.backgroundColor = UIColor.green
-        
-    
-        //self.view.addSubview(greenView)
-        
-        
+
        
     }
     //create the preview layer frames and place the buttons on them
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
-        
-        //Lizzy 2
-        //give the bars (all 4) a position on the screen
-        //Bar1View.center =
-        //CGPoint(x: MyVariables.screenWidth/2,
-        //y: 40)
-        //change too 0, if you cant see it, add the bars height (maybe times 2)
-        //use a ratio MyVariables.screenHeight
-        
         
         RetakeButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
@@ -282,8 +267,7 @@ class ViewController: UIViewController {
         
         //increment counter on button press
         MyVariables.counter += 1;
-            
-        
+       
     }
 
     
@@ -296,6 +280,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
     struct MyVariables {
         static var yourVariable = false
         static var bottomPinkBar = UIView()
+        
         static var screenWidth = CGFloat(0.1);
         static var screenHeight = CGFloat(0.1);
         //counter for button and progress bar
@@ -393,24 +378,6 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 
         imageTakePast = imageTake
         
-        //Lizzy 4
-        
-        //if counter is 16
-       //remove (bar 1) add bar 2
-        
-        //Bar1View.removeFromSuperview()
-        //view.addSubview(Bar2View)
-        
-        
-        //else if counter is 30
-        //remove bar 2 add bar 3
-        
-        //else if counter is 46
-        //remove bar 3 add bar 4
-        
-        //else if counter is 62
-        //go to completed page
-        
         
         imageTake = image
         if (Retake != true){
@@ -466,7 +433,8 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         let screenHeight = screenRect.size.height
         
         //make and place rectangle
-        let rectFrame: CGRect = CGRect(x:CGFloat(0), y:CGFloat(screenHeight-(screenHeight*0.19)), width:CGFloat(screenWidth), height:CGFloat(screenHeight*0.1))
+        /*let rectFrame: CGRect = CGRect(x:CGFloat(0), y:CGFloat(screenHeight-(screenHeight*0.19)), width:CGFloat(screenWidth), height:CGFloat(screenHeight*0.1))*/
+     let rectFrame: CGRect = CGRect(x:CGFloat(0), y:CGFloat(screenHeight-(screenHeight*0.20)), width:CGFloat(screenWidth), height:CGFloat(screenHeight*0.1))
         
               
               // Create a UIView object which use above CGRect object.
@@ -522,15 +490,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         view4.easy.layout(CenterY(), Left(padding).to(line3, .right), Size(viewSize))
         view4.rounded(radius: viewSize/2)
         view.addSubview(containerView)
-        
-       
-        
-        
-
-        //Lizzy 3
-        //add bar 1 for first time
-        //view.addSubview(Bar1View)
-       
+    
         //view.addSubview(bottomPinkBar)
         view.addSubview(NextPhotoButton)
         
