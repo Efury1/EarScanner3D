@@ -117,13 +117,15 @@ class ViewController: UIViewController {
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.backgroundColor = UIColor.lightGray.cgColor
         /*Counter */
-        
         var counter = 30
         for i in 0..<counter {
             // Do stuff...
-            counter += 1;
+            let newValue = counter + 1
+            button.setTitle("\(newValue)",for: .normal)
+                
         }
-        button.setTitle("\(counter)",for: .normal)
+        
+        //button.setTitle("\(items)",for: .normal)
         return button
     }()
     //the button to retake the photo
@@ -182,6 +184,7 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
+
         
         RetakeButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
                                        y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
@@ -267,7 +270,8 @@ class ViewController: UIViewController {
         
         //increment counter on button press
         MyVariables.counter += 1;
-       
+            
+        
     }
 
     
