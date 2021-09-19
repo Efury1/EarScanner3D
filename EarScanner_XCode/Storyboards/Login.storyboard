@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -356,14 +357,14 @@
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-Bl-T9n">
-                                <rect key="frame" x="16" y="20" width="358" height="1981"/>
+                                <rect key="frame" x="16" y="20" width="358" height="3341"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="capstone-logo copy" id="jhm-Sb-twt">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="1640"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="3000"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-za-1vd">
-                                        <rect key="frame" x="0.0" y="1650" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3010" width="358" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-a9-YEM">
                                                 <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
@@ -384,7 +385,7 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2A-Uo-X2b">
-                                        <rect key="frame" x="0.0" y="1710" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3070" width="358" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="5ar-Wp-jSk"/>
                                         </constraints>
@@ -392,7 +393,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wmy-Bs-yxa">
-                                        <rect key="frame" x="0.0" y="1770" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3130" width="358" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="arA-Ui-ZOK"/>
                                         </constraints>
@@ -400,7 +401,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-RY-OuE">
-                                        <rect key="frame" x="0.0" y="1830" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3190" width="358" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="12F-F3-I7v"/>
                                         </constraints>
@@ -408,7 +409,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-40-26M">
-                                        <rect key="frame" x="0.0" y="1890" width="358" height="31"/>
+                                        <rect key="frame" x="0.0" y="3250" width="358" height="31"/>
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Htg-g3-kzj">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -437,7 +438,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT3-mP-4aW">
-                                        <rect key="frame" x="0.0" y="1931" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3291" width="358" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5gD-wU-PkA"/>
@@ -485,6 +486,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SU7-fA-75a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="-218.30357142857142"/>
+        </scene>
+        <!--Album View Controller-->
+        <scene sceneID="HvB-6C-qE6">
+            <objects>
+                <viewController id="FeR-5P-I6L" customClass="AlbumViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BtS-ZK-Yte">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4gD-ee-Ygf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bag-9m-6hq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgW-3i-gci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617.3913043478265" y="-214.28571428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="slO-mk-neM">
@@ -584,6 +601,24 @@
             </objects>
             <point key="canvasLocation" x="2310" y="443"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zPc-6a-Qb0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ePf-3d-7cU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Of7-j2-tXM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FeR-5P-I6L" kind="relationship" relationship="rootViewController" id="EEF-Jy-PDk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Orw-qt-VJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1707.2463768115942" y="-214.28571428571428"/>
+        </scene>
     </scenes>
     <resources>
         <image name="capstone-logo copy" width="1000" height="1300"/>
@@ -593,5 +628,8 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
