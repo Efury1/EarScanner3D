@@ -62,7 +62,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
             }
             else {
-                let jsonbody = [  "Email": cryto(password: email), "Password": cryto(password: password), "FirstName": cryto(password: FirstName), "LastName": cryto(password: LastName), "Salt": cryto(password: salt)] as [String : Any]
+                let jsonbody = [  "Email": email, "Password": cryto(password: password), "FirstName": cryto(password: FirstName), "LastName": cryto(password: LastName), "Salt": cryto(password: salt)] as [String : Any]
             
             
             do {
@@ -70,6 +70,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
                 request.httpBody = requestBody
             } catch let error {
+                
                 print(error.localizedDescription)
             }
         

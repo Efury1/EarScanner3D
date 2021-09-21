@@ -74,11 +74,11 @@ class LoginViewController: UIViewController {
      else {return}
         
         //set the url of the api
-        print(cryto(password: email))
+        print("hehe: "+email)
         print(cryto(password: password))
         let url = URL(string:  "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/Login")
         var request = URLRequest(url: url!) //make a request object with the url
-        let jsonbody = [  "Email": cryto(password: email), "Password": cryto(password: password)]  //attach the json body to he request. pass in the text inputs
+        let jsonbody = [  "Email": email, "Password": cryto(password: password)]  //attach the json body to he request. pass in the text inputs
         do //making sure to convet it to json and attach it, testing if it breaks
         {
             let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)

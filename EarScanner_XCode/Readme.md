@@ -6,7 +6,7 @@ EaSc2708!
 
 
 Gmail account details
-EarScanner3d@gmail.coms
+EarScanner3d@gmail.com
 Earscanner13!
 
 Apple Account:
