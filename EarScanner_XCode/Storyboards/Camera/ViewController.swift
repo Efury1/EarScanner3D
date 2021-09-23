@@ -561,7 +561,7 @@ extension UIViewController {
 
         if(shouldMoveViewUp) {
         
-            self.view.frame.origin.y = 0 - (keyboardSize.xheight - ((self.view.frame.height - bottomOfTextField)*0.98))
+            self.view.frame.origin.y = 0 - (keyboardSize.height - ((self.view.frame.height - bottomOfTextField)*0.98))
         }
         }
           
