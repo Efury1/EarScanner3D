@@ -12,14 +12,37 @@ import MessageUI
 
 class ForgotPassViewController: UIViewController {
     
-
+    public static var activeTextField : UITextField? = nil
+    @IBOutlet weak var verificationCodeInput: UITextField!
     @IBOutlet weak var Email: UITextField!
     struct MyVariables {
         static var email = "None"
         static var code = "None"
      
     }
+    override func
+    viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        if (Email != nil){
+        Email.delegate = self;
+        }
+        if (verificationCodeInput != nil){
+            verificationCodeInput.delegate = self;
+        }
+        //Additional setup after loading view
+        LoginViewController.previousController = LoginViewController.currentController
+        LoginViewController.currentController = self
+
+       
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            if isBeingDismissed {
+                LoginViewController.currentController = LoginViewController.previousController
+            }
+        }
     @IBAction func sendEmail(_ sender: UIButton) {
         
 
@@ -114,7 +137,7 @@ class ForgotPassViewController: UIViewController {
         
  
     
-    @IBOutlet weak var verificationCodeInput: UITextField!
+   
     
     @IBAction func CheckCode(_ sender: UIButton) {
         
@@ -256,4 +279,16 @@ class ForgotPassViewController: UIViewController {
     
 }
 }
-
+extension ForgotPassViewController : UITextFieldDelegate {
+  // when user select a textfield, this method will be called
+  func textFieldDidBeginEditing(_ textField: UITextField) {
+    // set the activeTextField to the selected textfield
+    print("hehe")
+    LoginViewController.activeTextField = textField
+  }
+    
+  // when user click 'done' or dismiss the keyboard
+  func textFieldDidEndEditing(_ textField: UITextField) {
+    LoginViewController.activeTextField = nil
+  }
+}

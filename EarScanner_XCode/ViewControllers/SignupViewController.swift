@@ -45,6 +45,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        LoginViewController.previousController = LoginViewController.currentController;
+        
+        LoginViewController.currentController = self
         
         emailTextField.delegate = self;
         passwordTextField.delegate = self;
@@ -54,7 +57,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
       
     }
-    
+
+override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isBeingDismissed {
+            LoginViewController.currentController = LoginViewController.previousController
+        }
+    }
  
 //Buttons are connected
 @IBAction func signup(_ sender: Any) {

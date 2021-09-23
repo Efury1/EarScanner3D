@@ -561,7 +561,7 @@ extension UIViewController {
 
         if(shouldMoveViewUp) {
         
-            self.view.frame.origin.y = 0 - (keyboardSize.height - ((self.view.frame.height - bottomOfTextField)*0.98))
+            LoginViewController.currentController?.view.frame.origin.y = 0 - (keyboardSize.height - ((self.view.frame.height - bottomOfTextField)*0.98))
         }
         }
           
@@ -569,7 +569,7 @@ extension UIViewController {
     }
     @objc func dismissKeyboard() {
         view.endEditing(true)
-        self.view.frame.origin.y = 0
+        LoginViewController.currentController?.view.frame.origin.y = 0
     }
     
     func disablesAutomaticKeyboardDismissal() -> Bool{
