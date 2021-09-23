@@ -13,7 +13,19 @@ import CryptoKit
 /*
  * James, Not sure how to implement the encoding functions with the other code. Eliza*/
 class SignUpViewController: UIViewController, UITextFieldDelegate {
+    // when user select a textfield, this method will be called
+    public static var activeTextField : UITextField? = nil
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+      // set the activeTextField to the selected textfield
+      print("hehe")
+     LoginViewController.activeTextField = textField
+    }
+      
+    // when user click 'done' or dismiss the keyboard
+    func textFieldDidEndEditing(_ textField: UITextField) {
+      LoginViewController.activeTextField = nil
+    }
     //Need to redo these after the storyboard has correct dimensions
     @IBOutlet weak var LastNameField: UITextField!
     @IBOutlet weak var FirstNameField: UITextField!
@@ -32,6 +44,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     //delegate allows text field to be a string
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
+        emailTextField.delegate = self;
+        passwordTextField.delegate = self;
+        LastNameField.delegate = self;
+        retypeEmailTextField.delegate = self;
+        FirstNameField.delegate = self;
+        
       
     }
     
