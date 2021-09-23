@@ -559,10 +559,13 @@ extension UIViewController {
           }
         
 
-        if(shouldMoveViewUp) {
+            if(shouldMoveViewUp && LoginViewController.whichView != "CheckCode") {
         
             LoginViewController.currentController?.view.frame.origin.y = 0 - (keyboardSize.height - ((self.view.frame.height - bottomOfTextField)*0.98))
         }
+            else if(LoginViewController.whichView == "CheckCode"){
+                LoginViewController.currentController?.view.frame.origin.y = 0 - (keyboardSize.height - ((self.view.frame.height - bottomOfTextField)*0.8))
+            }
         }
           
         

@@ -104,6 +104,7 @@ class ForgotPassViewController: UIViewController {
                      self.addChild(childViewController)
                      self.view.addSubview(childViewController.view)
                      childViewController.didMove(toParent: self)
+                    LoginViewController.whichView = "CheckCode"
                     
                 }
                 
