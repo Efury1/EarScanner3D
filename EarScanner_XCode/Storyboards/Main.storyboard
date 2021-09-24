@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ha-1e-fnc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -1726,32 +1726,55 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
             </objects>
             <point key="canvasLocation" x="2107" y="2161"/>
         </scene>
-        <!--Step 1-->
-        <scene sceneID="23A-Ai-obs">
+        <!--Photoset Complete-->
+        <scene sceneID="32E-Fb-mep">
             <objects>
-                <viewController title="Step 1" hidesBottomBarWhenPushed="YES" id="2P5-99-RWm" customClass="MainViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wd6-5S-CTI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                <viewController storyboardIdentifier="PasswordChange" title="Photoset Complete" id="9Ha-1e-fnc" customClass="ForgotPassViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQf-CZ-cIH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-z1-9ED">
-                                <rect key="frame" x="30" y="30" width="354" height="206.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-Sh-Q5z">
+                                <rect key="frame" x="15" y="268" width="635.5" height="360"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEn-pG-OLb">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="143.5"/>
-                                        <string key="text">This photoset is complete. Press continue to navigate to your completed photosets where you can send the images to your clinician.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-NE-QEB">
+                                        <rect key="frame" x="0.0" y="0.5" width="635.5" height="99"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="CRG-Wq-qJs"/>
+                                            <constraint firstAttribute="width" secondItem="Gk2-NE-QEB" secondAttribute="height" multiplier="871:100" id="rzX-DE-KAj"/>
+                                            <constraint firstAttribute="height" constant="100" id="wyH-js-6N5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vch-0m-k1L">
+                                        <rect key="frame" x="0.0" y="115" width="635.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="64r-W5-0xZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="29"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-iS-mT4">
-                                        <rect key="frame" x="0.0" y="156.5" width="354" height="50"/>
-                                        <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can send this photoset to your clinician now or later from the Photosets page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-BN-aVE">
+                                        <rect key="frame" x="0.0" y="180" width="635.5" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="DYe-qY-lM6"/>
+                                            <constraint firstAttribute="height" constant="50" id="iak-b4-ndE"/>
                                         </constraints>
-                                        <state key="normal" title="Continue">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-qf-kZR">
+                                        <rect key="frame" x="0.0" y="245" width="635.5" height="50"/>
+                                        <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aZz-JR-dYm"/>
+                                            <constraint firstAttribute="width" secondItem="zS7-qf-kZR" secondAttribute="height" multiplier="191:50" id="y7x-ux-dgX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Send Later">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1759,31 +1782,52 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="StartCamera:" destination="2P5-99-RWm" eventType="touchUpInside" id="SM8-aj-ijg"/>
+                                            <action selector="SetPassword:" destination="9Ha-1e-fnc" eventType="touchUpInside" id="7Y0-Tm-FAP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-hM-cXM">
+                                        <rect key="frame" x="0.0" y="310" width="635.5" height="50"/>
+                                        <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8v5-WU-eZD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Send Now">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="SetPassword:" destination="9Ha-1e-fnc" eventType="touchUpInside" id="PeG-xL-Bmc"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gk2-NE-QEB" firstAttribute="centerX" secondItem="FsO-Sh-Q5z" secondAttribute="centerX" id="dkR-ZI-Je9"/>
+                                </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="pya-Aa-Rqc"/>
+                        <viewLayoutGuide key="safeArea" id="EcP-aQ-yiu"/>
                         <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EEW-z1-9ED" firstAttribute="centerX" secondItem="wd6-5S-CTI" secondAttribute="centerX" id="9Ys-4r-UZD"/>
-                            <constraint firstItem="pya-Aa-Rqc" firstAttribute="trailing" secondItem="EEW-z1-9ED" secondAttribute="trailing" constant="30" id="frX-sc-dLY"/>
-                            <constraint firstItem="EEW-z1-9ED" firstAttribute="top" secondItem="pya-Aa-Rqc" secondAttribute="top" constant="30" id="gVh-a1-ppB"/>
-                            <constraint firstItem="EEW-z1-9ED" firstAttribute="leading" secondItem="pya-Aa-Rqc" secondAttribute="leading" constant="30" id="krr-UG-Ozb"/>
+                            <constraint firstItem="FsO-Sh-Q5z" firstAttribute="centerX" secondItem="PQf-CZ-cIH" secondAttribute="centerX" id="BAg-je-Jzb"/>
+                            <constraint firstItem="FsO-Sh-Q5z" firstAttribute="centerY" secondItem="PQf-CZ-cIH" secondAttribute="centerY" id="Di8-nY-IxO"/>
+                            <constraint firstItem="EcP-aQ-yiu" firstAttribute="trailing" secondItem="FsO-Sh-Q5z" secondAttribute="trailing" constant="15" id="r5j-Tx-5t2"/>
+                            <constraint firstItem="FsO-Sh-Q5z" firstAttribute="leading" secondItem="EcP-aQ-yiu" secondAttribute="leading" constant="15" id="xTm-KC-YQP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="msY-mP-e7R"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rRq-kf-uW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8k-Ap-Smr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3725" y="2829"/>
+            <point key="canvasLocation" x="3613" y="2829"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YTJ-1T-zM5"/>
+        <segue reference="UnA-TC-w6x"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -1793,6 +1837,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <image name="4.circle.fill" catalog="system" width="128" height="121"/>
         <image name="About Us" width="1000" height="750"/>
         <image name="capstone-logo copy" width="1000" height="1300"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="line.horizontal.3.circle.fill" catalog="system" width="128" height="121"/>
@@ -1805,6 +1850,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
