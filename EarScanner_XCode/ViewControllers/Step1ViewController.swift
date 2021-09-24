@@ -23,6 +23,7 @@ class Step1: UIViewController, AVPlayerViewControllerDelegate {
         guard let path = Bundle.main.url(forResource: "Step-1-front", withExtension: "mp4") else {
             return
         }
+        print("self: ",self)
         
         let screenRect = UIScreen.main.bounds
         //get screen width
