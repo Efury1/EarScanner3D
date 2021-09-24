@@ -1,7 +1,9 @@
 import Photos
 import UIKit
 class MyAwesomeAlbum: NSObject {
-  var albumName = "My Awesome Album"
+  var albumName = GlobalPhotosetName
+   
+     // Prints "Sep 9, 2014, 4:30 AM"
   static let shared = MyAwesomeAlbum()
 
   private var assetCollection: PHAssetCollection!
@@ -58,8 +60,21 @@ class MyAwesomeAlbum: NSObject {
   }
 
   private func fetchAssetCollectionForAlbum() -> PHAssetCollection? {
+    print("name",self.albumName)
+    
+
+
+    let now = Date()
+
+    let formatter = DateFormatter()
+    formatter.dateStyle = .full
+    formatter.timeStyle = .full
+
+    let datetime = formatter.string(from: now)
+    print(self.albumName+" - " + datetime)
     let fetchOptions = PHFetchOptions()
-    fetchOptions.predicate = NSPredicate(format: "title = %@", self.albumName)
+    let title = self.albumName+" - " + datetime
+    fetchOptions.predicate = NSPredicate(format: "title = %@", title)
     let collection = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
 
     if let _: AnyObject = collection.firstObject {

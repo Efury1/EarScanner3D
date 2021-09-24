@@ -1173,7 +1173,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Change Password-->
         <scene sceneID="I0V-lV-7BS">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Xff-Q9-JFs" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="Xff-Q9-JFs" customClass="ChangePasswordViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pig-Sa-Chq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1220,6 +1220,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="ChangePasswordProfile:" destination="Xff-Q9-JFs" eventType="touchUpInside" id="yXP-lC-aw2"/>
                                             <segue destination="N5i-kw-1EH" kind="show" id="yQe-Y3-fdh"/>
                                         </connections>
                                     </button>
@@ -1236,6 +1237,11 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Change Password" id="LMV-EQ-Obq"/>
+                    <connections>
+                        <outlet property="ConfirmPassword" destination="nUP-xa-2RW" id="tJ0-xj-i2u"/>
+                        <outlet property="NewPassword" destination="CvB-FL-j2C" id="UlD-6x-Qlh"/>
+                        <outlet property="OldPassword" destination="tGp-aM-KJP" id="obI-OO-kRq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyr-81-MJF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

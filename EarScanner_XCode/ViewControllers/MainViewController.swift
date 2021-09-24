@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         //Additional setup after loading view
     }
     
-    
+
     
     /*fileprivate func isLoggedIn() -> Bool {
         return UserDefaults.standard.bool(forKey: "isLoggedin")
@@ -35,6 +35,10 @@ class MainViewController: UIViewController {
     }*/
     
     @IBAction func logoutButton(_ sender: Any) {
+        
+
+        
+        
         print("Users action was tapped")
         let refreshAlert = UIAlertController(title: "Log Out", message: "Are You Sure to Log Out ? ", preferredStyle: UIAlertController.Style.alert)
 
@@ -79,4 +83,6 @@ class MainViewController: UIViewController {
     }
     
     
+    
 }
+

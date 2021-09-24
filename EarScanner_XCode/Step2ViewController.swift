@@ -4,7 +4,6 @@
 //
 //  Created by Isabella Turco on 17/9/21.
 //
-
 import Foundation
 import AVFoundation
 import UIKit
@@ -48,4 +47,3 @@ class Step2: UIViewController, AVPlayerViewControllerDelegate {
 //
     }
 //}
-
