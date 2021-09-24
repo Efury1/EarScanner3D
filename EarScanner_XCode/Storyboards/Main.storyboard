@@ -1130,7 +1130,7 @@ One of the team's flagship projects is the Future Hear project led by Prof Woodr
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-rX-bQF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-rX-bQF">
                                 <rect key="frame" x="10" y="0.0" width="394" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat, lorem ut pharetra imperdiet, ligula nibh interdum justo, vel varius neque augue sed turpis. Nullam cursus ac neque vitae laoreet. Cras quis urna ac elit convallis euismod. Nulla tristique risus non aliquam tristique. Duis in quam sit amet nibh blandit mattis. Aliquam tempus diam lectus, id maximus sapien dignissim non. Ut cursus vehicula augue et fringilla. Praesent eget scelerisque enim. Nam aliquet libero in lectus lacinia, sit amet blandit ipsum facilisis. Nunc ut dolor non tellus dictum facilisis vitae vel elit. Quisque ornare quam nec tincidunt dictum. Phasellus faucibus leo ut blandit tincidunt. Proin vel tortor vel purus egestas auctor. Aenean id tincidunt nisl.
@@ -1718,7 +1718,62 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0N-7J-Zjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2107" y="2157"/>
+            <point key="canvasLocation" x="2107" y="2161"/>
+        </scene>
+        <!--Step 1-->
+        <scene sceneID="23A-Ai-obs">
+            <objects>
+                <viewController title="Step 1" hidesBottomBarWhenPushed="YES" id="2P5-99-RWm" customClass="MainViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wd6-5S-CTI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="EEW-z1-9ED">
+                                <rect key="frame" x="30" y="30" width="354" height="206.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEn-pG-OLb">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="143.5"/>
+                                        <string key="text">This photoset is complete. Press continue to navigate to your completed photosets where you can send the images to your clinician.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-iS-mT4">
+                                        <rect key="frame" x="0.0" y="156.5" width="354" height="50"/>
+                                        <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DYe-qY-lM6"/>
+                                        </constraints>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="StartCamera:" destination="2P5-99-RWm" eventType="touchUpInside" id="SM8-aj-ijg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pya-Aa-Rqc"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EEW-z1-9ED" firstAttribute="centerX" secondItem="wd6-5S-CTI" secondAttribute="centerX" id="9Ys-4r-UZD"/>
+                            <constraint firstItem="pya-Aa-Rqc" firstAttribute="trailing" secondItem="EEW-z1-9ED" secondAttribute="trailing" constant="30" id="frX-sc-dLY"/>
+                            <constraint firstItem="EEW-z1-9ED" firstAttribute="top" secondItem="pya-Aa-Rqc" secondAttribute="top" constant="30" id="gVh-a1-ppB"/>
+                            <constraint firstItem="EEW-z1-9ED" firstAttribute="leading" secondItem="pya-Aa-Rqc" secondAttribute="leading" constant="30" id="krr-UG-Ozb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="msY-mP-e7R"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRq-kf-uW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3725" y="2829"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
