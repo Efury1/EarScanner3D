@@ -13,6 +13,7 @@
 		47947D8026B3EABF00761DC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47947D7F26B3EABF00761DC8 /* Assets.xcassets */; };
 		47947D8B26B55DCB00761DC8 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D8A26B55DCB00761DC8 /* GridView.swift */; };
 		47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */; };
+		47D2BAA326FD83ED006A1D11 /* ChangeProfilePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D2BAA226FD83ED006A1D11 /* ChangeProfilePassword.swift */; };
 		47DEEF9126D2191900D6DF91 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 47DEEF9026D2191900D6DF91 /* CryptoSwift */; };
 		5607E4E926D101DB003D90E5 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 5607E4E826D101DB003D90E5 /* Readme.md */; };
 		5607E4ED26D258A4003D90E5 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */; };
@@ -40,6 +41,7 @@
 		47947D8426B3EABF00761DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47947D8A26B55DCB00761DC8 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		47947D8C26B56A5F00761DC8 /* SaveToPhotoAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToPhotoAlbum.swift; sourceTree = "<group>"; };
+		47D2BAA226FD83ED006A1D11 /* ChangeProfilePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfilePassword.swift; sourceTree = "<group>"; };
 		53EA04072803588CFD5E5478 /* Pods-EarScanner_XCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarScanner_XCode.debug.xcconfig"; path = "Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode.debug.xcconfig"; sourceTree = "<group>"; };
 		5607E4E826D101DB003D90E5 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				569E2C7326C90E4D00B6FBFE /* MainViewController.swift */,
 				5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */,
 				6A90106726FC93520002D672 /* Step1ViewController.swift */,
+				47D2BAA226FD83ED006A1D11 /* ChangeProfilePassword.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				47947D7926B3EABD00761DC8 /* SceneDelegate.swift in Sources */,
 				569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */,
 				47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */,
+				47D2BAA326FD83ED006A1D11 /* ChangeProfilePassword.swift in Sources */,
 				5691FBA626EDD94C00A84E66 /* SetUpViewController.swift in Sources */,
 				566CCE0F26BBFABA00DF6616 /* DesignableView.swift in Sources */,
 			);
