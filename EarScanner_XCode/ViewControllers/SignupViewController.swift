@@ -13,7 +13,19 @@ import CryptoKit
 /*
  * James, Not sure how to implement the encoding functions with the other code. Eliza*/
 class SignUpViewController: UIViewController, UITextFieldDelegate {
+    // when user select a textfield, this method will be called
+    public static var activeTextField : UITextField? = nil
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+      // set the activeTextField to the selected textfield
+      print("hehe")
+     LoginViewController.activeTextField = textField
+    }
+      
+    // when user click 'done' or dismiss the keyboard
+    func textFieldDidEndEditing(_ textField: UITextField) {
+      LoginViewController.activeTextField = nil
+    }
     //Need to redo these after the storyboard has correct dimensions
     @IBOutlet weak var LastNameField: UITextField!
     @IBOutlet weak var FirstNameField: UITextField!
@@ -32,9 +44,26 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     //delegate allows text field to be a string
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        LoginViewController.previousController = LoginViewController.currentController;
+        
+        LoginViewController.currentController = self
+        
+        emailTextField.delegate = self;
+        passwordTextField.delegate = self;
+        LastNameField.delegate = self;
+        retypeEmailTextField.delegate = self;
+        FirstNameField.delegate = self;
+        
       
     }
-    
+
+override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isBeingDismissed {
+            LoginViewController.currentController = LoginViewController.previousController
+        }
+    }
  
 //Buttons are connected
 @IBAction func signup(_ sender: Any) {
@@ -62,7 +91,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
             }
             else {
-                let jsonbody = [  "Email": cryto(password: email), "Password": cryto(password: password), "FirstName": cryto(password: FirstName), "LastName": cryto(password: LastName), "Salt": cryto(password: salt)] as [String : Any]
+                let jsonbody = [  "Email": email, "Password": cryto(password: password), "FirstName": cryto(password: FirstName), "LastName": cryto(password: LastName), "Salt": cryto(password: salt)] as [String : Any]
             
             
             do {
@@ -70,6 +99,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
                 request.httpBody = requestBody
             } catch let error {
+                
                 print(error.localizedDescription)
             }
         

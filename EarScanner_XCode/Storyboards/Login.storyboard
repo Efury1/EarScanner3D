@@ -5,14 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="EarScan3D" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPage" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="EarScan3D" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +109,6 @@
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
-                                            <action selector="GoToSignUp:" destination="Y6W-OH-hqX" eventType="primaryActionTriggered" id="3II-3g-NNd"/>
                                             <segue destination="ZWz-jN-3IQ" kind="presentation" id="tnQ-v7-PRH"/>
                                         </connections>
                                     </button>
@@ -148,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Pass View Controller-->
         <scene sceneID="dR7-ZI-2wT">
             <objects>
-                <viewController id="TVN-qA-aNO" sceneMemberID="viewController">
+                <viewController id="TVN-qA-aNO" customClass="ForgotPassViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GnK-8d-KX2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,8 +217,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="sendEmail:" destination="KbU-Up-jrS" eventType="touchUpInside" id="TKr-7G-9GX"/>
-                                            <segue destination="Kic-TH-VGn" kind="presentation" id="0Pw-OF-b0d"/>
+                                            <action selector="sendEmail:" destination="TVN-qA-aNO" eventType="touchUpInside" id="fgS-uP-GaE"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -239,22 +236,25 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bKr-TB-QZb"/>
+                    <connections>
+                        <outlet property="Email" destination="b0w-5Q-etM" id="MKY-eK-CqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Sp-rP-Imx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="KbU-Up-jrS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="889.85507246376824" y="442.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Pass View Controller-->
         <scene sceneID="as8-1k-tlB">
             <objects>
-                <viewController id="Kic-TH-VGn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnterCode" id="Kic-TH-VGn" customClass="ForgotPassViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNM-n1-va6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bOh-YA-DDP">
-                                <rect key="frame" x="15" y="231.5" width="871.5" height="379"/>
+                                <rect key="frame" x="15" y="258.5" width="871.5" height="379"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="envelope.badge" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-8E-DeZ">
                                         <rect key="frame" x="0.0" y="0.0" width="871.5" height="98"/>
@@ -312,8 +312,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="CheckCode:" destination="Kic-TH-VGn" eventType="touchUpInside" id="Pgj-5Q-o4z"/>
                                             <action selector="sendEmail:" destination="KbU-Up-jrS" eventType="touchUpInside" id="hhI-eh-Xa9"/>
-                                            <segue destination="fIE-af-h0n" kind="presentation" id="MJN-dS-AaJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaO-4e-M5S">
@@ -337,6 +337,9 @@
                             <constraint firstItem="bOh-YA-DDP" firstAttribute="centerY" secondItem="zNM-n1-va6" secondAttribute="centerY" id="Q9m-Yh-b5P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="verificationCodeInput" destination="2Xl-u0-XiU" id="DhY-hD-rKA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOS-B0-qlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,14 +360,14 @@
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-Bl-T9n">
-                                <rect key="frame" x="16" y="20" width="358" height="3341"/>
+                                <rect key="frame" x="16" y="20" width="358" height="3901"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="capstone-logo copy" id="jhm-Sb-twt">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="3000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="3560"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-za-1vd">
-                                        <rect key="frame" x="0.0" y="3010" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3570" width="358" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-a9-YEM">
                                                 <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
@@ -385,7 +388,7 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2A-Uo-X2b">
-                                        <rect key="frame" x="0.0" y="3070" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3630" width="358" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="5ar-Wp-jSk"/>
                                         </constraints>
@@ -393,7 +396,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wmy-Bs-yxa">
-                                        <rect key="frame" x="0.0" y="3130" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3690" width="358" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="arA-Ui-ZOK"/>
                                         </constraints>
@@ -401,7 +404,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-RY-OuE">
-                                        <rect key="frame" x="0.0" y="3190" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3750" width="358" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="12F-F3-I7v"/>
                                         </constraints>
@@ -409,7 +412,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-40-26M">
-                                        <rect key="frame" x="0.0" y="3250" width="358" height="31"/>
+                                        <rect key="frame" x="0.0" y="3810" width="358" height="31"/>
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Htg-g3-kzj">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -438,7 +441,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT3-mP-4aW">
-                                        <rect key="frame" x="0.0" y="3291" width="358" height="50"/>
+                                        <rect key="frame" x="0.0" y="3851" width="358" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5gD-wU-PkA"/>
@@ -487,32 +490,16 @@
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="-218.30357142857142"/>
         </scene>
-        <!--Album View Controller-->
-        <scene sceneID="HvB-6C-qE6">
-            <objects>
-                <viewController id="FeR-5P-I6L" customClass="AlbumViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BtS-ZK-Yte">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="4gD-ee-Ygf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Bag-9m-6hq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sgW-3i-gci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2617.3913043478265" y="-214.28571428571428"/>
-        </scene>
-        <!--View Controller-->
+        <!--Forgot Pass View Controller-->
         <scene sceneID="slO-mk-neM">
             <objects>
-                <viewController id="fIE-af-h0n" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordChange" id="fIE-af-h0n" customClass="ForgotPassViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KJ4-Dw-Uhj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IoV-dr-Wp9">
-                                <rect key="frame" x="15" y="241" width="277.5" height="360"/>
+                                <rect key="frame" x="15" y="268" width="277.5" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="key" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-fh-NrD">
                                         <rect key="frame" x="0.0" y="-1.5" width="277.5" height="103"/>
@@ -578,6 +565,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="SetPassword:" destination="fIE-af-h0n" eventType="touchUpInside" id="qX6-HR-1jY"/>
                                             <action selector="sendEmail:" destination="KbU-Up-jrS" eventType="touchUpInside" id="2wJ-2e-OqM"/>
                                         </connections>
                                     </button>
@@ -596,28 +584,14 @@
                             <constraint firstItem="IoV-dr-Wp9" firstAttribute="centerY" secondItem="KJ4-Dw-Uhj" secondAttribute="centerY" id="U0j-h6-5fR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NewPassword" destination="9kI-pP-Bbd" id="UKo-3p-hvY"/>
+                        <outlet property="NewPasswordConfirm" destination="uXu-Nn-t5U" id="T19-9j-v9I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irQ-Io-tdb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2310" y="443"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="zPc-6a-Qb0">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ePf-3d-7cU" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Of7-j2-tXM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="FeR-5P-I6L" kind="relationship" relationship="rootViewController" id="EEF-Jy-PDk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Orw-qt-VJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1707.2463768115942" y="-214.28571428571428"/>
         </scene>
     </scenes>
     <resources>
@@ -628,8 +602,5 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -521,16 +521,68 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 
 
 extension UIViewController {
+ 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        
     }
-    
+    @objc func keyboardWillAppear(notification: NSNotification) {
+        
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+
+          // if keyboard size is not available for some reason, dont do anything
+          return
+        }
+
+        var shouldMoveViewUp = false
+
+        // if active text field is not nil
+        var bottomOfTextField: CGFloat;
+        if let activeTextField = LoginViewController.activeTextField{
+            
+          bottomOfTextField = activeTextField.convert(activeTextField.bounds, to: self.view).maxY;
+          
+          let topOfKeyboard = self.view.frame.height - keyboardSize.height
+
+          // if the bottom of Textfield is below the top of keyboard, move up
+          if bottomOfTextField > topOfKeyboard {
+            shouldMoveViewUp = true
+          }
+        
+
+            if(shouldMoveViewUp && LoginViewController.whichView != "CheckCode") {
+        
+            LoginViewController.currentController?.view.frame.origin.y = 0 - (keyboardSize.height - ((self.view.frame.height - bottomOfTextField)*0.98))
+        }
+            else if(LoginViewController.whichView == "CheckCode"){
+                LoginViewController.currentController?.view.frame.origin.y = 0 - (keyboardSize.height - ((self.view.frame.height - bottomOfTextField)*0.8))
+            }
+        }
+          
+        
+    }
     @objc func dismissKeyboard() {
         view.endEditing(true)
+        LoginViewController.currentController?.view.frame.origin.y = 0
+    }
+    
+    func disablesAutomaticKeyboardDismissal() -> Bool{
+        return false;
     }
 }
+struct extensionsVariable{
+    static var activeTextField : UITextField? = nil
+}
+
 
 extension UIColor {
    convenience init(red: Int, green: Int, blue: Int) {
