@@ -142,85 +142,73 @@ class ForgotPassViewController: UIViewController {
     
     @IBAction func CheckCode(_ sender: UIButton) {
         
-        if (verificationCodeInput.text == MyVariables.code){
-            
-            let childViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "PasswordChange")
-            self.addChild(childViewController)
-            self.view.addSubview(childViewController.view)
-            childViewController.didMove(toParent: self)
-        }
-        else{
-            let alert = UIAlertController(title: "Error", message: "Verification Code is Wrong", preferredStyle: UIAlertController.Style.alert) //create alert
-                                    //I'm a pop up
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
-                self.present(alert, animated: true, completion: nil)
-            //
-        }
+
         //use email and code to hit an API
         //if API true move to next page
         //if not alert wrong code and go back to login page
         
         
-//        let url = URL(string:
-//                        "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/checkcode")
-//
-//        var request = URLRequest(url: url!) //make a request object with the url
-//        let email = MyVariables.email
-//        print("email = "+email)
-//        guard let code = verificationCodeInput.text else { return print("error") }
-//        print("code = "+code)
-//
-//        let jsonbody = [  "Email": email, "Code": code]  //attach the json body to he request. pass in the text inputs
-//        do //making sure to convet it to json and attach it, testing if it breaks
-//        {
-//            let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
-//            request.httpBody = requestBody
-//        }
-//        catch
-//        {
-//            print("error creating request body")
-//        }
-//        request.httpMethod = "POST" //set the method to //POST
-//        let session = URLSession.shared
-//        var APIResponse = "False"
-//
-//        //make the request
-//
-//
-//        let dataTask =  session.dataTask(with: request) { data, response, error in
-//        //decode the request and print the result
-//            //checks if response returned and if not checks internet
-//            if (data != nil){
-//                APIResponse = String(decoding: data!, as: UTF8.self)}
-//            print("UserExist: ")
-//            print(APIResponse)
-//            //if API returns false:
-//                //Alert "Email Doesn't Exist in System"
-//            if (APIResponse.contains("False")){
-//                 DispatchQueue.main.async {
-//                    print("alert")
-//                    let alert = UIAlertController(title: "Error", message: "Verification Code is Wrong", preferredStyle: UIAlertController.Style.alert) //create alert
-//                        //I'm a pop up
-//                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
-//                    self.present(alert, animated: true, completion: nil)
-//                        //I end here
-//                        // show the alert
-//                    }
-//            }
-//            else if (APIResponse.contains("True")){
-//                //send the email
-//                DispatchQueue.main.async {
-////                    self.performSegue(withIdentifier: "loginSegue", sender: self)
-//                    let childViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "PasswordChange")
-//                     self.addChild(childViewController)
-//                     self.view.addSubview(childViewController.view)
-//                     childViewController.didMove(toParent: self)
-//
-//                }
-//            }
-//        }
-//        dataTask.resume()
-                
+        let url = URL(string:
+                        "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/checkcode")
+
+        var request = URLRequest(url: url!) //make a request object with the url
+        let email = MyVariables.email
+        print("email = "+email)
+        guard let code = verificationCodeInput.text else { return print("error") }
+        print("code = "+code)
+
+        let jsonbody = [  "Email": email, "Code": code]  //attach the json body to he request. pass in the text inputs
+        do //making sure to convet it to json and attach it, testing if it breaks
+        {
+            let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
+            request.httpBody = requestBody
+        }
+        catch
+        {
+            print("error creating request body")
+        }
+        request.httpMethod = "POST" //set the method to //POST
+        let session = URLSession.shared
+        var APIResponse = "False"
+
+        //make the request
+
+
+        let dataTask =  session.dataTask(with: request) { data, response, error in
+        //decode the request and print the result
+            //checks if response returned and if not checks internet
+            if (data != nil){
+                APIResponse = String(decoding: data!, as: UTF8.self)}
+            print("UserExist: ")
+            print(APIResponse)
+            //if API returns false:
+                //Alert "Email Doesn't Exist in System"
+            if (APIResponse.contains("False")){
+                 DispatchQueue.main.async {
+                    print("alert")
+                    let alert = UIAlertController(title: "Error", message: "Verification Code is Wrong", preferredStyle: UIAlertController.Style.alert) //create alert
+                        //I'm a pop up
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                    self.present(alert, animated: true, completion: nil)
+                        //I end here
+                        // show the alert
+                    }
+            }
+            else if (APIResponse.contains("True")){
+                //send the email
+                DispatchQueue.main.async {
+//                    self.performSegue(withIdentifier: "loginSegue", sender: self)
+                    let childViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "PasswordChange")
+                     self.addChild(childViewController)
+                     self.view.addSubview(childViewController.view)
+                     childViewController.didMove(toParent: self)
+
+                }
+            }
+        }
+        dataTask.resume()
+        
+        
                 
     }
     

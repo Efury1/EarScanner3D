@@ -96,6 +96,7 @@ class LoginViewController: UIViewController {
             print("error creating request body")
         }
         
+        
     
         request.httpMethod = "POST" //set the method to POST
         let session = URLSession.shared
