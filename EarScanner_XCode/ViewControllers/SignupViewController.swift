@@ -121,12 +121,12 @@ override func viewWillDisappear(_ animated: Bool) {
                 //Implement autologin
                 self.userDefaults.setValue(true, forKey: "UserExists")
                 DispatchQueue.main.async {
-
                     let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
-                     self.addChild(childViewController)
-                     self.view.addSubview(childViewController.view)
-                     childViewController.didMove(toParent: self)
-                    
+                   
+                    childViewController.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+                    self.present(childViewController, animated: true, completion: nil)
+
+                  
                 }
                 
                 
