@@ -18,6 +18,7 @@
 		47DEEF9126D2191900D6DF91 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 47DEEF9026D2191900D6DF91 /* CryptoSwift */; };
 		5607E4E926D101DB003D90E5 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 5607E4E826D101DB003D90E5 /* Readme.md */; };
 		5607E4ED26D258A4003D90E5 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */; };
+		5615AC4626FF29810057487C /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615AC4526FF29810057487C /* ChangeEmailViewController.swift */; };
 		5620448026F711990000A578 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620447F26F711990000A578 /* AlbumCell.swift */; };
 		566CCE0F26BBFABA00DF6616 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CCE0E26BBFABA00DF6616 /* DesignableView.swift */; };
 		566FDA9926EDF37200E23B8F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FDA9826EDF37200E23B8F /* UIView+Extension.swift */; };
@@ -52,6 +53,7 @@
 		53EA04072803588CFD5E5478 /* Pods-EarScanner_XCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarScanner_XCode.debug.xcconfig"; path = "Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode.debug.xcconfig"; sourceTree = "<group>"; };
 		5607E4E826D101DB003D90E5 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		5615AC4526FF29810057487C /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
 		5620447F26F711990000A578 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		566CCE0E26BBFABA00DF6616 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		566FDA9826EDF37200E23B8F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */,
 				6A90106726FC93520002D672 /* Step1ViewController.swift */,
 				47D2BAA226FD83ED006A1D11 /* ChangeProfilePassword.swift */,
+				5615AC4526FF29810057487C /* ChangeEmailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				6A90106826FC93520002D672 /* Step1ViewController.swift in Sources */,
 				566FDA9926EDF37200E23B8F /* UIView+Extension.swift in Sources */,
 				47947D7926B3EABD00761DC8 /* SceneDelegate.swift in Sources */,
+				5615AC4626FF29810057487C /* ChangeEmailViewController.swift in Sources */,
 				569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */,
 				47D2BAA626FD8CD3006A1D11 /* Step2ViewController.swift in Sources */,
 				47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */,
