@@ -14,7 +14,7 @@ import SwiftUI
 
 
 class ViewController: UIViewController {
-    
+    var alreadyRetaken = false
     @IBOutlet var imageTake: UIImage!
     @IBOutlet var imageTakePast: UIImage!
     var Retake = true
@@ -167,6 +167,7 @@ class ViewController: UIViewController {
     //and check permissions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
@@ -275,7 +276,7 @@ class ViewController: UIViewController {
     
     @objc private func didTapTakePhoto(){
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        
+        alreadyRetaken = false
         //increment counter on button press
         MyVariables.counter += 1;
             
@@ -424,13 +425,64 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 //        UIImageWriteToSavedPhotosAlbum(imageTake, nil, nil, nil)
        
     }
-
+    
     @objc private func retake() {
         Retake = true;
+        
+        
         session?.startRunning()
         imageView.removeFromSuperview()
+        print(self.currentProgress)
         
-    }
+        if (alreadyRetaken == false){
+            alreadyRetaken = true
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                if self.currentProgress == 0 {
+                    self.currentProgress = 3
+                } else {
+                    self.currentProgress -= 1
+                }
+                switch self.currentProgress {
+                case 1:
+                    self.view2.alpha = 0.5
+                    self.line1.alpha = 0.5
+                case 2:
+                    self.view3.alpha = 0.5
+                    self.line2.alpha = 0.5
+                case 3:
+                    self.view1.alpha = 1
+                    self.view2.alpha = 1
+                    self.line1.alpha = 1
+                    self.view3.alpha = 1
+                    self.line2.alpha = 1
+                    self.view4.alpha = 1
+                    self.line3.alpha = 1
+                default:
+                    self.view1.alpha = 0.5
+                    self.view2.alpha = 0.5
+                    self.line1.alpha = 0.5
+                    self.view3.alpha = 0.5
+                    self.line2.alpha = 0.5
+                    self.view4.alpha = 0.5
+                    self.line3.alpha = 0.5
+                }
+               
+            }
+        }
+        else{
+            let alert = UIAlertController(title: "Retaking", message: "Already Retaking Photo", preferredStyle: UIAlertController.Style.alert) //create alert
+                                    //I'm a pop up
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                self.present(alert, animated: true, completion: nil)
+            }
+        
+        
+        }
+        
+    
     public func addGridView() {
         // cameraView is your view where you want to show the grid view
         let horizontalMargin = -10

@@ -144,6 +144,18 @@ override func viewWillDisappear(_ animated: Bool) {
                 
                 return
             }
+            else if (UserExists.contains("Email Already Exists"))
+            {
+                DispatchQueue.main.async {
+                print("alert")
+                let alert = UIAlertController(title: "Error", message: "Email Already Exists", preferredStyle: UIAlertController.Style.alert) //create alert
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                self.present(alert, animated: true, completion: nil) // show the alert
+                }
+                
+                
+                return
+            }
             }
             else{
                 print("error with connection")
