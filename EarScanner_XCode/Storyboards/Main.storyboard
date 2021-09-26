@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vbP-Ck-uHB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N5i-kw-1EH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -1267,7 +1267,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Step 1-->
         <scene sceneID="tms-Wa-5Uk">
             <objects>
-                <viewController title="Step 1" hidesBottomBarWhenPushed="YES" id="N5i-kw-1EH" sceneMemberID="viewController">
+                <viewController title="Step 1" hidesBottomBarWhenPushed="YES" id="N5i-kw-1EH" customClass="Step1" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3d-8L-pda">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1283,13 +1283,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Y6f-OS-JGJ"/>
                                     <constraint firstAttribute="width" constant="50" id="yCK-39-N5b"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Fm-iP-K0x">
-                                <rect key="frame" x="30" y="187.5" width="354" height="194.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="4Fm-iP-K0x" secondAttribute="height" multiplier="91:50" id="EEV-fP-ZEI"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFb-9I-9M1">
@@ -1315,18 +1308,15 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <viewLayoutGuide key="safeArea" id="ZuN-JA-Q5b"/>
                         <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4Fm-iP-K0x" firstAttribute="leading" secondItem="ZuN-JA-Q5b" secondAttribute="leading" constant="30" id="3EC-K1-KQj"/>
                             <constraint firstItem="BTA-BC-qHc" firstAttribute="top" secondItem="ZuN-JA-Q5b" secondAttribute="top" constant="30" id="7nG-Nv-JW2"/>
                             <constraint firstItem="SdG-Ar-FHN" firstAttribute="top" secondItem="ZuN-JA-Q5b" secondAttribute="top" constant="100" id="EOj-DW-CXo"/>
-                            <constraint firstItem="ZuN-JA-Q5b" firstAttribute="trailing" secondItem="4Fm-iP-K0x" secondAttribute="trailing" constant="30" id="F3H-sD-UDZ"/>
                             <constraint firstItem="SdG-Ar-FHN" firstAttribute="centerX" secondItem="X3d-8L-pda" secondAttribute="centerX" id="MHu-cm-nlZ"/>
                             <constraint firstItem="ZuN-JA-Q5b" firstAttribute="trailing" secondItem="lFb-9I-9M1" secondAttribute="trailing" constant="30" id="OlX-AI-SkL"/>
                             <constraint firstAttribute="trailing" secondItem="SdG-Ar-FHN" secondAttribute="trailing" constant="30" id="RYP-qz-ZeL"/>
+                            <constraint firstItem="lFb-9I-9M1" firstAttribute="top" secondItem="SdG-Ar-FHN" secondAttribute="bottom" constant="274.5" id="RcM-GK-HuU"/>
                             <constraint firstItem="SdG-Ar-FHN" firstAttribute="leading" secondItem="X3d-8L-pda" secondAttribute="leading" constant="30" id="ZqU-4w-cb9"/>
                             <constraint firstItem="BTA-BC-qHc" firstAttribute="centerX" secondItem="X3d-8L-pda" secondAttribute="centerX" id="k0q-Bk-L8o"/>
                             <constraint firstItem="lFb-9I-9M1" firstAttribute="leading" secondItem="ZuN-JA-Q5b" secondAttribute="leading" constant="30" id="oSH-SI-SRh"/>
-                            <constraint firstItem="lFb-9I-9M1" firstAttribute="top" secondItem="4Fm-iP-K0x" secondAttribute="bottom" constant="50" id="rpY-wG-VZV"/>
-                            <constraint firstItem="4Fm-iP-K0x" firstAttribute="top" secondItem="SdG-Ar-FHN" secondAttribute="bottom" constant="30" id="vSj-4d-8vj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aAO-aj-drf"/>
@@ -1469,13 +1459,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="height" constant="50" id="vVL-2j-0XF"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tcL-ZU-OEb">
-                                <rect key="frame" x="30" y="187.5" width="354" height="194.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="tcL-ZU-OEb" secondAttribute="height" multiplier="91:50" id="27T-zX-yOQ"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeI-6N-Qxn">
                                 <rect key="frame" x="30" y="432" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1501,16 +1484,13 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <constraints>
                             <constraint firstItem="IeI-6N-Qxn" firstAttribute="leading" secondItem="wkJ-FZ-LNh" secondAttribute="leading" constant="30" id="05j-af-Qv8"/>
                             <constraint firstItem="TGT-Kw-cXa" firstAttribute="leading" secondItem="KMX-GG-X5l" secondAttribute="leading" constant="30" id="EjU-87-VYu"/>
-                            <constraint firstItem="tcL-ZU-OEb" firstAttribute="leading" secondItem="wkJ-FZ-LNh" secondAttribute="leading" constant="30" id="JpW-We-NkF"/>
-                            <constraint firstItem="tcL-ZU-OEb" firstAttribute="top" secondItem="TGT-Kw-cXa" secondAttribute="bottom" constant="30" id="Olx-cA-9Xa"/>
                             <constraint firstAttribute="trailing" secondItem="TGT-Kw-cXa" secondAttribute="trailing" constant="30" id="QW9-6e-NYh"/>
                             <constraint firstItem="TGT-Kw-cXa" firstAttribute="top" secondItem="wkJ-FZ-LNh" secondAttribute="top" constant="100" id="TN9-HQ-S99"/>
-                            <constraint firstItem="wkJ-FZ-LNh" firstAttribute="trailing" secondItem="tcL-ZU-OEb" secondAttribute="trailing" constant="30" id="kb8-2O-kBg"/>
+                            <constraint firstItem="IeI-6N-Qxn" firstAttribute="top" secondItem="TGT-Kw-cXa" secondAttribute="bottom" constant="274.5" id="Yka-VP-sSY"/>
                             <constraint firstItem="jhe-HV-e93" firstAttribute="top" secondItem="wkJ-FZ-LNh" secondAttribute="top" constant="30" id="kwq-pT-aW3"/>
                             <constraint firstItem="wkJ-FZ-LNh" firstAttribute="trailing" secondItem="IeI-6N-Qxn" secondAttribute="trailing" constant="30" id="wbn-gq-KGw"/>
                             <constraint firstItem="jhe-HV-e93" firstAttribute="centerX" secondItem="KMX-GG-X5l" secondAttribute="centerX" id="y1W-xT-9iO"/>
                             <constraint firstItem="TGT-Kw-cXa" firstAttribute="centerX" secondItem="KMX-GG-X5l" secondAttribute="centerX" id="zPq-NB-J2a"/>
-                            <constraint firstItem="IeI-6N-Qxn" firstAttribute="top" secondItem="tcL-ZU-OEb" secondAttribute="bottom" constant="50" id="zsB-g2-P2K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QDh-10-lgQ"/>
@@ -1541,13 +1521,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="height" constant="50" id="UwC-DF-nGn"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UMn-Yx-nkV">
-                                <rect key="frame" x="30" y="216" width="354" height="194.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="UMn-Yx-nkV" secondAttribute="height" multiplier="91:50" id="L18-90-dp8"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzt-er-LMe">
                                 <rect key="frame" x="30" y="460.5" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1575,13 +1548,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                             <constraint firstItem="nft-ln-2Em" firstAttribute="leading" secondItem="NkE-4B-W9Y" secondAttribute="leading" constant="30" id="BLQ-2L-Ac2"/>
                             <constraint firstItem="bzt-er-LMe" firstAttribute="leading" secondItem="EmJ-uP-CTy" secondAttribute="leading" constant="30" id="HvO-hD-Rwx"/>
                             <constraint firstItem="EmJ-uP-CTy" firstAttribute="trailing" secondItem="bzt-er-LMe" secondAttribute="trailing" constant="30" id="SRc-dn-0s3"/>
-                            <constraint firstItem="UMn-Yx-nkV" firstAttribute="leading" secondItem="EmJ-uP-CTy" secondAttribute="leading" constant="30" id="a8G-bi-I9Y"/>
+                            <constraint firstItem="bzt-er-LMe" firstAttribute="top" secondItem="nft-ln-2Em" secondAttribute="bottom" constant="274.5" id="bep-ld-den"/>
                             <constraint firstItem="nft-ln-2Em" firstAttribute="top" secondItem="EmJ-uP-CTy" secondAttribute="top" constant="100" id="d7W-q4-YeY"/>
-                            <constraint firstItem="bzt-er-LMe" firstAttribute="top" secondItem="UMn-Yx-nkV" secondAttribute="bottom" constant="50" id="jBl-vx-Ti3"/>
                             <constraint firstItem="Diz-nd-YB9" firstAttribute="top" secondItem="EmJ-uP-CTy" secondAttribute="top" constant="30" id="jex-ND-GFa"/>
-                            <constraint firstItem="EmJ-uP-CTy" firstAttribute="trailing" secondItem="UMn-Yx-nkV" secondAttribute="trailing" constant="30" id="liU-Q9-38G"/>
                             <constraint firstAttribute="trailing" secondItem="nft-ln-2Em" secondAttribute="trailing" constant="30" id="pfU-Hc-O75"/>
-                            <constraint firstItem="UMn-Yx-nkV" firstAttribute="top" secondItem="nft-ln-2Em" secondAttribute="bottom" constant="30" id="qfr-04-WCv"/>
                             <constraint firstItem="nft-ln-2Em" firstAttribute="centerX" secondItem="NkE-4B-W9Y" secondAttribute="centerX" id="zyG-Ig-nG6"/>
                         </constraints>
                     </view>
@@ -1613,13 +1583,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="width" constant="50" id="wvX-Ll-5kV"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-8h-8R0">
-                                <rect key="frame" x="30" y="216" width="354" height="194.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Efh-8h-8R0" secondAttribute="height" multiplier="91:50" id="mbc-d4-lnb"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07y-ef-ien">
                                 <rect key="frame" x="30" y="460.5" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1641,17 +1604,14 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iSg-vs-jd3" firstAttribute="top" secondItem="I1U-i0-m8b" secondAttribute="top" constant="30" id="0Gt-up-ytq"/>
-                            <constraint firstItem="Efh-8h-8R0" firstAttribute="leading" secondItem="I1U-i0-m8b" secondAttribute="leading" constant="30" id="4IQ-E4-BDk"/>
                             <constraint firstItem="07y-ef-ien" firstAttribute="leading" secondItem="I1U-i0-m8b" secondAttribute="leading" constant="30" id="5co-18-v1Q"/>
-                            <constraint firstItem="I1U-i0-m8b" firstAttribute="trailing" secondItem="Efh-8h-8R0" secondAttribute="trailing" constant="30" id="9hR-LI-3Kf"/>
                             <constraint firstItem="nVJ-db-UaY" firstAttribute="leading" secondItem="Z9s-Xa-BGS" secondAttribute="leading" constant="30" id="AiQ-vQ-OD2"/>
-                            <constraint firstItem="Efh-8h-8R0" firstAttribute="top" secondItem="nVJ-db-UaY" secondAttribute="bottom" constant="30" id="C1M-C0-Kqb"/>
                             <constraint firstItem="iSg-vs-jd3" firstAttribute="centerX" secondItem="Z9s-Xa-BGS" secondAttribute="centerX" id="DEM-Ff-Ic7"/>
                             <constraint firstItem="I1U-i0-m8b" firstAttribute="trailing" secondItem="07y-ef-ien" secondAttribute="trailing" constant="30" id="Dpu-m7-Icv"/>
                             <constraint firstItem="nVJ-db-UaY" firstAttribute="top" secondItem="I1U-i0-m8b" secondAttribute="top" constant="100" id="IjQ-3u-4hF"/>
                             <constraint firstAttribute="trailing" secondItem="nVJ-db-UaY" secondAttribute="trailing" constant="30" id="QNB-tg-sXf"/>
-                            <constraint firstItem="07y-ef-ien" firstAttribute="top" secondItem="Efh-8h-8R0" secondAttribute="bottom" constant="50" id="g9U-6q-0B6"/>
                             <constraint firstItem="nVJ-db-UaY" firstAttribute="centerX" secondItem="Z9s-Xa-BGS" secondAttribute="centerX" id="l9H-r2-vb1"/>
+                            <constraint firstItem="07y-ef-ien" firstAttribute="top" secondItem="nVJ-db-UaY" secondAttribute="bottom" constant="274.5" id="stG-1d-GWC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WLr-Yf-xfn"/>
@@ -1834,10 +1794,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uzm-iY-aVK">
-                                <rect key="frame" x="15" y="300.5" width="344.5" height="295"/>
+                                <rect key="frame" x="15" y="300.5" width="384" height="295"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowshape.turn.up.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OX8-eH-Ir4">
-                                        <rect key="frame" x="0.0" y="1" width="344.5" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="1" width="384" height="97.5"/>
                                         <color key="tintColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="LGz-wb-OCv"/>
@@ -1846,7 +1806,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right ear is done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-T0-CKv">
-                                        <rect key="frame" x="0.0" y="115" width="344.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="csL-4O-kcX"/>
                                         </constraints>
@@ -1855,7 +1815,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press continue to take photos of the left ear." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-sv-bhK">
-                                        <rect key="frame" x="0.0" y="180" width="344.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dWQ-ci-SCZ"/>
                                         </constraints>
@@ -1864,7 +1824,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-oW-q9z">
-                                        <rect key="frame" x="0.0" y="245" width="344.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MA7-JX-U2V"/>

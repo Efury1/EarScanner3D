@@ -132,7 +132,6 @@
 		47947D7526B3EABD00761DC8 /* EarScanner_XCode */ = {
 			isa = PBXGroup;
 			children = (
-				47D2BAA526FD8CD3006A1D11 /* Step2ViewController.swift */,
 				566FDA9726EDF35B00E23B8F /* Extensions */,
 				47947D7626B3EABD00761DC8 /* AppDelegate.swift */,
 				47947D7826B3EABD00761DC8 /* SceneDelegate.swift */,
@@ -183,6 +182,7 @@
 				569E2C7326C90E4D00B6FBFE /* MainViewController.swift */,
 				5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */,
 				6A90106726FC93520002D672 /* Step1ViewController.swift */,
+				47D2BAA526FD8CD3006A1D11 /* Step2ViewController.swift */,
 				47D2BAA226FD83ED006A1D11 /* ChangeProfilePassword.swift */,
 				5615AC4526FF29810057487C /* ChangeEmailViewController.swift */,
 			);
