@@ -36,6 +36,7 @@
 		6A90106E26FD53870002D672 /* Step-2-back.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A90106B26FD53850002D672 /* Step-2-back.mp4 */; };
 		6A90106F26FD53870002D672 /* Step-3-around.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A90106C26FD53870002D672 /* Step-3-around.mp4 */; };
 		6A90107026FD53870002D672 /* Step-4-close.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A90106D26FD53870002D672 /* Step-4-close.mp4 */; };
+		6AACCD7F27000A4000D9F0A3 /* Step3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AACCD7E27000A4000D9F0A3 /* Step3ViewController.swift */; };
 		C0075DED261B0AE6595095B3 /* Pods_EarScanner_XCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87928C1E21F276CFD86C3E0D /* Pods_EarScanner_XCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		6A90106C26FD53870002D672 /* Step-3-around.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step-3-around.mp4"; sourceTree = "<group>"; };
 		6A90106D26FD53870002D672 /* Step-4-close.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step-4-close.mp4"; sourceTree = "<group>"; };
 		6A90107126FD53A90002D672 /* Step2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
+		6AACCD7E27000A4000D9F0A3 /* Step3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3ViewController.swift; sourceTree = "<group>"; };
 		87928C1E21F276CFD86C3E0D /* Pods_EarScanner_XCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EarScanner_XCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9095D166B902AF9638FC7A48 /* Pods-EarScanner_XCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarScanner_XCode.release.xcconfig"; path = "Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +187,7 @@
 				47D2BAA526FD8CD3006A1D11 /* Step2ViewController.swift */,
 				47D2BAA226FD83ED006A1D11 /* ChangeProfilePassword.swift */,
 				5615AC4526FF29810057487C /* ChangeEmailViewController.swift */,
+				6AACCD7E27000A4000D9F0A3 /* Step3ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				5615AC4626FF29810057487C /* ChangeEmailViewController.swift in Sources */,
 				569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */,
 				47D2BAA626FD8CD3006A1D11 /* Step2ViewController.swift in Sources */,
+				6AACCD7F27000A4000D9F0A3 /* Step3ViewController.swift in Sources */,
 				47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */,
 				47D2BAA326FD83ED006A1D11 /* ChangeProfilePassword.swift in Sources */,
 				5691FBA626EDD94C00A84E66 /* SetUpViewController.swift in Sources */,
