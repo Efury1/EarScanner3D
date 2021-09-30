@@ -29,7 +29,7 @@ class AlbumViewController: UIViewController {
         
     }
     func viewDidLoad2() {
-        super.viewDidLoad()
+        
         //remove previous view
         names = []
         items = []
@@ -67,6 +67,12 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+    
+    func UploadAlbum(albumName: String, UserEmail: String ) {
+        
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: AlbumCell.id, for: indexPath) as? AlbumCell {
@@ -107,49 +113,74 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete && PHPhotoLibrary.authorizationStatus(for: .readWrite) == .authorized {
-            print("Auth", PHPhotoLibrary.authorizationStatus(for: .readWrite))
+
+        if (editingStyle == .delete) {
+            
+            //deleteAlbum(albumName: names[indexPath.row].name)
+            
             tableView.performBatchUpdates {
-                items.remove(at: indexPath.row)
-                
-                tableView.deleteRows(at: [indexPath], with: .top)
-                self.deleteAlbum(albumName: names[indexPath.row].name)
-                names.remove(at: indexPath.row)
+                deleteAlbum(albumName: names[indexPath.row].name, tableView: tableView, indexPath: indexPath)
+//                print("authing")
+//
+//                items.remove(at: indexPath.row)
+//
+//                tableView.deleteRows(at: [indexPath], with: .top)
+//
+//                names.remove(at: indexPath.row)
                 
             } completion: { _ in
                 tableView.reloadData()
             }
+                
             
+        
         }
        
     }
-    func deleteAlbum(albumName: String){
-       
-        
-                    
+    func deleteAlbum(albumName: String, tableView: UITableView, indexPath: IndexPath){
                     let options = PHFetchOptions()
                     options.predicate = NSPredicate(format: "title = %@", albumName)
                     let album = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: options)
-                    
+                    var success2 = false;
                     
                     // check if album is available
+        let group = DispatchGroup()
+        group.enter()
+        DispatchQueue.main.async {
                     if album.firstObject != nil {
                         
                         // request to delete album
+                        
                         PHPhotoLibrary.shared().performChanges({
 //                            PHPhotoLibrary.shared().
+                            
                             PHAssetCollectionChangeRequest.deleteAssetCollections(album)
-                           
+                            
                         }, completionHandler: { (success, error) in
                             if success {
                                 print(" \(albumName) removed succesfully")
+                                success2 = true;
+                                group.leave()
+                                
                             } else if error != nil {
                                 print("request failed. please try again")
+                                group.leave()
                             }
                         })
                     }else{
                         print("requested album \(albumName) not found in photos")
+                        group.leave()
                     }
+            
+        }
+        
+        group.notify(queue: .main) {
+            
+                self.viewDidLoad2()
+                print("refreshed", success2)
+            
+        }
+ 
         
         
      
