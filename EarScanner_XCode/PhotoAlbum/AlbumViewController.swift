@@ -17,28 +17,49 @@ class AlbumViewController: UIViewController {
     var names: [AlbumModel] = []
     
     var items: [Int] = []
-    lazy var photoTable: UITableView = {
-        let tv = UITableView()
-        tv.register(AlbumCell.self, forCellReuseIdentifier: AlbumCell.id)
-        tv.dataSource = self
-        tv.delegate = self
-        return tv
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    //    var photoTable: UITableView = {
+    //        let tv = UITableView()
+    //        tv.register(AlbumCell.self, forCellReuseIdentifier: AlbumCell.id)
+    //        tv.dataSource = self
+    //        tv.delegate = self
+    //        return tv
+    //    }()
+    override func viewWillAppear(_ animated: Bool) {
+        viewDidLoad2()
         
-        view.addSubview(photoTable)
-        print("printing")
+    }
+    func viewDidLoad2() {
+        super.viewDidLoad()
+        //remove previous view
+        names = []
+        items = []
+        
         names = listAlbums()
+        print("printing", names.count)
         if (names.count > 0){
             for i in 0...names.count-1{
                 print("i", i)
                 items.append(i)
             }
         }
+        
+        
+        var photoTable: UITableView = {
+            let tv = UITableView()
+            tv.register(AlbumCell.self, forCellReuseIdentifier: AlbumCell.id)
+            tv.dataSource = self
+            tv.delegate = self
+            return tv
+        }()
+        photoTable.removeFromSuperview()
+        
+        view.addSubview(photoTable)
+        
         photoTable.easy.layout(Top(), Left(), Right(), Bottom())
+        
     }
+    
+    
     
 }
 
@@ -50,14 +71,18 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: AlbumCell.id, for: indexPath) as? AlbumCell {
             let row = indexPath.row
-     
-            let range = NSRange(location: 0, length: names[row].name.utf16.count)
+            
+            //let range = NSRange(location: 0, length: names[row].name.utf16.count)
+            print("row", row)
+            print("names", names.count)
             let regex = matches(for: "(?<=EarScanner3D: )(.*)(?= - )", in: names[row].name)
-            let regex2 = matches(for: "(?<= - ).*", in: names[row].name)
+            
             let setName = regex[0]
             
-            let setDate =  regex2[0]
-                
+            //Lizzy use this:
+            //let regex2 = matches(for: "(?<= - ).*", in: names[row].name)
+            //let setDate =  regex2[0]
+            
             cell.photoView.image = UIImage(named: String(items[row]))
             
             cell.text.text = setName
@@ -82,40 +107,52 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+        if editingStyle == .delete && PHPhotoLibrary.authorizationStatus(for: .readWrite) == .authorized {
+            print("Auth", PHPhotoLibrary.authorizationStatus(for: .readWrite))
             tableView.performBatchUpdates {
                 items.remove(at: indexPath.row)
+                
                 tableView.deleteRows(at: [indexPath], with: .top)
                 self.deleteAlbum(albumName: names[indexPath.row].name)
+                names.remove(at: indexPath.row)
                 
             } completion: { _ in
                 tableView.reloadData()
             }
             
         }
+       
     }
     func deleteAlbum(albumName: String){
-        let options = PHFetchOptions()
-        options.predicate = NSPredicate(format: "title = %@", albumName)
-        let album = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: options)
-
-
-        // check if album is available
-        if album.firstObject != nil {
-
-            // request to delete album
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetCollectionChangeRequest.deleteAssetCollections(album)
-        }, completionHandler: { (success, error) in
-            if success {
-                print(" \(albumName) removed succesfully")
-            } else if error != nil {
-                print("request failed. please try again")
-            }
-        })
-        }else{
-            print("requested album \(albumName) not found in photos")
-        }
+       
+        
+                    
+                    let options = PHFetchOptions()
+                    options.predicate = NSPredicate(format: "title = %@", albumName)
+                    let album = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: options)
+                    
+                    
+                    // check if album is available
+                    if album.firstObject != nil {
+                        
+                        // request to delete album
+                        PHPhotoLibrary.shared().performChanges({
+//                            PHPhotoLibrary.shared().
+                            PHAssetCollectionChangeRequest.deleteAssetCollections(album)
+                           
+                        }, completionHandler: { (success, error) in
+                            if success {
+                                print(" \(albumName) removed succesfully")
+                            } else if error != nil {
+                                print("request failed. please try again")
+                            }
+                        })
+                    }else{
+                        print("requested album \(albumName) not found in photos")
+                    }
+        
+        
+     
     }
     //check every album to see if it has the name 'EarScanner3D:' in it, if it does we will try to show it as one of the rows
     class AlbumModel {
@@ -158,7 +195,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         return names
     }
     func matches(for regex: String, in text: String) -> [String] {
-
+        
         do {
             let regex = try NSRegularExpression(pattern: regex)
             let results = regex.matches(in: text,
@@ -171,4 +208,8 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
             return []
         }
     }
+    
+
+  
+
 }

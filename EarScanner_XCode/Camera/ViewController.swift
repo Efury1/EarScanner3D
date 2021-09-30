@@ -14,6 +14,15 @@ import SwiftUI
 
 
 class ViewController: UIViewController {
+    
+    override open var shouldAutorotate: Bool {
+       return false
+    }
+
+    // Specify the orientation.
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+       return .portrait
+    }
     var alreadyRetaken = false
     @IBOutlet var imageTake: UIImage!
     @IBOutlet var imageTakePast: UIImage!
@@ -436,14 +445,19 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         if (alreadyRetaken == false){
             alreadyRetaken = true
+            ///De-progress the bar
             UIView.animate(withDuration: 0.5) { [weak self] in
                 guard let self = self else {
                     return
                 }
                 if self.currentProgress == 0 {
+                    
                     self.currentProgress = 3
+                    print("progress: ",self.currentProgress)
                 } else {
+                    
                     self.currentProgress -= 1
+                    print("progress: ",self.currentProgress)
                 }
                 switch self.currentProgress {
                 case 1:
@@ -458,8 +472,8 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
                     self.line1.alpha = 1
                     self.view3.alpha = 1
                     self.line2.alpha = 1
-                    self.view4.alpha = 1
-                    self.line3.alpha = 1
+                    self.view4.alpha = 0.5
+                    self.line3.alpha = 0.5
                 default:
                     self.view1.alpha = 0.5
                     self.view2.alpha = 0.5
@@ -573,6 +587,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 
 
 extension UIViewController {
+ 
  
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()

@@ -97,7 +97,7 @@ class MyAwesomeAlbum: NSObject {
                     let assetPlaceHolder = assetChangeRequest.placeholderForCreatedAsset
                     if let albumChangeRequest = PHAssetCollectionChangeRequest(for: self.assetCollection) {
                         let enumeration: NSArray = [assetPlaceHolder!]
-                        print(enumeration)
+                        print("NSArray",enumeration)
                         albumChangeRequest.addAssets(enumeration)
                         //albumChangeRequest.removeAssets(enumeration)
                     }
