@@ -12,5 +12,5 @@ pod 'EasyPeasy'
 
 pod "AYStepperView"
 
-pod 'OneDriveSDK'
+
 end

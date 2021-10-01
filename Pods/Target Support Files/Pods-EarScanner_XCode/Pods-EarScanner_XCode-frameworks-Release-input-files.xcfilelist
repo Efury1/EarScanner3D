@@ -1,7 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode-frameworks.sh
-${BUILT_PRODUCTS_DIR}/ADAL/ADAL.framework
 ${BUILT_PRODUCTS_DIR}/AYStepperView/AYStepperView.framework
-${BUILT_PRODUCTS_DIR}/Base32/Base32.framework
 ${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework
-${BUILT_PRODUCTS_DIR}/OneDriveSDK/OneDriveSDK.framework
 ${BUILT_PRODUCTS_DIR}/pop/pop.framework
