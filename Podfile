@@ -12,5 +12,5 @@ pod 'EasyPeasy'
 
 pod "AYStepperView"
 
-
+cd 
 end
