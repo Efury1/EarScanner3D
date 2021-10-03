@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-EarScanner_XCode/Pods-EarScanner_XCode-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AYStepperView/AYStepperView.framework
+${BUILT_PRODUCTS_DIR}/Disk/Disk.framework
 ${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework
 ${BUILT_PRODUCTS_DIR}/pop/pop.framework

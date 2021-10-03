@@ -1,24 +1,28 @@
 PODS:
   - AYStepperView (0.1.0):
     - pop (~> 1.0)
+  - Disk (0.6.4)
   - EasyPeasy (1.10.0)
   - pop (1.0.12)
 
 DEPENDENCIES:
   - AYStepperView
+  - Disk
   - EasyPeasy
 
 SPEC REPOS:
   trunk:
     - AYStepperView
+    - Disk
     - EasyPeasy
     - pop
 
 SPEC CHECKSUMS:
   AYStepperView: 6bc5399dae562b2d221c47cbd540db438454ecf9
+  Disk: dcee5c2e98fb72f9a924cde8da8435b08244a80e
   EasyPeasy: b9b1bae024d21a7dfa9bad26d6826d88348cc6f1
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
 
-PODFILE CHECKSUM: a4b208819d60f999a69d3075702b6659172c131b
+PODFILE CHECKSUM: 059b8454765ee60e9d9274b462845e3970ddfafb
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.0.beta.2

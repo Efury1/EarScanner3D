@@ -12,5 +12,6 @@ pod 'EasyPeasy'
 
 pod "AYStepperView"
 
-cd 
+pod "Disk"
+
 end
