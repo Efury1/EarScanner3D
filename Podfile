@@ -14,4 +14,7 @@ pod "AYStepperView"
 
 pod 'Disk', '~> 0.6.4'
 
+pod 'OneDriveSDK'
+
+
 end

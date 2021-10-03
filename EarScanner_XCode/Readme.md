@@ -4,7 +4,6 @@ Amazon AWS account details
 Earscanner3d@gmail.com
 EaSc2708!
 
-
 Gmail account details
 EarScanner3d@gmail.com
 Earscanner13!
@@ -12,6 +11,10 @@ Earscanner13!
 Apple Account:
 EarScanner3d@gmail.com
 EaSc2020!
+
+Microsoft Account:
+EarScanner3d@gmail.com
+EaSc0909!
 
 How to Connect to Database:
 1. Download MySQL Workbench
