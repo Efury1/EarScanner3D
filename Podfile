@@ -12,6 +12,6 @@ pod 'EasyPeasy'
 
 pod "AYStepperView"
 
-pod "Disk"
+pod 'Disk', '~> 0.6.4'
 
 end
