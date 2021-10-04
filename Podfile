@@ -16,5 +16,6 @@ pod 'Disk', '~> 0.6.4'
 
 pod 'OneDriveSDK'
 
+pod 'KeychainSwift', '~> 19.0'
 
 end

@@ -1,5 +1,6 @@
 import Photos
 import UIKit
+
 class MyAwesomeAlbum: NSObject {
     var albumName = ""
     

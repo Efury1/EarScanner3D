@@ -7,6 +7,7 @@
 
 import UIKit
 import EasyPeasy
+import OneDriveSDK
 
 class AlbumViewController: UIViewController {
     

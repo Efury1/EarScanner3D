@@ -58,6 +58,7 @@
 		5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		5615AC4526FF29810057487C /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
 		5615AC59270A6D670057487C /* SavePhotoToApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotoToApp.swift; sourceTree = "<group>"; };
+		5615AC5B270A7E080057487C /* EarScanner_XCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EarScanner_XCode.entitlements; sourceTree = "<group>"; };
 		5620447F26F711990000A578 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		566CCE0E26BBFABA00DF6616 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		566FDA9826EDF37200E23B8F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		47947D7526B3EABD00761DC8 /* EarScanner_XCode */ = {
 			isa = PBXGroup;
 			children = (
+				5615AC5B270A7E080057487C /* EarScanner_XCode.entitlements */,
 				566FDA9726EDF35B00E23B8F /* Extensions */,
 				47947D7626B3EABD00761DC8 /* AppDelegate.swift */,
 				47947D7826B3EABD00761DC8 /* SceneDelegate.swift */,
@@ -494,8 +496,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EarScanner_XCode/EarScanner_XCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KSTAQ25V98;
+				DEVELOPMENT_TEAM = GF32G6UN2A;
 				INFOPLIST_FILE = EarScanner_XCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,8 +517,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EarScanner_XCode/EarScanner_XCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KSTAQ25V98;
+				DEVELOPMENT_TEAM = GF32G6UN2A;
 				INFOPLIST_FILE = EarScanner_XCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
