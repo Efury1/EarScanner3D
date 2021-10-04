@@ -8,4 +8,6 @@ build/
 *.perspective
 *.perspectivev3
 
-xcuserdata/*
+*/xcuserdata
+*/xcuserdata/elizafury.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcuserstate
