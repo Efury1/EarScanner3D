@@ -20,6 +20,7 @@
 		5607E4ED26D258A4003D90E5 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607E4EC26D258A4003D90E5 /* ForgotPassViewController.swift */; };
 		5615AC4626FF29810057487C /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615AC4526FF29810057487C /* ChangeEmailViewController.swift */; };
 		5615AC5A270A6D670057487C /* SavePhotoToApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615AC59270A6D670057487C /* SavePhotoToApp.swift */; };
+		5615AC5D270B16650057487C /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 5615AC5C270B16640057487C /* Documentation.docc */; };
 		5620448026F711990000A578 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620447F26F711990000A578 /* AlbumCell.swift */; };
 		566CCE0F26BBFABA00DF6616 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CCE0E26BBFABA00DF6616 /* DesignableView.swift */; };
 		566FDA9926EDF37200E23B8F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566FDA9826EDF37200E23B8F /* UIView+Extension.swift */; };
@@ -59,6 +60,7 @@
 		5615AC4526FF29810057487C /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
 		5615AC59270A6D670057487C /* SavePhotoToApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotoToApp.swift; sourceTree = "<group>"; };
 		5615AC5B270A7E080057487C /* EarScanner_XCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EarScanner_XCode.entitlements; sourceTree = "<group>"; };
+		5615AC5C270B16640057487C /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		5620447F26F711990000A578 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		566CCE0E26BBFABA00DF6616 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		566FDA9826EDF37200E23B8F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -116,9 +118,9 @@
 		47947D6A26B3EABD00761DC8 = {
 			isa = PBXGroup;
 			children = (
+				5615AC5C270B16640057487C /* Documentation.docc */,
 				6A90106B26FD53850002D672 /* Step-2-back.mp4 */,
 				6A90106C26FD53870002D672 /* Step-3-around.mp4 */,
-				6A90106D26FD53870002D672 /* Step-4-close.mp4 */,
 				6A90106926FD50340002D672 /* Step-1-front.mp4 */,
 				47947D7526B3EABD00761DC8 /* EarScanner_XCode */,
 				47947D7426B3EABD00761DC8 /* Products */,
@@ -139,6 +141,7 @@
 		47947D7526B3EABD00761DC8 /* EarScanner_XCode */ = {
 			isa = PBXGroup;
 			children = (
+				6A90106D26FD53870002D672 /* Step-4-close.mp4 */,
 				5615AC5B270A7E080057487C /* EarScanner_XCode.entitlements */,
 				566FDA9726EDF35B00E23B8F /* Extensions */,
 				47947D7626B3EABD00761DC8 /* AppDelegate.swift */,
@@ -360,6 +363,7 @@
 				6A90106826FC93520002D672 /* Step1ViewController.swift in Sources */,
 				566FDA9926EDF37200E23B8F /* UIView+Extension.swift in Sources */,
 				47947D7926B3EABD00761DC8 /* SceneDelegate.swift in Sources */,
+				5615AC5D270B16650057487C /* Documentation.docc in Sources */,
 				5615AC4626FF29810057487C /* ChangeEmailViewController.swift in Sources */,
 				569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */,
 				47D2BAA626FD8CD3006A1D11 /* Step2ViewController.swift in Sources */,
@@ -498,13 +502,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EarScanner_XCode/EarScanner_XCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GF32G6UN2A;
+				DEVELOPMENT_TEAM = YT3DFL83FQ;
 				INFOPLIST_FILE = EarScanner_XCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = 129124712sdyqwhqzssz;
+				PRODUCT_BUNDLE_IDENTIFIER = Earscanner3d;
 				PRODUCT_NAME = EarScan3D;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,13 +523,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EarScanner_XCode/EarScanner_XCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GF32G6UN2A;
+				DEVELOPMENT_TEAM = YT3DFL83FQ;
 				INFOPLIST_FILE = EarScanner_XCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = 129124712sdyqwhqzssz;
+				PRODUCT_BUNDLE_IDENTIFIER = Earscanner3d;
 				PRODUCT_NAME = EarScan3D;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
