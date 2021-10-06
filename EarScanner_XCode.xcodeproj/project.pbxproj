@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4725224D270D5E2200A840DF /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725224C270D5E2200A840DF /* ChangeNameViewController.swift */; };
 		47947D7726B3EABD00761DC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7626B3EABD00761DC8 /* AppDelegate.swift */; };
 		47947D7926B3EABD00761DC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7826B3EABD00761DC8 /* SceneDelegate.swift */; };
 		47947D7B26B3EABD00761DC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7A26B3EABD00761DC8 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4725224C270D5E2200A840DF /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
 		47947D7326B3EABD00761DC8 /* EarScan3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarScan3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47947D7626B3EABD00761DC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47947D7826B3EABD00761DC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				5615AC4526FF29810057487C /* ChangeEmailViewController.swift */,
 				6AACCD7E27000A4000D9F0A3 /* Step3ViewController.swift */,
 				6AACCD8027000CC300D9F0A3 /* Step4ViewController.swift */,
+				4725224C270D5E2200A840DF /* ChangeNameViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				5615AC4626FF29810057487C /* ChangeEmailViewController.swift in Sources */,
 				569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */,
 				47D2BAA626FD8CD3006A1D11 /* Step2ViewController.swift in Sources */,
+				4725224D270D5E2200A840DF /* ChangeNameViewController.swift in Sources */,
 				6AACCD7F27000A4000D9F0A3 /* Step3ViewController.swift in Sources */,
 				47947D8D26B56A5F00761DC8 /* SaveToPhotoAlbum.swift in Sources */,
 				47D2BAA326FD83ED006A1D11 /* ChangeProfilePassword.swift in Sources */,
