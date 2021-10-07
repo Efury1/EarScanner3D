@@ -14,7 +14,7 @@ import SwiftUI
 
 
 class ViewController: UIViewController {
-    
+    var photoCount = 0;
     override open var shouldAutorotate: Bool {
        return false
     }
@@ -205,15 +205,15 @@ class ViewController: UIViewController {
 
         
         HelpButton.center = CGPoint(x: MyVariables.screenWidth - (MyVariables.screenWidth*0.85),
-                                       y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
+                                       y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.145/3)) )
         /*NextPhotoButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
                                          y: MyVariables.screenHeight - (MyVariables.screenHeight*0.3) )*/
        
         shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
-                                       y: MyVariables.screenHeight - (MyVariables.screenHeight*0.19) )
+                                       y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.19/2)) )
         
         RetakeButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
-                                         y: MyVariables.screenHeight - (MyVariables.screenHeight*0.145) )
+                                         y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.145/3)) )
     }
     private func checkCameraPermissions(){
         switch AVCaptureDevice.authorizationStatus(for: .video){
@@ -406,8 +406,10 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 //            MyAwesomeAlbum.shared.albumName = "RemovalTest"
             
             MyAwesomeAlbum.shared.save(image: self.imageTakePast)
+            photoCount += 1;
         }
         Retake = false
+        
         //NextPhotoButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
         
         
@@ -417,8 +419,16 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             
-            
-            
+            if (self.photoCount == 1){
+                //add the line to save the last photo due to how I delay saving for retaking
+                MyAwesomeAlbum.shared.save(image: self.imageTakePast)
+                print("changing the page")
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step2")
+                
+                self.present(balanceViewController, animated: true, completion: nil)
+            }
+            print("count",self.photoCount)
             self.session?.startRunning()
             self.imageView.removeFromSuperview()
             
@@ -512,7 +522,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         //make and place rectangle
         /*let rectFrame: CGRect = CGRect(x:CGFloat(0), y:CGFloat(screenHeight-(screenHeight*0.19)), width:CGFloat(screenWidth), height:CGFloat(screenHeight*0.1))*/
-     let rectFrame: CGRect = CGRect(x:CGFloat(0), y:CGFloat(screenHeight-(screenHeight*0.20)), width:CGFloat(screenWidth), height:CGFloat(screenHeight*0.1))
+     let rectFrame: CGRect = CGRect(x:CGFloat(0), y:CGFloat(screenHeight-(screenHeight*0.10)), width:CGFloat(screenWidth), height:CGFloat(screenHeight*0.1))
         
               
               // Create a UIView object which use above CGRect object.

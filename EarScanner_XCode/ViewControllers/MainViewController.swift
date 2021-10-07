@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
 
     
     /*fileprivate func isLoggedIn() -> Bool {
-        return UserDefaults.standard.bool(forKey: "isLoggedin")
+        return UserDefaults.standard.bool(forKey: "isLoggedin") 
     }
     
     func handleSignOut() {
@@ -67,11 +67,14 @@ class MainViewController: UIViewController {
        
         if (PhotosetName.text?.isEmpty == false && PhotosetName.text != nil && !(PhotosetName.text?.trimmingCharacters(in: .whitespaces).isEmpty)!){
             GlobalPhotosetName = PhotosetName.text ?? "Unnamed"
-            
-            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Camera")
+            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BeginFirstEar")
              self.addChild(childViewController)
              self.view.addSubview(childViewController.view)
              childViewController.didMove(toParent: self)
+//            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Camera")
+//             self.addChild(childViewController)
+//             self.view.addSubview(childViewController.view)
+//             childViewController.didMove(toParent: self)
             
         }
         else{
@@ -82,7 +85,14 @@ class MainViewController: UIViewController {
         }
     }
     
+    @IBAction func StartTutorial(_ sender: Any) {
+      
+        let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Step1")
+        self.parent?.present(childViewController, animated: true, completion: nil)
+//         self.addChild(childViewController)
+//         self.view.addSubview(childViewController.view)
+    }
     
-    
+
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vbP-Ck-uHB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWI-6d-uB4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController storyboardIdentifier="Camera" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="SWI-6d-uB4" customClass="ViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JE1-ep-akq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="nMm-av-JAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1244,7 +1244,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Step 1-->
         <scene sceneID="tms-Wa-5Uk">
             <objects>
-                <viewController title="Step 1" hidesBottomBarWhenPushed="YES" id="N5i-kw-1EH" customClass="Step1" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Step1" title="Step 1" hidesBottomBarWhenPushed="YES" id="N5i-kw-1EH" customClass="Step1" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3d-8L-pda">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1269,7 +1269,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="width" secondItem="lFb-9I-9M1" secondAttribute="height" multiplier="177:25" id="gNp-DA-6Fv"/>
                                     <constraint firstAttribute="height" constant="50" id="kfS-5E-7Vr"/>
                                 </constraints>
-                                <state key="normal" title="Back">
+                                <state key="normal" title="Take Photos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1278,7 +1278,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="t0F-Ui-C38" kind="show" id="o21-2n-TPW"/>
+                                    <segue destination="SWI-6d-uB4" kind="show" id="Rf2-qt-jJX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1418,7 +1418,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Step 2-->
         <scene sceneID="aUN-as-csE">
             <objects>
-                <viewController title="Step 2" hidesBottomBarWhenPushed="YES" id="t0F-Ui-C38" customClass="Step2" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Step2" title="Step 2" hidesBottomBarWhenPushed="YES" id="t0F-Ui-C38" customClass="Step2" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KMX-GG-X5l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1443,7 +1443,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="height" constant="50" id="Y2z-8V-NZC"/>
                                     <constraint firstAttribute="width" secondItem="IeI-6N-Qxn" secondAttribute="height" multiplier="177:25" id="ee3-BY-IwK"/>
                                 </constraints>
-                                <state key="normal" title="Back">
+                                <state key="normal" title="Take Photos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1452,7 +1452,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="4fp-7n-St8" kind="show" id="bSb-Ez-YSM"/>
+                                    <action selector="Dismiss:" destination="t0F-Ui-C38" eventType="touchUpInside" id="I4U-eF-s1u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1672,10 +1672,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-Sh-Q5z">
-                                <rect key="frame" x="15" y="268" width="384" height="360"/>
+                                <rect key="frame" x="15" y="268" width="191" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-NE-QEB">
-                                        <rect key="frame" x="0.0" y="0.5" width="384" height="99"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="191" height="99"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="CRG-Wq-qJs"/>
@@ -1684,7 +1684,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vch-0m-k1L">
-                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="115" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="64r-W5-0xZ"/>
                                         </constraints>
@@ -1693,7 +1693,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can send this photoset to your clinician now or later from the Photosets page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-BN-aVE">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="180" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iak-b4-ndE"/>
                                         </constraints>
@@ -1702,7 +1702,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-qf-kZR">
-                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="245" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="aZz-JR-dYm"/>
@@ -1723,7 +1723,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-hM-cXM">
-                                        <rect key="frame" x="0.0" y="310" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="310" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8v5-WU-eZD"/>
@@ -1765,16 +1765,16 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Right Ear Done-->
         <scene sceneID="xSe-CI-gbx">
             <objects>
-                <viewController title="Right Ear Done" id="vbP-Ck-uHB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeginNextEar" title="Right Ear Done" id="vbP-Ck-uHB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fu5-2B-bME">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uzm-iY-aVK">
-                                <rect key="frame" x="15" y="300.5" width="384" height="295"/>
+                                <rect key="frame" x="15" y="300.5" width="410" height="295"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowshape.turn.up.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OX8-eH-Ir4">
-                                        <rect key="frame" x="0.0" y="1" width="384" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="1" width="410" height="97.5"/>
                                         <color key="tintColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="LGz-wb-OCv"/>
@@ -1782,8 +1782,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             <constraint firstAttribute="width" secondItem="OX8-eH-Ir4" secondAttribute="height" multiplier="871:100" id="xji-NR-Akd"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin left ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-T0-CKv">
-                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin next ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-T0-CKv">
+                                        <rect key="frame" x="0.0" y="115" width="410" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="csL-4O-kcX"/>
                                         </constraints>
@@ -1791,8 +1791,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be directed to take 30 photos of the left ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-sv-bhK">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be directed to take 30 photos of the next ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-sv-bhK">
+                                        <rect key="frame" x="0.0" y="180" width="410" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dWQ-ci-SCZ"/>
                                         </constraints>
@@ -1801,7 +1801,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-oW-q9z">
-                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="245" width="410" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MA7-JX-U2V"/>
@@ -1843,7 +1843,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Right Ear Done-->
         <scene sceneID="Dy2-xe-loB">
             <objects>
-                <viewController title="Right Ear Done" id="bmf-TV-nR8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeginFirstEar" title="Right Ear Done" id="bmf-TV-nR8" customClass="MainViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5qG-hu-5rO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1860,7 +1860,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             <constraint firstAttribute="width" secondItem="E8L-ut-cRn" secondAttribute="height" multiplier="871:100" id="mI0-Ew-ISi"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin right ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-ks-MnF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin first ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-ks-MnF">
                                         <rect key="frame" x="0.0" y="115" width="871" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="kpL-XJ-ULK"/>
@@ -1869,7 +1869,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be directed to take 30 photos of the right ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf6-Sg-l4A">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be directed to take 30 photos of the first ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yf6-Sg-l4A">
                                         <rect key="frame" x="0.0" y="180" width="871" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="sC5-tB-zA5"/>
@@ -1895,7 +1895,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="SetPassword:" destination="bmf-TV-nR8" eventType="touchUpInside" id="XKR-na-Y9m"/>
+                                            <action selector="StartTutorial:" destination="bmf-TV-nR8" eventType="touchUpInside" id="Cah-aj-RM6"/>
                                         </connections>
                                     </button>
                                 </subviews>
