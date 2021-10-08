@@ -120,9 +120,148 @@
                     <view key="view" contentMode="scaleToFill" id="JPM-yT-vNo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ib0-Ww-tdS">
+                                <rect key="frame" x="10" y="10" width="394" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Begin New Photoset">
+                                        <attributes>
+                                            <color key="NSColor" red="0.093959532679999999" green="0.20892894270000001" blue="0.33334773779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Click the 'New Photoset' button on the Home page to begin a new photoset.">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="View Your Photosets">
+                                        <attributes>
+                                            <color key="NSColor" red="0.093959532679999999" green="0.20892894270000001" blue="0.33334773779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="21"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Go to the Photosets page to view your completed photosets. You can view the images on your phone's camera roll.">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Photoset Options">
+                                        <attributes>
+                                            <color key="NSColor" red="0.093959532679999999" green="0.20892894270000001" blue="0.33334773779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+Delete a photoset by sliding to the left, clicking the 'Delete' button and confirming the popup. Upload a photoset's images to the cloud storage by clicking the 'Send' icon and confirming the popup.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Menu Options">
+                                        <attributes>
+                                            <color key="NSColor" red="0.093959532679999999" green="0.20892894270000001" blue="0.33334773779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+Click the hamburger menu for more options (changing profile information, About Us page, Terms &amp; Conditions and logout functionality).</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GvS-hy-pGB"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ib0-Ww-tdS" firstAttribute="top" secondItem="GvS-hy-pGB" secondAttribute="top" constant="10" id="3Mu-Hn-HoM"/>
+                            <constraint firstItem="ib0-Ww-tdS" firstAttribute="leading" secondItem="GvS-hy-pGB" secondAttribute="leading" constant="10" id="RK0-kj-jKS"/>
+                            <constraint firstItem="GvS-hy-pGB" firstAttribute="trailing" secondItem="ib0-Ww-tdS" secondAttribute="trailing" constant="10" id="Wlh-Ip-gwc"/>
+                            <constraint firstAttribute="bottom" secondItem="ib0-Ww-tdS" secondAttribute="bottom" id="t1o-fu-Ke8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tutorial" id="4Uh-Cx-v27">
                         <barButtonItem key="leftBarButtonItem" image="line.horizontal.3.circle.fill" catalog="system" id="jMj-vI-4Vr">
@@ -564,7 +703,7 @@ One of the team's flagship projects is the Future Hear project led by Prof Woodr
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-rX-bQF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-rX-bQF">
                                 <rect key="frame" x="10" y="0.0" width="394" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat, lorem ut pharetra imperdiet, ligula nibh interdum justo, vel varius neque augue sed turpis. Nullam cursus ac neque vitae laoreet. Cras quis urna ac elit convallis euismod. Nulla tristique risus non aliquam tristique. Duis in quam sit amet nibh blandit mattis. Aliquam tempus diam lectus, id maximus sapien dignissim non. Ut cursus vehicula augue et fringilla. Praesent eget scelerisque enim. Nam aliquet libero in lectus lacinia, sit amet blandit ipsum facilisis. Nunc ut dolor non tellus dictum facilisis vitae vel elit. Quisque ornare quam nec tincidunt dictum. Phasellus faucibus leo ut blandit tincidunt. Proin vel tortor vel purus egestas auctor. Aenean id tincidunt nisl.
@@ -1132,10 +1271,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-Sh-Q5z">
-                                <rect key="frame" x="15" y="268" width="384" height="360"/>
+                                <rect key="frame" x="15" y="268" width="191" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-NE-QEB">
-                                        <rect key="frame" x="0.0" y="0.5" width="384" height="99"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="191" height="99"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="CRG-Wq-qJs"/>
@@ -1144,7 +1283,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vch-0m-k1L">
-                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="115" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="64r-W5-0xZ"/>
                                         </constraints>
@@ -1153,7 +1292,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can send this photoset to your clinician now or later from the Photosets page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-BN-aVE">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="180" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iak-b4-ndE"/>
                                         </constraints>
@@ -1162,7 +1301,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-qf-kZR">
-                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="245" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="aZz-JR-dYm"/>
@@ -1183,7 +1322,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-hM-cXM">
-                                        <rect key="frame" x="0.0" y="310" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="310" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8v5-WU-eZD"/>
