@@ -14,7 +14,8 @@ import SwiftUI
 
 
 class ViewController: UIViewController {
-    var photoCount = 0;
+    static var photoCount = 0;
+    static var SecondEar = false;
     override open var shouldAutorotate: Bool {
        return false
     }
@@ -406,7 +407,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 //            MyAwesomeAlbum.shared.albumName = "RemovalTest"
             
             MyAwesomeAlbum.shared.save(image: self.imageTakePast)
-            photoCount += 1;
+            ViewController.photoCount += 1;
         }
         Retake = false
         
@@ -419,16 +420,62 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             
-            if (self.photoCount == 1){
-                //add the line to save the last photo due to how I delay saving for retaking
-                MyAwesomeAlbum.shared.save(image: self.imageTakePast)
+            if (ViewController.photoCount == 5){
+                    //5
+        
                 print("changing the page")
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step2")
                 
                 self.present(balanceViewController, animated: true, completion: nil)
             }
-            print("count",self.photoCount)
+            else if (ViewController.photoCount == 11){
+                //11
+                //add the line to save the last photo due to how I delay saving for retaking
+                print("changing the page")
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step3")
+                
+                self.present(balanceViewController, animated: true, completion: nil)
+            }
+            else if (ViewController.photoCount == 23){
+                //23
+                //add the line to save the last photo due to how I delay saving for retaking
+
+                print("changing the page")
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step4")
+                
+                self.present(balanceViewController, animated: true, completion: nil)
+            }
+            
+            else if (ViewController.photoCount == 29){
+                //29
+                if (ViewController.SecondEar == false){
+                    MyAwesomeAlbum.shared.save(image: self.imageTakePast)
+                    ViewController.SecondEar = true;
+                    ViewController.photoCount = 0
+                    print("changing the page")
+                    let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BeginNextEar")
+                     self.addChild(childViewController)
+                     self.view.addSubview(childViewController.view)
+                     childViewController.didMove(toParent: self)
+                }
+                else{
+                    MyAwesomeAlbum.shared.save(image: self.imageTakePast)
+                    ViewController.SecondEar = false;
+                    ViewController.photoCount = 0
+                    print("changing the page")
+                    let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FinishedSet")
+                     self.addChild(childViewController)
+                     self.view.addSubview(childViewController.view)
+                     childViewController.didMove(toParent: self)
+                    
+                }
+            
+        }
+            
+            print("count",ViewController.photoCount)
             self.session?.startRunning()
             self.imageView.removeFromSuperview()
             

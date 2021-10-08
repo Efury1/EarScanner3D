@@ -63,7 +63,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var PhotosetName: UITextField!
     
     
-    @IBAction func StartCamera(_ sender: UIButton) {
+    @IBAction func StartFlow(_ sender: UIButton) {
        
         if (PhotosetName.text?.isEmpty == false && PhotosetName.text != nil && !(PhotosetName.text?.trimmingCharacters(in: .whitespaces).isEmpty)!){
             GlobalPhotosetName = PhotosetName.text ?? "Unnamed"
@@ -93,6 +93,13 @@ class MainViewController: UIViewController {
 //         self.view.addSubview(childViewController.view)
     }
     
-
+    @IBAction func FinishedFLow(_ sender: Any) {
+        let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+         self.addChild(childViewController)
+         self.view.addSubview(childViewController.view)
+         childViewController.didMove(toParent: self)
+        
+    }
+    
 }
 
