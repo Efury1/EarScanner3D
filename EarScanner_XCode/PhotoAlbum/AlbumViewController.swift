@@ -7,10 +7,9 @@
 
 import UIKit
 import EasyPeasy
-import OneDriveSDK
+import SwiftyDropbox
 
 class AlbumViewController: UIViewController {
-    
     
     var items: [String] = ["0", "1", "2", "3"]
     
@@ -55,6 +54,19 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     private func sendDidTap(button: Any?) {
         if let button = button as? UIButton {
             print("Send tapped at \(button.tag)")
+            let scopeRequest = ScopeRequest(scopeType: .user, scopes: ["account_info.read"], includeGrantedScopes: false)
+            DropboxClientsManager.authorizeFromControllerV2(
+                UIApplication.shared,
+                controller: self,
+                loadingStatusDelegate: nil,
+                openURL: { (url: URL) -> Void in UIApplication.shared.open(url, options: [:], completionHandler: nil) },
+                scopeRequest: scopeRequest
+            )
+//            DropboxClientsManager.authorizeFromController(UIApplication.shared,
+//                                                          controller: self,
+//                                                          openURL: { (url: URL) -> Void in
+//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//            })
         }
     }
     
