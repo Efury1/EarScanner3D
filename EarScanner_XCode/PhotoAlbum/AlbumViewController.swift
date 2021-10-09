@@ -115,35 +115,3 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 
-class A {
-    static var testing = A()
-    static var numberOfTaps = 0
-    var numberOfTapsNonStatic = 0
-    func hello() {
-        print("hello")
-    }
-}
-
-class B {
-    func main() {
-        let test = A()
-        test.hello()
-        test.numberOfTapsNonStatic += 1
-        A.numberOfTaps += 1
-    }
-    func test2() {
-        let a = A()
-        a.hello()
-        A().hello()
-    }
-    func singleton() {
-        A.testing.hello()
-    }
-}
-
-class C {
-    func main() {
-        A.testing.hello()
-        A.numberOfTaps += 1
-    }
-}
