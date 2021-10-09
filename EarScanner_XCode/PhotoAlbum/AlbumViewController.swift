@@ -8,8 +8,21 @@
 import UIKit
 import EasyPeasy
 import SwiftyDropbox
+import Photos
+
+
+/*Not sure if it should be struct?
+* Because values are going to be doing through get and set */
+struct PhotoDetail {
+    //TO DO: Save String that user creates
+    var albumName: String
+    var isSent: Bool
+    //TO DO: ADD PATH TO PHOTOS
+    
+}
 
 class AlbumViewController: UIViewController {
+    
     
     var items: [String] = ["0", "1", "2", "3"]
     
@@ -20,6 +33,7 @@ class AlbumViewController: UIViewController {
         tv.delegate = self
         return tv
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +53,8 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: AlbumCell.id, for: indexPath) as? AlbumCell {
             let row = indexPath.row
-            cell.photoView.image = UIImage(named: items[row])
+            //cell.photoView.image = UIImage(named: items[row])
+            cell.backgroundColor = UIColor(red: 9.0/255.0, green: 53.0/255.0, blue: 88.0/255.0, alpha: 1.0)
             cell.text.text = "Photoset \(row + 1)"
             cell.sendButton.tag = row
             cell.sendButton.addTarget(self, action: #selector(sendDidTap(button:)), for: .touchUpInside)
@@ -48,13 +63,17 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
-    /*James can add in code to send*/
-    
+    //TO DO: Fetch photos from phone and match with name of table
+    func fetchCustomAlbumPhotos()
+    {
+    }
+
+   
     @objc
     private func sendDidTap(button: Any?) {
         if let button = button as? UIButton {
             print("Send tapped at \(button.tag)")
-            let scopeRequest = ScopeRequest(scopeType: .user, scopes: ["account_info.read"], includeGrantedScopes: false)
+            let scopeRequest = ScopeRequest(scopeType: .user, scopes: ["account_info.read", "files.content.write"], includeGrantedScopes: false)
             DropboxClientsManager.authorizeFromControllerV2(
                 UIApplication.shared,
                 controller: self,
@@ -70,6 +89,14 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let path = "/Earscanner/newfolder"
+        //DropboxManager.shared.createFolder(path: path)
+        DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
@@ -84,5 +111,39 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
             }
 
         }
+    }
+}
+
+
+class A {
+    static var testing = A()
+    static var numberOfTaps = 0
+    var numberOfTapsNonStatic = 0
+    func hello() {
+        print("hello")
+    }
+}
+
+class B {
+    func main() {
+        let test = A()
+        test.hello()
+        test.numberOfTapsNonStatic += 1
+        A.numberOfTaps += 1
+    }
+    func test2() {
+        let a = A()
+        a.hello()
+        A().hello()
+    }
+    func singleton() {
+        A.testing.hello()
+    }
+}
+
+class C {
+    func main() {
+        A.testing.hello()
+        A.numberOfTaps += 1
     }
 }

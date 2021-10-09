@@ -21,7 +21,7 @@ class AlbumCell: UITableViewCell {
     
     lazy var text: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .white
         label.numberOfLines = 0
         return label
     }()
@@ -30,8 +30,9 @@ class AlbumCell: UITableViewCell {
        let button = UIButton()
         let largeTitle = UIImage.SymbolConfiguration(textStyle: .largeTitle)
         button.setImage(UIImage(systemName: "square.and.arrow.up.fill", withConfiguration: largeTitle), for: .normal)
+        //TO DO: Put under button
         button.setTitle("Send", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         return button
     }()
 

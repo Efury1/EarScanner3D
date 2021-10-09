@@ -28,3 +28,12 @@ How to Connect to Database:
 5. Choose Test Connection.
 6. In the popup that appears, enter the password "10938318Noyej"
 7. After testing your connection, from the Setup new connection dialog box, choose OK to save the connection.
+
+
+------------------------------------
+Application Colours
+
+Background: 
+Blue: #093558
+Blue:  9 53 8
+UIColor(red: 9.0/255.0, green: 53.0/255.0, blue: 88.0/255.0, alpha: 1.0)
