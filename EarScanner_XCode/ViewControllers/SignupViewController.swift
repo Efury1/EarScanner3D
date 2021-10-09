@@ -33,8 +33,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var retypeEmailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet var confirmPasswordTextField: UITextField!
 
     @IBOutlet weak var termsConditions: UIButton!
     
@@ -50,9 +50,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         LoginViewController.currentController = self
         
         emailTextField.delegate = self;
-        passwordTextField.delegate = self;
+        passwordTextField.delegate = self; //password
         LastNameField.delegate = self;
-        retypeEmailTextField.delegate = self;
+        passwordTextField.delegate = self; //actual password
+        confirmPasswordTextField.delegate = self; //actual password
         FirstNameField.delegate = self;
         
       
@@ -77,10 +78,20 @@ override func viewWillDisappear(_ animated: Bool) {
 
     let email = emailTextField.text!
     let password = passwordTextField.text!
+    let confirmPassword = confirmPasswordTextField.text!
     let FirstName = FirstNameField.text!
     let LastName = LastNameField.text!
     let salt = randomString(length: 8)
-    if((email == "") || password == "" || FirstName == "" || LastName == "") {
+    
+    if (confirmPassword != password){
+        DispatchQueue.main.async {
+        print("alert")
+        let alert = UIAlertController(title: "Error", message: "Passwords Don't Match", preferredStyle: UIAlertController.Style.alert) //create alert
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+        self.present(alert, animated: true, completion: nil) // show the alert
+        }
+    }
+    else if((email == "") || password == "" || FirstName == "" || LastName == "") {
                 print("Please ensure all fields are typed in")
                 DispatchQueue.main.async {
                 print("alert")
@@ -90,8 +101,27 @@ override func viewWillDisappear(_ animated: Bool) {
                 }
         
             }
+    else if (!isValidEmail(testStr: email)){
+        //
+        DispatchQueue.main.async {
+        print("alert")
+        let alert = UIAlertController(title: "Error", message: "Invalid Email", preferredStyle: UIAlertController.Style.alert) //create alert
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+        self.present(alert, animated: true, completion: nil) // show the alert
+        }
+    }
+    else if (!isValidPassword(testStr: password)){
+        //
+        DispatchQueue.main.async {
+        print("alert")
+        let alert = UIAlertController(title: "Error", message: "Invalid Password, must be atleast 8 characters and have atleast 1 number", preferredStyle: UIAlertController.Style.alert) //create alert
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+        self.present(alert, animated: true, completion: nil) // show the alert
+        }
+    }
+
             else {
-                let jsonbody = [  "Email": email, "Password": cryto(password: password), "FirstName": cryto(password: FirstName), "LastName": cryto(password: LastName), "Salt": cryto(password: salt)] as [String : Any]
+                let jsonbody = [  "Email": email, "Password": cryto(password: password), "FirstName": FirstName, "LastName": LastName, "Salt": cryto(password: salt)] as [String : Any]
             
             
             do {
@@ -173,5 +203,16 @@ override func viewWillDisappear(_ animated: Bool) {
             dataTask.resume()
         }
     }
+    public func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{1,4}$"
+        let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
+    public func isValidPassword(testStr:String) -> Bool {
+        let passRegEx = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
+        let passTest = NSPredicate(format:"SELF MATCHES[c] %@", passRegEx)
+        return passTest.evaluate(with: testStr)
+    }
+    
 }
 
