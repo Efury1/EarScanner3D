@@ -89,6 +89,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    //TO DO: let user create new folder
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         let path = "/Earscanner/newfolder"
@@ -101,7 +102,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         return 100
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.performBatchUpdates {
                 items.remove(at: indexPath.row)
@@ -109,8 +110,24 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
             } completion: { _ in
                 tableView.reloadData()
             }
-
+           
         }
+    }*/
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            print("more button tapped")
+        }
+        delete.backgroundColor = .red
+        
+        let signIn = UITableViewRowAction(style: .normal, title: "Sign in") { action, index in
+            print("sign in button tapped")
+        }
+        signIn.backgroundColor = .orange
+        
+        
+        return [delete, signIn]
     }
 }
 
