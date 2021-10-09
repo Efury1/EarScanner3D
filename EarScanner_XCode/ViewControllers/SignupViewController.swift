@@ -86,17 +86,17 @@ override func viewWillDisappear(_ animated: Bool) {
     if (confirmPassword != password){
         DispatchQueue.main.async {
         print("alert")
-        let alert = UIAlertController(title: "Error", message: "Passwords Don't Match", preferredStyle: UIAlertController.Style.alert) //create alert
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+        let alert = UIAlertController(title: "Error", message: "The passwords do not match", preferredStyle: UIAlertController.Style.alert) //create alert
+        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
         self.present(alert, animated: true, completion: nil) // show the alert
         }
     }
     else if((email == "") || password == "" || FirstName == "" || LastName == "") {
-                print("Please ensure all fields are typed in")
+                print("Please fill in all fields")
                 DispatchQueue.main.async {
                 print("alert")
-                let alert = UIAlertController(title: "Error", message: "Please make sure you fill in all fields", preferredStyle: UIAlertController.Style.alert) //create alert
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                let alert = UIAlertController(title: "Empty Fields", message: "Please fill in all fields", preferredStyle: UIAlertController.Style.alert) //create alert
+                alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil) // show the alert
                 }
         
@@ -105,8 +105,8 @@ override func viewWillDisappear(_ animated: Bool) {
         //
         DispatchQueue.main.async {
         print("alert")
-        let alert = UIAlertController(title: "Error", message: "Invalid Email", preferredStyle: UIAlertController.Style.alert) //create alert
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+        let alert = UIAlertController(title: "Invalid Email", message: "This email address is not valid", preferredStyle: UIAlertController.Style.alert) //create alert
+        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
         self.present(alert, animated: true, completion: nil) // show the alert
         }
     }
@@ -114,8 +114,8 @@ override func viewWillDisappear(_ animated: Bool) {
         //
         DispatchQueue.main.async {
         print("alert")
-        let alert = UIAlertController(title: "Error", message: "Invalid Password, must be atleast 8 characters and have atleast 1 number", preferredStyle: UIAlertController.Style.alert) //create alert
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+        let alert = UIAlertController(title: "Invalid Password", message: "Password must contain at least 8 characters and 1 number.", preferredStyle: UIAlertController.Style.alert) //create alert
+        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
         self.present(alert, animated: true, completion: nil) // show the alert
         }
     }
@@ -166,7 +166,7 @@ override func viewWillDisappear(_ animated: Bool) {
             {
                 DispatchQueue.main.async {
                 print("alert")
-                let alert = UIAlertController(title: "Error", message: "Something Went Wrong", preferredStyle: UIAlertController.Style.alert) //create alert
+                let alert = UIAlertController(title: "Error", message: "Something went wrong", preferredStyle: UIAlertController.Style.alert) //create alert
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil) // show the alert
                 }
@@ -178,8 +178,8 @@ override func viewWillDisappear(_ animated: Bool) {
             {
                 DispatchQueue.main.async {
                 print("alert")
-                let alert = UIAlertController(title: "Error", message: "Email Already Exists", preferredStyle: UIAlertController.Style.alert) //create alert
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                let alert = UIAlertController(title: "Email Already Exists", message: "This email has already been registered", preferredStyle: UIAlertController.Style.alert) //create alert
+                alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil) // show the alert
                 }
                 
@@ -191,7 +191,7 @@ override func viewWillDisappear(_ animated: Bool) {
                 print("error with connection")
                 DispatchQueue.main.async {
                 print("alert")
-                let alert = UIAlertController(title: "Error", message: "Please Check Internet Connection", preferredStyle: UIAlertController.Style.alert) //create alert
+                let alert = UIAlertController(title: "Error", message: "Please check your internet connection", preferredStyle: UIAlertController.Style.alert) //create alert
                     //I'm a pop up
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil)
