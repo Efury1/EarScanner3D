@@ -1337,7 +1337,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="pW6-ev-pdZ">
                                 <rect key="frame" x="30" y="30" width="354" height="176"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Old Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-N0-1IT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-N0-1IT">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RFg-3y-ZDe"/>
@@ -1345,7 +1345,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-Gz-s9D">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-Gz-s9D">
                                         <rect key="frame" x="0.0" y="63" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="3T2-Oa-ArB"/>
@@ -1404,7 +1404,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-4C-wl7">
                                 <rect key="frame" x="30" y="30" width="354" height="176"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New First Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcz-LB-SQV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcz-LB-SQV">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ftY-EV-SVn"/>
@@ -1412,7 +1412,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Last Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJy-vR-raF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJy-vR-raF">
                                         <rect key="frame" x="0.0" y="63" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6Pp-k0-dbZ"/>
@@ -1717,10 +1717,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-Sh-Q5z">
-                                <rect key="frame" x="15" y="268" width="384" height="360"/>
+                                <rect key="frame" x="15" y="268" width="191" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-NE-QEB">
-                                        <rect key="frame" x="0.0" y="0.5" width="384" height="99"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="191" height="99"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="CRG-Wq-qJs"/>
@@ -1729,7 +1729,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vch-0m-k1L">
-                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="115" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="64r-W5-0xZ"/>
                                         </constraints>
@@ -1738,7 +1738,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can send this photoset to your clinician now or later from the Photosets page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-BN-aVE">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="180" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iak-b4-ndE"/>
                                         </constraints>
@@ -1747,7 +1747,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-qf-kZR">
-                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="245" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="aZz-JR-dYm"/>
@@ -1768,7 +1768,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-hM-cXM">
-                                        <rect key="frame" x="0.0" y="310" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="310" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8v5-WU-eZD"/>
