@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
         
         
         print("Users action was tapped")
-        let refreshAlert = UIAlertController(title: "Log Out", message: "Are You Sure to Log Out ? ", preferredStyle: UIAlertController.Style.alert)
+        let refreshAlert = UIAlertController(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: UIAlertController.Style.alert)
 
         refreshAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
             self.navigationController?.popToRootViewController(animated: true)
@@ -78,8 +78,8 @@ class MainViewController: UIViewController {
             
         }
         else{
-            let alert = UIAlertController(title: "Error", message: "Enter a name for the Photoset", preferredStyle: UIAlertController.Style.alert) //create alert
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+            let alert = UIAlertController(title: "Error", message: "Please enter a name for this photoset", preferredStyle: UIAlertController.Style.alert) //create alert
+            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
             self.present(alert, animated: true, completion: nil) // show the alert
             
         }

@@ -544,7 +544,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             }
         }
         else{
-            let alert = UIAlertController(title: "Retaking", message: "Already Retaking Photo", preferredStyle: UIAlertController.Style.alert) //create alert
+            let alert = UIAlertController(title: "Retaking", message: "Already retaking the photo", preferredStyle: UIAlertController.Style.alert) //create alert
                                     //I'm a pop up
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil)
