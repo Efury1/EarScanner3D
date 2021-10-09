@@ -633,67 +633,70 @@ Click the hamburger menu for more options (changing profile information, About U
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIv-wM-6Gb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-LP-JQv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="About Us" id="Ovp-Re-HNV">
-                                                <rect key="frame" x="-6" y="0.0" width="426" height="312"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUT Biofabrication and Tissue Morphology Group" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWT-US-g7Y">
-                                                <rect key="frame" x="15" y="327" width="384" height="61"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <color key="textColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB5-OY-RW9">
-                                                <rect key="frame" x="15" y="403" width="384" height="359"/>
-                                                <string key="text">The Biofabrication and Tissue Morphology group led by Professor Mia Woodruff is a world class multi-disciplinary research team focused on embedding biofabrication into routine clinical use. The team uses 3D scanning, 3D modelling and 3D printing to disrupt traditional healthcare practices and provide low-cost, patient-specific and superior treatments for a range of conditions acquired from birth, injury or disease. 
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="About Us" id="Ovp-Re-HNV">
+                                <rect key="frame" x="-6" y="0.0" width="420" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-hF-odK">
+                                <rect key="frame" x="15" y="295" width="384" height="479"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="QUT Biofabrication and Tissue Morphology Group">
+                                        <attributes>
+                                            <color key="NSColor" red="0.093959532679999999" green="0.20892894270000001" blue="0.33334773779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="26" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">The Biofabrication and Tissue Morphology group led by Professor Mia Woodruff is a world class multi-disciplinary research team focused on embedding biofabrication into routine clinical use. The team uses 3D scanning, 3D modelling and 3D printing to disrupt traditional healthcare practices and provide low-cost, patient-specific and superior treatments for a range of conditions acquired from birth, injury or disease. 
 
-One of the team's flagship projects is the Future Hear project led by Prof Woodruff, Dr Sean Powell, Renee Nightingale and Maureen Ross. This project aims to deliver accessible, low-cost digital solutions for patient-specific ear prosthesis for those born with microtia or other conditions. This 3D scanning application provides the platform to connect with patients anywhere across Australia to obtain 3D scans of their affected and unaffected ears which can be used to create a custom-made prosthesis.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="IB5-OY-RW9" secondAttribute="trailing" constant="15" id="KBW-KD-0W5"/>
-                                            <constraint firstItem="dWT-US-g7Y" firstAttribute="top" secondItem="Ovp-Re-HNV" secondAttribute="bottom" constant="15" id="ORm-dU-QZS"/>
-                                            <constraint firstItem="IB5-OY-RW9" firstAttribute="leading" secondItem="RKp-LP-JQv" secondAttribute="leading" constant="15" id="c8n-rX-yQG"/>
-                                            <constraint firstItem="IB5-OY-RW9" firstAttribute="top" secondItem="dWT-US-g7Y" secondAttribute="bottom" constant="15" id="hH8-uD-gq6"/>
-                                            <constraint firstItem="dWT-US-g7Y" firstAttribute="leading" secondItem="RKp-LP-JQv" secondAttribute="leading" constant="15" id="k8N-97-PlR"/>
-                                            <constraint firstAttribute="trailing" secondItem="dWT-US-g7Y" secondAttribute="trailing" constant="15" id="maX-B0-wAL"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="RKp-LP-JQv" firstAttribute="leading" secondItem="gIv-wM-6Gb" secondAttribute="leading" id="3jH-Rs-eMo"/>
-                                    <constraint firstItem="RKp-LP-JQv" firstAttribute="width" secondItem="gIv-wM-6Gb" secondAttribute="width" id="9sd-va-kun"/>
-                                    <constraint firstItem="RKp-LP-JQv" firstAttribute="height" secondItem="gIv-wM-6Gb" secondAttribute="height" priority="250" id="D1Y-Uw-coW"/>
-                                    <constraint firstAttribute="bottom" secondItem="RKp-LP-JQv" secondAttribute="bottom" id="R88-Pg-U9D"/>
-                                    <constraint firstAttribute="trailing" secondItem="RKp-LP-JQv" secondAttribute="trailing" id="c5f-Gg-X19"/>
-                                    <constraint firstItem="RKp-LP-JQv" firstAttribute="top" secondItem="gIv-wM-6Gb" secondAttribute="top" id="nvq-eY-brR"/>
-                                </constraints>
-                            </scrollView>
+One of the team's flagship projects is the Future Hear project led by Prof Woodruff, Dr Sean Powell, Renee Nightingale and Maureen Ross. This project aims to deliver accessible, low-cost digital solutions for patient-specific ear prosthesis for those born with microtia or other conditions. This 3D scanning application provides the platform to connect with patients anywhere across Australia to obtain 3D scans of their affected and unaffected ears which can be used to create a custom-made prosthesis.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Z6-ES-aRJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gIv-wM-6Gb" firstAttribute="top" secondItem="LRv-cz-JK8" secondAttribute="top" id="0NY-y2-KB2"/>
-                            <constraint firstItem="gIv-wM-6Gb" firstAttribute="leading" secondItem="LRv-cz-JK8" secondAttribute="leading" id="18K-id-2bQ"/>
-                            <constraint firstAttribute="trailing" secondItem="gIv-wM-6Gb" secondAttribute="trailing" id="Acn-0f-clU"/>
-                            <constraint firstAttribute="bottom" secondItem="gIv-wM-6Gb" secondAttribute="bottom" id="Jti-Er-9gr"/>
+                            <constraint firstItem="YFd-hF-odK" firstAttribute="top" secondItem="Ovp-Re-HNV" secondAttribute="bottom" constant="15" id="Cci-Rt-ZeS"/>
+                            <constraint firstItem="YFd-hF-odK" firstAttribute="leading" secondItem="7Z6-ES-aRJ" secondAttribute="leading" constant="15" id="abQ-Xi-rvF"/>
+                            <constraint firstItem="7Z6-ES-aRJ" firstAttribute="trailing" secondItem="YFd-hF-odK" secondAttribute="trailing" constant="15" id="ctd-zK-Ewt"/>
+                            <constraint firstItem="YFd-hF-odK" firstAttribute="bottom" secondItem="7Z6-ES-aRJ" secondAttribute="bottom" id="yjD-jJ-FpC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About Us" id="Pwd-TP-84S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozu-L9-1WR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="2324"/>
+            <point key="canvasLocation" x="-410.14492753623193" y="2323.6607142857142"/>
         </scene>
         <!--Terms & Conditions-->
         <scene sceneID="SV3-Cw-hvH">
@@ -703,7 +706,7 @@ One of the team's flagship projects is the Future Hear project led by Prof Woodr
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-rX-bQF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-rX-bQF">
                                 <rect key="frame" x="10" y="0.0" width="394" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat, lorem ut pharetra imperdiet, ligula nibh interdum justo, vel varius neque augue sed turpis. Nullam cursus ac neque vitae laoreet. Cras quis urna ac elit convallis euismod. Nulla tristique risus non aliquam tristique. Duis in quam sit amet nibh blandit mattis. Aliquam tempus diam lectus, id maximus sapien dignissim non. Ut cursus vehicula augue et fringilla. Praesent eget scelerisque enim. Nam aliquet libero in lectus lacinia, sit amet blandit ipsum facilisis. Nunc ut dolor non tellus dictum facilisis vitae vel elit. Quisque ornare quam nec tincidunt dictum. Phasellus faucibus leo ut blandit tincidunt. Proin vel tortor vel purus egestas auctor. Aenean id tincidunt nisl.
@@ -1367,10 +1370,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uzm-iY-aVK">
-                                <rect key="frame" x="15" y="268" width="384" height="360"/>
+                                <rect key="frame" x="15" y="268" width="410" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowshape.turn.up.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OX8-eH-Ir4">
-                                        <rect key="frame" x="0.0" y="1" width="384" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="1" width="410" height="97.5"/>
                                         <color key="tintColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="LGz-wb-OCv"/>
@@ -1379,7 +1382,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin next ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-T0-CKv">
-                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="115" width="410" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="csL-4O-kcX"/>
                                         </constraints>
@@ -1388,7 +1391,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be directed to take 30 photos of the next ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-sv-bhK">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="180" width="410" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dWQ-ci-SCZ"/>
                                         </constraints>
@@ -1397,7 +1400,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-oW-q9z">
-                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="245" width="410" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MA7-JX-U2V"/>
@@ -1417,7 +1420,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-Gr-Xpy">
-                                        <rect key="frame" x="0.0" y="310" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="310" width="410" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="U5b-dU-d2I"/>
