@@ -32,6 +32,7 @@
 		569B3CE226BB4FA600A1A76E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569B3CE126BB4FA600A1A76E /* Login.storyboard */; };
 		569B3CE426BB52A100A1A76E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569B3CE326BB52A100A1A76E /* Media.xcassets */; };
 		569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569E2C7326C90E4D00B6FBFE /* MainViewController.swift */; };
+		56C7B8D62712A349004A6DAB /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7B8D52712A349004A6DAB /* AlbumModel.swift */; };
 		6A4C947E26DB5F6500B056B7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A4C947D26DB5F6500B056B7 /* logo.png */; };
 		6A703E5326D8818E007A06BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A703E5226D8818E007A06BA /* Main.storyboard */; };
 		6A90106826FC93520002D672 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90106726FC93520002D672 /* Step1ViewController.swift */; };
@@ -72,6 +73,7 @@
 		569B3CE126BB4FA600A1A76E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		569B3CE326BB52A100A1A76E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		569E2C7326C90E4D00B6FBFE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		56C7B8D52712A349004A6DAB /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		6A4C947D26DB5F6500B056B7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		6A703E5226D8818E007A06BA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6A90106726FC93520002D672 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				567097CF26F70CE0009FEB46 /* AlbumViewController.swift */,
 				5620447F26F711990000A578 /* AlbumCell.swift */,
+				56C7B8D42712A2E6004A6DAB /* Model */,
 			);
 			path = PhotoAlbum;
 			sourceTree = "<group>";
@@ -221,6 +224,14 @@
 				5615AC59270A6D670057487C /* SavePhotoToApp.swift */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		56C7B8D42712A2E6004A6DAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56C7B8D52712A349004A6DAB /* AlbumModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 				6A90106826FC93520002D672 /* Step1ViewController.swift in Sources */,
 				566FDA9926EDF37200E23B8F /* UIView+Extension.swift in Sources */,
 				47947D7926B3EABD00761DC8 /* SceneDelegate.swift in Sources */,
+				56C7B8D62712A349004A6DAB /* AlbumModel.swift in Sources */,
 				5615AC5D270B16650057487C /* Documentation.docc in Sources */,
 				5615AC4626FF29810057487C /* ChangeEmailViewController.swift in Sources */,
 				569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */,
