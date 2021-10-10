@@ -10,22 +10,13 @@ import EasyPeasy
 import SwiftyDropbox
 import Photos
 
-
-
-
 //TODO: Delete should delete from phone as well as application
 //TODO: Do String matching to link cell to album on phone
 
 class AlbumViewController: UIViewController {
     
-    //TODO: ensure that the tables are correctly loaded
-    override func loadView() {
-        
-    }
     
-    var items: [String] = ["0", "1", "2", "3"]
-    var names: [MyAwesomeAlbum] = []
-    //var albumName: [MyAwesomeAlbum] = []
+    var albumItems: [AlbumModel] = []
     
     lazy var photoTable: UITableView = {
         //TODO: Add iteams and album name to album
@@ -39,30 +30,54 @@ class AlbumViewController: UIViewController {
         return tv
     }()
     
+    //TODO: ensure that the tables are correctly loaded
+    override func loadView() {
+        super.loadView()
+        
+        view.addSubview(photoTable)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //view.addSubview(photoTable)
-
-        photoTable.easy.layout(Top(), Left(), Right(), Bottom())
+        print("view Did load")
+        photoTable.easy.layout(Edges())
+//        photoTable.frame = view.bounds
+        loadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+        loadData()
+    }
+ 
+    func loadData() {
+        albumItems = AlbumModel.listAlbums()
+        photoTable.reloadData()
     }
     
 }
 
 extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        print(albumItems.count)
+        return albumItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: AlbumCell.id, for: indexPath) as? AlbumCell {
             let row = indexPath.row
+            
+            let regex = AlbumModel.matches(for: "(?<=EarScanner3D: )(.*)(?= - )", in: albumItems[row].name)
+            let setName = regex[0]
+                        
+            cell.photoView.image = UIImage(named: String(row))
             //cell.photoView.image = UIImage(named: items[row])
             cell.backgroundColor = UIColor(red: 9.0/255.0, green: 53.0/255.0, blue: 88.0/255.0, alpha: 1.0)
             //TODO: Put album string in text.text
             
-            cell.text.text = "Photoset \(row + 1)"
+            cell.text.text = setName
             cell.sendButton.tag = row
             cell.sendButton.addTarget(self, action: #selector(sendDidTap(button:)), for: .touchUpInside)
             return cell
@@ -113,7 +128,10 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.performBatchUpdates {
-                items.remove(at: indexPath.row)
+                AlbumModel.deleteAlbum(albumName: albumItems[indexPath.row].name, completion:  { status in
+                    print(status)
+                })
+                albumItems.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .top)
             } completion: { _ in
                 tableView.reloadData()
