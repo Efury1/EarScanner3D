@@ -14,7 +14,10 @@ import SwiftUI
 
 
 class ViewController: UIViewController {
+    //used for tracking when to show tutorials,
     static var photoCount = 0;
+    //used for tracking what number to display
+    var counter = 0
     static var howLongIsBar = 6;
     static var SecondEar = false;
     override open var shouldAutorotate: Bool {
@@ -156,16 +159,16 @@ class ViewController: UIViewController {
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.backgroundColor = UIColor.lightGray.cgColor
         /*Counter */
-        var counter = 30
-        for i in 0..<counter {
-            // Do stuff...
-            let newValue = counter + 1
-            button.setTitle("\(newValue)",for: .normal)
-        }
+       
+        button.setTitle("\(0)",for: .normal)
+        
         
         //button.setTitle("\(items)",for: .normal)
         return button
-    }()
+    }();
+    
+   
+
     //the button to retake the photo
     private let RetakeButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -380,8 +383,30 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 
        
         view.addSubview(MyVariables.bottomPinkBar)
+        counter += 1
+        let shutterButton: UIButton = {
+            let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            button.layer.cornerRadius = 50
+            button.layer.borderWidth = 5
+            button.layer.borderColor = UIColor.white.cgColor
+            button.layer.backgroundColor = UIColor.lightGray.cgColor
+            /*Counter */
+
+            button.setTitle("\(counter)",for: .normal)
+
+
+            //button.setTitle("\(items)",for: .normal)
+            return button
+        }()
+        print("count2: ", ViewController.photoCount)
+        shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
+        shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
+                                       y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.19/2)) )
+        
         view.addSubview(shutterButton)
+     
         view.addSubview(RetakeButton)
+        
         view.addSubview(HelpButton)
         //view.addSubview(bottomPinkBar)
         //view.addSubview(NextPhotoButton)
@@ -543,12 +568,9 @@ else if (ViewController.howLongIsBar == 4){
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             
-            if (ViewController.photoCount == 10){
+            if (ViewController.photoCount == 5){
                     //5
-                self.currentProgress = 0
-                ViewController.howLongIsBar = 4
-                self.containerView.removeFromSuperview()
-                self.addGridView()
+                
                 
                 print("changing the page")
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -557,6 +579,10 @@ else if (ViewController.howLongIsBar == 4){
                 self.present(balanceViewController, animated: true, completion: nil)
             }
             else if (ViewController.photoCount == 11){
+                self.currentProgress = 0
+                ViewController.howLongIsBar = 4
+                self.containerView.removeFromSuperview()
+                self.addGridView()
                 //11
                 //add the line to save the last photo due to how I delay saving for retaking
                 print("changing the page")
@@ -570,6 +596,10 @@ else if (ViewController.howLongIsBar == 4){
                 //23
                 //add the line to save the last photo due to how I delay saving for retaking
                 ViewController.howLongIsBar = 6
+                self.currentProgress = 0
+              
+                self.containerView.removeFromSuperview()
+                self.addGridView()
                 print("changing the page")
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step4")
@@ -621,6 +651,8 @@ else if (ViewController.howLongIsBar == 4){
     }
     
     @objc private func retake() {
+        
+
         Retake = true;
         
         
@@ -629,6 +661,29 @@ else if (ViewController.howLongIsBar == 4){
         print(self.currentProgress)
         
         if (alreadyRetaken == false){
+            //reduce the number dsplayed by one, have to rremove, remake and reshow the shutter button in order to update the number
+            shutterButton.removeFromSuperview()
+            counter -= 1
+            let shutterButton: UIButton = {
+                let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                button.layer.cornerRadius = 50
+                button.layer.borderWidth = 5
+                button.layer.borderColor = UIColor.white.cgColor
+                button.layer.backgroundColor = UIColor.lightGray.cgColor
+                /*Counter */
+
+                button.setTitle("\(counter)",for: .normal)
+
+
+                //button.setTitle("\(items)",for: .normal)
+                return button
+            }()
+            print("count2: ", ViewController.photoCount)
+            shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
+            view.addSubview(shutterButton)
+            shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
+                                           y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.19/2)) )
+            
             alreadyRetaken = true
             ///De-progress the bar
             if (ViewController.howLongIsBar == 4){
