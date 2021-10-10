@@ -14,10 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        DropboxManager.shared.setupDropbox()
-        DropboxClientsManager.setupWithAppKey("le6iwra2591ou3x")
+        DropboxClientsManager.setupWithAppKey("ee1lc87gd8fnt0q")
         return true
     }
     
+    /*Handles the redirection back to SDK once authentication
+     * flow has been handled*/
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         let oauthCompletion: DropboxOAuthCompletion = {
           if let authResult = $0 {

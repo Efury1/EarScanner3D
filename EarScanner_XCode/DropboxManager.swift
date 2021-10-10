@@ -10,6 +10,7 @@ import SwiftyDropbox
 import UIKit
 
 
+//Manually retreive access token?
 class DropboxManager {
     // Reference after programmatic auth flow
     //private won't be available outside class
@@ -19,9 +20,10 @@ class DropboxManager {
     
     func setupDropbox() {
         // TODO: - Keychain when uploading to cloud
-        DropboxClientsManager.setupWithAppKey("p43i7ap4i2p6s2p")
+        DropboxClientsManager.setupWithAppKey("ee1lc87gd8fnt0q")
     }
     
+    /*Upload request*/
     func uploadImage(image: UIImage, path: String) {
         
         guard let client = DropboxClientsManager.authorizedClient, let fileData = image.pngData() else {

@@ -11,6 +11,7 @@ import SwiftyDropbox
 import Photos
 
 
+
 /*Not sure if it should be struct?
 * Because values are going to be doing through get and set */
 struct PhotoDetail {
@@ -66,6 +67,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     //TO DO: Fetch photos from phone and match with name of table
     func fetchCustomAlbumPhotos()
     {
+        
     }
 
    
@@ -92,7 +94,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     //TO DO: let user create new folder
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        let path = "/Earscanner/newfolder"
+        let path = "/Photos"
         //DropboxManager.shared.createFolder(path: path)
         DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
     }
@@ -102,7 +104,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         return 100
     }
     
-    /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.performBatchUpdates {
                 items.remove(at: indexPath.row)
@@ -110,14 +112,16 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
             } completion: { _ in
                 tableView.reloadData()
             }
-           
         }
-    }*/
+       
+    }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+    //TO DO: Multiple buttons, sign in.
+    /*func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             print("more button tapped")
+            
         }
         delete.backgroundColor = .red
         
@@ -128,7 +132,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         return [delete, signIn]
-    }
+    }*/
 }
 
 
