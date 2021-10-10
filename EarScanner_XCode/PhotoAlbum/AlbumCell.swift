@@ -12,7 +12,6 @@ class AlbumCell: UITableViewCell {
     
     static let id = "AlbumCell"
     
-   
     lazy var photoView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit

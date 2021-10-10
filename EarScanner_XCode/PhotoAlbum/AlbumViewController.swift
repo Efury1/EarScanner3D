@@ -12,26 +12,30 @@ import Photos
 
 
 
-/*Not sure if it should be struct?
-* Because values are going to be doing through get and set */
-struct PhotoDetail {
-    //TO DO: Save String that user creates
-    var albumName: String
-    var isSent: Bool
-    //TO DO: ADD PATH TO PHOTOS
-    
-}
+
+//TODO: Delete should delete from phone as well as application
+//TODO: Do String matching to link cell to album on phone
 
 class AlbumViewController: UIViewController {
     
+    //TODO: ensure that the tables are correctly loaded
+    override func loadView() {
+        
+    }
     
     var items: [String] = ["0", "1", "2", "3"]
+    var names: [MyAwesomeAlbum] = []
+    //var albumName: [MyAwesomeAlbum] = []
     
     lazy var photoTable: UITableView = {
+        //TODO: Add iteams and album name to album
+        //items = []
+        //albumName = []
         let tv = UITableView()
         tv.register(AlbumCell.self, forCellReuseIdentifier: AlbumCell.id)
         tv.dataSource = self
         tv.delegate = self
+        tv.backgroundColor = UIColor(red: 9.0/255.0, green: 53.0/255.0, blue: 88.0/255.0, alpha: 1.0)
         return tv
     }()
     
@@ -39,7 +43,7 @@ class AlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(photoTable)
+        //view.addSubview(photoTable)
 
         photoTable.easy.layout(Top(), Left(), Right(), Bottom())
     }
@@ -56,6 +60,8 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
             let row = indexPath.row
             //cell.photoView.image = UIImage(named: items[row])
             cell.backgroundColor = UIColor(red: 9.0/255.0, green: 53.0/255.0, blue: 88.0/255.0, alpha: 1.0)
+            //TODO: Put album string in text.text
+            
             cell.text.text = "Photoset \(row + 1)"
             cell.sendButton.tag = row
             cell.sendButton.addTarget(self, action: #selector(sendDidTap(button:)), for: .touchUpInside)
@@ -116,23 +122,6 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
        
     }
     
-    //TO DO: Multiple buttons, sign in.
-    /*func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-        
-        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-            print("more button tapped")
-            
-        }
-        delete.backgroundColor = .red
-        
-        let signIn = UITableViewRowAction(style: .normal, title: "Sign in") { action, index in
-            print("sign in button tapped")
-        }
-        signIn.backgroundColor = .orange
-        
-        
-        return [delete, signIn]
-    }*/
 }
 
 

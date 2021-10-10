@@ -20,7 +20,7 @@ class DropboxManager {
     
     func setupDropbox() {
         // TODO: - Keychain when uploading to cloud
-        DropboxClientsManager.setupWithAppKey("ee1lc87gd8fnt0q")
+        DropboxClientsManager.setupWithAppKey("p43i7ap4i2p6s2p")
     }
     
     /*Upload request*/
