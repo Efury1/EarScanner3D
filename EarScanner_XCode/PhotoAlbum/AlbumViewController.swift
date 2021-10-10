@@ -98,6 +98,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
                 scopeRequest: scopeRequest
             )
                 let path = "/Photos/"
+                //TO DO: Upload Ablum from phone
                 DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
 //            DropboxClientsManager.authorizeFromController(UIApplication.shared,
 //                                                          controller: self,
