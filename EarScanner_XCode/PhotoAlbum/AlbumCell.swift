@@ -54,9 +54,9 @@ class AlbumCell: UITableViewCell {
         contentView.addSubview(sendButton)
         contentView.addSubview(text)
         
-        photoView.easy.layout(Top(), Left(), Right(), Height(50))
+        //photoView.easy.layout(Top(), Left(), Right(), Height(50))
         text.easy.layout(Top(10), Left())
-        sendButton.easy.layout(Top(), Left(), Right(), Bottom())
+        sendButton.easy.layout(Right(20), Bottom())
         
     }
     

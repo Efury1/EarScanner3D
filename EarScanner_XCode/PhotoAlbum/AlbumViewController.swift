@@ -85,13 +85,6 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
-    //TO DO: Fetch photos from phone and match with name of table
-    func fetchCustomAlbumPhotos()
-    {
-        
-    }
-
-   
     @objc
     private func sendDidTap(button: Any?) {
         if let button = button as? UIButton {
@@ -104,6 +97,8 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
                 openURL: { (url: URL) -> Void in UIApplication.shared.open(url, options: [:], completionHandler: nil) },
                 scopeRequest: scopeRequest
             )
+                let path = "/Photos/"
+                DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
 //            DropboxClientsManager.authorizeFromController(UIApplication.shared,
 //                                                          controller: self,
 //                                                          openURL: { (url: URL) -> Void in
@@ -113,12 +108,14 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     //TO DO: let user create new folder
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        let path = "/Photos"
+        //let path = "/Photos"
         //DropboxManager.shared.createFolder(path: path)
-        DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
-    }
+        //TODO: upload album
+        //DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
+        //DropboxManager.shared.uploadImage(, path: path)
+    }*/
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
