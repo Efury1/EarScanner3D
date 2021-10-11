@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     //used for tracking when to show tutorials,
     static var photoCount = 0;
     //used for tracking what number to display
-    var counter = 0
+    static var counter = 0
     static var howLongIsBar = 6;
     static var SecondEar = false;
     override open var shouldAutorotate: Bool {
@@ -160,7 +160,7 @@ class ViewController: UIViewController {
         button.layer.backgroundColor = UIColor.lightGray.cgColor
         /*Counter */
        
-        button.setTitle("\(0)",for: .normal)
+        button.setTitle("\(ViewController.counter)",for: .normal)
         
         
         //button.setTitle("\(items)",for: .normal)
@@ -212,7 +212,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
- 
+        
+        HelpButton.addTarget(self, action: #selector(tutorialPage), for: .touchUpInside)
         
         
         
@@ -319,7 +320,7 @@ class ViewController: UIViewController {
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
         alreadyRetaken = false
         //increment counter on button press
-        MyVariables.counter += 1;
+//        MyVariables.counter += 1;
             
         
     }
@@ -338,7 +339,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         static var screenWidth = CGFloat(0.1);
         static var screenHeight = CGFloat(0.1);
         //counter for button and progress bar
-        static var counter = 0;
+//        static var counter = 0;
 
     }
     
@@ -383,7 +384,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 
        
         view.addSubview(MyVariables.bottomPinkBar)
-        counter += 1
+        ViewController.counter += 1
         let shutterButton: UIButton = {
             let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             button.layer.cornerRadius = 50
@@ -392,7 +393,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             button.layer.backgroundColor = UIColor.lightGray.cgColor
             /*Counter */
 
-            button.setTitle("\(counter)",for: .normal)
+            button.setTitle("\(ViewController.counter)",for: .normal)
 
 
             //button.setTitle("\(items)",for: .normal)
@@ -649,7 +650,15 @@ else if (ViewController.howLongIsBar == 4){
 //        UIImageWriteToSavedPhotosAlbum(imageTake, nil, nil, nil)
        
     }
-    
+    @objc private func tutorialPage() {
+        self.containerView.removeFromSuperview()
+        self.addGridView()
+        print("changing the page")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "tutorialPage")
+        
+        self.present(balanceViewController, animated: true, completion: nil)
+    }
     @objc private func retake() {
         
 
@@ -663,7 +672,7 @@ else if (ViewController.howLongIsBar == 4){
         if (alreadyRetaken == false){
             //reduce the number dsplayed by one, have to rremove, remake and reshow the shutter button in order to update the number
             shutterButton.removeFromSuperview()
-            counter -= 1
+            ViewController.counter -= 1
             let shutterButton: UIButton = {
                 let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
                 button.layer.cornerRadius = 50
@@ -672,7 +681,7 @@ else if (ViewController.howLongIsBar == 4){
                 button.layer.backgroundColor = UIColor.lightGray.cgColor
                 /*Counter */
 
-                button.setTitle("\(counter)",for: .normal)
+                button.setTitle("\(ViewController.counter)",for: .normal)
 
 
                 //button.setTitle("\(items)",for: .normal)
@@ -880,8 +889,7 @@ else if (ViewController.howLongIsBar == 4){
         let horizontalMargin = -10
         let verticalMargin = -10
         
-        
-        
+    
         let gridView = GridView()
         
         let screenRect = UIScreen.main.bounds
@@ -904,6 +912,7 @@ else if (ViewController.howLongIsBar == 4){
         MyVariables.bottomPinkBar = bottomPinkBar
         
         shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
+        
 
         gridView.translatesAutoresizingMaskIntoConstraints = false
         //add image based upon what number counter is at
@@ -911,6 +920,7 @@ else if (ViewController.howLongIsBar == 4){
         //bottom pink bar
         view.addSubview(bottomPinkBar)
         //main circle button
+        shutterButton.setTitle("\(ViewController.counter)",for: .normal)
         view.addSubview(shutterButton)
         //retake button
         view.addSubview(RetakeButton)
@@ -918,7 +928,7 @@ else if (ViewController.howLongIsBar == 4){
         view.addSubview(HelpButton)
         
         
-        containerView.easy.layout(Top(padding).to(view.safeAreaLayoutGuide, .top), CenterX(), Width(containerWidth), Height(containerHeight))
+        containerView.easy.layout(Top(padding).to(view.safeAreaLayoutGuide, .top), CenterX(), Width(containerWidth), Height(containerHeight*2))
         var viewSize2 = viewSize
         var lineWidth2 = lineWidth
         if (ViewController.howLongIsBar == 6){
