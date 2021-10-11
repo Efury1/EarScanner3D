@@ -33,16 +33,20 @@ class MainViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
         self.present(alert, animated: true, completion: nil)
     }*/
-    
-    @IBAction func logoutButton(_ sender: Any) {
-        
+   
 
-        
-        
+    
+    
+    @IBAction func Logout(_ sender: UIButton) {
         print("Users action was tapped")
         let refreshAlert = UIAlertController(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: UIAlertController.Style.alert)
 
         refreshAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let viewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginPage")
+            UIApplication.shared.windows.first?.rootViewController = viewController
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            
             self.navigationController?.popToRootViewController(animated: true)
         }))
 
@@ -54,9 +58,8 @@ class MainViewController: UIViewController {
         }))
 
         present(refreshAlert, animated: true, completion: nil)
-    
     }
-   
+    
         
     
     

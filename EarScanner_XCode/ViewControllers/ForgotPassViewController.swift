@@ -47,8 +47,15 @@ class ForgotPassViewController: UIViewController {
         
 
         print("Called")
-        guard let email = Email.text else { return print("error") }
+        var email = ""
+        if (Email != nil){
+            email = Email.text ?? "Error"
+        
         MyVariables.email = email
+        }
+        else{
+            email = MyVariables.email
+        }
         //Need to confirm email exisits
         //Hit the API with the email to check if
         //Email Exists
@@ -137,6 +144,7 @@ class ForgotPassViewController: UIViewController {
         
         
  
+   
     
    
     
