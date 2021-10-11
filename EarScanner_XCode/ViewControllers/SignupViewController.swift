@@ -98,8 +98,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         else if (switchState != true){
             DispatchQueue.main.async {
                 print("alert")
-                let alert = UIAlertController(title: "Terms and Conditons", message: "The terms and conditions need to be accepted", preferredStyle: UIAlertController.Style.alert) //create alert
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                let alert = UIAlertController(title: "Terms & Conditions", message: "Please accept the Terms & Conditions", preferredStyle: UIAlertController.Style.alert) //create alert
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil) // show the alert
             }
         }
