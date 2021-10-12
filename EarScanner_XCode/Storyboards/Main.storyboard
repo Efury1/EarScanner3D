@@ -927,7 +927,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yh-Km-WYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3518.840579710145" y="2122.0982142857142"/>
+            <point key="canvasLocation" x="3523" y="2121"/>
         </scene>
         <!--Change Email-->
         <scene sceneID="KrP-CX-0Bu">
@@ -1567,6 +1567,69 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBv-2x-2j2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3607" y="2875"/>
+        </scene>
+        <!--Step 1-->
+        <scene sceneID="CPU-9I-bC0">
+            <objects>
+                <viewController storyboardIdentifier="Step1-2" title="Step 1" hidesBottomBarWhenPushed="YES" id="rhV-qd-o3T" customClass="Step1" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HJD-xO-oL5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capture 6 photos from the front of the ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30W-Yw-rVV">
+                                <rect key="frame" x="30" y="100" width="354" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="1.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CMd-eO-STN">
+                                <rect key="frame" x="182" y="30.5" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SMH-AO-fw0"/>
+                                    <constraint firstAttribute="width" constant="50" id="s00-9J-B0Z"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDR-qg-l3c">
+                                <rect key="frame" x="30" y="432" width="354" height="50"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eDR-qg-l3c" secondAttribute="height" multiplier="177:25" id="TDb-pB-6Qp"/>
+                                    <constraint firstAttribute="height" constant="50" id="mNk-B6-RHs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Take Photos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismiss:" destination="rhV-qd-o3T" eventType="touchUpInside" id="a1a-UI-N5K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fen-AD-6So"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fen-AD-6So" firstAttribute="trailing" secondItem="eDR-qg-l3c" secondAttribute="trailing" constant="30" id="1Jx-RD-sjZ"/>
+                            <constraint firstItem="CMd-eO-STN" firstAttribute="centerX" secondItem="HJD-xO-oL5" secondAttribute="centerX" id="5Mz-PW-18l"/>
+                            <constraint firstItem="30W-Yw-rVV" firstAttribute="centerX" secondItem="HJD-xO-oL5" secondAttribute="centerX" id="8Ec-9u-Zsv"/>
+                            <constraint firstItem="30W-Yw-rVV" firstAttribute="leading" secondItem="HJD-xO-oL5" secondAttribute="leading" constant="30" id="ApV-CM-lqP"/>
+                            <constraint firstItem="eDR-qg-l3c" firstAttribute="leading" secondItem="fen-AD-6So" secondAttribute="leading" constant="30" id="H8b-pr-Iav"/>
+                            <constraint firstItem="30W-Yw-rVV" firstAttribute="top" secondItem="fen-AD-6So" secondAttribute="top" constant="100" id="TTG-fX-S7r"/>
+                            <constraint firstAttribute="trailing" secondItem="30W-Yw-rVV" secondAttribute="trailing" constant="30" id="aoz-n6-bAF"/>
+                            <constraint firstItem="CMd-eO-STN" firstAttribute="top" secondItem="fen-AD-6So" secondAttribute="top" constant="30" id="ePn-Be-OkY"/>
+                            <constraint firstItem="eDR-qg-l3c" firstAttribute="top" secondItem="30W-Yw-rVV" secondAttribute="bottom" constant="274.5" id="glP-Ds-P1B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DXw-s2-GuQ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6eo-YT-huS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2874" y="2121"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

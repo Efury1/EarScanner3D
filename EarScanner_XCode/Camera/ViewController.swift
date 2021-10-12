@@ -653,11 +653,42 @@ else if (ViewController.howLongIsBar == 4){
     @objc private func tutorialPage() {
         self.containerView.removeFromSuperview()
         self.addGridView()
-        print("changing the page")
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "tutorialPage")
         
-        self.present(balanceViewController, animated: true, completion: nil)
+        
+        print("changing the page")
+        if (ViewController.photoCount <= 4){
+            //step1
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step1-2")
+            
+            self.present(balanceViewController, animated: true, completion: nil)
+        }
+        else if (ViewController.photoCount <= 10){
+            //step2
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step2")
+            
+            self.present(balanceViewController, animated: true, completion: nil)
+        }
+        else if (ViewController.photoCount <= 22){
+            //step3
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step3")
+            
+            self.present(balanceViewController, animated: true, completion: nil)
+        }
+        else {
+            //step4
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step4")
+            
+            self.present(balanceViewController, animated: true, completion: nil)
+        }
+
+
+        
+        
+        
     }
     @objc private func retake() {
         
