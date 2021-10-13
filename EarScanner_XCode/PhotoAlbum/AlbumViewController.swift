@@ -10,8 +10,6 @@ import EasyPeasy
 import SwiftyDropbox
 import Photos
 
-//TODO: Delete should delete from phone as well as application
-//TODO: Do String matching to link cell to album on phone
 
 class AlbumViewController: UIViewController {
     
@@ -19,9 +17,6 @@ class AlbumViewController: UIViewController {
     var albumItems: [AlbumModel] = []
     
     lazy var photoTable: UITableView = {
-        //TODO: Add iteams and album name to album
-        //items = []
-        //albumName = []
         let tv = UITableView()
         tv.register(AlbumCell.self, forCellReuseIdentifier: AlbumCell.id)
         tv.dataSource = self
@@ -30,7 +25,7 @@ class AlbumViewController: UIViewController {
         return tv
     }()
     
-    //TODO: ensure that the tables are correctly loaded
+ 
     override func loadView() {
         super.loadView()
         
@@ -97,9 +92,11 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
                 openURL: { (url: URL) -> Void in UIApplication.shared.open(url, options: [:], completionHandler: nil) },
                 scopeRequest: scopeRequest
             )
+                //TODO: Make sure it recognised the Photos album
                 let path = "/Photos/"
-                //TO DO: Upload Ablum from phone
+                //TODO: Send through phone album
                 DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
+            
 //            DropboxClientsManager.authorizeFromController(UIApplication.shared,
 //                                                          controller: self,
 //                                                          openURL: { (url: URL) -> Void in
@@ -115,7 +112,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         //DropboxManager.shared.createFolder(path: path)
         //TODO: upload album
         //DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
-        //DropboxManager.shared.uploadImage(, path: path)
+      
     }*/
     
     
