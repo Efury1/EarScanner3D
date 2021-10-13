@@ -179,6 +179,16 @@ class ViewController: UIViewController {
         
         return button
     }()
+    
+    private let ExitButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        button.backgroundColor = .black
+        let largeTitle = UIImage.SymbolConfiguration(textStyle: .largeTitle)
+        button.setImage(UIImage(systemName: "xmark", withConfiguration: largeTitle), for: .normal)
+        //button.setTitle("Retake", for: .normal)
+        
+        return button
+    }()
     //button to move to the next photo
     /*private let NextPhotoButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -214,6 +224,7 @@ class ViewController: UIViewController {
         view.layer.addSublayer(previewLayer)
         
         HelpButton.addTarget(self, action: #selector(tutorialPage), for: .touchUpInside)
+        ExitButton.addTarget(self, action: #selector(exitCameraFlow), for: .touchUpInside)
         
         
         
@@ -247,6 +258,9 @@ class ViewController: UIViewController {
         
         RetakeButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
                                          y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.145/3)) )
+        
+        ExitButton.center = CGPoint(x:  MyVariables.screenWidth*0.10,
+                                    y: MyVariables.screenHeight - (MyVariables.screenHeight*0.85) )
     }
     private func checkCameraPermissions(){
         switch AVCaptureDevice.authorizationStatus(for: .video){
@@ -384,6 +398,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 
        
         view.addSubview(MyVariables.bottomPinkBar)
+        
         ViewController.counter += 1
         let shutterButton: UIButton = {
             let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -565,6 +580,7 @@ else if (ViewController.howLongIsBar == 4){
         
         RetakeButton.addTarget(self, action: #selector(retake), for: .touchUpInside)
         
+        
         let seconds = 2.0
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
@@ -690,6 +706,32 @@ else if (ViewController.howLongIsBar == 4){
         
         
     }
+    @objc private func exitCameraFlow() {
+        
+        let refreshAlert = UIAlertController(title: "Exit Camera", message: "Are you sure you want to exit the camera? This photoset cannot be resumed once exited.", preferredStyle: UIAlertController.Style.alert) //create alert
+        
+
+        refreshAlert.addAction(UIAlertAction(title: "Exit", style: .default, handler: { (action: UIAlertAction!) in
+           
+            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+             self.addChild(childViewController)
+             self.view.addSubview(childViewController.view)
+             childViewController.didMove(toParent: self)
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { (action: UIAlertAction!) in
+
+            refreshAlert .dismiss(animated: true, completion: nil)
+
+
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
+        print("ons")
+        }
+        
+
     @objc private func retake() {
         
 
@@ -957,11 +999,14 @@ else if (ViewController.howLongIsBar == 4){
         view.addSubview(RetakeButton)
         //help
         view.addSubview(HelpButton)
-        
+        view.addSubview(ExitButton)
+        //add to the view the exit button
+       
         
         containerView.easy.layout(Top(padding).to(view.safeAreaLayoutGuide, .top), CenterX(), Width(containerWidth), Height(containerHeight*2))
         var viewSize2 = viewSize
         var lineWidth2 = lineWidth
+        
         if (ViewController.howLongIsBar == 6){
         addViews(views: [view1, view2, view3, view4,view5,view6])
             addViews(views: [line1, line2, line3,line4,line5])}
