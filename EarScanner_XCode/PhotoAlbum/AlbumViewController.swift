@@ -10,8 +10,6 @@ import EasyPeasy
 import SwiftyDropbox
 import Photos
 
-//TODO: Delete should delete from phone as well as application
-//TODO: Do String matching to link cell to album on phone
 
 class AlbumViewController: UIViewController {
     var photo: UIImage? = nil
@@ -21,9 +19,6 @@ class AlbumViewController: UIViewController {
     var albumItems: [AlbumModel] = []
     
     lazy var photoTable: UITableView = {
-        //TODO: Add iteams and album name to album
-        //items = []
-        //albumName = []
         let tv = UITableView()
         tv.register(AlbumCell.self, forCellReuseIdentifier: AlbumCell.id)
         tv.dataSource = self
@@ -32,7 +27,7 @@ class AlbumViewController: UIViewController {
         return tv
     }()
     
-    //TODO: ensure that the tables are correctly loaded
+ 
     override func loadView() {
         super.loadView()
         
@@ -92,6 +87,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
+
     //TO DO: Fetch photos from phone and match with name of table
     
 ///            LIZZY       LIZZYLIZZY LIZZY   LIZZY   LIZZY       LIZZY   LIZZY   LIZZY   LIZZY   LIZZY   LIZZY       LIZZYLIZZY LIZZY   LIZZY   LIZZY       LIZZY   LIZZY   LIZZY   LIZZY   LIZZY
@@ -180,6 +176,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
 //                openURL: { (url: URL) -> Void in UIApplication.shared.open(url, options: [:], completionHandler: nil) },
 //                scopeRequest: scopeRequest
 //            )
+
 //            DropboxClientsManager.authorizeFromController(UIApplication.shared,
 //                                                          controller: self,
 //                                                          openURL: { (url: URL) -> Void in
@@ -222,12 +219,14 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     //TO DO: let user create new folder
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        let path = "/Photos"
+        //let path = "/Photos"
         //DropboxManager.shared.createFolder(path: path)
-        DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
-    }
+        //TODO: upload album
+        //DropboxManager.shared.uploadImage(image: UIImage(named: "0")!, path: path)
+      
+    }*/
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -7,6 +7,7 @@
 
 import UIKit
 import EasyPeasy
+import SwiftUI
 
 class AlbumCell: UITableViewCell {
     
@@ -29,11 +30,16 @@ class AlbumCell: UITableViewCell {
        let button = UIButton()
         let largeTitle = UIImage.SymbolConfiguration(textStyle: .largeTitle)
         button.setImage(UIImage(systemName: "square.and.arrow.up.fill", withConfiguration: largeTitle), for: .normal)
-        //TO DO: Put under button
-        button.setTitle("Send", for: .normal)
-        button.setTitleColor(.white, for: .normal)
         return button
     }()
+    
+    lazy var sendText: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.text = "Send"
+        return label
+    }()
+    
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -54,10 +60,10 @@ class AlbumCell: UITableViewCell {
         contentView.addSubview(sendButton)
         contentView.addSubview(text)
         
-        photoView.easy.layout(Top(), Left(), Right(), Height(50))
-        text.easy.layout(Top(10), Left())
-        sendButton.easy.layout(Top(), Left(), Right(), Bottom())
-        
+        //photoView.easy.layout(Top(), Left(), Right(), Height(50))
+        text.easy.layout(Top(15), Left(10))
+        sendButton.easy.layout(Right(20), Bottom())
+        sendText.easy.layout(Top(), Left(), Right(20), Bottom())
     }
     
 }
