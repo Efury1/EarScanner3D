@@ -24,7 +24,7 @@ class DropboxManager {
     }
     
     /*Upload request*/
-    func uploadImage(image: UIImage, path: String) {
+    public func uploadImage(image: UIImage, path: String) {
         
         guard let client = DropboxClientsManager.authorizedClient, let fileData = image.pngData() else {
             print("Failed to obtain client or image data")
