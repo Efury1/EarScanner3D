@@ -47,8 +47,15 @@ class ForgotPassViewController: UIViewController {
         
 
         print("Called")
-        guard let email = Email.text else { return print("error") }
+        var email = ""
+        if (Email != nil){
+            email = Email.text ?? "Error"
+        
         MyVariables.email = email
+        }
+        else{
+            email = MyVariables.email
+        }
         //Need to confirm email exisits
         //Hit the API with the email to check if
         //Email Exists
@@ -87,9 +94,9 @@ class ForgotPassViewController: UIViewController {
             if (APIResponse.contains("NoEmail")){
                  DispatchQueue.main.async {
                     print("alert")
-                    let alert = UIAlertController(title: "Email Error", message: "Email is Not Registered to Database", preferredStyle: UIAlertController.Style.alert) //create alert
+                    let alert = UIAlertController(title: "Email Error", message: "This email is not registered", preferredStyle: UIAlertController.Style.alert) //create alert
                         //I'm a pop up
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                     self.present(alert, animated: true, completion: nil)
                         //I end here
                         // show the alert
@@ -117,7 +124,7 @@ class ForgotPassViewController: UIViewController {
                 print(APIResponse)
                 DispatchQueue.main.async {
                 print("alert")
-                let alert = UIAlertController(title: APIResponse, message: "Something Went Wrong", preferredStyle: UIAlertController.Style.alert) //create alert
+                let alert = UIAlertController(title: APIResponse, message: "Something went wrong", preferredStyle: UIAlertController.Style.alert) //create alert
                     //I'm a pop up
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil)
@@ -137,6 +144,7 @@ class ForgotPassViewController: UIViewController {
         
         
  
+   
     
    
     
@@ -186,9 +194,9 @@ class ForgotPassViewController: UIViewController {
             if (APIResponse.contains("False")){
                  DispatchQueue.main.async {
                     print("alert")
-                    let alert = UIAlertController(title: "Error", message: "Verification Code is Wrong", preferredStyle: UIAlertController.Style.alert) //create alert
+                    let alert = UIAlertController(title: "Verification Error", message: "The verification code is incorrect", preferredStyle: UIAlertController.Style.alert) //create alert
                         //I'm a pop up
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                     self.present(alert, animated: true, completion: nil)
                         //I end here
                         // show the alert
@@ -260,9 +268,9 @@ class ForgotPassViewController: UIViewController {
     }
     else{
         
-        let alert = UIAlertController(title: "Error", message: "Passwords Dont Match or Are Invalid", preferredStyle: UIAlertController.Style.alert) //create alert
+        let alert = UIAlertController(title: "Invalid Password", message: "The passwords do not match or are invalid. Passwords must contain at least 8 characters and 1 number.", preferredStyle: UIAlertController.Style.alert) //create alert
                                 //I'm a pop up
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
             self.present(alert, animated: true, completion: nil)
         }
     
