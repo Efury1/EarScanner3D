@@ -746,6 +746,7 @@ One of the team's flagship projects is the Future Hear project led by Prof Woodr
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-rX-bQF">
                                 <rect key="frame" x="10" y="0.0" width="394" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat, lorem ut pharetra imperdiet, ligula nibh interdum justo, vel varius neque augue sed turpis. Nullam cursus ac neque vitae laoreet. Cras quis urna ac elit convallis euismod. Nulla tristique risus non aliquam tristique. Duis in quam sit amet nibh blandit mattis. Aliquam tempus diam lectus, id maximus sapien dignissim non. Ut cursus vehicula augue et fringilla. Praesent eget scelerisque enim. Nam aliquet libero in lectus lacinia, sit amet blandit ipsum facilisis. Nunc ut dolor non tellus dictum facilisis vitae vel elit. Quisque ornare quam nec tincidunt dictum. Phasellus faucibus leo ut blandit tincidunt. Proin vel tortor vel purus egestas auctor. Aenean id tincidunt nisl.
 
 Cras ut placerat neque. Phasellus laoreet eget orci sit amet mattis. Curabitur molestie, sapien nec tempor malesuada, lorem enim auctor erat, id dapibus purus ex a neque. Integer eget velit non lorem suscipit vulputate eu maximus erat. Mauris aliquam ultrices enim posuere efficitur. In dictum purus ligula, vitae lobortis mauris ullamcorper nec. Sed sit amet risus suscipit, ultrices felis at, accumsan magna. Vestibulum ultrices, arcu vitae maximus sagittis, libero sem euismod nunc, eu dictum tortor nisi a purus. Mauris vel velit ut enim bibendum condimentum. Aenean sed odio porttitor, eleifend leo nec, varius neque. Quisque tincidunt interdum nisl vel posuere. Duis sed quam nec lacus molestie malesuada vitae vitae eros. Nulla facilisi. Donec quis pretium nulla, et sagittis nunc. Suspendisse hendrerit id erat eget volutpat.
@@ -770,6 +771,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AI0-Z1-2Rt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="Icx-rX-bQF" firstAttribute="top" secondItem="AI0-Z1-2Rt" secondAttribute="top" id="Zv8-re-drv"/>
                             <constraint firstAttribute="bottom" secondItem="Icx-rX-bQF" secondAttribute="bottom" id="dDR-Nd-SJG"/>
@@ -796,6 +798,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-aM-KJP">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1o6-F1-77d"/>
                                         </constraints>
@@ -804,6 +807,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CvB-FL-j2C">
                                         <rect key="frame" x="0.0" y="63" width="354" height="50"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="baE-w7-str"/>
                                         </constraints>
@@ -812,6 +816,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUP-xa-2RW">
                                         <rect key="frame" x="0.0" y="126" width="354" height="50"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Bj6-dP-MM4"/>
                                         </constraints>
@@ -841,6 +846,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qii-SL-MKJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="R9q-pl-ocD" firstAttribute="top" secondItem="qii-SL-MKJ" secondAttribute="top" constant="30" id="5p0-em-jB1"/>
                             <constraint firstItem="R9q-pl-ocD" firstAttribute="leading" secondItem="qii-SL-MKJ" secondAttribute="leading" constant="30" id="7bs-Q0-o3D"/>
@@ -978,6 +984,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Zq-e8-9Gd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="pW6-ev-pdZ" firstAttribute="top" secondItem="4Zq-e8-9Gd" secondAttribute="top" constant="30" id="09r-Ox-q5E"/>
                             <constraint firstItem="4Zq-e8-9Gd" firstAttribute="trailing" secondItem="pW6-ev-pdZ" secondAttribute="trailing" constant="30" id="aP6-RQ-Tfg"/>
@@ -1038,6 +1045,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g2g-dS-KC2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="tLx-4C-wl7" firstAttribute="centerX" secondItem="eCc-B1-Asa" secondAttribute="centerX" id="GwR-dy-ktf"/>
                             <constraint firstItem="g2g-dS-KC2" firstAttribute="trailing" secondItem="tLx-4C-wl7" secondAttribute="trailing" constant="30" id="TQK-xi-0FD"/>
@@ -1288,6 +1296,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uTh-V3-AYb"/>
                         <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="DpO-gn-4u5" firstAttribute="centerX" secondItem="wbV-mL-zFp" secondAttribute="centerX" id="G6v-BC-aQM"/>
                             <constraint firstItem="DpO-gn-4u5" firstAttribute="leading" secondItem="uTh-V3-AYb" secondAttribute="leading" constant="30" id="LtK-ye-z59"/>
@@ -1673,6 +1682,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
