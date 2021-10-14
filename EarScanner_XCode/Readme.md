@@ -15,7 +15,7 @@ EaSc2020!
 Microsoft Account:
 EarScanner3d@gmail.com
 EaSc0909!
-
+//
 How to Connect to Database:
 1. Download MySQL Workbench
 2. Open MySQL Workbench, and choose the ⊕ sign beside MySQL Connections to set up a new connection.
