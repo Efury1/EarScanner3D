@@ -1,13 +1,14 @@
 //
-//  ChangeEmailViewController.swift
+//  ChangeNameViewController.swift
 //  EarScanner_XCode
 //
-//  Created by Eliza Fury on 25/9/21.
+//  Created by James Noye on 6/10/21.
 //
+
 
 import UIKit
 
-class ChangeEmailViewController: UIViewController {
+class ChangeNameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,23 +16,27 @@ class ChangeEmailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var OldEmail: UITextField!
+   
     
-    @IBOutlet weak var NewEmail: UITextField!
+
+    @IBOutlet weak var NewFirstName: UITextField!
     
-    @IBAction func ChangeEmailProfile(_ sender: UIButton) {
+    @IBOutlet weak var NewLastName: UITextField!
+    
+    @IBAction func ChangeNameProfile(_ sender: UIButton) {
         
-        let OldEmailText = OldEmail.text;
-        let NewEmailText = NewEmail.text;
+        let NewLastText = NewLastName.text;
+        let NewFirstText = NewFirstName.text;
+        
        
         
        
         let url = URL(string:
-                            "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/emailprofile")
+                            "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/changenamesprofile")
 
             var request = URLRequest(url: url!) //make a request object with the url
            
-            let jsonbody = [ "NewEmail": NewEmailText!, "OldEmail": OldEmailText!] //attach the json body to he request. pass in the text inputs
+        let jsonbody = [ "FirstName": NewFirstText!, "LastName": NewLastText!, "Email": LoginViewController.Email] //attach the json body to he request. pass in the text inputs
        
             do //making sure to convet it to json and attach it, testing if it breaks
             {
