@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4720814A2718507000144E35 /* Step-4-close.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 472081492718507000144E35 /* Step-4-close.mp4 */; };
 		47947D7726B3EABD00761DC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7626B3EABD00761DC8 /* AppDelegate.swift */; };
 		47947D7926B3EABD00761DC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7826B3EABD00761DC8 /* SceneDelegate.swift */; };
 		47947D7B26B3EABD00761DC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7A26B3EABD00761DC8 /* ViewController.swift */; };
@@ -34,7 +35,6 @@
 		569E2C7426C90E4D00B6FBFE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569E2C7326C90E4D00B6FBFE /* MainViewController.swift */; };
 		56C7B8D62712A349004A6DAB /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C7B8D52712A349004A6DAB /* AlbumModel.swift */; };
 		6A4C947E26DB5F6500B056B7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A4C947D26DB5F6500B056B7 /* logo.png */; };
-		6A6DBC3027182D68003A68D4 /* Step-4-close.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DBC2F27182D68003A68D4 /* Step-4-close.mp4 */; };
 		6A703E5326D8818E007A06BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A703E5226D8818E007A06BA /* Main.storyboard */; };
 		6A90106826FC93520002D672 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A90106726FC93520002D672 /* Step1ViewController.swift */; };
 		6A90106A26FD50340002D672 /* Step-1-front.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A90106926FD50340002D672 /* Step-1-front.mp4 */; };
@@ -46,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		472081492718507000144E35 /* Step-4-close.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step-4-close.mp4"; sourceTree = "<group>"; };
 		47947D7326B3EABD00761DC8 /* EarScan3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarScan3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47947D7626B3EABD00761DC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47947D7826B3EABD00761DC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		569E2C7326C90E4D00B6FBFE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		56C7B8D52712A349004A6DAB /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		6A4C947D26DB5F6500B056B7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		6A6DBC2F27182D68003A68D4 /* Step-4-close.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Step-4-close.mp4"; path = "../Uni/2021 - SEM 2/IFB399/Tutorial videos/Step-4-close.mp4"; sourceTree = "<group>"; };
 		6A703E5226D8818E007A06BA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6A90106726FC93520002D672 /* Step1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
 		6A90106926FD50340002D672 /* Step-1-front.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step-1-front.mp4"; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				5615AC5C270B16640057487C /* Documentation.docc */,
-				6A6DBC2F27182D68003A68D4 /* Step-4-close.mp4 */,
+				472081492718507000144E35 /* Step-4-close.mp4 */,
 				6A90106B26FD53850002D672 /* Step-2-back.mp4 */,
 				6A90106C26FD53870002D672 /* Step-3-around.mp4 */,
 				6A90106926FD50340002D672 /* Step-1-front.mp4 */,
@@ -309,7 +309,7 @@
 				569B3CE226BB4FA600A1A76E /* Login.storyboard in Resources */,
 				6A4C947E26DB5F6500B056B7 /* logo.png in Resources */,
 				5607E4E926D101DB003D90E5 /* Readme.md in Resources */,
-				6A6DBC3027182D68003A68D4 /* Step-4-close.mp4 in Resources */,
+				4720814A2718507000144E35 /* Step-4-close.mp4 in Resources */,
 				6A703E5326D8818E007A06BA /* Main.storyboard in Resources */,
 				47947D8026B3EABF00761DC8 /* Assets.xcassets in Resources */,
 			);
@@ -518,13 +518,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EarScanner_XCode/EarScanner_XCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WMJD55GQ94;
+				DEVELOPMENT_TEAM = KSTAQ25V98;
 				INFOPLIST_FILE = EarScanner_XCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nvjdhbjlk;
+				PRODUCT_BUNDLE_IDENTIFIER = nvjdhbjlka;
 				PRODUCT_NAME = EarScan3D;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -539,13 +539,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EarScanner_XCode/EarScanner_XCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WMJD55GQ94;
+				DEVELOPMENT_TEAM = KSTAQ25V98;
 				INFOPLIST_FILE = EarScanner_XCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nvjdhbjlk;
+				PRODUCT_BUNDLE_IDENTIFIER = nvjdhbjlka;
 				PRODUCT_NAME = EarScan3D;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -706,6 +706,9 @@ else if (ViewController.howLongIsBar == 4){
     @objc private func exitCameraFlow() {
         
         let refreshAlert = UIAlertController(title: "Exit Camera", message: "Are you sure you want to exit the camera? This photoset cannot be resumed once exited.", preferredStyle: UIAlertController.Style.alert) //create alert
+        ViewController.photoCount = 0;
+        ViewController.counter = 0;
+        ViewController.SecondEar = false;
         
 
         refreshAlert.addAction(UIAlertAction(title: "Exit", style: .default, handler: { (action: UIAlertAction!) in
