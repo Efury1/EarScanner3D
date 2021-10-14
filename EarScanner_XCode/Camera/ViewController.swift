@@ -7,14 +7,15 @@
 import AVFoundation
 import UIKit
 import Foundation
-//test
 import EasyPeasy
-import AYStepperView
-import SwiftUI
 
 
 class ViewController: UIViewController {
+    //used for tracking when to show tutorials,
     static var photoCount = 0;
+    //used for tracking what number to display
+    static var counter = 0
+    static var howLongIsBar = 6;
     static var SecondEar = false;
     override open var shouldAutorotate: Bool {
        return false
@@ -59,10 +60,10 @@ class ViewController: UIViewController {
         self.containerWidth/7
     }
     var viewSize: CGFloat {
-        self.containerWidth/9
+        self.containerWidth/12
     }
     var lineWidth: CGFloat {
-        self.containerWidth/8
+        self.containerWidth/18
     }
     var padding: CGFloat {
         self.containerWidth/45
@@ -72,45 +73,72 @@ class ViewController: UIViewController {
     
     var view1: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen
-        view.alpha = 0.5
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
         return view
     }()
+    
     let view2: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen
-        view.alpha = 0.5
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
         return view
     }()
     let view3: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen
-        view.alpha = 0.5
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
         return view
     }()
     let view4: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen
-        view.alpha = 0.5
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
+        return view
+    }()
+    let view5: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
         return view
     }()
     
+    let view6: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
+        return view
+    }()
+    
+    
     let line1: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen
-        view.alpha = 0.5
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
         return view
     }()
     let line2: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen
-        view.alpha = 0.5
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
         return view
     }()
     let line3: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen
-        view.alpha = 0.5
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
+        return view
+    }()
+    let line4: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
+        return view
+    }()
+    let line5: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemOrange
+        view.alpha = 0.35
         return view
     }()
     private func addViews(views: [UIView]) {
@@ -128,22 +156,32 @@ class ViewController: UIViewController {
         button.layer.borderColor = UIColor.white.cgColor
         button.layer.backgroundColor = UIColor.lightGray.cgColor
         /*Counter */
-        var counter = 30
-        for i in 0..<counter {
-            // Do stuff...
-            let newValue = counter + 1
-            button.setTitle("\(newValue)",for: .normal)
-        }
+       
+        button.setTitle("\(ViewController.counter)",for: .normal)
+        
         
         //button.setTitle("\(items)",for: .normal)
         return button
-    }()
+    }();
+    
+   
+
     //the button to retake the photo
     private let RetakeButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 //        button.backgroundColor = .black
         let largeTitle = UIImage.SymbolConfiguration(textStyle: .largeTitle)
         button.setImage(UIImage(systemName: "gobackward", withConfiguration: largeTitle), for: .normal)
+        //button.setTitle("Retake", for: .normal)
+        
+        return button
+    }()
+    
+    private let ExitButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        button.backgroundColor = .black
+        let largeTitle = UIImage.SymbolConfiguration(textStyle: .largeTitle)
+        button.setImage(UIImage(systemName: "xmark", withConfiguration: largeTitle), for: .normal)
         //button.setTitle("Retake", for: .normal)
         
         return button
@@ -181,7 +219,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
- 
+        
+        HelpButton.addTarget(self, action: #selector(tutorialPage), for: .touchUpInside)
+        ExitButton.addTarget(self, action: #selector(exitCameraFlow), for: .touchUpInside)
         
         
         
@@ -215,6 +255,9 @@ class ViewController: UIViewController {
         
         RetakeButton.center = CGPoint(x:  MyVariables.screenWidth*0.80,
                                          y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.145/3)) )
+        
+        ExitButton.center = CGPoint(x:  MyVariables.screenWidth*0.10,
+                                    y: MyVariables.screenHeight - (MyVariables.screenHeight*0.85) )
     }
     private func checkCameraPermissions(){
         switch AVCaptureDevice.authorizationStatus(for: .video){
@@ -288,7 +331,7 @@ class ViewController: UIViewController {
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
         alreadyRetaken = false
         //increment counter on button press
-        MyVariables.counter += 1;
+//        MyVariables.counter += 1;
             
         
     }
@@ -307,7 +350,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         static var screenWidth = CGFloat(0.1);
         static var screenHeight = CGFloat(0.1);
         //counter for button and progress bar
-        static var counter = 0;
+//        static var counter = 0;
 
     }
     
@@ -352,8 +395,31 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 
        
         view.addSubview(MyVariables.bottomPinkBar)
+        
+        ViewController.counter += 1
+        let shutterButton: UIButton = {
+            let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            button.layer.cornerRadius = 50
+            button.layer.borderWidth = 5
+            button.layer.borderColor = UIColor.white.cgColor
+            button.layer.backgroundColor = UIColor.lightGray.cgColor
+            /*Counter */
+
+            button.setTitle("\(ViewController.counter)",for: .normal)
+
+
+            //button.setTitle("\(items)",for: .normal)
+            return button
+        }()
+        print("count2: ", ViewController.photoCount)
+        shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
+        shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
+                                       y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.19/2)) )
+        
         view.addSubview(shutterButton)
+     
         view.addSubview(RetakeButton)
+        
         view.addSubview(HelpButton)
         //view.addSubview(bottomPinkBar)
         //view.addSubview(NextPhotoButton)
@@ -365,38 +431,133 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             
          
 
-        
-        UIView.animate(withDuration: 0.5) { [weak self] in
+if (ViewController.howLongIsBar == 6){
+        UIView.animate(withDuration: 0.7) { [weak self] in
             guard let self = self else {
                 return
             }
+            print("progress",self.currentProgress)
             switch self.currentProgress {
             case 0:
                 self.view1.alpha = 1
+                self.view1.backgroundColor = .systemGreen
+                
             case 1:
                 self.view2.alpha = 1
+                self.view2.backgroundColor = .systemGreen
                 self.line1.alpha = 1
+                self.line1.backgroundColor = .systemGreen
             case 2:
                 self.view3.alpha = 1
+                self.view3.backgroundColor = .systemGreen
                 self.line2.alpha = 1
+                self.line2.backgroundColor = .systemGreen
+
             case 3:
                 self.view4.alpha = 1
+                self.view4.backgroundColor = .systemGreen
                 self.line3.alpha = 1
+                self.line3.backgroundColor = .systemGreen
+            case 4:
+                self.view5.alpha = 1
+                self.view5.backgroundColor = .systemGreen
+                self.line4.alpha = 1
+                self.line4.backgroundColor = .systemGreen
+            case 5:
+                self.view6.alpha = 1
+                self.view6.backgroundColor = .systemGreen
+                self.line5.alpha = 1
+                self.line5.backgroundColor = .systemGreen
+         
             default:
-                self.view1.alpha = 0.5
-                self.view2.alpha = 0.5
-                self.line1.alpha = 0.5
-                self.view3.alpha = 0.5
-                self.line2.alpha = 0.5
-                self.view4.alpha = 0.5
-                self.line3.alpha = 0.5
+                self.view1.alpha = 0.35
+                self.view1.backgroundColor = .systemOrange
             }
-            if self.currentProgress > 3 {
+            if self.currentProgress > 4 {
                 self.currentProgress = 0
+                self.view1.alpha = 0.35
+                self.view1.backgroundColor = .systemOrange
+                self.view2.alpha = 0.35
+                self.view2.backgroundColor = .systemOrange
+                self.line1.alpha = 0.35
+                self.line1.backgroundColor = .systemOrange
+                self.view3.alpha = 0.35
+                self.view3.backgroundColor = .systemOrange
+                self.line2.alpha = 0.35
+                self.line2.backgroundColor = .systemOrange
+                self.view4.alpha = 0.35
+                self.view4.backgroundColor = .systemOrange
+                self.line3.alpha = 0.35
+                self.line3.backgroundColor = .systemOrange
+                self.view5.alpha = 0.35
+                self.view5.backgroundColor = .systemOrange
+                self.line4.alpha = 0.35
+                self.line4.backgroundColor = .systemOrange
+                self.view6.alpha = 0.35
+                self.view6.backgroundColor = .systemOrange
+                self.line5.alpha = 0.35
+                self.line5.backgroundColor = .systemOrange
             } else {
                 self.currentProgress += 1
             }
-        }
+    }
+}
+else if (ViewController.howLongIsBar == 4){
+                    UIView.animate(withDuration: 0.7) { [weak self] in
+                        guard let self = self else {
+                            return
+                        }
+                        print("progress",self.currentProgress)
+                        switch self.currentProgress {
+                        case 0:
+                            self.view1.alpha = 1
+                            self.view1.backgroundColor = .systemGreen
+                            
+                        case 1:
+                            self.view2.alpha = 1
+                            self.view2.backgroundColor = .systemGreen
+                            self.line1.alpha = 1
+                            self.line1.backgroundColor = .systemGreen
+                        case 2:
+                            self.view3.alpha = 1
+                            self.view3.backgroundColor = .systemGreen
+                            self.line2.alpha = 1
+                            self.line2.backgroundColor = .systemGreen
+
+                        case 3:
+                            self.view4.alpha = 1
+                            self.view4.backgroundColor = .systemGreen
+                            self.line3.alpha = 1
+                            self.line3.backgroundColor = .systemGreen
+                        default:
+                            self.view1.alpha = 0.35
+                            self.view1.backgroundColor = .systemOrange
+                            
+                        }
+                        if self.currentProgress > 2 {
+                            self.currentProgress = 0
+                            self.view1.alpha = 0.35
+                            self.view1.backgroundColor = .systemOrange
+                            self.view2.alpha = 0.35
+                            self.view2.backgroundColor = .systemOrange
+                            self.line1.alpha = 0.35
+                            self.line1.backgroundColor = .systemOrange
+                            self.view3.alpha = 0.35
+                            self.view3.backgroundColor = .systemOrange
+                            self.line2.alpha = 0.35
+                            self.line2.backgroundColor = .systemOrange
+                            self.view4.alpha = 0.35
+                            self.view4.backgroundColor = .systemOrange
+                            self.line3.alpha = 0.35
+                            self.line3.backgroundColor = .systemOrange
+                            
+                        } else {
+                            self.currentProgress += 1
+                        }
+                }
+            }
+            
+            
         }
 
         imageTakePast = imageTake
@@ -416,13 +577,15 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         
         RetakeButton.addTarget(self, action: #selector(retake), for: .touchUpInside)
         
+        
         let seconds = 2.0
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             
             if (ViewController.photoCount == 5){
                     //5
-        
+                
+                
                 print("changing the page")
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step2")
@@ -430,9 +593,14 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
                 self.present(balanceViewController, animated: true, completion: nil)
             }
             else if (ViewController.photoCount == 11){
+                self.currentProgress = 0
+                ViewController.howLongIsBar = 4
+                self.containerView.removeFromSuperview()
+                self.addGridView()
                 //11
                 //add the line to save the last photo due to how I delay saving for retaking
                 print("changing the page")
+                
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step3")
                 
@@ -441,7 +609,11 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             else if (ViewController.photoCount == 23){
                 //23
                 //add the line to save the last photo due to how I delay saving for retaking
-
+                ViewController.howLongIsBar = 6
+                self.currentProgress = 0
+              
+                self.containerView.removeFromSuperview()
+                self.addGridView()
                 print("changing the page")
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step4")
@@ -491,8 +663,75 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 //        UIImageWriteToSavedPhotosAlbum(imageTake, nil, nil, nil)
        
     }
-    
+    @objc private func tutorialPage() {
+        self.containerView.removeFromSuperview()
+        self.addGridView()
+        
+        
+        print("changing the page")
+        if (ViewController.photoCount <= 4){
+            //step1
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step1-2")
+            
+            self.present(balanceViewController, animated: true, completion: nil)
+        }
+        else if (ViewController.photoCount <= 10){
+            //step2
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step2")
+            
+            self.present(balanceViewController, animated: true, completion: nil)
+        }
+        else if (ViewController.photoCount <= 22){
+            //step3
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step3")
+            
+            self.present(balanceViewController, animated: true, completion: nil)
+        }
+        else {
+            //step4
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "Step4")
+            
+            self.present(balanceViewController, animated: true, completion: nil)
+        }
+
+
+        
+        
+        
+    }
+    @objc private func exitCameraFlow() {
+        
+        let refreshAlert = UIAlertController(title: "Exit Camera", message: "Are you sure you want to exit the camera? This photoset cannot be resumed once exited.", preferredStyle: UIAlertController.Style.alert) //create alert
+        
+
+        refreshAlert.addAction(UIAlertAction(title: "Exit", style: .default, handler: { (action: UIAlertAction!) in
+           
+            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+             self.addChild(childViewController)
+             self.view.addSubview(childViewController.view)
+             childViewController.didMove(toParent: self)
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { (action: UIAlertAction!) in
+
+            refreshAlert .dismiss(animated: true, completion: nil)
+
+
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
+        print("ons")
+        }
+        
+
     @objc private func retake() {
+        
+
         Retake = true;
         
         
@@ -501,9 +740,33 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         print(self.currentProgress)
         
         if (alreadyRetaken == false){
+            //reduce the number dsplayed by one, have to rremove, remake and reshow the shutter button in order to update the number
+            shutterButton.removeFromSuperview()
+            ViewController.counter -= 1
+            let shutterButton: UIButton = {
+                let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                button.layer.cornerRadius = 50
+                button.layer.borderWidth = 5
+                button.layer.borderColor = UIColor.white.cgColor
+                button.layer.backgroundColor = UIColor.lightGray.cgColor
+                /*Counter */
+
+                button.setTitle("\(ViewController.counter)",for: .normal)
+
+
+                //button.setTitle("\(items)",for: .normal)
+                return button
+            }()
+            print("count2: ", ViewController.photoCount)
+            shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
+            view.addSubview(shutterButton)
+            shutterButton.center = CGPoint(x: (MyVariables.screenWidth/2) ,
+                                           y: MyVariables.screenHeight - (MyVariables.screenHeight*(0.19/2)) )
+            
             alreadyRetaken = true
             ///De-progress the bar
-            UIView.animate(withDuration: 0.5) { [weak self] in
+            if (ViewController.howLongIsBar == 4){
+            UIView.animate(withDuration: 0.7) { [weak self] in
                 guard let self = self else {
                     return
                 }
@@ -518,29 +781,166 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
                 }
                 switch self.currentProgress {
                 case 1:
-                    self.view2.alpha = 0.5
-                    self.line1.alpha = 0.5
+                    self.view2.alpha = 0.35
+                    self.view2.backgroundColor = .systemOrange
+                    self.line1.backgroundColor = .systemOrange
+                    self.line1.alpha = 0.35
+                    
                 case 2:
-                    self.view3.alpha = 0.5
-                    self.line2.alpha = 0.5
+                    self.view3.alpha = 0.35
+                    self.line2.alpha = 0.35
+                    self.view3.backgroundColor = .systemOrange
+                    self.line2.backgroundColor = .systemOrange
                 case 3:
                     self.view1.alpha = 1
+                    self.view1.backgroundColor = .systemGreen
                     self.view2.alpha = 1
+                    self.view2.backgroundColor = .systemGreen
                     self.line1.alpha = 1
+                    self.line1.backgroundColor = .systemGreen
                     self.view3.alpha = 1
+                    self.view3.backgroundColor = .systemGreen
                     self.line2.alpha = 1
-                    self.view4.alpha = 0.5
-                    self.line3.alpha = 0.5
+                    self.line2.backgroundColor = .systemGreen
+                    
+                    self.view4.alpha = 0.35
+                    self.line3.alpha = 0.35
+                    self.view4.backgroundColor = .systemOrange
+                    self.line3.backgroundColor = .systemOrange
                 default:
-                    self.view1.alpha = 0.5
-                    self.view2.alpha = 0.5
-                    self.line1.alpha = 0.5
-                    self.view3.alpha = 0.5
-                    self.line2.alpha = 0.5
-                    self.view4.alpha = 0.5
-                    self.line3.alpha = 0.5
+                    self.view1.alpha = 0.35
+                    self.view2.alpha = 0.35
+                    self.view1.backgroundColor = .systemOrange
+                    self.view2.backgroundColor = .systemOrange
+                    
+                    self.line1.alpha = 0.35
+                    self.view3.backgroundColor = .systemOrange
+                    self.line1.backgroundColor = .systemOrange
+                    self.view3.alpha = 0.35
+                    
+                    self.line2.alpha = 0.35
+                    self.view4.alpha = 0.35
+                    self.view4.backgroundColor = .systemOrange
+                    self.line2.backgroundColor = .systemOrange
+                    
+                    self.line3.alpha = 0.35
+                    self.line3.backgroundColor = .systemOrange
                 }
                
+            }
+            }
+            else if (ViewController.howLongIsBar == 6){
+            UIView.animate(withDuration: 0.7) { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                if self.currentProgress == 0 {
+                    
+                    self.currentProgress = 5
+                    print("progress: ",self.currentProgress)
+                } else {
+                    
+                    self.currentProgress -= 1
+                    print("progress: ",self.currentProgress)
+                }
+                switch self.currentProgress {
+                case 1:
+                    self.view2.alpha = 0.35
+                    self.view2.backgroundColor = .systemOrange
+                    self.line1.backgroundColor = .systemOrange
+                    self.line1.alpha = 0.35
+                    
+                case 2:
+                    self.view3.alpha = 0.35
+                    self.line2.alpha = 0.35
+                    self.view3.backgroundColor = .systemOrange
+                    self.line2.backgroundColor = .systemOrange
+                case 3:
+                    self.view1.alpha = 1
+                    self.view1.backgroundColor = .systemGreen
+                    self.view2.alpha = 1
+                    self.view2.backgroundColor = .systemGreen
+                    self.line1.alpha = 1
+                    self.line1.backgroundColor = .systemGreen
+                    self.view3.alpha = 1
+                    self.view3.backgroundColor = .systemGreen
+                    self.line2.alpha = 1
+                    self.line2.backgroundColor = .systemGreen
+                    
+                    self.view4.alpha = 0.35
+                    self.line3.alpha = 0.35
+                    self.view4.backgroundColor = .systemOrange
+                    self.line3.backgroundColor = .systemOrange
+                case 4:
+                    self.view1.alpha = 1
+                    self.view1.backgroundColor = .systemGreen
+                    self.view2.alpha = 1
+                    self.view2.backgroundColor = .systemGreen
+                    self.line1.alpha = 1
+                    self.line1.backgroundColor = .systemGreen
+                    self.view3.alpha = 1
+                    self.view3.backgroundColor = .systemGreen
+                    self.line2.alpha = 1
+                    self.line2.backgroundColor = .systemGreen
+                    
+                    self.view4.alpha = 1
+                    self.line3.alpha = 1
+                    self.view4.backgroundColor = .systemGreen
+                    self.line3.backgroundColor = .systemGreen
+                    
+                    self.view5.alpha = 0.35
+                    self.line4.alpha = 0.35
+                    self.view5.backgroundColor = .systemOrange
+                    self.line4.backgroundColor = .systemOrange
+                    
+                case 5:
+                    self.view1.alpha = 1
+                    self.view1.backgroundColor = .systemGreen
+                    self.view2.alpha = 1
+                    self.view2.backgroundColor = .systemGreen
+                    self.line1.alpha = 1
+                    self.line1.backgroundColor = .systemGreen
+                    self.view3.alpha = 1
+                    self.view3.backgroundColor = .systemGreen
+                    self.line2.alpha = 1
+                    self.line2.backgroundColor = .systemGreen
+                    
+                    self.view4.alpha = 1
+                    self.line3.alpha = 1
+                    self.view4.backgroundColor = .systemGreen
+                    self.line3.backgroundColor = .systemGreen
+                    
+                    self.view5.alpha = 1
+                    self.line4.alpha = 1
+                    self.view5.backgroundColor = .systemGreen
+                    self.line4.backgroundColor = .systemGreen
+                    
+                    self.view6.alpha = 0.35
+                    self.line5.alpha = 0.35
+                    self.view6.backgroundColor = .systemOrange
+                    self.line5.backgroundColor = .systemOrange
+                    
+                default:
+                    self.view1.alpha = 0.35
+                    self.view2.alpha = 0.35
+                    self.view1.backgroundColor = .systemOrange
+                    self.view2.backgroundColor = .systemOrange
+                    
+                    self.line1.alpha = 0.35
+                    self.view3.backgroundColor = .systemOrange
+                    self.line1.backgroundColor = .systemOrange
+                    self.view3.alpha = 0.35
+                    
+                    self.line2.alpha = 0.35
+                    self.view4.alpha = 0.35
+                    self.view4.backgroundColor = .systemOrange
+                    self.line2.backgroundColor = .systemOrange
+                    
+                    self.line3.alpha = 0.35
+                    self.line3.backgroundColor = .systemOrange
+                }
+               
+            }
             }
         }
         else{
@@ -559,8 +959,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         let horizontalMargin = -10
         let verticalMargin = -10
         
-        
-        
+    
         let gridView = GridView()
         
         let screenRect = UIScreen.main.bounds
@@ -583,6 +982,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         MyVariables.bottomPinkBar = bottomPinkBar
         
         shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
+        
 
         gridView.translatesAutoresizingMaskIntoConstraints = false
         //add image based upon what number counter is at
@@ -590,40 +990,71 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         //bottom pink bar
         view.addSubview(bottomPinkBar)
         //main circle button
+        shutterButton.setTitle("\(ViewController.counter)",for: .normal)
         view.addSubview(shutterButton)
         //retake button
         view.addSubview(RetakeButton)
         //help
         view.addSubview(HelpButton)
+        view.addSubview(ExitButton)
+        //add to the view the exit button
+       
         
+        containerView.easy.layout(Top(padding).to(view.safeAreaLayoutGuide, .top), CenterX(), Width(containerWidth), Height(containerHeight*2))
+        var viewSize2 = viewSize
+        var lineWidth2 = lineWidth
         
-        containerView.easy.layout(Top(padding).to(view.safeAreaLayoutGuide, .top), CenterX(), Width(containerWidth), Height(containerHeight))
+        if (ViewController.howLongIsBar == 6){
+        addViews(views: [view1, view2, view3, view4,view5,view6])
+            addViews(views: [line1, line2, line3,line4,line5])}
+        else{
+            var viewSize: CGFloat {
+                self.containerWidth/8
+            }
+            viewSize2 = viewSize
+            
+            var lineWidth: CGFloat {
+                self.containerWidth/8
+            }
+            lineWidth2 = lineWidth
+            addViews(views: [view1, view2, view3, view4])
+                addViews(views: [line1, line2, line3])
+        }
+        view1.easy.layout(CenterY(), Left(padding).to(containerView, .left), Size(viewSize2))
+        view1.rounded(radius: viewSize2/2)
         
-        
-        addViews(views: [view1, view2, view3, view4])
-        addViews(views: [line1, line2, line3])
-        
-        view1.easy.layout(CenterY(), Left(padding).to(containerView, .left), Size(viewSize))
-        view1.rounded(radius: viewSize/2)
-        
-        line1.easy.layout(CenterY(), Left(padding).to(view1, .right), Height(lineHeight), Width(lineWidth))
+        line1.easy.layout(CenterY(), Left(padding).to(view1, .right), Height(lineHeight), Width(lineWidth2))
 
         line1.rounded(radius: lineHeight/2)
         
-        view2.easy.layout(CenterY(), Left(padding).to(line1, .right), Size(viewSize))
-        view2.rounded(radius: viewSize/2)
+        view2.easy.layout(CenterY(), Left(padding).to(line1, .right), Size(viewSize2))
+        view2.rounded(radius: viewSize2/2)
         
-        line2.easy.layout(CenterY(), Left(padding).to(view2, .right), Height(lineHeight), Width(lineWidth))
+        line2.easy.layout(CenterY(), Left(padding).to(view2, .right), Height(lineHeight), Width(lineWidth2))
         line2.rounded(radius: lineHeight/2)
         
-        view3.easy.layout(CenterY(), Left(padding).to(line2, .right), Size(viewSize))
-        view3.rounded(radius: viewSize/2)
+        view3.easy.layout(CenterY(), Left(padding).to(line2, .right), Size(viewSize2))
+        view3.rounded(radius: viewSize2/2)
         
-        line3.easy.layout(CenterY(), Left(padding).to(view3, .right), Height(lineHeight), Width(lineWidth))
+        line3.easy.layout(CenterY(), Left(padding).to(view3, .right), Height(lineHeight), Width(lineWidth2))
         line3.rounded(radius: lineHeight/2)
         
-        view4.easy.layout(CenterY(), Left(padding).to(line3, .right), Size(viewSize))
-        view4.rounded(radius: viewSize/2)
+        view4.easy.layout(CenterY(), Left(padding).to(line3, .right), Size(viewSize2))
+        view4.rounded(radius: viewSize2/2)
+        if (ViewController.howLongIsBar == 6){
+        line4.easy.layout(CenterY(), Left(padding).to(view4, .right), Height(lineHeight), Width(lineWidth2))
+        line4.rounded(radius: lineHeight/2)
+        
+        view5.easy.layout(CenterY(), Left(padding).to(line4, .right), Size(viewSize2))
+        view5.rounded(radius: viewSize2/2)
+        
+        line5.easy.layout(CenterY(), Left(padding).to(view5, .right), Height(lineHeight), Width(lineWidth2))
+        line5.rounded(radius: lineHeight/2)
+        
+        view6.easy.layout(CenterY(), Left(padding).to(line5, .right), Size(viewSize2))
+        
+        view6.rounded(radius: viewSize2/2)
+        }
         view.addSubview(containerView)
     
         //view.addSubview(bottomPinkBar)

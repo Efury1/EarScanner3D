@@ -89,7 +89,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func StartTutorial(_ sender: Any) {
-      
+        ViewController.counter = 0;
         let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Step1")
         self.parent?.present(childViewController, animated: true, completion: nil)
 //         self.addChild(childViewController)

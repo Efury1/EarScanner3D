@@ -4,10 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+<<<<<<< HEAD
 		<key>ADAL.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
+=======
+		<key>ADAL.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+>>>>>>> f8fe5bc9e6c26ecc4d4795a62b2cb3fed15908cf
 		</dict>
 		<key>AYStepperView.xcscheme</key>
 		<dict>
@@ -16,16 +23,33 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+<<<<<<< HEAD
 		<key>Base32.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
 		<key>Disk.xcscheme</key>
+=======
+		<key>AYStepperView.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>Base32.xcscheme_^#shared#^_</key>
+>>>>>>> f8fe5bc9e6c26ecc4d4795a62b2cb3fed15908cf
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+<<<<<<< HEAD
+=======
+		<key>Disk.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+>>>>>>> f8fe5bc9e6c26ecc4d4795a62b2cb3fed15908cf
 		<key>EasyPeasy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,16 +57,33 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+<<<<<<< HEAD
 		<key>KeychainSwift.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
 		<key>OneDriveSDK.xcscheme</key>
+=======
+		<key>EasyPeasy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>KeychainSwift.xcscheme_^#shared#^_</key>
+>>>>>>> f8fe5bc9e6c26ecc4d4795a62b2cb3fed15908cf
 		<dict>
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+<<<<<<< HEAD
+=======
+		<key>OneDriveSDK.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+>>>>>>> f8fe5bc9e6c26ecc4d4795a62b2cb3fed15908cf
 		<key>Pods-EarScanner_XCode.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -50,12 +91,22 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Pods-EarScanner_XCode.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>pop.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
