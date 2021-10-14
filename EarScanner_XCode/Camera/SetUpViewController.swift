@@ -7,7 +7,6 @@
 
 import UIKit
 import EasyPeasy
-import AYStepperView
 
 class SetUpViewController: UIViewController {
     
