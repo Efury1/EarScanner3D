@@ -10,12 +10,11 @@ target 'EarScanner_XCode' do
 
 pod 'EasyPeasy'
 
-pod "AYStepperView"
+#pod "AYStepperView"
 
 pod 'Disk', '~> 0.6.4'
 
-pod 'OneDriveSDK'
+pod 'SwiftyDropbox'
 
-pod 'KeychainSwift', '~> 19.0'
 
 end

@@ -616,21 +616,21 @@
 		1D3840BC7FD43C21D58A245918FFD9F3 /* ADWorkPlaceJoinConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ADWorkPlaceJoinConstants.h; path = ADALiOS/ADALiOS/ADWorkPlaceJoinConstants.h; sourceTree = "<group>"; };
 		1E2CA276F5AD8FE2A5EC8971B3658576 /* pop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = pop.modulemap; sourceTree = "<group>"; };
 		1EF022ABAFA8F88A45F0E2FE37E2CE92 /* ODURLSessionUploadTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODURLSessionUploadTask.m; path = OneDriveSDK/OneDriveCoreSDK/Core/ODURLSEssion/ODURLSessionUploadTask.m; sourceTree = "<group>"; };
-		1EFB7CE9CB292E70F08BD9D65749FF3B /* POPPropertyAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPPropertyAnimation.mm; path = pop/POPPropertyAnimation.mm; sourceTree = "<group>"; };
+		1EFB7CE9CB292E70F08BD9D65749FF3B /* POPPropertyAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPPropertyAnimation.mm; path = pop/POPPropertyAnimation.mm; sourceTree = "<group>"; };
 		205F1F16DD2FD58E62D0A72E090333D2 /* ADAuthenticationError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ADAuthenticationError.m; path = ADALiOS/ADALiOS/ADAuthenticationError.m; sourceTree = "<group>"; };
 		20666EFF0A1F566A8E7E8A996D7C1659 /* POPLayerExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = pop/POPLayerExtras.h; sourceTree = "<group>"; };
 		208246A1BC7E70FDA90E5CC1CE6EE03B /* ODDriveRequestBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODDriveRequestBuilder.h; path = OneDriveSDK/OneDriveCoreSDK/requests/ODDriveRequestBuilder.h; sourceTree = "<group>"; };
 		208BBD59471466C17DDC8A50F446D3BB /* Disk+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+UIImage.swift"; path = "Sources/Disk+UIImage.swift"; sourceTree = "<group>"; };
 		20F6EA4E663CA241B34BDFFFE887FB0B /* ODExpandOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODExpandOptions.h; path = OneDriveSDK/OneDriveCoreSDK/Core/Options/ODExpandOptions.h; sourceTree = "<group>"; };
-		218B3190AF70458841DD827B524CCDE1 /* POPGeometry.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPGeometry.mm; path = pop/POPGeometry.mm; sourceTree = "<group>"; };
+		218B3190AF70458841DD827B524CCDE1 /* POPGeometry.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPGeometry.mm; path = pop/POPGeometry.mm; sourceTree = "<group>"; };
 		219B1E452D50194296D2359BAE738581 /* ADAuthenticationParameters+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ADAuthenticationParameters+Internal.h"; path = "ADALiOS/ADALiOS/ADAuthenticationParameters+Internal.h"; sourceTree = "<group>"; };
 		21E718872B9BB1804E32C90F854FBFE7 /* ODDrive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODDrive.m; path = OneDriveSDK/OneDriveCoreSDK/model/ODDrive.m; sourceTree = "<group>"; };
 		228E0EE10D0BB140F1BFA9967A65710E /* ADHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ADHelpers.h; path = ADALiOS/ADALiOS/ADHelpers.h; sourceTree = "<group>"; };
-		22E1535142229D73E8A0D1A2C8AED3F2 /* POPAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimationExtras.mm; path = pop/POPAnimationExtras.mm; sourceTree = "<group>"; };
+		22E1535142229D73E8A0D1A2C8AED3F2 /* POPAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationExtras.mm; path = pop/POPAnimationExtras.mm; sourceTree = "<group>"; };
 		22EE51B87CB3642BF5B03589631AA72D /* TransformationMatrix.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = TransformationMatrix.cpp; path = pop/WebCore/TransformationMatrix.cpp; sourceTree = "<group>"; };
 		23311CF3D24854E82E722B82715C781D /* ODLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODLoggerProtocol.h; path = OneDriveSDK/Common/ODLoggerProtocol.h; sourceTree = "<group>"; };
 		235FCDA68FB58ABB114752D742FE18E4 /* ODVersionsCollectionRequestBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODVersionsCollectionRequestBuilder.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODVersionsCollectionRequestBuilder.m; sourceTree = "<group>"; };
-		2365E1D3935D18B5BEB2844B28CA2776 /* POPAnimationEvent.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = "<group>"; };
+		2365E1D3935D18B5BEB2844B28CA2776 /* POPAnimationEvent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = "<group>"; };
 		238F216EFE5A2C7276084C409BE77602 /* ODTopOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODTopOptions.m; path = OneDriveSDK/OneDriveCoreSDK/Core/Options/ODTopOptions.m; sourceTree = "<group>"; };
 		23AE7F7A923EE3BEBB7C220B2A1D3DCA /* ODThumbnailSetRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODThumbnailSetRequest.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODThumbnailSetRequest.m; sourceTree = "<group>"; };
 		2464CE0F028D6DE017403E92C38BACB1 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = pop/POPSpringAnimationInternal.h; sourceTree = "<group>"; };
@@ -644,7 +644,7 @@
 		275A636847FEECD1A30BE9A5C4F79C11 /* EasyPeasy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyPeasy.modulemap; sourceTree = "<group>"; };
 		27D05B3C15F1068808463E661521F19F /* ODLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODLocation.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODLocation.h; sourceTree = "<group>"; };
 		288DC52EBEAF395C78C6E6A56984E77B /* ODItemRequestBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODItemRequestBuilder.h; path = OneDriveSDK/OneDriveCoreSDK/requests/ODItemRequestBuilder.h; sourceTree = "<group>"; };
-		299423BFD00E1800ACDD24D8E08FAE9B /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimatableProperty.mm; path = pop/POPAnimatableProperty.mm; sourceTree = "<group>"; };
+		299423BFD00E1800ACDD24D8E08FAE9B /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimatableProperty.mm; path = pop/POPAnimatableProperty.mm; sourceTree = "<group>"; };
 		29ACD72F24A2E7C8A37B1D735ADDBF8F /* ADAuthenticationContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ADAuthenticationContext.m; path = ADALiOS/ADALiOS/ADAuthenticationContext.m; sourceTree = "<group>"; };
 		2A6967A634E6D5C403F1137DB7EC2851 /* ODItemContentRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODItemContentRequest.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODItemContentRequest.m; sourceTree = "<group>"; };
 		2B30C156EA3BA8B5E8A782BEB44BAAAE /* OneDriveSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OneDriveSDK.release.xcconfig; sourceTree = "<group>"; };
@@ -658,9 +658,9 @@
 		2DC42DD8E18A2EF4FB27C4660F668FCF /* POPMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPMath.h; path = pop/POPMath.h; sourceTree = "<group>"; };
 		2DDF5DA108F527E0DD63C8EEF8DE880A /* ODItemSearchRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODItemSearchRequest.h; path = OneDriveSDK/OneDriveCoreSDK/requests/ODItemSearchRequest.h; sourceTree = "<group>"; };
 		2E46E2E9C984C721A54742F40AA69AC7 /* ODPermissionsCollectionRequestBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODPermissionsCollectionRequestBuilder.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODPermissionsCollectionRequestBuilder.m; sourceTree = "<group>"; };
-		2EEC15342E0C55625ECD9A284B6D23BE /* POPLayerExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPLayerExtras.mm; path = pop/POPLayerExtras.mm; sourceTree = "<group>"; };
+		2EEC15342E0C55625ECD9A284B6D23BE /* POPLayerExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = pop/POPLayerExtras.mm; sourceTree = "<group>"; };
 		2F2F844654FDE1D0DB0BEC542482D370 /* ODDrive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODDrive.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODDrive.h; sourceTree = "<group>"; };
-		2FEF07E54D2718F5901AB3DB13AD43E0 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPSpringAnimation.mm; path = pop/POPSpringAnimation.mm; sourceTree = "<group>"; };
+		2FEF07E54D2718F5901AB3DB13AD43E0 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPSpringAnimation.mm; path = pop/POPSpringAnimation.mm; sourceTree = "<group>"; };
 		2FF1F329F36158708597DD106DF912CE /* ODPersonalAuthProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODPersonalAuthProvider.h; path = OneDriveSDK/Auth/ODPersonalAuthProvider.h; sourceTree = "<group>"; };
 		3103115F8137A087C7A79744D4A5C2CD /* ADWorkPlaceJoinUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ADWorkPlaceJoinUtil.h; path = ADALiOS/ADALiOS/ADWorkPlaceJoinUtil.h; sourceTree = "<group>"; };
 		312D7D5D3FF659F0ACB450BF52835C3B /* POPSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimation.h; path = pop/POPSpringAnimation.h; sourceTree = "<group>"; };
@@ -682,7 +682,7 @@
 		3D8EF3783C4331117EC96D14AA0ADD10 /* ODClient+DefaultConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ODClient+DefaultConfiguration.m"; path = "OneDriveSDK/Extensions/ODClient+DefaultConfiguration.m"; sourceTree = "<group>"; };
 		3DBFD0783113738F23773FA76751F021 /* AYStepperView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AYStepperView-dummy.m"; sourceTree = "<group>"; };
 		3DDEDE0EF21021D4EC07610B866E2BEC /* Base32-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Base32-dummy.m"; sourceTree = "<group>"; };
-		3DE4646FEA99DB16AD1A49B2B93C76F7 /* POPCustomAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPCustomAnimation.mm; path = pop/POPCustomAnimation.mm; sourceTree = "<group>"; };
+		3DE4646FEA99DB16AD1A49B2B93C76F7 /* POPCustomAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCustomAnimation.mm; path = pop/POPCustomAnimation.mm; sourceTree = "<group>"; };
 		3E1A4A4FA0D05EA4B79535D74ED393B2 /* ODSharingInvitation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODSharingInvitation.m; path = OneDriveSDK/OneDriveCoreSDK/model/ODSharingInvitation.m; sourceTree = "<group>"; };
 		3E1CDCBAE9A66B67F1236F5462EC6A04 /* ODPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODPermission.m; path = OneDriveSDK/OneDriveCoreSDK/model/ODPermission.m; sourceTree = "<group>"; };
 		3E62E0F2CC978276486BDB6FA5E34147 /* ODPermissionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODPermissionRequest.h; path = OneDriveSDK/OneDriveCoreSDK/requests/ODPermissionRequest.h; sourceTree = "<group>"; };
@@ -694,7 +694,7 @@
 		412BD7DE5DCCE3DA2E9742B7DF26100D /* PositionAttribute+AppKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PositionAttribute+AppKit.swift"; path = "EasyPeasy/PositionAttribute+AppKit.swift"; sourceTree = "<group>"; };
 		41315C06B59D403FEC23DD7776DB2D6B /* ODURLSessionDataTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODURLSessionDataTask.m; path = OneDriveSDK/OneDriveCoreSDK/Core/ODURLSEssion/ODURLSessionDataTask.m; sourceTree = "<group>"; };
 		424F0A505766720605423F83811E953D /* ODExpandOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODExpandOptions.m; path = OneDriveSDK/OneDriveCoreSDK/Core/Options/ODExpandOptions.m; sourceTree = "<group>"; };
-		42B75DB9529546BCF32FD22F8961C3FF /* POPAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimation.mm; path = pop/POPAnimation.mm; sourceTree = "<group>"; };
+		42B75DB9529546BCF32FD22F8961C3FF /* POPAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimation.mm; path = pop/POPAnimation.mm; sourceTree = "<group>"; };
 		43D0E7F35B3AAE100184910C4A3E40CC /* ADURLProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ADURLProtocol.h; path = ADALiOS/ADALiOS/ADURLProtocol.h; sourceTree = "<group>"; };
 		43F767387E9CA829D6CC5ADA1D9E1AAF /* NSDictionary+ADExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+ADExtensions.m"; path = "ADALiOS/ADALiOS/NSDictionary+ADExtensions.m"; sourceTree = "<group>"; };
 		444DE8BD8F5CE0EBF03CBD6F5C7B312A /* ODVideo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODVideo.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODVideo.h; sourceTree = "<group>"; };
@@ -705,7 +705,7 @@
 		45B773402B25E3342907027EA5D155AC /* ODOpenWithSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODOpenWithSet.m; path = OneDriveSDK/OneDriveCoreSDK/model/ODOpenWithSet.m; sourceTree = "<group>"; };
 		45CB789AF1B520639BEC881DE01870FD /* AYStepperView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AYStepperView.release.xcconfig; sourceTree = "<group>"; };
 		46E89F39F166C3B95EB5D33F066EE208 /* ODFileSystemInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODFileSystemInfo.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODFileSystemInfo.h; sourceTree = "<group>"; };
-		472A57C0308326961D69A396D2632FBC /* POPBasicAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPBasicAnimation.mm; path = pop/POPBasicAnimation.mm; sourceTree = "<group>"; };
+		472A57C0308326961D69A396D2632FBC /* POPBasicAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = pop/POPBasicAnimation.mm; sourceTree = "<group>"; };
 		47B952A50C7D56E2BF2F7A044EFAAFC2 /* ODDriveRecentRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODDriveRecentRequest.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODDriveRecentRequest.m; sourceTree = "<group>"; };
 		47FDE599CA4B8D845A639771F1E0EE73 /* ODThumbnailSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODThumbnailSet.m; path = OneDriveSDK/OneDriveCoreSDK/model/ODThumbnailSet.m; sourceTree = "<group>"; };
 		485E34B91586A67D8F7D2BACC69FA9FD /* ODShare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODShare.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODShare.h; sourceTree = "<group>"; };
@@ -798,7 +798,7 @@
 		6FAAA5397D65842D22BFA2CDCF35EDD3 /* pop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "pop-prefix.pch"; sourceTree = "<group>"; };
 		6FC203022BCE526ED7B86A06C20394E6 /* POPGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPGeometry.h; path = pop/POPGeometry.h; sourceTree = "<group>"; };
 		7007BC47D6A6FB72DDB34A15CF5311E6 /* ODImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODImage.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODImage.h; sourceTree = "<group>"; };
-		701C372A57564095EAB4AC17BCAA4419 /* POPMath.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPMath.mm; path = pop/POPMath.mm; sourceTree = "<group>"; };
+		701C372A57564095EAB4AC17BCAA4419 /* POPMath.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = pop/POPMath.mm; sourceTree = "<group>"; };
 		71756256D9242373FF02F8B770F19B1D /* Disk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Disk.debug.xcconfig; sourceTree = "<group>"; };
 		71DE6868AF6A9443B619E48B76786168 /* ODURLSessionDataTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODURLSessionDataTask.h; path = OneDriveSDK/OneDriveCoreSDK/Core/ODURLSEssion/ODURLSessionDataTask.h; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -840,7 +840,7 @@
 		842E9539BBB1719E0BDCA45B3C8C736D /* ADOAuth2Constants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ADOAuth2Constants.m; path = ADALiOS/ADALiOS/ADOAuth2Constants.m; sourceTree = "<group>"; };
 		8480871D351C894D780B817A364A608A /* ODSharesCollectionRequestBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODSharesCollectionRequestBuilder.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODSharesCollectionRequestBuilder.m; sourceTree = "<group>"; };
 		84DC614223BAA8067D041D0BD9679A26 /* ODCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODCollection.h; path = OneDriveSDK/OneDriveCoreSDK/Core/ODCollection.h; sourceTree = "<group>"; };
-		85D4D5B2CDB44A445DD2BB24A00E0B52 /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimationRuntime.mm; path = pop/POPAnimationRuntime.mm; sourceTree = "<group>"; };
+		85D4D5B2CDB44A445DD2BB24A00E0B52 /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationRuntime.mm; path = pop/POPAnimationRuntime.mm; sourceTree = "<group>"; };
 		86B1F9EB2A3F12687EFEDE25C8AA2E95 /* ODAuthConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODAuthConstants.m; path = OneDriveSDK/Common/ODAuthConstants.m; sourceTree = "<group>"; };
 		87019D096F5B28D38B7508567FB50EF6 /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracerInternal.h; path = pop/POPAnimationTracerInternal.h; sourceTree = "<group>"; };
 		878E90959E3ACA6AF279B831AD36F3BC /* ODUploadSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODUploadSession.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODUploadSession.h; sourceTree = "<group>"; };
@@ -877,7 +877,7 @@
 		994D0F004C0B7EE4237BE3DFEE6D3E7E /* ODImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODImage.m; path = OneDriveSDK/OneDriveCoreSDK/model/ODImage.m; sourceTree = "<group>"; };
 		997F697A16725D52CB94415C4AC3018A /* ODItemReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODItemReference.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODItemReference.h; sourceTree = "<group>"; };
 		99F8A198DB1521CF376139E6D1C2B171 /* Pods-EarScanner_XCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EarScanner_XCode.release.xcconfig"; sourceTree = "<group>"; };
-		9A09253232099620CD1D906530625F84 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimationTracer.mm; path = pop/POPAnimationTracer.mm; sourceTree = "<group>"; };
+		9A09253232099620CD1D906530625F84 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = pop/POPAnimationTracer.mm; sourceTree = "<group>"; };
 		9A10A4FB1119F66C201A8A0BCFB6B8B5 /* DimensionAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DimensionAttribute.swift; path = EasyPeasy/DimensionAttribute.swift; sourceTree = "<group>"; };
 		9AAE7EC21D77B1DED04B4706EB00C008 /* ODThumbnailSet+CustomThumbnail.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ODThumbnailSet+CustomThumbnail.m"; path = "OneDriveSDK/OneDriveCoreSDK/Extensions/ODThumbnailSet+CustomThumbnail.m"; sourceTree = "<group>"; };
 		9AE3F739AA3D40023D218FD8151B6D46 /* ODError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODError.m; path = OneDriveSDK/OneDriveCoreSDK/Errors/ODError.m; sourceTree = "<group>"; };
@@ -887,11 +887,11 @@
 		9CF9536896F3A9BA8F132D1C270D1B0C /* NSError+OneDriveSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+OneDriveSDK.h"; path = "OneDriveSDK/Extensions/NSError+OneDriveSDK.h"; sourceTree = "<group>"; };
 		9D7F2417663BA80972DC9CA40A97FE01 /* ADTokenCacheStoreItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ADTokenCacheStoreItem.h; path = ADALiOS/ADALiOS/ADTokenCacheStoreItem.h; sourceTree = "<group>"; };
 		9D91987B9C09101408AA4F9B4269ED0E /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimationInternal.h; path = pop/POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DF4D36829FB9FC64A5B178434E50E77 /* ODQuota.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODQuota.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODQuota.h; sourceTree = "<group>"; };
 		9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainSwift; path = KeychainSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB5393E1D42FEBDB32BF8385BC7A93 /* Disk+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Disk+Data.swift"; path = "Sources/Disk+Data.swift"; sourceTree = "<group>"; };
-		9F08A2D3AB7027D8813D83A530E99205 /* Pods-EarScanner_XCode */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-EarScanner_XCode"; path = Pods_EarScanner_XCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F08A2D3AB7027D8813D83A530E99205 /* Pods_EarScanner_XCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EarScanner_XCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B012DF1B63AFA37E068C9F8FDF129C /* ADAL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ADAL-dummy.m"; sourceTree = "<group>"; };
 		A0C04DE8E7A821D957CF3704421FE3EB /* AYStepperView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AYStepperView.m; path = Pod/Classes/AYStepperView.m; sourceTree = "<group>"; };
 		A0D383803753096E50F9ECA51BB32729 /* POPDecayAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimation.h; path = pop/POPDecayAnimation.h; sourceTree = "<group>"; };
@@ -955,7 +955,7 @@
 		BEE6675B0C9F3CD9390383DF1AA06B02 /* ODItemCopyRequestBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODItemCopyRequestBuilder.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODItemCopyRequestBuilder.m; sourceTree = "<group>"; };
 		BF3E6AC87C45FB1DBAFBC7A45FC61AC4 /* ODHttpProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODHttpProvider.h; path = OneDriveSDK/Common/ODHttpProvider.h; sourceTree = "<group>"; };
 		BFF64718340DB1C00D06F62DA350CBE5 /* ODURLSessionTask+Protected.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ODURLSessionTask+Protected.h"; path = "OneDriveSDK/OneDriveCoreSDK/Core/ODURLSEssion/ODURLSessionTask+Protected.h"; sourceTree = "<group>"; };
-		C068801350060ABFCE70388937CDC0B0 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPDecayAnimation.mm; path = pop/POPDecayAnimation.mm; sourceTree = "<group>"; };
+		C068801350060ABFCE70388937CDC0B0 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = pop/POPDecayAnimation.mm; sourceTree = "<group>"; };
 		C1E47EF0CE5803089B153D264BAB1F7E /* AYStepperView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AYStepperView-Info.plist"; sourceTree = "<group>"; };
 		C217BACB8ABB9572034CAB5CF3DEC728 /* ODChildrenCollectionRequestBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODChildrenCollectionRequestBuilder.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODChildrenCollectionRequestBuilder.m; sourceTree = "<group>"; };
 		C3E277CC6D9C68AD6290B8450DA648B6 /* Attribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Attribute.swift; path = EasyPeasy/Attribute.swift; sourceTree = "<group>"; };
@@ -963,7 +963,7 @@
 		C55B84B9E9FF317F14018EBE850F1AC7 /* ADAuthenticationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ADAuthenticationDelegate.h; path = ADALiOS/ADALiOS/ADAuthenticationDelegate.h; sourceTree = "<group>"; };
 		C59092B8413BB54DBCE0A3CAC621663C /* ODShareRequestBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ODShareRequestBuilder.m; path = OneDriveSDK/OneDriveCoreSDK/requests/ODShareRequestBuilder.m; sourceTree = "<group>"; };
 		C5D782B3CD75A042AE589D1F631BA433 /* Pods-EarScanner_XCode-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EarScanner_XCode-Info.plist"; sourceTree = "<group>"; };
-		C6E4C42D6096F9B4A87707660274CCF0 /* POPCGUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPCGUtils.mm; path = pop/POPCGUtils.mm; sourceTree = "<group>"; };
+		C6E4C42D6096F9B4A87707660274CCF0 /* POPCGUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCGUtils.mm; path = pop/POPCGUtils.mm; sourceTree = "<group>"; };
 		C8CDC06A2C431E3C14260B5790A0F65A /* Collection+Easy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Easy.swift"; path = "EasyPeasy/Collection+Easy.swift"; sourceTree = "<group>"; };
 		C93EB7FE6E1EDA0910CB97A085AA13FF /* EasyPeasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyPeasy.release.xcconfig; sourceTree = "<group>"; };
 		C9C12C19F0D57D9A4523BCE78B5CD767 /* ODFolder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODFolder.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODFolder.h; sourceTree = "<group>"; };
@@ -1021,7 +1021,7 @@
 		E224AD39846980BCD60AA0C30A51FD52 /* ADAL_iPad_Storyboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = ADAL_iPad_Storyboard.storyboard; path = ADALiOS/ADALiOS/ADAL_iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		E2454453F7212562BDF9DA2F010A14BC /* ODAuthProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODAuthProvider.h; path = OneDriveSDK/Common/ODAuthProvider.h; sourceTree = "<group>"; };
 		E262B4C4ADC10117D558F315BC3131AE /* ODThumbnailSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODThumbnailSet.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODThumbnailSet.h; sourceTree = "<group>"; };
-		E34BE3D73DF678906C6B94F970629BAE /* POPAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPAnimator.mm; path = pop/POPAnimator.mm; sourceTree = "<group>"; };
+		E34BE3D73DF678906C6B94F970629BAE /* POPAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimator.mm; path = pop/POPAnimator.mm; sourceTree = "<group>"; };
 		E64761C846073D723F8874827E86C5EA /* ODRequestBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODRequestBuilder.h; path = OneDriveSDK/OneDriveCoreSDK/Core/ODRequestBuilder.h; sourceTree = "<group>"; };
 		E6E8751E4CA76C8410B458ED47B366D9 /* UIApplication+ADExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ADExtensions.m"; path = "ADALiOS/ADALiOS/UIApplication+ADExtensions.m"; sourceTree = "<group>"; };
 		E7713EEF221686262BE4E6B4E25E81C4 /* ADNTLMHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ADNTLMHandler.h; path = ADALiOS/ADALiOS/ADNTLMHandler.h; sourceTree = "<group>"; };
@@ -1055,7 +1055,7 @@
 		F5C7F40E96B9A9AF4B725B0F296F800D /* ODThumbnailRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODThumbnailRequest.h; path = OneDriveSDK/OneDriveCoreSDK/requests/ODThumbnailRequest.h; sourceTree = "<group>"; };
 		F5D1531ED6332EAAA24CEF70660A48C0 /* Pods-EarScanner_XCode-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EarScanner_XCode-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F5DDF007D6ADB86794DA1E8FC63D0EB9 /* ODPhoto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ODPhoto.h; path = OneDriveSDK/OneDriveCoreSDK/model/ODPhoto.h; sourceTree = "<group>"; };
-		F5EE0D85C46754FA5B1576F8EB132FC0 /* POPVector.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = POPVector.mm; path = pop/POPVector.mm; sourceTree = "<group>"; };
+		F5EE0D85C46754FA5B1576F8EB132FC0 /* POPVector.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPVector.mm; path = pop/POPVector.mm; sourceTree = "<group>"; };
 		F6482A60BD9C73E73ECA7BB68A4F18AA /* AYStepperView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AYStepperView.h; path = Pod/Classes/AYStepperView.h; sourceTree = "<group>"; };
 		F65663489575D7C8FEA5BB5081DDCD41 /* ReferenceAttribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceAttribute.swift; path = EasyPeasy/ReferenceAttribute.swift; sourceTree = "<group>"; };
 		F6B885466D969C69F5584C57CE2764AC /* POPCGUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCGUtils.h; path = pop/POPCGUtils.h; sourceTree = "<group>"; };
@@ -1168,7 +1168,6 @@
 				2136EB1968E03A036CE6121D65D679EB /* OneDriveCoreSDK */,
 				AF4F84AFE0823A12F2BEDD3FA53DF2A6 /* Support Files */,
 			);
-			name = OneDriveSDK;
 			path = OneDriveSDK;
 			sourceTree = "<group>";
 		};
@@ -1180,7 +1179,6 @@
 				D2D444B4911C209FE30BF95DE49F2DFE /* TegKeychainConstants.swift */,
 				2320494B018D10096080FD5EC03B1486 /* Support Files */,
 			);
-			name = KeychainSwift;
 			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
@@ -1513,7 +1511,6 @@
 				76145F1441CF416FA2D9430CEF0935B6 /* UnitBezier.h */,
 				CAB18752CDEA03262354B6C14A543A17 /* Support Files */,
 			);
-			name = pop;
 			path = pop;
 			sourceTree = "<group>";
 		};
@@ -1544,7 +1541,6 @@
 				269D017D2F107196F81585D56D37F1F3 /* UIView+Easy.swift */,
 				8D1DB51A57A00D82A508FF85B222EC4D /* Support Files */,
 			);
-			name = EasyPeasy;
 			path = EasyPeasy;
 			sourceTree = "<group>";
 		};
@@ -1683,7 +1679,6 @@
 				D2CE3A7DE488864346A2F94996FEB9EF /* MF_Base32Additions.m */,
 				6D4129ED0A799170CB921D65555F2BA2 /* Support Files */,
 			);
-			name = Base32;
 			path = Base32;
 			sourceTree = "<group>";
 		};
@@ -1694,7 +1689,6 @@
 				A0C04DE8E7A821D957CF3704421FE3EB /* AYStepperView.m */,
 				77A4186475DD4EC5A025D9CB4E0A086C /* Support Files */,
 			);
-			name = AYStepperView;
 			path = AYStepperView;
 			sourceTree = "<group>";
 		};
@@ -1738,7 +1732,7 @@
 				8328E6FCAC1E4D4E635FEAE69D63A19E /* EasyPeasy */,
 				9E0FD012ADC3C7179C684035672383E5 /* KeychainSwift */,
 				98BCA28FD87F35A121BEE93C0EB68DF7 /* OneDriveSDK */,
-				9F08A2D3AB7027D8813D83A530E99205 /* Pods-EarScanner_XCode */,
+				9F08A2D3AB7027D8813D83A530E99205 /* Pods_EarScanner_XCode.framework */,
 				51305B2D9D8DA36D89CC277D729083D2 /* pop */,
 			);
 			name = Products;
@@ -1891,7 +1885,6 @@
 				8522BE9546993BD58598944DD61A2AFF /* Resources */,
 				59AC4A064595461BA823E68BD0182552 /* Support Files */,
 			);
-			name = ADAL;
 			path = ADAL;
 			sourceTree = "<group>";
 		};
@@ -1919,7 +1912,6 @@
 				B943EADA51EC614D88DAE82B8A172332 /* Disk+VolumeInformation.swift */,
 				8F43D8E459E6983BE73010B8FA8FEE96 /* Support Files */,
 			);
-			name = Disk;
 			path = Disk;
 			sourceTree = "<group>";
 		};
@@ -2317,7 +2309,7 @@
 			);
 			name = "Pods-EarScanner_XCode";
 			productName = Pods_EarScanner_XCode;
-			productReference = 9F08A2D3AB7027D8813D83A530E99205 /* Pods-EarScanner_XCode */;
+			productReference = 9F08A2D3AB7027D8813D83A530E99205 /* Pods_EarScanner_XCode.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7AB385395597735698BB9CE5CEFC0EC3 /* EasyPeasy */ = {

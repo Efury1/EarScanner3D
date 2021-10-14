@@ -321,6 +321,9 @@
                                         <state key="normal" title="Resend email">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendEmail:" destination="Kic-TH-VGn" eventType="touchUpInside" id="9bv-VU-pLZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -487,6 +490,7 @@
                         <outlet property="firstNameTextField" destination="DBu-a9-YEM" id="xQ8-5J-3hI"/>
                         <outlet property="lastNameTextField" destination="U8u-Bk-Wag" id="5yZ-NA-XWu"/>
                         <outlet property="passwordTextField" destination="Wmy-Bs-yxa" id="UEN-ki-0iH"/>
+                        <outlet property="termsAccepted" destination="Htg-g3-kzj" id="ecL-Qa-6pG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SU7-fA-75a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
