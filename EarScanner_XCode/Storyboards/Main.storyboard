@@ -1141,7 +1141,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Dismiss:" destination="4fp-7n-St8" eventType="touchUpInside" id="XyF-Kn-HCg"/>
-                                    <segue destination="0nd-TE-gLN" kind="show" id="o3J-S1-tyo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1306,7 +1305,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                 <rect key="frame" x="15" y="219" width="191" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-NE-QEB">
-                                        <rect key="frame" x="0.0" y="0.5" width="384" height="99"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="191" height="99"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="CRG-Wq-qJs"/>
@@ -1315,7 +1314,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vch-0m-k1L">
-                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="115" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="64r-W5-0xZ"/>
                                         </constraints>
@@ -1333,7 +1332,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-qf-kZR">
-                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="245" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="aZz-JR-dYm"/>
@@ -1354,7 +1353,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-hM-cXM">
-                                        <rect key="frame" x="0.0" y="310" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="310" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8v5-WU-eZD"/>
@@ -1543,7 +1542,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="SetPassword:" destination="bmf-TV-nR8" eventType="touchUpInside" id="XKR-na-Y9m"/>
+                                            <action selector="StartTutorial:" destination="bmf-TV-nR8" eventType="touchUpInside" id="QFr-KL-1Xh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1646,7 +1645,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="hamburger" width="25" height="25"/>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="line.horizontal.3.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
