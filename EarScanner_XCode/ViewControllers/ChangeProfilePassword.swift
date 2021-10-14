@@ -64,17 +64,17 @@ class ChangePasswordViewController: UIViewController {
         //if the passwords are the same hit the API to change the password where the email is this one
             }
             else if (APIResponse == "False"){
-                let alert = UIAlertController(title: "Error", message: "Old Password Doesnt Exist in System", preferredStyle: UIAlertController.Style.alert) //create alert
+                let alert = UIAlertController(title: "Incorrect Password", message: "The current password is incorrect", preferredStyle: UIAlertController.Style.alert) //create alert
                                         //I'm a pop up
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                    alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                     self.present(alert, animated: true, completion: nil)
             }
     }
     else{
         
-        let alert = UIAlertController(title: "Error", message: "Passwords Dont Match or Are Invalid", preferredStyle: UIAlertController.Style.alert) //create alert
+        let alert = UIAlertController(title: "Invalid Password", message: "The passwords do not match or are invalid. Passwords must contain at least 8 characters and 1 number.", preferredStyle: UIAlertController.Style.alert) //create alert
                                 //I'm a pop up
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
             self.present(alert, animated: true, completion: nil)
         }
     }

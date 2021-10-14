@@ -48,5 +48,9 @@ class Step2: UIViewController, AVPlayerViewControllerDelegate {
                                                    y: 260+(screenHeight/14) )
         
     }
+    
+    @IBAction func Dismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
