@@ -168,6 +168,9 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
 //        if let button = button as? UIButton {
 //        print("button", button.text.text)
 //            print("Send tapped at \(button.tag)")
+        
+        let clientBox = DropboxClientsManager.authorizedClient
+        if (clientBox == nil){
             let scopeRequest = ScopeRequest(scopeType: .user, scopes: ["account_info.read", "files.content.write"], includeGrantedScopes: false)
             DropboxClientsManager.authorizeFromControllerV2(
                 UIApplication.shared,
@@ -176,6 +179,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
                 openURL: { (url: URL) -> Void in UIApplication.shared.open(url, options: [:], completionHandler: nil) },
                 scopeRequest: scopeRequest
             )
+        }
 
 //            DropboxClientsManager.authorizeFromController(UIApplication.shared,
 //                                                          controller: self,
