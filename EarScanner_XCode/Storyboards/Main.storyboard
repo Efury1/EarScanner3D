@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vbP-Ck-uHB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWI-6d-uB4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -116,7 +115,7 @@
         <!--Tutorial-->
         <scene sceneID="Jqw-OG-LNE">
             <objects>
-                <viewController id="IlQ-5X-PzY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialPage" id="IlQ-5X-PzY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JPM-yT-vNo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -893,6 +892,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="width" secondItem="lFb-9I-9M1" secondAttribute="height" multiplier="177:25" id="gNp-DA-6Fv"/>
                                     <constraint firstAttribute="height" constant="50" id="kfS-5E-7Vr"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Take Photos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -925,7 +925,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yh-Km-WYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3518.840579710145" y="2122.0982142857142"/>
+            <point key="canvasLocation" x="3523" y="2121"/>
         </scene>
         <!--Change Email-->
         <scene sceneID="KrP-CX-0Bu">
@@ -1067,6 +1067,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="height" constant="50" id="Y2z-8V-NZC"/>
                                     <constraint firstAttribute="width" secondItem="IeI-6N-Qxn" secondAttribute="height" multiplier="177:25" id="ee3-BY-IwK"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Take Photos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1129,6 +1130,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="width" secondItem="bzt-er-LMe" secondAttribute="height" multiplier="177:25" id="710-Ht-9Cv"/>
                                     <constraint firstAttribute="height" constant="50" id="CWr-zm-ke3"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Take Photos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1192,6 +1194,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     <constraint firstAttribute="width" secondItem="07y-ef-ien" secondAttribute="height" multiplier="177:25" id="I5i-xS-rE9"/>
                                     <constraint firstAttribute="height" constant="50" id="Isu-eB-90h"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Take Photos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1300,7 +1303,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-Sh-Q5z">
-                                <rect key="frame" x="15" y="268" width="384" height="360"/>
+                                <rect key="frame" x="15" y="219" width="191" height="360"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-NE-QEB">
                                         <rect key="frame" x="0.0" y="0.5" width="384" height="99"/>
@@ -1320,8 +1323,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can send this photoset to your clinician now or later from the Photosets page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-BN-aVE">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can upload this photoset to the cloud now or later from the Photosets page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-BN-aVE">
+                                        <rect key="frame" x="0.0" y="180" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iak-b4-ndE"/>
                                         </constraints>
@@ -1337,7 +1340,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             <constraint firstAttribute="width" secondItem="zS7-qf-kZR" secondAttribute="height" multiplier="191:50" id="y7x-ux-dgX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <state key="normal" title="Send Later">
+                                        <state key="normal" title="Upload Later">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1357,7 +1360,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             <constraint firstAttribute="height" constant="50" id="8v5-WU-eZD"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <state key="normal" title="Send Now">
+                                        <state key="normal" title="Upload Now">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1377,7 +1380,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FsO-Sh-Q5z" firstAttribute="centerX" secondItem="PQf-CZ-cIH" secondAttribute="centerX" id="BAg-je-Jzb"/>
-                            <constraint firstItem="FsO-Sh-Q5z" firstAttribute="centerY" secondItem="PQf-CZ-cIH" secondAttribute="centerY" id="Di8-nY-IxO"/>
+                            <constraint firstItem="FsO-Sh-Q5z" firstAttribute="top" secondItem="EcP-aQ-yiu" secondAttribute="top" constant="175" id="Wdu-fc-sEG"/>
                             <constraint firstItem="EcP-aQ-yiu" firstAttribute="trailing" secondItem="FsO-Sh-Q5z" secondAttribute="trailing" constant="15" id="r5j-Tx-5t2"/>
                             <constraint firstItem="FsO-Sh-Q5z" firstAttribute="leading" secondItem="EcP-aQ-yiu" secondAttribute="leading" constant="15" id="xTm-KC-YQP"/>
                         </constraints>
@@ -1387,19 +1390,19 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
             </objects>
             <point key="canvasLocation" x="5006" y="2875"/>
         </scene>
-        <!--Right Ear Done-->
+        <!--Begin next ear-->
         <scene sceneID="xSe-CI-gbx">
             <objects>
-                <viewController storyboardIdentifier="BeginNextEar" title="Right Ear Done" id="vbP-Ck-uHB" customClass="MainViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeginNextEar" title="Begin next ear" id="vbP-Ck-uHB" customClass="MainViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fu5-2B-bME">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uzm-iY-aVK">
-                                <rect key="frame" x="15" y="300.5" width="384" height="295"/>
+                                <rect key="frame" x="15" y="219" width="612" height="390"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowshape.turn.up.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OX8-eH-Ir4">
-                                        <rect key="frame" x="0.0" y="1" width="384" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="1" width="612" height="97.5"/>
                                         <color key="tintColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="LGz-wb-OCv"/>
@@ -1407,8 +1410,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             <constraint firstAttribute="width" secondItem="OX8-eH-Ir4" secondAttribute="height" multiplier="871:100" id="xji-NR-Akd"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right ear is done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-T0-CKv">
-                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've finished the first ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-T0-CKv">
+                                        <rect key="frame" x="0.0" y="115" width="612" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="csL-4O-kcX"/>
                                         </constraints>
@@ -1416,17 +1419,17 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press continue to take photos of the left ear." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-sv-bhK">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to finish now or continue and take 30 photos of the second ear?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-sv-bhK">
+                                        <rect key="frame" x="0.0" y="180" width="612" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="dWQ-ci-SCZ"/>
+                                            <constraint firstAttribute="height" constant="80" id="dWQ-ci-SCZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-oW-q9z">
-                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="275" width="612" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MA7-JX-U2V"/>
@@ -1446,13 +1449,13 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-Gr-Xpy">
-                                        <rect key="frame" x="0.0" y="310" width="402" height="50"/>
+                                        <rect key="frame" x="0.0" y="340" width="612" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="U5b-dU-d2I"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <state key="normal" title="I only want the one ear">
+                                        <state key="normal" title="Finish">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1475,8 +1478,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Oi6-AN-9X8" firstAttribute="trailing" secondItem="uzm-iY-aVK" secondAttribute="trailing" constant="15" id="0g6-PG-Dm9"/>
-                            <constraint firstItem="uzm-iY-aVK" firstAttribute="centerY" secondItem="Fu5-2B-bME" secondAttribute="centerY" id="8pl-oy-VL0"/>
                             <constraint firstItem="uzm-iY-aVK" firstAttribute="leading" secondItem="Oi6-AN-9X8" secondAttribute="leading" constant="15" id="CVo-IX-evT"/>
+                            <constraint firstItem="uzm-iY-aVK" firstAttribute="top" secondItem="Oi6-AN-9X8" secondAttribute="top" constant="175" id="HyJ-Jg-fIy"/>
                             <constraint firstItem="uzm-iY-aVK" firstAttribute="centerX" secondItem="Fu5-2B-bME" secondAttribute="centerX" id="pvF-sf-SYM"/>
                         </constraints>
                     </view>
@@ -1485,16 +1488,16 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
             </objects>
             <point key="canvasLocation" x="4319" y="2875"/>
         </scene>
-        <!--Right Ear Done-->
+        <!--Begin first ear-->
         <scene sceneID="Dy2-xe-loB">
             <objects>
-                <viewController storyboardIdentifier="BeginFirstEar" title="Right Ear Done" id="bmf-TV-nR8" customClass="MainViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeginFirstEar" title="Begin first ear" id="bmf-TV-nR8" customClass="MainViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5qG-hu-5rO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="N1u-Uv-kM3">
-                                <rect key="frame" x="15" y="300.5" width="871" height="295"/>
+                                <rect key="frame" x="15" y="219" width="871" height="295"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowshape.turn.up.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E8L-ut-cRn">
                                         <rect key="frame" x="0.0" y="1" width="871" height="97.5"/>
@@ -1555,7 +1558,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                             <constraint firstItem="oVF-9h-nk8" firstAttribute="trailing" secondItem="N1u-Uv-kM3" secondAttribute="trailing" constant="15" id="L6k-FK-UlN"/>
                             <constraint firstItem="N1u-Uv-kM3" firstAttribute="centerX" secondItem="5qG-hu-5rO" secondAttribute="centerX" id="Vxo-GO-JI3"/>
                             <constraint firstItem="N1u-Uv-kM3" firstAttribute="leading" secondItem="oVF-9h-nk8" secondAttribute="leading" constant="15" id="ZdY-lh-Cyy"/>
-                            <constraint firstItem="N1u-Uv-kM3" firstAttribute="centerY" secondItem="5qG-hu-5rO" secondAttribute="centerY" id="sPI-oT-Gyo"/>
+                            <constraint firstItem="N1u-Uv-kM3" firstAttribute="top" secondItem="oVF-9h-nk8" secondAttribute="top" constant="175" id="nxe-fM-2gy"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1563,9 +1566,72 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
             </objects>
             <point key="canvasLocation" x="3607" y="2875"/>
         </scene>
+        <!--Step 1-->
+        <scene sceneID="CPU-9I-bC0">
+            <objects>
+                <viewController storyboardIdentifier="Step1-2" title="Step 1" hidesBottomBarWhenPushed="YES" id="rhV-qd-o3T" customClass="Step1" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HJD-xO-oL5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capture 6 photos from the front of the ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30W-Yw-rVV">
+                                <rect key="frame" x="30" y="100" width="354" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="1.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CMd-eO-STN">
+                                <rect key="frame" x="182" y="30.5" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SMH-AO-fw0"/>
+                                    <constraint firstAttribute="width" constant="50" id="s00-9J-B0Z"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDR-qg-l3c">
+                                <rect key="frame" x="30" y="432" width="354" height="50"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eDR-qg-l3c" secondAttribute="height" multiplier="177:25" id="TDb-pB-6Qp"/>
+                                    <constraint firstAttribute="height" constant="50" id="mNk-B6-RHs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Take Photos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismiss:" destination="rhV-qd-o3T" eventType="touchUpInside" id="a1a-UI-N5K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fen-AD-6So"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fen-AD-6So" firstAttribute="trailing" secondItem="eDR-qg-l3c" secondAttribute="trailing" constant="30" id="1Jx-RD-sjZ"/>
+                            <constraint firstItem="CMd-eO-STN" firstAttribute="centerX" secondItem="HJD-xO-oL5" secondAttribute="centerX" id="5Mz-PW-18l"/>
+                            <constraint firstItem="30W-Yw-rVV" firstAttribute="centerX" secondItem="HJD-xO-oL5" secondAttribute="centerX" id="8Ec-9u-Zsv"/>
+                            <constraint firstItem="30W-Yw-rVV" firstAttribute="leading" secondItem="HJD-xO-oL5" secondAttribute="leading" constant="30" id="ApV-CM-lqP"/>
+                            <constraint firstItem="eDR-qg-l3c" firstAttribute="leading" secondItem="fen-AD-6So" secondAttribute="leading" constant="30" id="H8b-pr-Iav"/>
+                            <constraint firstItem="30W-Yw-rVV" firstAttribute="top" secondItem="fen-AD-6So" secondAttribute="top" constant="100" id="TTG-fX-S7r"/>
+                            <constraint firstAttribute="trailing" secondItem="30W-Yw-rVV" secondAttribute="trailing" constant="30" id="aoz-n6-bAF"/>
+                            <constraint firstItem="CMd-eO-STN" firstAttribute="top" secondItem="fen-AD-6So" secondAttribute="top" constant="30" id="ePn-Be-OkY"/>
+                            <constraint firstItem="eDR-qg-l3c" firstAttribute="top" secondItem="30W-Yw-rVV" secondAttribute="bottom" constant="274.5" id="glP-Ds-P1B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DXw-s2-GuQ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6eo-YT-huS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2874" y="2121"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UnA-TC-w6x"/>
+        <segue reference="14N-zH-P72"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -1580,7 +1646,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="hamburger" width="25" height="25"/>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="100"/>
+        <image name="line.horizontal.3.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
