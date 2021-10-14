@@ -498,13 +498,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EarScanner_XCode/EarScanner_XCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GF32G6UN2A;
+				DEVELOPMENT_TEAM = KSTAQ25V98;
 				INFOPLIST_FILE = EarScanner_XCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = 129124712sdyqwhqzssz;
+				PRODUCT_BUNDLE_IDENTIFIER = 129124712sdyqwhqzzxz;
 				PRODUCT_NAME = EarScan3D;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,13 +519,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EarScanner_XCode/EarScanner_XCode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GF32G6UN2A;
+				DEVELOPMENT_TEAM = KSTAQ25V98;
 				INFOPLIST_FILE = EarScanner_XCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = 129124712sdyqwhqzssz;
+				PRODUCT_BUNDLE_IDENTIFIER = 129124712sdyqwhqzzxz;
 				PRODUCT_NAME = EarScan3D;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

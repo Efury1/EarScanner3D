@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Progress bar3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "hamburger.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

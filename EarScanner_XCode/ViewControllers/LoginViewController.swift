@@ -133,8 +133,8 @@ class LoginViewController: UIViewController {
             {
                 DispatchQueue.main.async {
                 print("alert")
-                let alert = UIAlertController(title: "Error", message: "Wrong password or email", preferredStyle: UIAlertController.Style.alert) //create alert
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                let alert = UIAlertController(title: "Login Error", message: "Incorrect email or password", preferredStyle: UIAlertController.Style.alert) //create alert
+                alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil) // show the alert
                 }
                 MyVariables.UserExists = "False"
@@ -146,7 +146,7 @@ class LoginViewController: UIViewController {
                 print("error with connection")
                 DispatchQueue.main.async {
                 print("alert")
-                let alert = UIAlertController(title: "Error", message: "Please Check Internet Connection", preferredStyle: UIAlertController.Style.alert) //create alert
+                let alert = UIAlertController(title: "Error", message: "Please check your internet connection", preferredStyle: UIAlertController.Style.alert) //create alert
                     //I'm a pop up
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil)

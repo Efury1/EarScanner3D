@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
 
     
     /*fileprivate func isLoggedIn() -> Bool {
-        return UserDefaults.standard.bool(forKey: "isLoggedin")
+        return UserDefaults.standard.bool(forKey: "isLoggedin") 
     }
     
     func handleSignOut() {
@@ -33,16 +33,20 @@ class MainViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
         self.present(alert, animated: true, completion: nil)
     }*/
-    
-    @IBAction func logoutButton(_ sender: Any) {
-        
+   
 
-        
-        
+    
+    
+    @IBAction func Logout(_ sender: UIButton) {
         print("Users action was tapped")
-        let refreshAlert = UIAlertController(title: "Log Out", message: "Are You Sure to Log Out ? ", preferredStyle: UIAlertController.Style.alert)
+        let refreshAlert = UIAlertController(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: UIAlertController.Style.alert)
 
         refreshAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let viewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginPage")
+            UIApplication.shared.windows.first?.rootViewController = viewController
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            
             self.navigationController?.popToRootViewController(animated: true)
         }))
 
@@ -54,35 +58,51 @@ class MainViewController: UIViewController {
         }))
 
         present(refreshAlert, animated: true, completion: nil)
-    
     }
-   
+    
         
     
     
     @IBOutlet weak var PhotosetName: UITextField!
     
     
-    @IBAction func StartCamera(_ sender: UIButton) {
+    @IBAction func StartFlow(_ sender: UIButton) {
        
         if (PhotosetName.text?.isEmpty == false && PhotosetName.text != nil && !(PhotosetName.text?.trimmingCharacters(in: .whitespaces).isEmpty)!){
             GlobalPhotosetName = PhotosetName.text ?? "Unnamed"
-            
-            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Camera")
+            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BeginFirstEar")
              self.addChild(childViewController)
              self.view.addSubview(childViewController.view)
              childViewController.didMove(toParent: self)
+//            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Camera")
+//             self.addChild(childViewController)
+//             self.view.addSubview(childViewController.view)
+//             childViewController.didMove(toParent: self)
             
         }
         else{
-            let alert = UIAlertController(title: "Error", message: "Enter a name for the Photoset", preferredStyle: UIAlertController.Style.alert) //create alert
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+            let alert = UIAlertController(title: "Error", message: "Please enter a name for this photoset", preferredStyle: UIAlertController.Style.alert) //create alert
+            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
             self.present(alert, animated: true, completion: nil) // show the alert
             
         }
     }
     
+    @IBAction func StartTutorial(_ sender: Any) {
+      
+        let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Step1")
+        self.parent?.present(childViewController, animated: true, completion: nil)
+//         self.addChild(childViewController)
+//         self.view.addSubview(childViewController.view)
+    }
     
+    @IBAction func FinishedFLow(_ sender: Any) {
+        let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+         self.addChild(childViewController)
+         self.view.addSubview(childViewController.view)
+         childViewController.didMove(toParent: self)
+        
+    }
     
 }
 
