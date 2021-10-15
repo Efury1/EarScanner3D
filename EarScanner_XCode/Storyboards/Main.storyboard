@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="2084" y="2869"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--tabBarStart-->
         <scene sceneID="Uis-0z-Ip3">
             <objects>
-                <tabBarController storyboardIdentifier="StartMain" id="RbX-Pi-iHW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="StartMain" title="tabBarStart" id="RbX-Pi-iHW" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="QkP-IU-GNW"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="lzp-ic-pS0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -349,7 +349,7 @@ Click the hamburger menu for more options (changing profile information, About U
         <!--Home-->
         <scene sceneID="R6R-an-4Cg">
             <objects>
-                <viewController id="UoM-2Z-qXg" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="UoM-2Z-qXg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cyK-RQ-GBo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1634,7 +1634,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="14N-zH-P72"/>
+        <segue reference="YTJ-1T-zM5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

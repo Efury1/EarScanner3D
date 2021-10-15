@@ -19,7 +19,7 @@ class MyAwesomeAlbum: NSObject {
         let formatter = DateFormatter()
         formatter.dateStyle = .full
         formatter.timeStyle = .full
-        self.albumName = GlobalPhotosetName
+        self.albumName = MainViewController.GlobalPhotosetName
         let datetime = formatter.string(from: now)
         print(self.albumName+" - " + datetime)
         self.albumName = "EarScanner3D: " + self.albumName+" - " + datetime
@@ -76,8 +76,18 @@ class MyAwesomeAlbum: NSObject {
     }
     
     private func fetchAssetCollectionForAlbum() -> PHAssetCollection? {
+        let now = Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .full
+        self.albumName = MainViewController.GlobalPhotosetName
+        let datetime = formatter.string(from: now)
+        print(self.albumName+" - " + datetime)
+        self.albumName = "EarScanner3D: " + self.albumName+" - " + datetime
+        
         print("name",self.albumName)
-
+    
         let fetchOptions = PHFetchOptions()
         
         fetchOptions.predicate = NSPredicate(format: "title = %@", self.albumName)

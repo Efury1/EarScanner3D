@@ -713,11 +713,21 @@ else if (ViewController.howLongIsBar == 4){
 
         refreshAlert.addAction(UIAlertAction(title: "Exit", style: .default, handler: { (action: UIAlertAction!) in
            
+//            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+//
+//            //childViewController.didMove(toParent: self)
+//
+//            UIApplication.shared.windows.first?.rootViewController = childViewController
+//            //UIApplication.shared.windows.first?.makeKeyAndVisible()
+//
+//            self.navigationController?.popToRootViewController(animated: true)
+//            
+//            self.view.removeFromSuperview()
+            
             let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
              self.addChild(childViewController)
              self.view.addSubview(childViewController.view)
              childViewController.didMove(toParent: self)
-            self.navigationController?.popToRootViewController(animated: true)
         }))
 
         refreshAlert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { (action: UIAlertAction!) in
