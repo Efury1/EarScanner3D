@@ -97,6 +97,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func FinishedFLow(_ sender: Any) {
+        ViewController.SecondEar = false;
         let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
          self.addChild(childViewController)
          self.view.addSubview(childViewController.view)
