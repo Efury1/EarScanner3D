@@ -62,16 +62,16 @@ class ChangePasswordViewController: UIViewController {
             }
             else if (APIResponse.contains("False")){
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Error", message: "Old Password Doesnt Exist in System", preferredStyle: UIAlertController.Style.alert) //create alert
+                    let alert = UIAlertController(title: "Incorrect Old Password", message: "The old password is incorrect", preferredStyle: UIAlertController.Style.alert) //create alert
                                             //I'm a pop up
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                         self.present(alert, animated: true, completion: nil)
                 }
             }
         
         else{
             DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Error", message: "An Error Has Occured", preferredStyle: UIAlertController.Style.alert) //create alert
+            let alert = UIAlertController(title: "Error", message: "An Error Has Occurred", preferredStyle: UIAlertController.Style.alert) //create alert
                                     //I'm a pop up
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil)
@@ -82,9 +82,9 @@ class ChangePasswordViewController: UIViewController {
         }
         else{
             DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Error", message: "Passwords Don't Match", preferredStyle: UIAlertController.Style.alert) //create alert
+            let alert = UIAlertController(title: "Error", message: "The new passwords don't match", preferredStyle: UIAlertController.Style.alert) //create alert
                                     //I'm a pop up
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
+                alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil)) // add an action (button)
                 self.present(alert, animated: true, completion: nil)
             }}
     }
