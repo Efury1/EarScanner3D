@@ -11,25 +11,26 @@ class MyAwesomeAlbum: NSObject {
     static let shared = MyAwesomeAlbum()
     
     private var assetCollection: PHAssetCollection!
-    
+    public var datetime = ""
+    public var dateCreated = false
     private override init() {
         super.init()
         let now = Date()
         
-        let formatter = DateFormatter()
-        formatter.dateStyle = .full
-        formatter.timeStyle = .full
-        self.albumName = MainViewController.GlobalPhotosetName
-        let datetime = formatter.string(from: now)
-        print(self.albumName+" - " + datetime)
-        self.albumName = "EarScanner3D: " + self.albumName+" - " + datetime
-        
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .full
+//        formatter.timeStyle = .full
+//        self.albumName = MainViewController.GlobalPhotosetName
+//        datetime = formatter.string(from: now)
+//        print("time", datetime)
+//        self.albumName = "EarScanner3D: " + self.albumName+" - " + datetime
+//
         if let assetCollection = fetchAssetCollectionForAlbum() {
             self.assetCollection = assetCollection
             return
         }
     }
-    
+
     private func checkAuthorizationWithHandler(completion: @escaping ((_ success: Bool) -> Void)) {
         if PHPhotoLibrary.authorizationStatus() == .notDetermined {
             PHPhotoLibrary.requestAuthorization({ (status) in
@@ -76,14 +77,21 @@ class MyAwesomeAlbum: NSObject {
     }
     
     private func fetchAssetCollectionForAlbum() -> PHAssetCollection? {
-        let now = Date()
+        //if first instance of the album, recreate the time and date
+        if (ViewController.photoCount == 0 && ViewController.SecondEar == false){
+                    let now = Date()
+            dateCreated = true
+            let formatter = DateFormatter()
+            formatter.dateStyle = .full
+            formatter.timeStyle = .full
+                    datetime = formatter.string(from: now)
+                    print("time", datetime)
         
-        let formatter = DateFormatter()
-        formatter.dateStyle = .full
-        formatter.timeStyle = .full
+        }
+
         self.albumName = MainViewController.GlobalPhotosetName
-        let datetime = formatter.string(from: now)
-        print(self.albumName+" - " + datetime)
+
+        
         self.albumName = "EarScanner3D: " + self.albumName+" - " + datetime
         
         print("name",self.albumName)
