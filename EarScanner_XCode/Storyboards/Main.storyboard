@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWI-6d-uB4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbX-Pi-iHW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="2084" y="2869"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--tabBarStart-->
         <scene sceneID="Uis-0z-Ip3">
             <objects>
-                <tabBarController storyboardIdentifier="StartMain" id="RbX-Pi-iHW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="StartMain" title="tabBarStart" id="RbX-Pi-iHW" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="QkP-IU-GNW"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="lzp-ic-pS0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -283,6 +283,9 @@ Click the hamburger menu for more options (changing profile information, About U
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tutorial" id="4Uh-Cx-v27">
+                        <barButtonItem key="backBarButtonItem" title="Tutorial" id="S7N-ZG-60a">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="jMj-vI-4Vr">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -337,7 +340,7 @@ Click the hamburger menu for more options (changing profile information, About U
         <!--Home-->
         <scene sceneID="R6R-an-4Cg">
             <objects>
-                <viewController id="UoM-2Z-qXg" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="UoM-2Z-qXg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cyK-RQ-GBo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -524,7 +527,11 @@ Click the hamburger menu for more options (changing profile information, About U
                             <constraint firstItem="ZUu-Iy-8Vy" firstAttribute="centerY" secondItem="jDa-8G-a2a" secondAttribute="centerY" id="uRk-n6-gxh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Menu" id="QaC-BI-ddS"/>
+                    <navigationItem key="navigationItem" title="Menu" id="QaC-BI-ddS">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="5mg-21-2eV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuG-iT-r76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -620,7 +627,11 @@ Click the hamburger menu for more options (changing profile information, About U
                             <constraint firstItem="Ngl-Pl-LWe" firstAttribute="trailing" secondItem="XTc-ZN-kxu" secondAttribute="trailing" constant="50" id="slo-95-3hh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="xBw-rU-j2S"/>
+                    <navigationItem key="navigationItem" title="Profile" id="xBw-rU-j2S">
+                        <barButtonItem key="backBarButtonItem" title="Profile" id="9oR-8n-jpP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Za0-pR-9lj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -724,6 +735,7 @@ One of the team's flagship projects is the Future Hear project led by Prof Woodr
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-rX-bQF">
                                 <rect key="frame" x="10" y="0.0" width="394" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat, lorem ut pharetra imperdiet, ligula nibh interdum justo, vel varius neque augue sed turpis. Nullam cursus ac neque vitae laoreet. Cras quis urna ac elit convallis euismod. Nulla tristique risus non aliquam tristique. Duis in quam sit amet nibh blandit mattis. Aliquam tempus diam lectus, id maximus sapien dignissim non. Ut cursus vehicula augue et fringilla. Praesent eget scelerisque enim. Nam aliquet libero in lectus lacinia, sit amet blandit ipsum facilisis. Nunc ut dolor non tellus dictum facilisis vitae vel elit. Quisque ornare quam nec tincidunt dictum. Phasellus faucibus leo ut blandit tincidunt. Proin vel tortor vel purus egestas auctor. Aenean id tincidunt nisl.
 
 Cras ut placerat neque. Phasellus laoreet eget orci sit amet mattis. Curabitur molestie, sapien nec tempor malesuada, lorem enim auctor erat, id dapibus purus ex a neque. Integer eget velit non lorem suscipit vulputate eu maximus erat. Mauris aliquam ultrices enim posuere efficitur. In dictum purus ligula, vitae lobortis mauris ullamcorper nec. Sed sit amet risus suscipit, ultrices felis at, accumsan magna. Vestibulum ultrices, arcu vitae maximus sagittis, libero sem euismod nunc, eu dictum tortor nisi a purus. Mauris vel velit ut enim bibendum condimentum. Aenean sed odio porttitor, eleifend leo nec, varius neque. Quisque tincidunt interdum nisl vel posuere. Duis sed quam nec lacus molestie malesuada vitae vitae eros. Nulla facilisi. Donec quis pretium nulla, et sagittis nunc. Suspendisse hendrerit id erat eget volutpat.
@@ -748,6 +760,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AI0-Z1-2Rt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="Icx-rX-bQF" firstAttribute="top" secondItem="AI0-Z1-2Rt" secondAttribute="top" id="Zv8-re-drv"/>
                             <constraint firstAttribute="bottom" secondItem="Icx-rX-bQF" secondAttribute="bottom" id="dDR-Nd-SJG"/>
@@ -774,6 +787,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-aM-KJP">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1o6-F1-77d"/>
                                         </constraints>
@@ -782,6 +796,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CvB-FL-j2C">
                                         <rect key="frame" x="0.0" y="63" width="354" height="50"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="baE-w7-str"/>
                                         </constraints>
@@ -790,6 +805,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nUP-xa-2RW">
                                         <rect key="frame" x="0.0" y="126" width="354" height="50"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Bj6-dP-MM4"/>
                                         </constraints>
@@ -819,6 +835,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qii-SL-MKJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="R9q-pl-ocD" firstAttribute="top" secondItem="qii-SL-MKJ" secondAttribute="top" constant="30" id="5p0-em-jB1"/>
                             <constraint firstItem="R9q-pl-ocD" firstAttribute="leading" secondItem="qii-SL-MKJ" secondAttribute="leading" constant="30" id="7bs-Q0-o3D"/>
@@ -967,6 +984,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Zq-e8-9Gd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="pW6-ev-pdZ" firstAttribute="top" secondItem="4Zq-e8-9Gd" secondAttribute="top" constant="30" id="09r-Ox-q5E"/>
                             <constraint firstItem="4Zq-e8-9Gd" firstAttribute="trailing" secondItem="pW6-ev-pdZ" secondAttribute="trailing" constant="30" id="aP6-RQ-Tfg"/>
@@ -1034,6 +1052,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g2g-dS-KC2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="tLx-4C-wl7" firstAttribute="centerX" secondItem="eCc-B1-Asa" secondAttribute="centerX" id="GwR-dy-ktf"/>
                             <constraint firstItem="g2g-dS-KC2" firstAttribute="trailing" secondItem="tLx-4C-wl7" secondAttribute="trailing" constant="30" id="TQK-xi-0FD"/>
@@ -1153,7 +1172,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Dismiss:" destination="4fp-7n-St8" eventType="touchUpInside" id="XyF-Kn-HCg"/>
-                                    <segue destination="0nd-TE-gLN" kind="show" id="o3J-S1-tyo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1250,7 +1268,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DpO-gn-4u5">
-                                <rect key="frame" x="30" y="30" width="354" height="183.5"/>
+                                <rect key="frame" x="30" y="30" width="354" height="325.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a name for this photoset" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAd-8l-1D8">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="57.5"/>
@@ -1284,11 +1302,19 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             <action selector="StartFlow:" destination="xqY-wm-3h9" eventType="touchUpInside" id="jJq-m3-SNO"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1G-KO-46h">
+                                        <rect key="frame" x="0.0" y="196.5" width="354" height="129"/>
+                                        <string key="text">Please note: A series of video tutorials will guide you through the stages of completing a photoset. Once you have finished the first 30 photos (one photoset), you have the option to exit or continue and take a photoset of the other ear.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uTh-V3-AYb"/>
                         <color key="backgroundColor" red="0.039215686270000001" green="0.21176470589999999" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="DpO-gn-4u5" firstAttribute="centerX" secondItem="wbV-mL-zFp" secondAttribute="centerX" id="G6v-BC-aQM"/>
                             <constraint firstItem="DpO-gn-4u5" firstAttribute="leading" secondItem="uTh-V3-AYb" secondAttribute="leading" constant="30" id="LtK-ye-z59"/>
@@ -1315,10 +1341,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FsO-Sh-Q5z">
-                                <rect key="frame" x="15" y="219" width="384" height="360"/>
+                                <rect key="frame" x="15" y="219" width="191" height="295"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gk2-NE-QEB">
-                                        <rect key="frame" x="0.0" y="0.5" width="384" height="99"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="191" height="99"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="CRG-Wq-qJs"/>
@@ -1327,7 +1353,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vch-0m-k1L">
-                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="115" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="64r-W5-0xZ"/>
                                         </constraints>
@@ -1335,8 +1361,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can upload this photoset to the cloud now or later from the Photosets page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-BN-aVE">
-                                        <rect key="frame" x="0.0" y="180" width="384" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can upload this photoset to the cloud from the photosets page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIT-BN-aVE">
+                                        <rect key="frame" x="0.0" y="180" width="191" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iak-b4-ndE"/>
                                         </constraints>
@@ -1345,14 +1371,14 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-qf-kZR">
-                                        <rect key="frame" x="0.0" y="245" width="384" height="50"/>
+                                        <rect key="frame" x="0.0" y="245" width="191" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="aZz-JR-dYm"/>
                                             <constraint firstAttribute="width" secondItem="zS7-qf-kZR" secondAttribute="height" multiplier="191:50" id="y7x-ux-dgX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <state key="normal" title="Upload Later">
+                                        <state key="normal" title="Finish">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -1364,23 +1390,6 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <connections>
                                             <action selector="FinishedFLow:" destination="9Ha-1e-fnc" eventType="touchUpInside" id="RDj-cu-a3A"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-hM-cXM">
-                                        <rect key="frame" x="0.0" y="310" width="384" height="50"/>
-                                        <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="8v5-WU-eZD"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <state key="normal" title="Upload Now">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1411,10 +1420,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uzm-iY-aVK">
-                                <rect key="frame" x="15" y="219" width="612" height="390"/>
+                                <rect key="frame" x="15" y="219" width="384" height="390"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowshape.turn.up.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OX8-eH-Ir4">
-                                        <rect key="frame" x="0.0" y="1" width="612" height="97.5"/>
+                                        <rect key="frame" x="0.0" y="1" width="384" height="97.5"/>
                                         <color key="tintColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="LGz-wb-OCv"/>
@@ -1422,8 +1431,8 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             <constraint firstAttribute="width" secondItem="OX8-eH-Ir4" secondAttribute="height" multiplier="871:100" id="xji-NR-Akd"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've finished the first ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-T0-CKv">
-                                        <rect key="frame" x="0.0" y="115" width="612" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've finished the first ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-T0-CKv">
+                                        <rect key="frame" x="0.0" y="115" width="384" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="csL-4O-kcX"/>
                                         </constraints>
@@ -1432,7 +1441,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to finish now or continue and take 30 photos of the second ear?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbB-sv-bhK">
-                                        <rect key="frame" x="0.0" y="180" width="612" height="80"/>
+                                        <rect key="frame" x="0.0" y="180" width="384" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="dWQ-ci-SCZ"/>
                                         </constraints>
@@ -1441,7 +1450,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-oW-q9z">
-                                        <rect key="frame" x="0.0" y="275" width="612" height="50"/>
+                                        <rect key="frame" x="0.0" y="275" width="384" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MA7-JX-U2V"/>
@@ -1461,7 +1470,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-Gr-Xpy">
-                                        <rect key="frame" x="0.0" y="340" width="612" height="50"/>
+                                        <rect key="frame" x="0.0" y="340" width="384" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.48627450979999998" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="U5b-dU-d2I"/>
@@ -1520,7 +1529,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             <constraint firstAttribute="width" secondItem="E8L-ut-cRn" secondAttribute="height" multiplier="871:100" id="mI0-Ew-ISi"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin right ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-ks-MnF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin first ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-ks-MnF">
                                         <rect key="frame" x="0.0" y="115" width="384" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="kpL-XJ-ULK"/>
@@ -1555,7 +1564,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="SetPassword:" destination="bmf-TV-nR8" eventType="touchUpInside" id="XKR-na-Y9m"/>
+                                            <action selector="StartTutorial:" destination="bmf-TV-nR8" eventType="touchUpInside" id="QFr-KL-1Xh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1643,7 +1652,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="14N-zH-P72"/>
+        <segue reference="YTJ-1T-zM5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -1674,6 +1683,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
