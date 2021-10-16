@@ -123,7 +123,7 @@ class LoginViewController: UIViewController {
                      self.addChild(childViewController)
                      self.view.addSubview(childViewController.view)
                      childViewController.didMove(toParent: self)
-                    LoginViewController.MainController = childViewController;
+                    LoginViewController.MainController = self;
                     
                 }
                 MyVariables.UserExists = "True"

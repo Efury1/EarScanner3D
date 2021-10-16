@@ -423,7 +423,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
         view.addSubview(HelpButton)
         //view.addSubview(bottomPinkBar)
         //view.addSubview(NextPhotoButton)
-        let seconds2 = 2.0
+        let seconds2 = 1.0
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds2) {
             
@@ -578,7 +578,7 @@ else if (ViewController.howLongIsBar == 4){
         RetakeButton.addTarget(self, action: #selector(retake), for: .touchUpInside)
         
         
-        let seconds = 2.0
+        let seconds = 1.0
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             
@@ -705,6 +705,7 @@ else if (ViewController.howLongIsBar == 4){
     }
     @objc private func exitCameraFlow() {
         
+        
         let refreshAlert = UIAlertController(title: "Exit Camera", message: "Are you sure you want to exit the camera? This photoset cannot be resumed once exited.", preferredStyle: UIAlertController.Style.alert) //create alert
         ViewController.photoCount = 0;
         ViewController.counter = 0;
@@ -713,21 +714,27 @@ else if (ViewController.howLongIsBar == 4){
 
         refreshAlert.addAction(UIAlertAction(title: "Exit", style: .default, handler: { (action: UIAlertAction!) in
            
-//            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
-//
-//            //childViewController.didMove(toParent: self)
-//
-//            UIApplication.shared.windows.first?.rootViewController = childViewController
-//            //UIApplication.shared.windows.first?.makeKeyAndVisible()
+            let childViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginPage")
+
+            //childViewController.didMove(toParent: self)
+
+            UIApplication.shared.windows.first?.rootViewController = childViewController
+            //UIApplication.shared.windows.first?.makeKeyAndVisible()
 //
 //            self.navigationController?.popToRootViewController(animated: true)
 //            
 //            self.view.removeFromSuperview()
             
-            let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
-             self.addChild(childViewController)
-             self.view.addSubview(childViewController.view)
-             childViewController.didMove(toParent: self)
+//            UIApplication.shared.windows.first?.rootViewController = LoginViewController.MainController
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            
+            self.navigationController?.popToRootViewController(animated: true)
+            
+            let childViewController2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
+            childViewController.addChild(childViewController2)
+            childViewController.view.addSubview(childViewController2.view)
+            childViewController.didMove(toParent: self)
+            
         }))
 
         refreshAlert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { (action: UIAlertAction!) in
