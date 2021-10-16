@@ -3,6 +3,7 @@
 //  EarScanner_XCode
 //
 import UIKit
+import SwiftyDropbox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

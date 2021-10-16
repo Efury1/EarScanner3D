@@ -5,9 +5,6 @@
       location = "group:EarScanner_XCode.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Documentation.docc">
-   </FileRef>
-   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

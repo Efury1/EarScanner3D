@@ -7,9 +7,9 @@
 
 import Foundation
 import UIKit
-public var GlobalPhotosetName = ""
+
 class MainViewController: UIViewController {
-    
+    static var GlobalPhotosetName = ""
     override func
     viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +69,8 @@ class MainViewController: UIViewController {
     @IBAction func StartFlow(_ sender: UIButton) {
        
         if (PhotosetName.text?.isEmpty == false && PhotosetName.text != nil && !(PhotosetName.text?.trimmingCharacters(in: .whitespaces).isEmpty)!){
-            GlobalPhotosetName = PhotosetName.text ?? "Unnamed"
+            MainViewController.GlobalPhotosetName = PhotosetName.text ?? "Unnamed"
+            print("photoset Name", MainViewController.GlobalPhotosetName)
             let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BeginFirstEar")
              self.addChild(childViewController)
              self.view.addSubview(childViewController.view)
@@ -97,6 +98,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func FinishedFLow(_ sender: Any) {
+        ViewController.SecondEar = false;
         let childViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartMain")
          self.addChild(childViewController)
          self.view.addSubview(childViewController.view)
