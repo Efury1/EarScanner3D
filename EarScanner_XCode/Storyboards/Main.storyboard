@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbX-Pi-iHW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbX-Pi-iHW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -838,7 +837,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="ChangePasswordProfile:" destination="Xff-Q9-JFs" eventType="touchUpInside" id="yXP-lC-aw2"/>
+                                            <action selector="ChangePasswordProfile:" destination="Xff-Q9-JFs" eventType="touchUpInside" id="naT-EH-3qA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -856,9 +855,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                     </view>
                     <navigationItem key="navigationItem" title="Change Password" id="LMV-EQ-Obq"/>
                     <connections>
-                        <outlet property="ConfirmPassword" destination="nUP-xa-2RW" id="tJ0-xj-i2u"/>
-                        <outlet property="NewPassword" destination="CvB-FL-j2C" id="UlD-6x-Qlh"/>
-                        <outlet property="OldPassword" destination="tGp-aM-KJP" id="obI-OO-kRq"/>
+                        <outlet property="ConfirmPassword" destination="nUP-xa-2RW" id="lgD-VU-m08"/>
+                        <outlet property="NewPassword" destination="CvB-FL-j2C" id="RGe-tq-BeZ"/>
+                        <outlet property="OldPassword" destination="tGp-aM-KJP" id="YMc-kE-MdQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyr-81-MJF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -948,24 +947,32 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Change Email-->
         <scene sceneID="KrP-CX-0Bu">
             <objects>
-                <viewController title="Change Email" hidesBottomBarWhenPushed="YES" id="Y5F-kW-izd" sceneMemberID="viewController">
+                <viewController title="Change Email" hidesBottomBarWhenPushed="YES" id="Y5F-kW-izd" customClass="ChangeEmailViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yO1-iP-qq6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="pW6-ev-pdZ">
-                                <rect key="frame" x="30" y="30" width="354" height="113"/>
+                                <rect key="frame" x="30" y="30" width="354" height="176"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="{display logged in user's email and let them edit it}" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-N0-1IT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VeW-w1-2lC">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="RFg-3y-ZDe"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ucg-WT-u9B"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ub-Cs-myX">
+                                        <rect key="frame" x="0.0" y="63" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1eF-G5-nge"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caM-cT-rLR">
-                                        <rect key="frame" x="0.0" y="63" width="354" height="50"/>
+                                        <rect key="frame" x="0.0" y="126" width="354" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Zes-Ch-8qX"/>
@@ -978,6 +985,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ChangeEmailProfile:" destination="Y5F-kW-izd" eventType="touchUpInside" id="29y-1k-xst"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -993,6 +1003,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Change Email" id="iq3-Ca-Be3"/>
+                    <connections>
+                        <outlet property="NewEmail" destination="3ub-Cs-myX" id="Y1B-ci-ozV"/>
+                        <outlet property="OldEmail" destination="VeW-w1-2lC" id="It3-We-cm9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SJ-eq-tnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1001,7 +1015,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Change Name-->
         <scene sceneID="hZE-ht-lhb">
             <objects>
-                <viewController title="Change Name" hidesBottomBarWhenPushed="YES" id="dXO-8A-hYb" sceneMemberID="viewController">
+                <viewController title="Change Name" hidesBottomBarWhenPushed="YES" id="dXO-8A-hYb" customClass="ChangeNameViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eCc-B1-Asa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1009,21 +1023,21 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-4C-wl7">
                                 <rect key="frame" x="30" y="30" width="354" height="176"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="{display logged in user's First Name &amp; let them edit}" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcz-LB-SQV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtP-gQ-DT1">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ftY-EV-SVn"/>
+                                            <constraint firstAttribute="height" constant="50" id="fQw-y4-6QZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="given-name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="{display logged in user's Last Name &amp; let them edit}" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJy-vR-raF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT0-Gn-psq">
                                         <rect key="frame" x="0.0" y="63" width="354" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="6Pp-k0-dbZ"/>
+                                            <constraint firstAttribute="height" constant="50" id="Nej-m3-Wku"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="family-name"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uQ-AB-yTt">
                                         <rect key="frame" x="0.0" y="126" width="354" height="50"/>
@@ -1039,6 +1053,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ChangeNameProfile:" destination="dXO-8A-hYb" eventType="touchUpInside" id="vtl-U4-yfs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1054,6 +1071,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Change Name" id="Yq0-Qt-9QI"/>
+                    <connections>
+                        <outlet property="NewFirstName" destination="mtP-gQ-DT1" id="MS6-ra-i1q"/>
+                        <outlet property="NewLastName" destination="UT0-Gn-psq" id="zrI-eM-ck9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11K-ju-U7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1649,7 +1670,7 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="hamburger" width="25" height="25"/>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="100"/>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
         <image name="questionmark" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
