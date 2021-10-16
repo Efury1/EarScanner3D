@@ -7,7 +7,11 @@
 		<key>EarScanner_XCode.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>9</integer>
+=======
+			<integer>2</integer>
+>>>>>>> f8fe5bc9e6c26ecc4d4795a62b2cb3fed15908cf
 		</dict>
 	</dict>
 </dict>

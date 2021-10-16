@@ -134,7 +134,6 @@
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cgo
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -151,7 +150,6 @@ Cgo
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -161,7 +159,6 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -178,7 +175,6 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cgo
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -195,7 +191,6 @@ Cgo
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -205,7 +200,6 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -222,7 +216,6 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cgo
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -242,7 +235,6 @@ Upload a photoset's images to the cloud storage by clicking the 'Send' icon and 
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -252,7 +244,6 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -687,7 +678,6 @@ Click the hamburger menu for more options (changing profile information, About U
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -697,7 +687,6 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -856,9 +845,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                     </view>
                     <navigationItem key="navigationItem" title="Change Password" id="LMV-EQ-Obq"/>
                     <connections>
-                        <outlet property="ConfirmPassword" destination="nUP-xa-2RW" id="tJ0-xj-i2u"/>
-                        <outlet property="NewPassword" destination="CvB-FL-j2C" id="UlD-6x-Qlh"/>
-                        <outlet property="OldPassword" destination="tGp-aM-KJP" id="obI-OO-kRq"/>
+                        <outlet property="ConfirmPassword" destination="nUP-xa-2RW" id="V71-84-74u"/>
+                        <outlet property="NewPassword" destination="CvB-FL-j2C" id="Grw-mk-GtG"/>
+                        <outlet property="OldPassword" destination="tGp-aM-KJP" id="7Le-73-SMZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyr-81-MJF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -948,24 +937,32 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
         <!--Change Email-->
         <scene sceneID="KrP-CX-0Bu">
             <objects>
-                <viewController title="Change Email" hidesBottomBarWhenPushed="YES" id="Y5F-kW-izd" sceneMemberID="viewController">
+                <viewController title="Change Email" hidesBottomBarWhenPushed="YES" id="Y5F-kW-izd" customClass="ChangeEmailViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yO1-iP-qq6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="pW6-ev-pdZ">
-                                <rect key="frame" x="30" y="30" width="354" height="113"/>
+                                <rect key="frame" x="30" y="30" width="354" height="176"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="{display logged in user's email and let them edit it}" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-N0-1IT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-N0-1IT">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RFg-3y-ZDe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-Gz-s9D">
+                                        <rect key="frame" x="0.0" y="63" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3T2-Oa-ArB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caM-cT-rLR">
-                                        <rect key="frame" x="0.0" y="63" width="354" height="50"/>
+                                        <rect key="frame" x="0.0" y="126" width="354" height="50"/>
                                         <color key="backgroundColor" red="0.69803921570000005" green="0.49019607840000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Zes-Ch-8qX"/>
@@ -978,6 +975,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ChangeEmailProfile:" destination="Y5F-kW-izd" eventType="touchUpInside" id="uk7-0s-Mnj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -993,15 +993,19 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Change Email" id="iq3-Ca-Be3"/>
+                    <connections>
+                        <outlet property="NewEmail" destination="nz6-Gz-s9D" id="PRh-lL-SYf"/>
+                        <outlet property="OldEmail" destination="MLd-N0-1IT" id="MQl-Fh-wka"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SJ-eq-tnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="3042"/>
+            <point key="canvasLocation" x="-410.14492753623193" y="3041.5178571428569"/>
         </scene>
         <!--Change Name-->
         <scene sceneID="hZE-ht-lhb">
             <objects>
-                <viewController title="Change Name" hidesBottomBarWhenPushed="YES" id="dXO-8A-hYb" sceneMemberID="viewController">
+                <viewController title="Change Name" hidesBottomBarWhenPushed="YES" id="dXO-8A-hYb" customClass="ChangeNameViewController" customModule="EarScan3D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eCc-B1-Asa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1009,21 +1013,21 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-4C-wl7">
                                 <rect key="frame" x="30" y="30" width="354" height="176"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="{display logged in user's First Name &amp; let them edit}" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcz-LB-SQV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcz-LB-SQV">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ftY-EV-SVn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="given-name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="{display logged in user's Last Name &amp; let them edit}" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJy-vR-raF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJy-vR-raF">
                                         <rect key="frame" x="0.0" y="63" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6Pp-k0-dbZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="family-name"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uQ-AB-yTt">
                                         <rect key="frame" x="0.0" y="126" width="354" height="50"/>
@@ -1039,6 +1043,9 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ChangeNameProfile:" destination="dXO-8A-hYb" eventType="touchUpInside" id="eP8-8s-BXT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1054,6 +1061,10 @@ Nulla vulputate ex nec massa feugiat mollis. Etiam porttitor et nisi quis tristi
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Change Name" id="Yq0-Qt-9QI"/>
+                    <connections>
+                        <outlet property="NewFirstName" destination="Vcz-LB-SQV" id="G1J-g5-PEb"/>
+                        <outlet property="NewLastName" destination="eJy-vR-raF" id="EG7-Z1-jPJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11K-ju-U7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
