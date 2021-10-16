@@ -5,7 +5,7 @@
 //  Created by James Noye on 24/9/21.
 //
 import Foundation
-import SwiftUI
+import UIKit
 
 class ChangePasswordViewController: UIViewController {
     
@@ -16,28 +16,24 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var ConfirmPassword: UITextField!
     
     @IBAction func ChangePasswordProfile(_ sender: UIButton) {
-        
         let OldPasswordText = OldPassword.text;
         
         let NewPasswordText = NewPassword.text;
         let ConfirmPasswordText = ConfirmPassword.text;
         
-        if (NewPasswordText == ConfirmPasswordText && NewPasswordText != "" && NewPasswordText != " "){
-            let url = URL(string:
-                            "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/changepasswordprofile")
-
+        if (NewPasswordText == ConfirmPasswordText && NewPasswordText != "" && NewPasswordText != " ") {
+            let url = URL(string: "https://oty2gz2wmh.execute-api.ap-southeast-2.amazonaws.com/default/changepasswordprofile")
+            
             var request = URLRequest(url: url!) //make a request object with the url
            
             let jsonbody = [ "NewPassword": cryto(password: NewPasswordText!), "OldPassword": cryto(password: OldPasswordText!), "Email": LoginViewController.Email] //attach the json body to he request. pass in the text inputs
             
             print("testing password", NewPasswordText!, OldPasswordText!, LoginViewController.Email)
-            do //making sure to convet it to json and attach it, testing if it breaks
-            {
+            //making sure to convet it to json and attach it, testing if it breaks
+            do {
                 let requestBody = try JSONSerialization.data(withJSONObject: jsonbody, options: .fragmentsAllowed)
                 request.httpBody = requestBody
-            }
-            catch
-            {
+            } catch {
                 print("error creating request body")
             }
             request.httpMethod = "POST" //set the method to //POST
@@ -45,6 +41,7 @@ class ChangePasswordViewController: UIViewController {
             var APIResponse = "False"
             
             //make the request
+            
             let dataTask =  session.dataTask(with: request) { data, response, error in
                 //decode the request and print the result
                     //checks if response returned and if not checks internet

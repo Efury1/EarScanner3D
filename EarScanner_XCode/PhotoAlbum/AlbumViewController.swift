@@ -7,9 +7,8 @@
 
 import UIKit
 import EasyPeasy
-import SwiftyDropbox
 import Photos
-
+import SwiftyDropbox
 
 class AlbumViewController: UIViewController {
     var photo: UIImage? = nil
@@ -179,6 +178,7 @@ extension AlbumViewController: UITableViewDelegate, UITableViewDataSource {
                 openURL: { (url: URL) -> Void in UIApplication.shared.open(url, options: [:], completionHandler: nil) },
                 scopeRequest: scopeRequest
             )
+        
         
         
 
