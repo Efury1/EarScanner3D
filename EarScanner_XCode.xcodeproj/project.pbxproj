@@ -68,6 +68,7 @@
 		566CCE0E26BBFABA00DF6616 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		566FDA9826EDF37200E23B8F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		567097CF26F70CE0009FEB46 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		5680FF86271AA3B100AFC353 /* Step-4-close.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step-4-close.mp4"; sourceTree = "<group>"; };
 		5687B81526B93E5E00548B19 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		5687B81726B93E8C00548B19 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = EarScanner_XCode/ViewControllers/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		5691FBA526EDD94C00A84E66 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 			children = (
 				5615AC5C270B16640057487C /* Documentation.docc */,
 				6A90106B26FD53850002D672 /* Step-2-back.mp4 */,
+				5680FF86271AA3B100AFC353 /* Step-4-close.mp4 */,
 				6A90106C26FD53870002D672 /* Step-3-around.mp4 */,
 				6A90106926FD50340002D672 /* Step-1-front.mp4 */,
 				47947D7526B3EABD00761DC8 /* EarScanner_XCode */,
