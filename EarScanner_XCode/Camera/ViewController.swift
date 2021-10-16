@@ -157,7 +157,7 @@ class ViewController: UIViewController {
         button.layer.backgroundColor = UIColor.lightGray.cgColor
         /*Counter */
        
-        button.setTitle("\(ViewController.counter)",for: .normal)
+        button.setTitle("\(ViewController.counter)"+"/30",for: .normal)
         
         
         //button.setTitle("\(items)",for: .normal)
@@ -405,7 +405,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             button.layer.backgroundColor = UIColor.lightGray.cgColor
             /*Counter */
 
-            button.setTitle("\(ViewController.counter)",for: .normal)
+            button.setTitle("\(ViewController.counter)"+"/30",for: .normal)
 
 
             //button.setTitle("\(items)",for: .normal)
@@ -771,7 +771,7 @@ else if (ViewController.howLongIsBar == 4){
                 button.layer.backgroundColor = UIColor.lightGray.cgColor
                 /*Counter */
 
-                button.setTitle("\(ViewController.counter)",for: .normal)
+                button.setTitle("\(ViewController.counter)"+"/30",for: .normal)
 
 
                 //button.setTitle("\(items)",for: .normal)
@@ -1010,7 +1010,7 @@ else if (ViewController.howLongIsBar == 4){
         //bottom pink bar
         view.addSubview(bottomPinkBar)
         //main circle button
-        shutterButton.setTitle("\(ViewController.counter)",for: .normal)
+        shutterButton.setTitle("\(ViewController.counter)"+"/30",for: .normal)
         view.addSubview(shutterButton)
         //retake button
         view.addSubview(RetakeButton)
