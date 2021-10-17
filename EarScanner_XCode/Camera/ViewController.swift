@@ -174,6 +174,7 @@ class ViewController: UIViewController {
         button.setImage(UIImage(systemName: "gobackward", withConfiguration: largeTitle), for: .normal)
         //button.setTitle("Retake", for: .normal)
         
+//        button.setTitle("hehe",for: .normal)
         return button
     }()
     
