@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4720814A2718507000144E35 /* Step-4-close.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 472081492718507000144E35 /* Step-4-close.mp4 */; };
 		4720814C271AD1B500144E35 /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4720814B271AD1B500144E35 /* ChangeNameViewController.swift */; };
+		4720814E271BB9DD00144E35 /* Step-4-close.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5680FF86271AA3B100AFC353 /* Step-4-close.mp4 */; };
 		47947D7726B3EABD00761DC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7626B3EABD00761DC8 /* AppDelegate.swift */; };
 		47947D7926B3EABD00761DC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7826B3EABD00761DC8 /* SceneDelegate.swift */; };
 		47947D7B26B3EABD00761DC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47947D7A26B3EABD00761DC8 /* ViewController.swift */; };
@@ -47,7 +47,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		472081492718507000144E35 /* Step-4-close.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step-4-close.mp4"; sourceTree = "<group>"; };
 		4720814B271AD1B500144E35 /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
 		47947D7326B3EABD00761DC8 /* EarScan3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarScan3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47947D7626B3EABD00761DC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4720814E271BB9DD00144E35 /* Step-4-close.mp4 in Resources */,
 				6A90106E26FD53870002D672 /* Step-2-back.mp4 in Resources */,
 				6A90106F26FD53870002D672 /* Step-3-around.mp4 in Resources */,
 				6A90106A26FD50340002D672 /* Step-1-front.mp4 in Resources */,
