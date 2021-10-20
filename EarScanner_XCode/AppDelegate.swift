@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    /*Handles the redirection back to SDK once authentication
+    /*Handles the redirection back to SDK once authentication for the dropbox is completed
      * flow has been handled*/
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         let oauthCompletion: DropboxOAuthCompletion = {
@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     
-    
+    //auto generated code
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
