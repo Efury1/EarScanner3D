@@ -1,4 +1,5 @@
 # EarScanner3D
+For more information, visit the [Earscan 3D project on Behance](https://www.behance.net/gallery/138522609/Earscan-3D).
 
 ## Overview
 EarScanner3D is a medical application developed in 2021 in collaboration with QUT's Biofabrication and Tissue Morphology Group to assist individuals with microtia. The application leverages existing technology, providing a frugal and accessible framework for capturing the external ear using smartphone-based 3D scanning. This approach addresses the high costs and invasiveness associated with traditional impression techniques and high-end 3D scanning solutions.
